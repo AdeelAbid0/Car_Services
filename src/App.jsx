@@ -1,8 +1,8 @@
-import Routes from "./Routes/Routes";
+import Layout from "./Layout/Layout";
 const App = () => {
   return (
     <div>
-      <Routes />
+      <Layout />
     </div>
   );
 };
