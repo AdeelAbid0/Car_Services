@@ -1,107 +1,76 @@
-import { Button, Checkbox } from "antd";
+import { Checkbox } from "antd";
 import InputText from "../../Common/InputText/InputText";
 import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
-import GoogleIcon from "../../assets/svg/google-icon.svg?react";
 import MailIcon from "../../assets/svg/mail-placeholder.svg?react";
 import PasswordIcon from "../../assets/svg/password-placeholder.svg?react";
 import EyeIcon from "../../assets/svg/eye-icon.svg?react";
 import UserIcon from "../../assets/svg/user.svg?react";
+import AuthCard from "../../Components/AuthCard/AuthCard";
+import { useNavigate } from "react-router-dom";
+import { PublicRoutes } from "../../Routes/routing";
+
 const Register = () => {
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    console.log("Register clicked");
+  };
+
+  const handleGoogleRegister = () => {
+    console.log("Google register clicked");
+  };
+
+  const handleLoginClick = () => {
+    navigate(PublicRoutes.Login.path);
+  };
+
   return (
-    <div className="flex w-full justify-end relative">
-      <img
-        src="/login.png"
-        alt="login"
-        className="object-contain w-[52%] h-full absolute blur-lg"
-      />
-      <img
-        src="/login-green.png"
-        alt="login"
-        className="object-contain h-full left-[43%]  absolute "
-      />
-      <div className="w-1/2 z-50 m-2">
-        <img
-          src="/Images/login-image.png"
-          alt="login"
-          className="w-full h-full object-cover rounded-2xl"
+    <AuthCard
+      title="Create your account"
+      description="Sign up to book reliable car services in just a few steps."
+      buttonText="Continue"
+      buttonIcon={<ArrowRightIcon />}
+      onButtonClick={handleRegister}
+      onGoogleClick={handleGoogleRegister}
+      footerText="Already have an account?"
+      footerLinkText="Log in"
+      onFooterLinkClick={handleLoginClick}
+    >
+      <div className="w-full space-y-4">
+        <InputText
+          label="Name"
+          placeholder="Enter name"
+          prefixIcon={UserIcon}
+          className="w-full"
         />
-      </div>
-      <div className="w-1/2 relative ">
-        <div className="flex w-full h-full ">
-          <div className="flex justify-center items-center w-full rounded-xl bg-white my-2 mr-2  z-50 ">
-            <div className="flex flex-col w-full px-37.5 justify-center items-center gap-9 z-10">
-              <div className="flex flex-col gap-2">
-                <h1 className="font-roboto !font-bold text-[#262626] text-[44px] leading-[129%]">
-                  Create your account
-                </h1>
-                <p className="text-[#737373] text-sm !font-normal">
-                  Sign up to book reliable car services in just a few steps.
-                </p>
-              </div>
-              <div className="flex w-full items-center flex-col gap-3">
-                <div className="w-full">
-                  <InputText
-                    label="Name"
-                    placeholder="Enter name"
-                    prefixIcon={UserIcon}
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-full">
-                  <InputText
-                    label="Email"
-                    placeholder="Enter email"
-                    prefixIcon={MailIcon}
-                    className="w-full"
-                  />
-                </div>
-                <div className="w-full">
-                  <InputText
-                    label="Password"
-                    placeholder="Enter password"
-                    prefixIcon={PasswordIcon}
-                    suffixIcon={EyeIcon}
-                  />
-                </div>
-                <div className="w-full">
-                  <InputText
-                    label="Confirm Password"
-                    placeholder="Enter password"
-                    prefixIcon={PasswordIcon}
-                    suffixIcon={EyeIcon}
-                  />
-                </div>
-                <div className="flex w-full justify-between items-center">
-                  <Checkbox className="text-[#262626] font-medium leading-5">
-                    Remember me
-                  </Checkbox>
-                </div>
-              </div>
-              <div className="w-full">
-                <Button type="primary" className="w-full">
-                  Continue <ArrowRightIcon />
-                </Button>
-              </div>
-              <span className="w-full border-t border-[#F5F5F5]"></span>
-              <div className="w-full">
-                <Button type="default" className="w-full !bg-[#EAE8FF]">
-                  <GoogleIcon />
-                  Google
-                </Button>
-              </div>
-              <div className="text-[#262626] font-medium leading-5 text-sm">
-                <p>
-                  Don't have an account?{" "}
-                  <span className="text-[#9A85FF] underline cursor-pointer">
-                    Sign Up
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
+        <InputText
+          label="Email"
+          placeholder="Enter email"
+          prefixIcon={MailIcon}
+          className="w-full"
+        />
+        <InputText
+          label="Password"
+          placeholder="Enter password"
+          prefixIcon={PasswordIcon}
+          suffixIcon={EyeIcon}
+          type="password"
+          className="w-full"
+        />
+        <InputText
+          label="Confirm Password"
+          placeholder="Confirm your password"
+          prefixIcon={PasswordIcon}
+          suffixIcon={EyeIcon}
+          type="password"
+          className="w-full"
+        />
+        <div className="flex items-center">
+          <Checkbox className="text-[#262626] font-medium leading-5">
+            I agree to the Terms of Service and Privacy Policy
+          </Checkbox>
         </div>
       </div>
-    </div>
+    </AuthCard>
   );
 };
 

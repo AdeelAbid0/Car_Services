@@ -14,6 +14,7 @@ const App = () => {
           Input: {
             paddingBlock: 12,
             paddingInline: 16,
+            borderRadius: 12,
             hoverBorderColor: "#6E44FF",
             activeBorderColor: "#6E44FF",
             activeShadow: "0px 0px 0px 4px #DBEAFE",
@@ -41,6 +42,7 @@ const App = () => {
 
             colorLink: "#9A85FF",
             colorLinkHover: "#8E81F5aa",
+            colorLinkActive: "#9A85FF",
 
             colorBgContainerDisabled: "#D7D7D7",
             colorTextDisabled: "#9A85FF",

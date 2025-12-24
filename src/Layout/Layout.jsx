@@ -1,10 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
 import Routes from "../Routes/Routes";
 
 const Layout = () => {
   return (
-    <div className="flex w-full">
-      <Routes />
-    </div>
+    <BrowserRouter>
+      <div className="flex w-full">
+        <Routes />
+      </div>
+    </BrowserRouter>
   );
 };
 

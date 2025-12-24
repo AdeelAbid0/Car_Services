@@ -1,60 +1,50 @@
-import { Button, Checkbox, Input } from "antd";
+import { Input } from "antd";
 import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
+import AuthCard from "../../Components/AuthCard/AuthCard";
+
 const VerifyOTP = () => {
+  const handleVerifyOTP = () => {
+    console.log("Verify OTP clicked");
+  };
+
+  const handleResendOTP = () => {
+    console.log("Resend OTP clicked");
+  };
+
+  const handleGoBack = () => {
+    console.log("Go back clicked");
+  };
+
   return (
-    <div className="flex w-full justify-end relative">
-      <img
-        src="/login.png"
-        alt="login"
-        className="object-contain w-[52%] h-full absolute blur-lg"
-      />
-      <img
-        src="/login-green.png"
-        alt="login"
-        className="object-contain h-full left-[43%]  absolute "
-      />
-      <div className="w-1/2 z-50 m-2">
-        <img
-          src="/Images/login-image.png"
-          alt="login"
-          className="w-full h-full object-cover rounded-2xl"
-        />
-      </div>
-      <div className="w-1/2 relative ">
-        <div className="flex w-full h-full ">
-          <div className="flex justify-center items-center w-full rounded-xl bg-white my-2 mr-2  z-50 ">
-            <div className="flex flex-col w-full px-37.5 justify-center items-center gap-9 z-10">
-              <div className="flex flex-col gap-2">
-                <h1 className="font-roboto !font-bold text-[#262626] text-[44px] leading-[129%]">
-                  Verify your number
-                </h1>
-                <p className="text-[#737373] text-sm !font-normal">
-                  Enter the code we sent to keep your account secure.
-                </p>
-              </div>
-              <div className="flex w-full items-center flex-col gap-3">
-                <div className="flex justify-center w-full">
-                  <Input.OTP
-                    length={6}
-                    // value={otp}
-                    // onChange={(value) => setOtp(value)}
-                  />
-                </div>
-              </div>
-              <div className="w-full">
-                <Button type="primary" className="w-full">
-                  Confirm OTP
-                  <ArrowRightIcon />
-                </Button>
-              </div>
-              <div>
-                <Button type="link">Resend OTP</Button>
-              </div>
-            </div>
-          </div>
+    <AuthCard
+      title="Verify your number"
+      description="Enter the code we sent to keep your account secure."
+      buttonText="Confirm OTP"
+      buttonIcon={<ArrowRightIcon />}
+      onButtonClick={handleVerifyOTP}
+      showGoogleButton={false}
+      footerText="Didn't receive the code?"
+      footerLinkText="Resend OTP"
+      onFooterLinkClick={handleResendOTP}
+    >
+      <div className="w-full flex flex-col items-center gap-6">
+        <div className="w-full flex justify-center">
+          <Input.OTP
+            length={6}
+            // value={otp}
+            // onChange={(value) => setOtp(value)}
+            className="otp-input"
+            style={{
+              "--otp-input-gap": "0.5rem",
+              "--otp-input-size": "3.5rem",
+            }}
+          />
         </div>
+        <p className="text-xs text-gray-500 text-center">
+          Check your spam folder if you don't see the code in your inbox
+        </p>
       </div>
-    </div>
+    </AuthCard>
   );
 };
 
