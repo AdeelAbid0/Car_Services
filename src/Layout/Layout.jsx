@@ -2,7 +2,7 @@ import Routes from "../Routes/Routes";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="flex w-full">
       <Routes />
     </div>
   );
