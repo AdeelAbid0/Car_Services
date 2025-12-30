@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Header from "../Header/Header";
 import SearchIcon from "../../assets/svg/search.svg?react";
 import HeroSendIcon from "../../assets/svg/hero-send.svg?react";
 import { Button } from "antd";
@@ -27,7 +26,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative" id="home">
       {/* Background Image with Gradient Bars */}
       <div className="relative">
         <img
@@ -63,7 +62,6 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-20">
         <div className="relative w-full h-auto px-18 py-6 z-10">
           <div className="relative z-10">
-            <Header />
             <div className="flex w-full justify-center text-center mt-24">
               <h1 className="font-anton max-w-217.5 text-white text-[100px] font-normal text-center leading-[120%] uppercase">
                 All <span className="text-[#9A85FF]">your car services</span>

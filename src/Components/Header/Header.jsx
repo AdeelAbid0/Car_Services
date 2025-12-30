@@ -5,7 +5,8 @@ import HamburgerIcon from "../../assets/svg/hamburger.svg?react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { PublicRoutes } from "../../Routes/routing";
 
-const Header = () => {
+const Header = ({ scrolled }) => {
+  // ✅ scrolled prop قبول کریں
   const navigate = useNavigate();
   const location = useLocation();
   const [activeNav, setActiveNav] = useState("Home");
@@ -41,7 +42,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex w-full justify-between h-10">
+    <div className="flex w-[calc(100%-144px)] mx-auto justify-between h-10 transition-colors duration-300 my-4">
       <div className="cursor-pointer" onClick={() => handleNavClick("Home")}>
         <LogoIcon />
       </div>
@@ -50,14 +51,14 @@ const Header = () => {
           {["Home", "Services", "Packages"].map((item) => (
             <li
               key={item}
-              className={`cursor-pointer transition-colors relative ${
-                activeNav === item ? "text-white" : "hover:text-white"
+              className={`cursor-pointer hover:text-white transition-colors relative ${
+                activeNav === item ? "text-white" : ""
               }`}
               onClick={() => handleNavClick(item)}
             >
               {item}
               {activeNav === item && (
-                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white"></span>
+                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1.5 h-1.25 bg-white rounded-full shrink-0"></span>
               )}
             </li>
           ))}
