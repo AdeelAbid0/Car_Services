@@ -1,7 +1,7 @@
 import LocationIcon from "../../../assets/svg/location.svg?react";
 const Services = () => {
   return (
-    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-[40%] p-5">
+    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-[full] p-5">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
         return (
           <div className="flex flex-col items-center gap-2">

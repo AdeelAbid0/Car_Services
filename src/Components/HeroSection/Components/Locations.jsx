@@ -4,7 +4,7 @@ import LocationIcon from "../../../assets/svg/location.svg?react";
 
 const Locations = () => {
   return (
-    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-[40%] p-5">
+    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-full p-5">
       <div className="flex flex-col w-full justify-center items-center gap-2">
         <InputText
           placeholder={"Search place"}
