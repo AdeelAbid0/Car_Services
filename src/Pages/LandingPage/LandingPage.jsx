@@ -1,9 +1,9 @@
-import React from "react";
+import HeroSection from "../../Components/HeroSection/HeroSection";
 
 const LandingPage = () => {
   return (
-    <div>
-      <h1>Landing page</h1>
+    <div className="flex w-full">
+      <HeroSection />
     </div>
   );
 };

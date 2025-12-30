@@ -11,7 +11,7 @@ const AuthCard = ({
   footerText,
   footerLinkText,
   onFooterLinkClick,
-  imageSrc = "/Images/login-image.png",
+  imageSrc = "/Images/hero-image.png",
 }) => {
   return (
     <div className="flex w-full justify-end relative min-h-screen">
@@ -43,7 +43,7 @@ const AuthCard = ({
             <div className="flex flex-col w-full px-10 md:px-20 justify-center items-center gap-9">
               {/* Title and Description */}
               <div className="flex items-center flex-col gap-2 text-center w-full">
-                <h1 className="font-roboto font-bold text-[#262626] text-3xl md:text-4xl lg:text-5xl leading-tight">
+                <h1 className="font-bold text-[#262626] text-3xl md:text-4xl lg:text-5xl leading-tight">
                   {title}
                 </h1>
                 {description && (

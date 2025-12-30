@@ -22,9 +22,12 @@ const App = () => {
           },
           Button: {
             controlHeight: 44,
+            controlHeightSM: 40,
             borderRadius: 99,
+            borderRadiusSM: 99,
             colorPrimaryText: "white",
             paddingInline: 16,
+            paddingInlineSM: 16,
             // paddingBlock: 10,
             // paddingInlineSM: 12,
 

@@ -11,9 +11,9 @@ const InputText = ({
   ...rest
 }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex w-full items-center flex-col gap-2">
       {label && (
-        <p className="text-[#171717] font-semibold text-[16px] leading-6">
+        <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
           {label}
         </p>
       )}
@@ -23,7 +23,7 @@ const InputText = ({
         placeholder={placeholder}
         prefix={PrefixIcon ? <PrefixIcon /> : null}
         suffix={SuffixIcon ? <SuffixIcon /> : null}
-        className={`w-full rounded-lg border border-[#E5E5E5] ${
+        className={`w-full! rounded-lg border border-[#E5E5E5] ${
           className ?? ""
         }`}
         style={{ height: "44px" }}
