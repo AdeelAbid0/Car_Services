@@ -7,7 +7,7 @@ import { PublicRoutes } from "../../Routes/routing";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [activeNav, setActiveNav] = useState("Home"); // Set Home as default active
+  const [activeNav, setActiveNav] = useState("Home");
 
   return (
     <div className="flex w-full justify-between h-10">

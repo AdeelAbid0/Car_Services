@@ -6,7 +6,7 @@ import { Button } from "antd";
 import CustomCalendar from "./Components/Calendar";
 import Locations from "./Components/Locations";
 import Services from "./Components/Services";
-import Packages from "../../Pages/Packages/Packages";
+// Remove Packages import from here
 
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -30,6 +30,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative">
+      {/* Background Image with Gradient Bars */}
       <div className="relative">
         <img
           src="/Images/hero-image.png"
@@ -59,11 +60,13 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Hero Content */}
       <div className="absolute inset-0 z-20">
-        <div className="relative w-full h-auto px-18 py-6 z-10 ">
+        <div className="relative w-full h-auto px-18 py-6 z-10">
           <div className="relative z-10">
             <Header />
-            <div className="flex w-full justify-center text-center mt-24 ">
+            <div className="flex w-full justify-center text-center mt-24">
               <h1 className="font-anton max-w-217.5 text-white text-[100px] font-normal text-center leading-[120%] uppercase">
                 All <span className="text-[#9A85FF]">your car services</span>
                 <br />
@@ -125,7 +128,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <Packages />
     </div>
   );
 };
