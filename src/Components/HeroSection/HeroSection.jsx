@@ -32,7 +32,7 @@ const HeroSection = () => {
         <img
           src="/Images/hero-image.png"
           alt=""
-          className="w-full h-auto rounded-bl-4xl rounded-br-4xl"
+          className="w-full h-screen object-cover rounded-bl-4xl rounded-br-4xl"
           id="hero-image"
         />
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
         <div className="absolute z-10 bottom-22 left-15 w-[24%]">
           <div className="flex gap-3 items-center">
             <span className="h-8 border-[3px] border-[#9A85FF]"></span>
-            <p className="text-[16px] font-medium text-white leading-5">
+            <p className="text-[14px] font-medium text-white leading-5">
               Book trusted car services, compare prices, and manage everything
               online.
             </p>
