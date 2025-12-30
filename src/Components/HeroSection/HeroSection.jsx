@@ -6,8 +6,6 @@ import { Button } from "antd";
 import CustomCalendar from "./Components/Calendar";
 import Locations from "./Components/Locations";
 import Services from "./Components/Services";
-// Remove Packages import from here
-
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   const searchInputs = [

@@ -1,17 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "antd";
 import LogoIcon from "../../assets/svg/logo.svg?react";
 import HamburgerIcon from "../../assets/svg/hamburger.svg?react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { PublicRoutes } from "../../Routes/routing";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeNav, setActiveNav] = useState("Home");
+
+  // Update active nav based on URL hash
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    if (hash && ["Home", "Services", "Packages"].includes(hash)) {
+      setActiveNav(hash);
+    }
+  }, [location]);
+
+  const handleNavClick = (item) => {
+    setActiveNav(item);
+
+    // Scroll to section
+    const sectionId = item.toLowerCase();
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      // Smooth scroll to section
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // Update URL with hash without page reload
+      navigate(`/#${sectionId}`, { replace: true });
+    } else {
+      // If on another page, navigate to landing with hash
+      navigate(`${PublicRoutes.Landing.path}#${sectionId}`);
+    }
+  };
 
   return (
     <div className="flex w-full justify-between h-10">
-      <div>
+      <div className="cursor-pointer" onClick={() => handleNavClick("Home")}>
         <LogoIcon />
       </div>
       <div className="flex text-[#737373] font-medium text-[16px] items-center">
@@ -22,7 +53,7 @@ const Header = () => {
               className={`cursor-pointer transition-colors relative ${
                 activeNav === item ? "text-white" : "hover:text-white"
               }`}
-              onClick={() => setActiveNav(item)}
+              onClick={() => handleNavClick(item)}
             >
               {item}
               {activeNav === item && (
