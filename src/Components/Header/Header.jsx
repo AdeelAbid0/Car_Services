@@ -5,13 +5,10 @@ import HamburgerIcon from "../../assets/svg/hamburger.svg?react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { PublicRoutes } from "../../Routes/routing";
 
-const Header = ({ scrolled }) => {
-  // ✅ scrolled prop قبول کریں
+const Header = ({ activeSection, onSectionChange }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeNav, setActiveNav] = useState("Home");
-
-  // Update active nav based on URL hash
   useEffect(() => {
     const hash = location.hash.replace("#", "");
     if (hash && ["Home", "Services", "Packages"].includes(hash)) {
@@ -20,24 +17,13 @@ const Header = ({ scrolled }) => {
   }, [location]);
 
   const handleNavClick = (item) => {
-    setActiveNav(item);
-
-    // Scroll to section
     const sectionId = item.toLowerCase();
     const element = document.getElementById(sectionId);
-
     if (element) {
-      // Smooth scroll to section
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
-
-      // Update URL with hash without page reload
-      navigate(`/#${sectionId}`, { replace: true });
-    } else {
-      // If on another page, navigate to landing with hash
-      navigate(`${PublicRoutes.Landing.path}#${sectionId}`);
     }
   };
 
@@ -52,12 +38,12 @@ const Header = ({ scrolled }) => {
             <li
               key={item}
               className={`cursor-pointer hover:text-white transition-colors relative ${
-                activeNav === item ? "text-white" : ""
+                activeSection === item.toLowerCase() ? "text-white" : ""
               }`}
               onClick={() => handleNavClick(item)}
             >
               {item}
-              {activeNav === item && (
+              {activeSection === item.toLowerCase() && (
                 <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1.5 h-1.25 bg-white rounded-full shrink-0"></span>
               )}
             </li>

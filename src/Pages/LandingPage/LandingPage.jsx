@@ -7,36 +7,42 @@ import Header from "../../Components/Header/Header";
 const LandingPage = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isHomeVisible, setIsHomeVisible] = useState(true);
-
-  // Handle scroll effect
+  const [activeSection, setActiveSection] = useState("home");
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 30;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
-
-      // Check if Home section is visible
+      const sections = ["home", "services", "packages"];
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const isInView =
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2;
+          if (isInView) {
+            setActiveSection(section);
+            window.history.replaceState(null, "", `#${section}`);
+            break;
+          }
+        }
+      }
       const homeSection = document.getElementById("home");
       if (homeSection) {
         const rect = homeSection.getBoundingClientRect();
-        // Check if home section is in viewport
         setIsHomeVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Initial check
     handleScroll();
-
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
 
-  // Handle hash navigation on page load
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
@@ -66,7 +72,11 @@ const LandingPage = () => {
           scrolled ? "bg-[#262626]" : isHomeVisible ? "bg-transparent" : ""
         }`}
       >
-        <Header scrolled={scrolled || !isHomeVisible} />
+        <Header
+          scrolled={scrolled || !isHomeVisible}
+          activeSection={activeSection}
+          onSectionChange={(section) => setActiveSection(section)}
+        />
       </div>
 
       <div className="">
