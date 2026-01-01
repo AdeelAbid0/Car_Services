@@ -26,14 +26,14 @@ export const PublicRoutes = {
     path: "/verify-otp",
     component: VerifyOTP,
   },
-  Services: {
-    id: 5,
-    path: "/services",
-    component: Services,
-  },
-  Packages: {
-    id: 6,
-    path: "/packages",
-    component: Packages,
-  },
+  // Services: {
+  //   id: 5,
+  //   path: "/services",
+  //   component: Services,
+  // },
+  // Packages: {
+  //   id: 6,
+  //   path: "/packages",
+  //   component: Packages,
+  // },
 };

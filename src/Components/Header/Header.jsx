@@ -28,7 +28,7 @@ const Header = ({ activeSection, onSectionChange }) => {
   };
 
   return (
-    <div className="flex w-[calc(100%-144px)] mx-auto justify-between h-10 transition-colors duration-300 my-4">
+    <header className="flex w-[calc(100%-144px)] mx-auto justify-between h-10 transition-colors duration-300 my-4">
       <div className="cursor-pointer" onClick={() => handleNavClick("Home")}>
         <LogoIcon />
       </div>
@@ -62,7 +62,7 @@ const Header = ({ activeSection, onSectionChange }) => {
         </Button>
         <HamburgerIcon className="cursor-pointer" />
       </div>
-    </div>
+    </header>
   );
 };
 

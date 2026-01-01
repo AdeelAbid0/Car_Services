@@ -85,7 +85,7 @@ const HeroSection = () => {
                       onMouseEnter={() => setActiveTab(input.id)}
                     >
                       <div
-                        className={`px-10 py-2 rounded-full transition-colors duration-300 cursor-pointer ${
+                        className={`shrink-0 px-10 py-2 rounded-full transition-colors duration-300 cursor-pointer ${
                           activeTab === input.id
                             ? "bg-[#F4F2FF]"
                             : "hover:bg-[#F4F2FF]"
