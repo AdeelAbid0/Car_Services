@@ -3,6 +3,7 @@ import LandingPage from "../Pages/LandingPage/LandingPage";
 import Login from "../Pages/Login/Login";
 import Packages from "../Pages/Packages/Packages";
 import Register from "../Pages/Register/Register";
+import RegisterPartner from "../Pages/RegisterPartner/RegisterPartner";
 import VerifyOTP from "../Pages/VerifyOTP/VerifyOTP";
 
 export const PublicRoutes = {
@@ -16,13 +17,18 @@ export const PublicRoutes = {
     path: "/login",
     component: Login,
   },
-  Register: {
+  RegisterUser: {
     id: 3,
-    path: "/register",
+    path: "/register/user",
     component: Register,
   },
-  VerifyOTP: {
+  RegisterPartner: {
     id: 4,
+    path: "/register/partner",
+    component: RegisterPartner,
+  },
+  VerifyOTP: {
+    id: 5,
     path: "/verify-otp",
     component: VerifyOTP,
   },

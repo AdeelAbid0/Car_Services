@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full">
         <BgGradientBlue />
       </div>
-      <div className="relative flex w-full flex-col px-50 m-1 bg-[#262626] z-10">
+      <div className="relative flex flex-col px-50 m-1 bg-[#262626] z-10">
         <div className="flex w-full justify-between pt-22.5 pb-5">
           <div className="flex w-[25%] flex-col gap-7">
             <Logo />
@@ -86,7 +86,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-      <div className="absolute bottom-0 left-[50%] w-full">
+      <div className="absolute bottom-0 left-[51%] w-full">
         <BgGradientOrange />
       </div>
     </footer>
