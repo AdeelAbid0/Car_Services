@@ -1,6 +1,5 @@
-import { Button } from "antd";
+import Button from "../../ui/Button/Button";
 import Logo from "../../assets/svg/logo-partner.svg?react";
-
 const AuthCardPartner = ({
   title,
   description,
@@ -45,15 +44,16 @@ const AuthCardPartner = ({
           <div className="flex w-full gap-2 mt-8">
             <Button
               type="default"
-              className="w-full text-[#9A85FF]! bg-[#F4F2FF]! hover:bg-[#F4F2FF]! hover:text-[#9A85FF]!"
+              label={"Go back"}
               onClick={onBack}
               disabled={currentStep === 1}
-            >
-              Go back
-            </Button>
-            <Button type="primary" className="w-full" onClick={onNext}>
-              {currentStep === totalSteps ? "Submit" : "Continue"}
-            </Button>
+            />
+
+            <Button
+              type="primary"
+              label={currentStep === totalSteps ? "Submit" : "Continue"}
+              onClick={onNext}
+            />
           </div>
         </div>
       </div>

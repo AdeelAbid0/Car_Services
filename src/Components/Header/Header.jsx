@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Button } from "antd";
 import LogoIcon from "../../assets/svg/logo.svg?react";
 import HamburgerIcon from "../../assets/svg/hamburger.svg?react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { PublicRoutes } from "../../Routes/routing";
+import Button from "../../ui/Button/Button";
 
 const Header = ({ activeSection, onSectionChange }) => {
   const navigate = useNavigate();
@@ -52,14 +52,13 @@ const Header = ({ activeSection, onSectionChange }) => {
       </div>
       <div className="flex items-center gap-6">
         <Button
-          size="small"
-          className="bg-[#F4F2FF]! text-[#9A85FF]! border border-[#D8D4FF] hover:bg-[#F4F2FF]!"
+          type="default"
+          label={"Join as Partner"}
           onClick={() => {
-            navigate(PublicRoutes.Login.path);
+            navigate(PublicRoutes.RegisterPartner.path);
           }}
-        >
-          Join as Partner
-        </Button>
+        />
+
         <HamburgerIcon className="cursor-pointer" />
       </div>
     </header>

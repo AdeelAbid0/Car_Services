@@ -1,5 +1,5 @@
-import { Button } from "antd";
 import GoogleIcon from "../../assets/svg/google-icon.svg?react";
+import Button from "../../ui/Button/Button";
 const AuthCard = ({
   title,
   description,
@@ -61,12 +61,11 @@ const AuthCard = ({
                 {buttonText && (
                   <Button
                     type="primary"
+                    label={buttonText}
+                    suffixIcon={buttonIcon}
                     onClick={() => {}}
                     className="w-full bg-[#9A85FF] hover:bg-[#7d6cd3] text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
-                    {buttonText}
-                    {buttonIcon && <span>{buttonIcon}</span>}
-                  </Button>
+                  />
                 )}
 
                 {showGoogleButton && (
@@ -81,11 +80,10 @@ const AuthCard = ({
                     </div>
                     <div className="mt-9">
                       <Button
-                        className="w-full bg-[#EAE8FF]! text-black! hover:bg-[#d9d6f2]! h-auto py-2.5 flex items-center justify-center gap-2"
-                        icon={<GoogleIcon />}
-                      >
-                        {googleButtonText}
-                      </Button>
+                        type="default"
+                        label={googleButtonText}
+                        prefixIcon={<GoogleIcon />}
+                      />
                     </div>
                   </>
                 )}
@@ -93,17 +91,14 @@ const AuthCard = ({
 
               {/* Footer Link */}
               {footerText && (
-                <div className="text-[#262626]! font-medium text-sm">
-                  <p>
-                    {footerText}{" "}
-                    <Button
-                      type="link"
-                      onClick={onFooterLinkClick}
-                      className="px-0! py-0! h-auto! underline cursor-pointer font-medium"
-                    >
-                      {footerLinkText}
-                    </Button>
-                  </p>
+                <div className="flex shrink-0 items-center justify-center gap-1 text-[#262626]! font-medium text-sm">
+                  <span className="flex shrink-0">{footerText}</span>
+                  <Button
+                    type="link"
+                    label={footerLinkText}
+                    onClick={onFooterLinkClick}
+                    className="inline-block"
+                  />
                 </div>
               )}
             </div>

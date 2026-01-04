@@ -1,5 +1,5 @@
-import { Button, Checkbox } from "antd";
-import InputText from "../../Common/InputText/InputText";
+import { Checkbox } from "antd";
+import InputText from "../../ui/InputText/InputText";
 import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
 import MailIcon from "../../assets/svg/mail-placeholder.svg?react";
 import PasswordIcon from "../../assets/svg/password-placeholder.svg?react";
@@ -7,6 +7,7 @@ import EyeIcon from "../../assets/svg/eye-icon.svg?react";
 import AuthCard from "../../Components/AuthCard/AuthCard";
 import { useNavigate } from "react-router-dom";
 import { PublicRoutes } from "../../Routes/routing";
+import Button from "../../ui/Button/Button";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -53,17 +54,18 @@ const Login = () => {
           type="password"
           className="w-full"
         />
-        <div className="flex justify-between items-center">
-          <Checkbox className="text-[#262626] font-medium leading-5">
-            Remember me
-          </Checkbox>
+        <div className="flex w-full justify-between items-center">
+          <div className="flex items-center gap-2">
+            <Checkbox className="m-0" />
+            <span className="text-[#262626] font-medium leading-5">
+              Remember me
+            </span>
+          </div>
           <Button
             type="link"
+            label="Forgot password?"
             onClick={handleForgotPassword}
-            className="px-0! py-0! h-auto! text-[#9A85FF] font-medium text-sm"
-          >
-            Forgot password?
-          </Button>
+          />
         </div>
       </div>
     </AuthCard>

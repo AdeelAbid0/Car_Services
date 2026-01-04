@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InputText from "../../Common/InputText/InputText";
+import InputText from "../../ui/InputText/InputText";
 import AuthCardPartner from "../../Components/AuthCardPartner/AuthCardPartner";
 import PartnerIcon from "../../assets/svg/partner.svg?react";
 import UserIcon from "../../assets/svg/user.svg?react";
