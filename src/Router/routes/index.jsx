@@ -1,4 +1,4 @@
-import { AUTH_ROUTES } from "./auth.routes";
-import { LANDINGPAGE_ROUTES } from "./landingpage.routes";
+// exporting all routes from same file
 
-export const appRoutes = [...AUTH_ROUTES, ...LANDINGPAGE_ROUTES];
+export { AUTH_ROUTES } from "./auth.routes";
+export { LANDINGPAGE_ROUTES } from "./landingpage.routes";
