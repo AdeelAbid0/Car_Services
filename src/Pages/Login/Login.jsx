@@ -8,11 +8,23 @@ import AuthCard from "../../Components/AuthCard/AuthCard";
 import { useNavigate } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import { ROUTES } from "../../constants/routes";
+import { useFormik } from "formik";
+import { LoginInitialValues } from "./Formik/login.initialvalues";
+import { LoginValidationSchema } from "./Formik/login.validationschema";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const formik = useFormik({
+    initialValues: LoginInitialValues,
+    validationSchema: LoginValidationSchema,
+    onSubmit: (values) => {
+      console.log({ values });
+    },
+  });
+
   const handleLogin = () => {
-    console.log("Login clicked");
+    formik.handleSubmit();
   };
 
   const handleGoogleLogin = () => {
@@ -44,6 +56,8 @@ const Login = () => {
           label="Email"
           placeholder="Enter email"
           prefixIcon={MailIcon}
+          name="email"
+          formik={formik}
           className="w-full"
         />
         <InputText
@@ -52,6 +66,8 @@ const Login = () => {
           prefixIcon={PasswordIcon}
           suffixIcon={EyeIcon}
           type="password"
+          name="password"
+          formik={formik}
           className="w-full"
         />
         <div className="flex w-full justify-between items-center">

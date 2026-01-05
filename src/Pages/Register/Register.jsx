@@ -8,10 +8,21 @@ import UserIcon from "../../assets/svg/user.svg?react";
 import AuthCard from "../../Components/AuthCard/AuthCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
+import { useFormik } from "formik";
+import { RegisterUserInitialValues } from "./Formik/register.initialvalues";
+import { RegisterValidationSchema } from "./Formik/register.validationschema";
+
 const Register = () => {
   const navigate = useNavigate();
+  const formik = useFormik({
+    initialValues: RegisterUserInitialValues,
+    validationSchema: RegisterValidationSchema,
+    onSubmit: (values) => {
+      console.log("Form submitted:", values);
+    },
+  });
   const handleRegister = () => {
-    console.log("Register clicked");
+    formik.handleSubmit();
   };
 
   const handleGoogleRegister = () => {
@@ -37,6 +48,8 @@ const Register = () => {
       <div className="w-full space-y-4">
         <InputText
           label="Name"
+          name="name"
+          formik={formik}
           placeholder="Enter name"
           prefixIcon={UserIcon}
           className="w-full"
@@ -45,6 +58,8 @@ const Register = () => {
           label="Email"
           placeholder="Enter email"
           prefixIcon={MailIcon}
+          name="email"
+          formik={formik}
           className="w-full"
         />
         <InputText
@@ -53,6 +68,8 @@ const Register = () => {
           prefixIcon={PasswordIcon}
           suffixIcon={EyeIcon}
           type="password"
+          name="password"
+          formik={formik}
           className="w-full"
         />
         <InputText
@@ -61,10 +78,19 @@ const Register = () => {
           prefixIcon={PasswordIcon}
           suffixIcon={EyeIcon}
           type="password"
+          name="confirmPassword"
+          formik={formik}
           className="w-full"
         />
         <div className="flex items-center">
-          <Checkbox className="text-[#262626] font-medium leading-5">
+          <Checkbox
+            name="terms"
+            checked={formik.values.terms}
+            onChange={(e) => {
+              formik.setFieldValue("terms", e.target.checked);
+            }}
+            className="text-[#262626] font-medium"
+          >
             I agree to the Terms of Service and Privacy Policy
           </Checkbox>
         </div>

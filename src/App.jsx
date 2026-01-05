@@ -28,6 +28,12 @@ const App = () => {
               hoverBorderColor: "#6E44FF",
               activeBorderColor: "#6E44FF",
               activeShadow: "0px 0px 0px 4px #DBEAFE",
+              colorError: "#EF4444",
+              colorErrorBg: "#EF4444",
+              colorErrorBorder: "#EF4444  ",
+              colorErrorText: "#EF4444  ",
+              errorActiveShadow: "0px 0px 0px 4px #EF444422",
+              errorHoverShadow: "0px 0px 0px 4px black",
             },
             Button: {
               controlHeight: 44,
