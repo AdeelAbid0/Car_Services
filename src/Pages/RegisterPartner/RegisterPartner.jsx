@@ -4,6 +4,11 @@ import AuthCardPartner from "../../Components/AuthCardPartner/AuthCardPartner";
 import PartnerIcon from "../../assets/svg/partner.svg?react";
 import UserIcon from "../../assets/svg/user.svg?react";
 import EmailIcon from "../../assets/svg/mail-placeholder.svg?react";
+import LocationPlaceholder from "../../assets/svg/location-placeholder.svg?react";
+import EditIcon from "../../assets/svg/edit.svg?react";
+import UploadIcon from "../../assets/svg/upload-cloud.svg?react";
+import InputTextArea from "../../ui/InputTextArea/InputTextArea";
+import UploadImage from "../../Components/UploadImage/UploadImage";
 // import BuildingIcon from "../../assets/svg/building.svg?react";
 // import LocationIcon from "../../assets/svg/location.svg?react";
 // import ImageIcon from "../../assets/svg/image.svg?react";
@@ -34,9 +39,7 @@ const RegisterPartner = () => {
     if (currentStep < 4) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Submit form logic here
       console.log("Form submitted:", formData);
-      // Add your form submission logic
     }
   };
 
@@ -68,6 +71,10 @@ const RegisterPartner = () => {
         };
       }
     });
+  };
+
+  const handleUpload = () => {
+    console.log("handle upload");
   };
 
   const renderStepContent = () => {
@@ -105,7 +112,7 @@ const RegisterPartner = () => {
             <InputText
               label={"Business Name"}
               placeholder={"Enter business name"}
-              // prefixIcon={BuildingIcon}
+              prefixIcon={UserIcon}
               value={formData.businessName}
               onChange={(e) =>
                 handleInputChange("businessName", e.target.value)
@@ -114,7 +121,7 @@ const RegisterPartner = () => {
             <InputText
               label={"Location"}
               placeholder={"Enter location"}
-              // prefixIcon={LocationIcon}
+              prefixIcon={LocationPlaceholder}
               value={formData.location}
               onChange={(e) => handleInputChange("location", e.target.value)}
             />
@@ -122,6 +129,15 @@ const RegisterPartner = () => {
               <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
                 Map pin selection
               </p>
+              <div className="flex w-full rounded-2xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26582.945925006887!2d73.14608095274605!3d33.60872299289165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfec0851d92db3%3A0x66f28b1327836ee2!2sGulberg%20Greens%20Islamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1767599039578!5m2!1sen!2s"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  className="w-full rounded-2xl max-h-27.5"
+                ></iframe>
+              </div>
             </div>
           </div>
         );
@@ -152,39 +168,32 @@ const RegisterPartner = () => {
                 </div>
               ))}
             </div>
+            <div>
+              <InputText
+                label={"other"}
+                placeholder={"Other service name"}
+                prefixIcon={EditIcon}
+              />
+            </div>
           </div>
         );
 
       case 4:
         return (
           <div className="flex flex-col gap-2 mt-9">
-            <div className="border-2 border-dashed border-[#9A85FF] rounded-2xl p-8 text-center bg-[#F4F2FF]">
-              <div className="flex flex-col items-center gap-3">
-                {/* <ImageIcon className="w-12 h-12 text-[#9A85FF]" /> */}
-                <div>
-                  <p className="text-[16px] text-[#262626] font-medium">
-                    Drag & drop your images here
-                  </p>
-                  <p className="text-[14px] text-[#737373]">
-                    or click to browse
-                  </p>
-                </div>
-                <p className="text-[12px] text-[#737373]">
-                  Supported formats: JPG, PNG, GIF (Max 5MB each)
-                </p>
-              </div>
+            <div>
+              <UploadImage
+                svg={<UploadIcon />}
+                title={"Upload"}
+                description={"Images must be in JPEG or PNG - 10mb max"}
+                handleUpload={handleUpload}
+              />
             </div>
-
-            <div className="mt-6">
-              <InputText
-                label={"Description"}
-                placeholder={"Add service description..."}
-                type="textarea"
+            <div>
+              <InputTextArea
+                placeholder={"Write description"}
+                prefix={EditIcon}
                 rows={4}
-                value={formData.description}
-                onChange={(e) =>
-                  handleInputChange("description", e.target.value)
-                }
               />
             </div>
           </div>

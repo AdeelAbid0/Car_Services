@@ -1,5 +1,6 @@
 import Button from "../../ui/Button/Button";
 import Logo from "../../assets/svg/logo-partner.svg?react";
+import ArrowLeft from "../../assets/svg/arrow-left.svg?react";
 const AuthCardPartner = ({
   title,
   description,
@@ -45,6 +46,7 @@ const AuthCardPartner = ({
             <Button
               type="default"
               label={"Go back"}
+              prefixIcon={<ArrowLeft />}
               onClick={onBack}
               disabled={currentStep === 1}
             />
