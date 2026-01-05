@@ -2,14 +2,16 @@
 
 /* Tailwind theme define */
 @theme {
+  --font-roboto: "Roboto", sans-serif;
   --font-dmsans: "DM sans", sans-serif;
   --font-anton: "Anton", sans-serif;
 }
 
 /* Base styles */
 @layer base {
-  html {
-    font-family: var(--font-dmsans) !important;
+  html,
+  body {
+    font-family: var(--font-roboto) !important;
   }
 
   p,

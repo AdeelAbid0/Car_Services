@@ -6,8 +6,8 @@ import PasswordIcon from "../../assets/svg/password-placeholder.svg?react";
 import EyeIcon from "../../assets/svg/eye-icon.svg?react";
 import AuthCard from "../../Components/AuthCard/AuthCard";
 import { useNavigate } from "react-router-dom";
-import { PublicRoutes } from "../../Routes/routing";
 import Button from "../../ui/Button/Button";
+import { ROUTES } from "../../constants/routes";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   const handleSignUpClick = () => {
-    navigate(PublicRoutes.Register.path);
+    navigate(ROUTES.REGISTER_USER);
   };
 
   const handleForgotPassword = () => {

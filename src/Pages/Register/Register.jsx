@@ -7,8 +7,7 @@ import EyeIcon from "../../assets/svg/eye-icon.svg?react";
 import UserIcon from "../../assets/svg/user.svg?react";
 import AuthCard from "../../Components/AuthCard/AuthCard";
 import { useNavigate } from "react-router-dom";
-import { PublicRoutes } from "../../Routes/routing";
-
+import { ROUTES } from "../../constants/routes";
 const Register = () => {
   const navigate = useNavigate();
   const handleRegister = () => {
@@ -20,7 +19,7 @@ const Register = () => {
   };
 
   const handleLoginClick = () => {
-    navigate(PublicRoutes.Login.path);
+    navigate(ROUTES.LOGIN);
   };
 
   return (

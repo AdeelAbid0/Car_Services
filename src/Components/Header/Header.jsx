@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import LogoIcon from "../../assets/svg/logo.svg?react";
 import HamburgerIcon from "../../assets/svg/hamburger.svg?react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { PublicRoutes } from "../../Routes/routing";
 import Button from "../../ui/Button/Button";
+import { ROUTES } from "../../constants/routes";
 
 const Header = ({ activeSection, onSectionChange }) => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const Header = ({ activeSection, onSectionChange }) => {
           type="default"
           label={"Join as Partner"}
           onClick={() => {
-            navigate(PublicRoutes.RegisterPartner.path);
+            navigate(ROUTES.PARTNER_REGISTER);
           }}
         />
 

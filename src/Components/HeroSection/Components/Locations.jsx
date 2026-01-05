@@ -46,7 +46,7 @@ const Locations = () => {
             {[1, 2, 3].map((item) => {
               return (
                 <div className="flex flex-col gap-1  mt-2.5">
-                  <h1 className="font-inter text-[13px] font-normal text-[#262626]">
+                  <h1 className="text-[13px] font-normal text-[#262626]">
                     F-8 Markaz, Islamabad
                   </h1>
                   <p className="font-normal text-[#737373] text-[10px]">
