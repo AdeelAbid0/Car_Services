@@ -1,12 +1,15 @@
 import React from "react";
+import Header from "../../Components/Header/Header";
 
 const Packages = () => {
   return (
     <div
-      className="flex w-full h-screen justify-center items-center bg-amber-400"
-      id="packages"
+      className="flex w-full h-screen justify-center items-center bg-amber-200"
+      id="services"
     >
-      <h1>Packages</h1>
+      <div className="absolute w-full top-0">
+        <Header />
+      </div>
     </div>
   );
 };

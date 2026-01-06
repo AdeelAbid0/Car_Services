@@ -33,10 +33,10 @@ const VerifyOTP = () => {
             length={6}
             // value={otp}
             // onChange={(value) => setOtp(value)}
-            className="otp-input"
             style={{
-              "--otp-input-gap": "0.5rem",
-              "--otp-input-size": "3.5rem",
+              "--antd-otp-input-width": "48px",
+              "--antd-otp-input-height": "48px",
+              "--antd-otp-input-padding": "0", // agar padding adjust karni ho
             }}
           />
         </div>
