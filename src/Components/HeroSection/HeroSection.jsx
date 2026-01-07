@@ -29,12 +29,9 @@ const HeroSection = () => {
     },
   ];
 
-  // Calculate hero height based on active tab
   useEffect(() => {
     if (activeTab === 3) {
-      // When calendar is open
       setHeroHeight("auto");
-      // Add a small delay to ensure DOM is updated
       setTimeout(() => {
         if (heroRef.current) {
           const totalHeight = heroRef.current.scrollHeight;
@@ -48,7 +45,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative" ref={heroRef}>
-      {/* Background Image with Gradient Bars - Fixed Position */}
       <div className="fixed inset-0 z-0">
         <img
           src="/Images/hero-image.png"
@@ -138,7 +134,7 @@ const HeroSection = () => {
                   </Button>
                 </div>
 
-                {/* Dropdown Content - Position absolute to prevent pushing content */}
+                {/* Dropdown Content */}
                 <div className="relative w-full">
                   {activeTab === 1 && (
                     <div className="absolute top-2 left-0 right-0 z-40">
