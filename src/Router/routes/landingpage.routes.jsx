@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 const LandingPage = lazy(() => import("../../Pages/LandingPage/LandingPage"));
 const Services = lazy(() => import("../../Pages/Services/Services"));
-const Packages = lazy(() => import("../../Pages/Packages/Packages"));
+const Partners = lazy(() => import("../../Pages/Partners/Partners"));
 
 export const LANDINGPAGE_ROUTES = [
   {
@@ -14,8 +14,8 @@ export const LANDINGPAGE_ROUTES = [
     element: <Services />,
   },
   {
-    path: ROUTES.PACKAGES,
-    element: <Packages />,
+    path: ROUTES.PARTNERS,
+    element: <Partners />,
   },
   {
     path: "*",

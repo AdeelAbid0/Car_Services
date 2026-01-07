@@ -16,7 +16,7 @@ const AuthCard = ({
   imageSrc = "/Images/hero-image.png",
 }) => {
   return (
-    <div className="relative flex w-full min-h-[90vh]">
+    <div className="relative flex w-full h-screen">
       {/* Background Images */}
       <img
         src="/login.png"

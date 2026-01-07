@@ -134,7 +134,7 @@ const CustomCalendar = () => {
   const days = getDaysInMonth(currentDate);
 
   return (
-    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-full p-5">
+    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-full  p-5">
       <div className="bg-white rounded-2xl p-5 w-full">
         <div className="flex gap-6">
           {/* Calendar Section */}

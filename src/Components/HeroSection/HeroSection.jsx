@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import SearchIcon from "../../assets/svg/search.svg?react";
 import HeroSendIcon from "../../assets/svg/hero-send.svg?react";
 import { Button } from "antd";
-import CustomCalendar from "./Components/Calendar";
+import CustomCalendar from "../Calendar/Calendar";
 import Locations from "./Components/Locations";
 import Services from "./Components/Services";
+
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [heroHeight, setHeroHeight] = useState("100vh");
+  const heroRef = useRef(null);
+
   const searchInputs = [
     {
       id: 1,
@@ -25,14 +29,31 @@ const HeroSection = () => {
     },
   ];
 
+  // Calculate hero height based on active tab
+  useEffect(() => {
+    if (activeTab === 3) {
+      // When calendar is open
+      setHeroHeight("auto");
+      // Add a small delay to ensure DOM is updated
+      setTimeout(() => {
+        if (heroRef.current) {
+          const totalHeight = heroRef.current.scrollHeight;
+          setHeroHeight(`${totalHeight}px`);
+        }
+      }, 100);
+    } else {
+      setHeroHeight("100vh");
+    }
+  }, [activeTab]);
+
   return (
-    <div className="relative" id="home">
-      {/* Background Image with Gradient Bars */}
-      <div className="relative">
+    <div className="relative" ref={heroRef}>
+      {/* Background Image with Gradient Bars - Fixed Position */}
+      <div className="fixed inset-0 z-0">
         <img
           src="/Images/hero-image.png"
           alt=""
-          className="w-full h-screen object-cover rounded-bl-4xl rounded-br-4xl"
+          className="w-full h-screen object-cover"
           id="hero-image"
         />
 
@@ -59,7 +80,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="absolute inset-0 z-20">
+      <div className="relative z-20" style={{ minHeight: heroHeight }}>
         <div className="relative w-full h-auto px-18 py-6 z-10">
           <div className="relative z-10">
             <div className="flex w-full justify-center text-center mt-24">
@@ -77,7 +98,7 @@ const HeroSection = () => {
                   setActiveTab(null);
                 }}
               >
-                <div className="flex items-center bg-white rounded-full p-1 w-full relative">
+                <div className="flex items-center bg-white rounded-full p-1 w-full relative z-30">
                   {searchInputs.map((input, index) => (
                     <div
                       key={input.id}
@@ -116,9 +137,25 @@ const HeroSection = () => {
                     <SearchIcon className="w-6 h-6 text-white shrink-0" />
                   </Button>
                 </div>
-                {activeTab === 1 && <Services />}
-                {activeTab === 2 && <Locations />}
-                {activeTab === 3 && <CustomCalendar />}
+
+                {/* Dropdown Content - Position absolute to prevent pushing content */}
+                <div className="relative w-full">
+                  {activeTab === 1 && (
+                    <div className="absolute top-2 left-0 right-0 z-40">
+                      <Services />
+                    </div>
+                  )}
+                  {activeTab === 2 && (
+                    <div className="absolute top-2 left-0 right-0 z-40">
+                      <Locations />
+                    </div>
+                  )}
+                  {activeTab === 3 && (
+                    <div className="absolute top-2 left-0 right-0 z-40">
+                      <CustomCalendar />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

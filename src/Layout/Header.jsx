@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import LogoIcon from "../../assets/svg/logo.svg?react";
-import HamburgerIcon from "../../assets/svg/hamburger.svg?react";
+import LogoIcon from "../assets/svg/logo.svg?react";
+import HamburgerIcon from "../assets/svg/hamburger.svg?react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Button from "../../ui/Button/Button";
-import { ROUTES } from "../../constants/routes";
+import Button from "../ui/Button/Button";
+import { ROUTES } from "../constants/routes";
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -13,7 +13,7 @@ const Header = () => {
     const path = location.pathname;
     if (path === ROUTES.HOME) setActiveNav("Home");
     else if (path === ROUTES.SERVICES) setActiveNav("Services");
-    else if (path === ROUTES.PACKAGES) setActiveNav("Packages");
+    else if (path === ROUTES.PARTNERS) setActiveNav("Partners");
   }, [location]);
   const navItems = [
     {
@@ -36,11 +36,11 @@ const Header = () => {
     },
     {
       id: 3,
-      label: "Packages",
-      path: ROUTES.PACKAGES,
+      label: "Partners",
+      path: ROUTES.PARTNERS,
       action: () => {
-        navigate(ROUTES.PACKAGES);
-        setActiveNav("Packages");
+        navigate(ROUTES.PARTNERS);
+        setActiveNav("Partners");
       },
     },
   ];
@@ -83,7 +83,10 @@ const Header = () => {
         <Button
           type="default"
           label="Join as Partner"
-          onClick={() => navigate(ROUTES.REGISTER_PARTNER)}
+          onClick={() => {
+            console.log("clicked");
+            navigate(ROUTES.PARTNER_REGISTER);
+          }}
           className="text-[#9A85FF] bg-[#F4F2FF] hover:bg-[#E5E0FF]"
         />
         <HamburgerIcon className="cursor-pointer" />

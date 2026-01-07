@@ -2,7 +2,7 @@ export const ROUTES = {
   // Landing page routes
   HOME: "/",
   SERVICES: "/services",
-  PACKAGES: "/packages",
+  PARTNERS: "/partners",
 
   // Auth routes
   LOGIN: "/login",

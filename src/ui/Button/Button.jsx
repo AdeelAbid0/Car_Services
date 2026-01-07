@@ -19,7 +19,7 @@ const Button = ({
         type === "default"
           ? "w-full text-[#9A85FF]! bg-[#F4F2FF]! hover:bg-[#F4F2FF]! hover:text-[#9A85FF]!"
           : type === "link"
-          ? "flex w-auto! px-0! py-0! h-auto! underline cursor-pointer font-medium"
+          ? "flex w-auto! px-0! py-0! h-auto! underline cursor-pointer font-medium underline-offset-3"
           : "w-full"
       } ${className}`}
     >

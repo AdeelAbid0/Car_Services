@@ -18,7 +18,7 @@ const App = () => {
           token: {
             colorPrimary: "#9A85FF",
             borderRadius: 6,
-            fontFamily: "Roboto, sans-serif",
+            fontFamily: "DM Sans, sans-serif",
           },
           components: {
             Input: {
