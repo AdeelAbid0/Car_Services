@@ -46,6 +46,7 @@ const AuthCardPartner = ({
             <Button
               type="default"
               label={"Go back"}
+              width="full"
               prefixIcon={<ArrowLeft />}
               onClick={onBack}
               disabled={currentStep === 1}
@@ -55,6 +56,7 @@ const AuthCardPartner = ({
               type="primary"
               label={currentStep === totalSteps ? "Submit" : "Continue"}
               onClick={onNext}
+              width="full"
             />
           </div>
         </div>

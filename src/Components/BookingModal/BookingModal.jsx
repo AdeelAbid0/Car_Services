@@ -57,7 +57,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
         {/* Content */}
         {showCalendarScreen ? (
           <div className="flex w-full justify-center">
-            <div className="flex w-[50%] items-center flex-col gap-2 p-10 max-h-[70vh] overflow-auto">
+            <div className="flex w-[60%]  items-center flex-col gap-2 p-10 max-h-[80vh] overflow-auto">
               <CustomCalendar />
             </div>
           </div>

@@ -9,9 +9,6 @@ import EditIcon from "../../assets/svg/edit.svg?react";
 import UploadIcon from "../../assets/svg/upload-cloud.svg?react";
 import InputTextArea from "../../ui/InputTextArea/InputTextArea";
 import UploadImage from "../../Components/UploadImage/UploadImage";
-// import BuildingIcon from "../../assets/svg/building.svg?react";
-// import LocationIcon from "../../assets/svg/location.svg?react";
-// import ImageIcon from "../../assets/svg/image.svg?react";
 
 const RegisterPartner = () => {
   const [currentStep, setCurrentStep] = useState(1);

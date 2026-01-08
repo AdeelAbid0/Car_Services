@@ -10,4 +10,7 @@ export const ROUTES = {
   PARTNER_REGISTER: "/register-partner",
   FORGOT_PASSWORD: "/forgot-password",
   VERIFY_OTP: "/verify-otp",
+
+  // Private routes
+  BOOKINGS: "/bookings",
 };

@@ -33,7 +33,11 @@ const CustomCalendar = () => {
     "7:30 PM",
     "8:00 PM",
     "8:30 PM",
-    "9:00 PM",
+    // "9:00 PM",
+    // "9:30 PM",
+    // "10:00 PM",
+    // "10:30 PM",
+    // "11:00 PM",
   ];
 
   const getDaysInMonth = (date) => {
@@ -114,6 +118,13 @@ const CustomCalendar = () => {
     setSelectedDate(nextWeek);
   };
 
+  const handleTomorrow = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    setCurrentDate(tomorrow);
+    setSelectedDate(tomorrow);
+  };
+
   const isSameDay = (date1, date2) => {
     return (
       date1.getDate() === date2.getDate() &&
@@ -134,49 +145,42 @@ const CustomCalendar = () => {
   const days = getDaysInMonth(currentDate);
 
   return (
-    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-full  p-5">
-      <div className="bg-white rounded-2xl p-5 w-full">
+    <div className="flex items-center bg-white rounded-2xl w-full">
+      <div className="bg-white rounded-2xl p-4 w-full">
         <div className="flex gap-6">
-          {/* Calendar Section */}
-          <div className="flex-1">
-            {/* Month Navigation */}
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-gray-700">
+          {/* Calendar Section - Smaller */}
+          <div className="flex-1 min-w-69">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-base font-semibold text-gray-700">
                 {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
               </h2>
-              <div className="flex gap-2">
-                <Button
+              <div className="flex gap-1">
+                <span
+                  className="flex justify-center items-center text-[#9A85FF]! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-[#9A85FF] transition cursor-pointer"
                   onClick={handlePrevMonth}
-                  className="flex items-center justify-center w-8 h-8 p-0 rounded-sm border border-[#F4F2FF] hover:border-[#9A85FF] transition"
-                  icon={
-                    <LeftOutlined style={{ fontSize: "12px", color: "#666" }} />
-                  }
-                />
-                <Button
+                >
+                  <LeftOutlined className="w-2 h-2" />
+                </span>
+                <span
+                  className="flex justify-center items-center text-[#9A85FF]! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-[#9A85FF] transition cursor-pointer"
                   onClick={handleNextMonth}
-                  className="flex items-center justify-center w-8 h-8 p-0 rounded-sm border border-[#F4F2FF] hover:border-[#9A85FF] transition"
-                  icon={
-                    <RightOutlined
-                      style={{ fontSize: "12px", color: "#666" }}
-                    />
-                  }
-                />
+                >
+                  <RightOutlined className="w-2 h-2" />
+                </span>
               </div>
             </div>
-
             {/* Day Headers */}
-            <div className="grid grid-cols-7 gap-2 mb-2">
+            <div className="grid grid-cols-7 gap-2.5 mb-1">
               {dayNames.map((day) => (
                 <div
                   key={day}
-                  className="text-center text-xs font-medium text-gray-500"
+                  className="text-center text-xs font-medium text-gray-500 py-1"
                 >
                   {day}
                 </div>
               ))}
             </div>
-
-            {/* Calendar Days */}
+            {/* Calendar Days - Smaller */}
             <div className="grid grid-cols-7 gap-2">
               {days.map((dateObj, idx) => {
                 const isCurrentDay = isToday(dateObj.date);
@@ -187,42 +191,47 @@ const CustomCalendar = () => {
                     key={idx}
                     onClick={() => handleDateClick(dateObj)}
                     className={`
-                    aspect-square flex items-center justify-center text-sm
-                    transition-all duration-200 border rounded-sm
-                    ${
-                      !dateObj.isCurrentMonth
-                        ? "text-gray-300"
-                        : "text-gray-700"
-                    }
-                    ${
-                      isCurrentDay
-                        ? "border-[#9A85FF] text-[#9A85FF]"
-                        : "border-none"
-                    }
-                    ${
-                      isSelectedDay
-                        ? "bg-[#9A85FF]! text-white! border-[#9A85FF]!"
-                        : "hover:bg-[#F4F2FF]"
-                    }
-                  `}
+                      w-9 h-8 flex items-center justify-center text-xs
+                      transition-all duration-200 border rounded-sm
+                      ${
+                        !dateObj.isCurrentMonth
+                          ? "text-gray-300"
+                          : "text-gray-700"
+                      }
+                      ${
+                        isCurrentDay
+                          ? "border-[#9A85FF] text-[#9A85FF]"
+                          : "border-none"
+                      }
+                      ${
+                        isSelectedDay
+                          ? "bg-[#9A85FF]! text-white! border-[#9A85FF]!"
+                          : "hover:bg-[#F4F2FF]"
+                      }
+                    `}
                   >
                     {dateObj.day}
                   </button>
                 );
               })}
             </div>
-
             {/* Action Buttons */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-2 mt-4">
               <button
                 onClick={handleToday}
-                className="flex-1 py-2 text-sm text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
               >
                 Today
               </button>
               <button
+                onClick={handleTomorrow}
+                className="flex-1 py-1.5 text-xs text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+              >
+                Tomorrow
+              </button>
+              <button
                 onClick={handleNextWeek}
-                className="flex-1 py-2 text-sm text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
               >
                 Next Week
               </button>
@@ -232,26 +241,30 @@ const CustomCalendar = () => {
           {/* Divider */}
           <div className="w-px bg-gray-200"></div>
 
-          {/* Time Selection */}
-          <div className="w-32">
+          {/* Time Selection - Larger */}
+          <div className="flex-1 max-w-50">
             <div className="mb-4">
-              <div className="text-sm font-semibold text-gray-700">
-                {dayNames[selectedDate.getDay()]} {selectedDate.getDate()}
+              <div className="text-base font-semibold text-gray-700 mb-1">
+                {dayNames[selectedDate.getDay()]}, {selectedDate.getDate()}{" "}
+                {monthNames[selectedDate.getMonth()]}
               </div>
+              <div className="text-xs text-gray-500">Select a time slot</div>
             </div>
-            <div className="flex flex-col gap-1">
+            {/* Time slots with scroll */}
+            <div className="flex flex-col gap-2 max-h-70 overflow-y-auto pr-1">
               {times.map((time) => (
                 <button
                   key={time}
                   onClick={() => handleTimeClick(time)}
                   className={`
-                  w-full py-2 flex justify-center text-sm text-left rounded-lg transition border border-[#EAE8FF] cursor-pointer
-                  ${
-                    selectedTime === time
-                      ? "bg-[#9A85FF] text-white! border-[#9A85FF]"
-                      : "text-black hover:bg-[#F4F2FF] hover:border-[#9A85FF]"
-                  }
-                `}
+                    w-full flex justify-center items-center py-1 px-4 text-sm rounded-lg 
+                    transition border cursor-pointer
+                    ${
+                      selectedTime === time
+                        ? "bg-[#9A85FF] text-white! border-[#9A85FF]"
+                        : "text-gray-700 border-[#EAE8FF] hover:bg-[#F4F2FF] hover:border-[#9A85FF]"
+                    }
+                  `}
                 >
                   {time}
                 </button>
