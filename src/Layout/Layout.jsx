@@ -5,25 +5,33 @@ import { useEffect, useState } from "react";
 import { AUTH_ROUTES } from "../Router/routes";
 
 const Layout = () => {
-  const [currentPath, setCurrentPath] = useState();
+  const [isAuthRoute, setIsAuthRoute] = useState(false);
   const location = useLocation();
   const auth_routes = AUTH_ROUTES;
 
   const Routes = useRoutes(appRoutes);
+
   useEffect(() => {
-    const currentRoute = auth_routes?.find(
-      (item) => item.path === location.pathname
+    // Check if current path is an auth route
+    const isCurrentPathAuthRoute = auth_routes?.some(
+      (route) => route.path === location.pathname
     );
-    setCurrentPath(currentRoute);
-  }, [location]);
+    setIsAuthRoute(isCurrentPathAuthRoute);
+  }, [location, auth_routes]);
+
   return (
     <div className="relative w-full bg-[#F5F5F5]">
-      {!currentPath && (
+      {!isAuthRoute && (
         <div className="w-full fixed z-40">
           <Header />
         </div>
       )}
-      <div className="h-[calc(100vh-87px)] mt-21.75">{Routes}</div>
+
+      <div
+        className={`h-[calc(100vh-87px)] ${isAuthRoute ? "mt-0" : "mt-21.75"}`}
+      >
+        {Routes}
+      </div>
     </div>
   );
 };

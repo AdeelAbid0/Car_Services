@@ -76,7 +76,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20">
+      <div className="relative z-20 pt-21">
         <div className="relative w-full h-auto px-18 py-6 z-10">
           <div className="relative z-10">
             <div className="flex w-full justify-center text-center">
