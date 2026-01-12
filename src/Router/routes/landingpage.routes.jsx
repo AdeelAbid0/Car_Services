@@ -1,6 +1,9 @@
 import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
+import About from "../../Pages/About/About";
+import Contact from "../../Pages/Contact/Contact";
+import FAQ from "../../Pages/FAQ/FAQ";
 
 const LandingPage = lazy(() => import("../../Pages/LandingPage/LandingPage"));
 const Services = lazy(() => import("../../Pages/Services/Services"));
@@ -28,6 +31,30 @@ export const LANDINGPAGE_ROUTES = [
     element: (
       <PublicRoutes>
         <Partners />
+      </PublicRoutes>
+    ),
+  },
+  {
+    path: ROUTES.ABOUT,
+    element: (
+      <PublicRoutes>
+        <About />
+      </PublicRoutes>
+    ),
+  },
+  {
+    path: ROUTES.CONTACT,
+    element: (
+      <PublicRoutes>
+        <Contact />
+      </PublicRoutes>
+    ),
+  },
+  {
+    path: ROUTES.FAQs,
+    element: (
+      <PublicRoutes>
+        <FAQ />
       </PublicRoutes>
     ),
   },

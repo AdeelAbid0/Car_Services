@@ -4,7 +4,6 @@ const UploadImage = ({ svg, title, description, onFileSelect }) => {
   // Allowed file types
   const allowedTypes = ["image/png", "image/jpeg", "image/jpg"];
 
-  // File validation function
   const beforeUpload = (file) => {
     const isImage = allowedTypes.includes(file.type);
     if (!isImage) {
@@ -12,7 +11,6 @@ const UploadImage = ({ svg, title, description, onFileSelect }) => {
       return Upload.LIST_IGNORE;
     }
 
-    // Check file size (optional: limit to 5MB)
     const isLt10M = file.size / 1024 / 1024 < 10;
     if (!isLt10M) {
       message.error("Image must be smaller than 10MB!");

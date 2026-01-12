@@ -76,10 +76,10 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20" style={{ minHeight: heroHeight }}>
+      <div className="relative z-20">
         <div className="relative w-full h-auto px-18 py-6 z-10">
           <div className="relative z-10">
-            <div className="flex w-full justify-center text-center mt-24">
+            <div className="flex w-full justify-center text-center">
               <h1 className="font-anton max-w-217.5 text-white text-[100px] font-normal text-center leading-[120%] uppercase">
                 All <span className="text-[#9A85FF]">your car services</span>
                 <br />

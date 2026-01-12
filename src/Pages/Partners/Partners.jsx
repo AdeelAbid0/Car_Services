@@ -2,7 +2,7 @@ import PartnerCard from "../../Components/PartnerCard/PartnerCard";
 
 const Partners = () => {
   return (
-    <div className="flex flex-col w-full items-center h-full mt-21">
+    <div className="flex flex-col w-full items-center h-full">
       <div className="flex w-[72%] flex-col gap-6 py-11">
         <div className="flex flex-col gap-1">
           <h1 className="text-[#262626] text-2xl! font-bold!">Partners</h1>

@@ -102,7 +102,7 @@ const Services = () => {
   }, [serviceCategory]);
   return (
     <>
-      <div className="flex w-full justify-center h-full mt-21 overflow-auto">
+      <div className="flex w-full justify-center h-full overflow-auto">
         <div className="flex w-[72%] flex-col gap-6 h-full py-11">
           <div className="flex flex-col gap-1">
             <h1 className="text-[#262626] text-2xl! font-bold!">Services</h1>

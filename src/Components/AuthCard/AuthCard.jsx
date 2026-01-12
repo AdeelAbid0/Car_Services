@@ -30,7 +30,7 @@ const AuthCard = ({
       />
 
       {/* Left Side */}
-      <div className="w-1/2 p-2 pr-0 z-50 flex items-center">
+      <div className="w-1/2 p-2 pr-0 z-40 flex items-center">
         <img
           src={imageSrc}
           alt="auth"
@@ -39,7 +39,7 @@ const AuthCard = ({
       </div>
 
       <div className="w-1/2 min-h-[90vh] flex">
-        <div className="w-full mr-2 m-2 rounded-xl bg-white z-50 overflow-y-auto">
+        <div className="w-full mr-2 m-2 rounded-xl bg-white z-40 overflow-y-auto">
           <div className="min-h-full flex items-center justify-center">
             <div className="flex flex-col w-full px-10 md:px-20 py-10 gap-9">
               <div className="flex flex-col items-center gap-2 text-center">

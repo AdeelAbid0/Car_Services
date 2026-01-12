@@ -3,6 +3,9 @@ export const ROUTES = {
   HOME: "/",
   SERVICES: "/services",
   PARTNERS: "/partners",
+  ABOUT: "/about",
+  FAQs: "/faq",
+  CONTACT: "/contact",
 
   // Auth routes
   LOGIN: "/login",
@@ -10,6 +13,7 @@ export const ROUTES = {
   PARTNER_REGISTER: "/register-partner",
   FORGOT_PASSWORD: "/forgot-password",
   VERIFY_OTP: "/verify-otp",
+  PROFILE: "/profile",
 
   // Private routes
   BOOKINGS: "/bookings",

@@ -2,7 +2,6 @@ import { useState } from "react";
 import EmptyView from "../../Components/EmptyView/EmptyView";
 import BookingEmptyIcon from "../../assets/Images/booking-empty.svg?react";
 import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
-import PartnerCard from "../../Components/PartnerCard/PartnerCard";
 import BookingCard from "../../Components/BookingCard/BookingCard";
 
 const Bookings = () => {
@@ -17,7 +16,7 @@ const Bookings = () => {
     },
     {
       id: 2,
-      label: "Ongoing", // Fixed spelling from "Onoing"
+      label: "Ongoing",
       value: "ongoing",
     },
     {
@@ -33,7 +32,7 @@ const Bookings = () => {
   ];
 
   return (
-    <div className="flex w-full justify-center items-start mt-21.75 h-[calc(100vh-87px)]">
+    <div className="flex w-full justify-center items-start">
       {!bookingData.length > 0 ? (
         <div className="mt-11 w-full max-w-[72%]">
           <div className="flex w-full justify-between items-center">

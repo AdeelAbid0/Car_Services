@@ -19,11 +19,11 @@ const Layout = () => {
   return (
     <div className="relative w-full bg-[#F5F5F5]">
       {!currentPath && (
-        <div className="w-full fixed z-50">
+        <div className="w-full fixed z-40">
           <Header />
         </div>
       )}
-      <div className="h-[calc(100vh-87px)]">{Routes}</div>
+      <div className="h-[calc(100vh-87px)] mt-21.75">{Routes}</div>
     </div>
   );
 };
