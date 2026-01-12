@@ -24,7 +24,7 @@ const PartnerCard = ({
             className="w-full h-full object-cover rounded-xl"
           />
         </div>
-        <div className="flex w-auto flex-col gap-4 justify-center">
+        <div className="flex w-auto flex-col gap-4 justify-center my-2">
           <span className="inline-flex bg-[#2E82FF] rounded-full px-4 py-1 text-white text-sm font-normal max-w-fit">
             {tag}
           </span>
