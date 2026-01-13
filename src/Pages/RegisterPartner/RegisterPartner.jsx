@@ -82,21 +82,21 @@ const RegisterPartner = () => {
             <InputText
               label={"Full name"}
               placeholder={"Enter full name"}
-              prefixIcon={UserIcon}
+              prefixIcon={<UserIcon />}
               value={formData.fullName}
               onChange={(e) => handleInputChange("fullName", e.target.value)}
             />
             <InputText
               label={"Email"}
               placeholder={"Enter email"}
-              prefixIcon={EmailIcon}
+              prefixIcon={<EmailIcon />}
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
             />
             <InputText
               label={"Phone"}
               placeholder={"Enter phone"}
-              prefixIcon={EmailIcon}
+              prefixIcon={<EmailIcon />}
               value={formData.phone}
               onChange={(e) => handleInputChange("phone", e.target.value)}
             />
@@ -109,7 +109,7 @@ const RegisterPartner = () => {
             <InputText
               label={"Business Name"}
               placeholder={"Enter business name"}
-              prefixIcon={UserIcon}
+              prefixIcon={<UserIcon />}
               value={formData.businessName}
               onChange={(e) =>
                 handleInputChange("businessName", e.target.value)
@@ -118,7 +118,7 @@ const RegisterPartner = () => {
             <InputText
               label={"Location"}
               placeholder={"Enter location"}
-              prefixIcon={LocationPlaceholder}
+              prefixIcon={<LocationPlaceholder />}
               value={formData.location}
               onChange={(e) => handleInputChange("location", e.target.value)}
             />
@@ -169,7 +169,7 @@ const RegisterPartner = () => {
               <InputText
                 label={"other"}
                 placeholder={"Other service name"}
-                prefixIcon={EditIcon}
+                prefixIcon={<EditIcon />}
               />
             </div>
           </div>
@@ -189,7 +189,7 @@ const RegisterPartner = () => {
             <div>
               <InputTextArea
                 placeholder={"Write description"}
-                prefix={EditIcon}
+                prefix={<EditIcon />}
                 rows={4}
               />
             </div>

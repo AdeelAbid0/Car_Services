@@ -17,4 +17,5 @@ export const ROUTES = {
 
   // Private routes
   BOOKINGS: "/bookings",
+  MY_WALLET: "/my-wallet",
 };

@@ -55,7 +55,7 @@ const Login = () => {
         <InputText
           label="Email"
           placeholder="Enter email"
-          prefixIcon={MailIcon}
+          prefixIcon={<MailIcon />}
           name="email"
           formik={formik}
           className="w-full"
@@ -63,8 +63,8 @@ const Login = () => {
         <InputText
           label="Password"
           placeholder="Enter password"
-          prefixIcon={PasswordIcon}
-          suffixIcon={EyeIcon}
+          prefixIcon={<PasswordIcon />}
+          suffixIcon={<EyeIcon />}
           type="password"
           name="password"
           formik={formik}

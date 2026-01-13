@@ -48,9 +48,9 @@ const UploadImage = ({ svg, title, description, onFileSelect }) => {
           <div className="flex flex-col gap-1 text-center">
             <h1 className="text-[#292929] text-sm font-medium">{title}</h1>
             <p className="text-sm text-[#777777] leading-4.5">{description}</p>
-            <p className="text-xs text-[#999999] mt-2">
+            {/* <p className="text-xs text-[#999999] mt-2">
               Supports: PNG, JPG (Max 5MB)
-            </p>
+            </p> */}
           </div>
         </div>
       </Upload>

@@ -1,0 +1,51 @@
+import { Drawer } from "antd";
+import CloseIcon from "../../assets/svg/add.svg?react";
+import Button from "../Button/Button";
+const CommonDrawer = ({
+  open,
+  onClose,
+  title,
+  description,
+  children,
+  footerButtonLabel,
+}) => {
+  return (
+    <Drawer
+      onClose={onClose}
+      open={open}
+      width={463}
+      closable={false}
+      rootClassName="[&_.ant-drawer-body]:p-0! [&_.ant-drawer-header]:display-none"
+    >
+      <div className="flex flex-col h-full">
+        {/* Header - Fixed Top */}
+        <div className="shrink-0 border-b border-[#E5E5E5] p-8 pb-3 bg-white">
+          <div className="flex justify-between items-start">
+            <div className="flex flex-col gap-1 flex-1">
+              <h1 className="text-2xl! font-bold! text-[#262626]">{title}</h1>
+              <p className="text-[16px]! font-normal! text-[#737373] leading-6">
+                {description}
+              </p>
+            </div>
+            <div
+              className="flex w-6 h-6 shrink-0 rounded-full cursor-pointer"
+              onClick={onClose}
+            >
+              <CloseIcon className="rotate-45" />
+            </div>
+          </div>
+        </div>
+
+        {/* Content Area - Scrollable */}
+        <div className="flex-1 overflow-y-auto p-8">{children}</div>
+
+        {/* Footer - Fixed Bottom */}
+        <div className="shrink-0 border-t border-[#E5E5E5] py-3 px-8 flex justify-end bg-white">
+          <Button type={"primary"} label={footerButtonLabel} />
+        </div>
+      </div>
+    </Drawer>
+  );
+};
+
+export default CommonDrawer;

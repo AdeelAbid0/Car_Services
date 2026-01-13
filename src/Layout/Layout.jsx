@@ -12,7 +12,6 @@ const Layout = () => {
   const Routes = useRoutes(appRoutes);
 
   useEffect(() => {
-    // Check if current path is an auth route
     const isCurrentPathAuthRoute = auth_routes?.some(
       (route) => route.path === location.pathname
     );

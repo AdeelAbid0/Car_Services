@@ -3,8 +3,11 @@ import EmptyView from "../../Components/EmptyView/EmptyView";
 import BookingEmptyIcon from "../../assets/Images/booking-empty.svg?react";
 import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
 import BookingCard from "../../Components/BookingCard/BookingCard";
+import { ROUTES } from "../../constants/routes";
+import { useNavigate } from "react-router-dom";
 
 const Bookings = () => {
+  const navigate = useNavigate();
   const [bookingData, setBookingData] = useState([]);
   const [selectedTab, setSelectedTab] = useState("upcoming");
 
@@ -44,7 +47,12 @@ const Bookings = () => {
                 Track your upcoming, ongoing, and completed services.
               </p>
             </div>
-            <div className="flex items-center">
+            <div
+              className="flex items-center"
+              onClick={() => {
+                navigate(ROUTES.MY_WALLET);
+              }}
+            >
               <div className="flex items-center px-4 py-1.75 gap-2 bg-[#262626] rounded-lg cursor-pointer hover:bg-[#404040] transition-colors">
                 <p className="text-white font-normal text-sm">PKR 0</p>
                 <span className="h-3 border border-[#404040] "></span>

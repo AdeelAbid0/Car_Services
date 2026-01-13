@@ -51,13 +51,13 @@ const Register = () => {
           name="name"
           formik={formik}
           placeholder="Enter name"
-          prefixIcon={UserIcon}
+          prefixIcon={<UserIcon />}
           className="w-full"
         />
         <InputText
           label="Email"
           placeholder="Enter email"
-          prefixIcon={MailIcon}
+          prefixIcon={<MailIcon />}
           name="email"
           formik={formik}
           className="w-full"
@@ -65,8 +65,8 @@ const Register = () => {
         <InputText
           label="Password"
           placeholder="Enter password"
-          prefixIcon={PasswordIcon}
-          suffixIcon={EyeIcon}
+          prefixIcon={<PasswordIcon />}
+          suffixIcon={<EyeIcon />}
           type="password"
           name="password"
           formik={formik}
@@ -75,8 +75,8 @@ const Register = () => {
         <InputText
           label="Confirm Password"
           placeholder="Confirm your password"
-          prefixIcon={PasswordIcon}
-          suffixIcon={EyeIcon}
+          prefixIcon={<PasswordIcon />}
+          suffixIcon={<EyeIcon />}
           type="password"
           name="confirmPassword"
           formik={formik}
