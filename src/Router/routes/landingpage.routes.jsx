@@ -2,9 +2,9 @@ import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
 
-const About = lazy(() => "../../Pages/About/About");
-const Contact = lazy(() => "../../Pages/Contact/Contact");
-const FAQ = lazy(() => "../../Pages/FAQ/FAQ");
+const About = lazy(() => import("../../Pages/About/About"));
+const Contact = lazy(() => import("../../Pages/Contact/Contact"));
+const FAQ = lazy(() => import("../../Pages/FAQ/FAQ"));
 const LandingPage = lazy(() => import("../../Pages/LandingPage/LandingPage"));
 const Services = lazy(() => import("../../Pages/Services/Services"));
 const Partners = lazy(() => import("../../Pages/Partners/Partners"));
