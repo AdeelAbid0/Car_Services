@@ -141,7 +141,7 @@ const Header = () => {
                     isActive && location.pathname === ROUTES.HOME
                       ? "text-white"
                       : isActive
-                      ? "text-[#262626]"
+                      ? "text-[#262626]!"
                       : ""
                   }`
                 }
@@ -192,16 +192,24 @@ const Header = () => {
               onClick={() => setShowDropdown(!showDropdown)}
               className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors cursor-pointer ${
                 location.pathname === ROUTES.HOME
-                  ? "text-white"
+                  ? "text-white "
                   : "text-[#262626]"
               }`}
             >
               <div className="w-11 h-11 rounded-full bg-gray-300 flex items-center justify-center"></div>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform stroke-white ${
-                  showDropdown ? "rotate-180" : ""
+              <div
+                className={`${
+                  location.pathname === ROUTES.HOME
+                    ? "text-white"
+                    : "text-[#262626]"
                 }`}
-              />
+              >
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    showDropdown ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
             </button>
 
             {/* Dropdown Menu */}
@@ -235,7 +243,6 @@ const Header = () => {
                     );
                   }
 
-                  // Baaki sab items ke liye NavLink use karenge
                   return (
                     <NavLink
                       key={item.id}

@@ -22,7 +22,7 @@ const App = () => {
           },
           components: {
             Input: {
-              paddingBlock: 12,
+              // paddingBlock: 12,
               paddingInline: 16,
               borderRadius: 12,
               hoverBorderColor: "#6E44FF",
