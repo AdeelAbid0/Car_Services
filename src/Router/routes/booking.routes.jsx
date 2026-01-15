@@ -1,8 +1,8 @@
 import { ROUTES } from "../../constants/routes";
 import { lazy } from "react";
 import PrivateRoutes from "../PrivateRoutes";
-import My_Wallet from "../../Pages/My_Wallet/My_Wallet";
 
+const My_Wallet = lazy(() => import("../../Pages/My_Wallet/My_Wallet"));
 const Bookings = lazy(() => import("../../Pages/Bookings/Bookings"));
 
 export const BOOKING_ROUTES = [

@@ -1,5 +1,5 @@
 import { Radio } from "antd";
-import { useState } from "react"; // Added useState hook
+import { useState } from "react";
 import VisaLogo from "../../assets/svg/visa-logo.svg?react";
 import EasypaisaLogo from "../../assets/svg/easypaisa-logo.svg?react";
 import JazzcashLogo from "../../assets/svg/jazzcash-logo.svg?react";
@@ -17,9 +17,35 @@ const SelectPaymentMethod = () => {
     setSelectedMethod(method);
   };
 
+  const handleBreadcrumbClick = (stepId) => {
+    if (stepId < currentStep) {
+      setCurrentStep(stepId);
+    }
+  };
+  const getStep2Breadcrumb = () => {
+    if (selectedMethod === "debit") return "Debit Card";
+    if (selectedMethod === "paypal") return "PayPal";
+    if (selectedMethod === "easypaisa") return "Easypaisa";
+    if (selectedMethod === "jazzcash") return "Jazzcash";
+    return "Payment Details";
+  };
+
+  const getFullBreadcrumb = () => {
+    if (currentStep === 1) {
+      return "Select Payment Method";
+    } else if (currentStep === 2) {
+      return `Select Payment Method › ${getStep2Breadcrumb()}`;
+    } else if (currentStep === 3) {
+      return `Select Payment Method › ${getStep2Breadcrumb()} › Processing`;
+    } else {
+      return `Select Payment Method › ${getStep2Breadcrumb()} › Success`;
+    }
+  };
+
   return (
     <div className="flex w-full justify-center h-full overflow-auto">
       <div className="flex w-[72%] flex-col gap-6 h-full py-11">
+        {/* Static Heading - Same for all components */}
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-bold! text-[#262626] leading-11">
             Payment Method
@@ -29,11 +55,49 @@ const SelectPaymentMethod = () => {
           </p>
         </div>
 
-        <div className="mt-6">
+        <div className="mt-4 flex w-full justify-center">
+          <div className="flex max-w-87 items-center gap-1 text-sm text-[#737373]">
+            {getFullBreadcrumb()
+              .split(" › ")
+              .map((part, index, array) => (
+                <div key={index} className="flex items-center">
+                  <button
+                    onClick={() => {
+                      // Determine which step to go to based on index
+                      let targetStep = 1;
+                      if (index === 0) targetStep = 1;
+                      else if (index === 1) targetStep = 2;
+                      else if (index === 2)
+                        targetStep = currentStep === 3 ? 3 : 4;
+
+                      handleBreadcrumbClick(targetStep);
+                    }}
+                    className={`
+                    ${
+                      index === array.length - 1
+                        ? "text-[#262626] font-medium cursor-default"
+                        : "text-[#737373] hover:text-[#9A85FF] cursor-pointer hover:underline"
+                    }
+                    transition-colors duration-200
+                    disabled:opacity-50 disabled:cursor-not-allowed
+                  `}
+                    disabled={index === array.length - 1}
+                  >
+                    {part}
+                  </button>
+                  {index < array.length - 1 && (
+                    <span className="mx-1 text-[#737373]">›</span>
+                  )}
+                </div>
+              ))}
+          </div>
+        </div>
+
+        <div className="mt-2">
           {currentStep === 1 ? (
             <div className="flex flex-col gap-4 w-full items-center">
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
                 onClick={() => handleRadioChange("paypal")}
               >
                 <div className="flex gap-3 items-center">
@@ -46,8 +110,9 @@ const SelectPaymentMethod = () => {
                   Powered by Stripe
                 </label>
               </div>
+
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
                 onClick={() => handleRadioChange("debit")}
               >
                 <div className="flex gap-3 items-center">
@@ -58,8 +123,9 @@ const SelectPaymentMethod = () => {
                 </div>
                 <VisaLogo />
               </div>
+
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
                 onClick={() => handleRadioChange("easypaisa")}
               >
                 <div className="flex gap-3 items-center">
@@ -70,8 +136,9 @@ const SelectPaymentMethod = () => {
                 </div>
                 <EasypaisaLogo />
               </div>
+
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
                 onClick={() => handleRadioChange("jazzcash")}
               >
                 <div className="flex gap-3 items-center">
@@ -82,7 +149,8 @@ const SelectPaymentMethod = () => {
                 </div>
                 <JazzcashLogo />
               </div>
-              <div className="w-full max-w-85">
+
+              <div className="w-full max-w-85 mt-2">
                 <Button
                   type={"primary"}
                   label={"Continue"}
@@ -98,11 +166,20 @@ const SelectPaymentMethod = () => {
               currentStep={currentStep}
               setCurrentStep={setCurrentStep}
               selectedMethod={selectedMethod}
+              goBack={() => handleBreadcrumbClick(1)}
             />
           ) : currentStep === 3 ? (
-            <LoadingPayment />
+            <LoadingPayment
+              currentStep={currentStep}
+              setCurrentStep={setCurrentStep}
+              selectedMethod={selectedMethod}
+              goBack={() => handleBreadcrumbClick(2)}
+            />
           ) : (
-            <PaymentSuccess />
+            <PaymentSuccess
+              currentStep={currentStep}
+              setCurrentStep={setCurrentStep}
+            />
           )}
         </div>
       </div>

@@ -1,6 +1,8 @@
+import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
-import Profile from "../../Pages/Profie/Profile";
 import PublicRoutes from "../PublicRoutes";
+
+const Profile = lazy(() => import("../../Pages/Profie/Profile"));
 
 export const PROFILE_ROUTES = [
   {

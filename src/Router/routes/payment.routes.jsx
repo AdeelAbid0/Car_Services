@@ -1,7 +1,9 @@
+import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
-import SelectPaymentMethod from "../../Pages/SelectPaymentMethod/SelectPaymentMethod";
 import PrivateRoutes from "../PrivateRoutes";
-
+const SelectPaymentMethod = lazy(() =>
+  import("../../Pages/SelectPaymentMethod/SelectPaymentMethod")
+);
 export const PAYMENT_ROUTES = [
   {
     path: ROUTES.PAYMENT,
