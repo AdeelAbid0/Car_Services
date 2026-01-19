@@ -1,8 +1,8 @@
 const About = () => {
   return (
     <div className="flex w-full justify-center">
-      <div className="flex justify-between w-[72%] py-11">
-        <div className="flex flex-col gap-1 w-[48%] relative z-0">
+      <div className="flex justify-between w-[50%] py-11">
+        <div className="flex flex-col gap-1 w-[50%] relative z-0">
           <h1 className="text-2xl! font-bold! text-[#262626] leading-11">
             About us
           </h1>
