@@ -28,8 +28,8 @@ const Button = ({
         type === "default"
           ? "text-[#9A85FF]! bg-[#F4F2FF]! hover:bg-[#F4F2FF]! hover:text-[#9A85FF]!"
           : type === "link"
-          ? "flex px-0! py-0! h-auto! underline cursor-pointer font-medium underline-offset-3"
-          : ""
+            ? "flex px-0! py-0! h-auto! underline cursor-pointer font-medium underline-offset-3"
+            : ""
       } ${className}`}
     >
       {prefixIcon && <span className="ml-1">{prefixIcon}</span>} {label}

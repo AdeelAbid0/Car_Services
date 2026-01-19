@@ -9,13 +9,16 @@ import { ROUTES } from "../constants/routes";
 import User from "../assets/svg/profile.svg?react";
 import ChevronDown from "../assets/svg/chevron-down.svg?react";
 import Info from "../assets/svg/info.svg?react";
-import Phone from "../assets/svg/call.svg?react";
+import Phone from "../assets/svg/call-border.svg?react";
 import Logout from "../assets/svg/logout.svg?react";
 import Bookmark from "../assets/svg/bookmark.svg?react";
 import Question from "../assets/svg/question.svg?react";
+import { useSelector } from "react-redux";
+import { getNavItems } from "../config/navigation";
 
 const Header = () => {
   const navigate = useNavigate();
+  const userData = useSelector((state) => state.user);
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -42,32 +45,33 @@ const Header = () => {
   };
 
   // Navigation items
-  const navItems = [
-    {
-      id: 1,
-      label: "Home",
-      path: ROUTES.HOME,
-    },
-    {
-      id: 2,
-      label: "Services",
-      path: ROUTES.SERVICES,
-    },
-    {
-      id: 3,
-      label: "Partners",
-      path: ROUTES.PARTNERS,
-    },
-  ];
+  // const navItems = [
+  //   {
+  //     id: 1,
+  //     label: "Home",
+  //     path: ROUTES.HOME,
+  //   },
+  //   {
+  //     id: 2,
+  //     label: "Services",
+  //     path: ROUTES.SERVICES,
+  //   },
+  //   {
+  //     id: 3,
+  //     label: "Partners",
+  //     path: ROUTES.PARTNERS,
+  //   },
+  // ];
+  const navItems = getNavItems(userData);
 
   // Add My Bookings if authenticated
-  if (isAuthenticated) {
-    navItems.push({
-      id: 4,
-      label: "My Bookings",
-      path: ROUTES.BOOKINGS,
-    });
-  }
+  // if (isAuthenticated) {
+  //   navItems.push({
+  //     id: 4,
+  //     label: "My Bookings",
+  //     path: ROUTES.BOOKINGS,
+  //   });
+  // }
 
   // Dropdown menu items
   const dropdownItems = [
@@ -141,8 +145,8 @@ const Header = () => {
                     isActive && location.pathname === ROUTES.HOME
                       ? "text-white"
                       : isActive
-                      ? "text-[#262626]!"
-                      : ""
+                        ? "text-[#262626]!"
+                        : ""
                   }`
                 }
               >

@@ -76,11 +76,11 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20 pt-21">
+      <div className="relative z-20 pt-4">
         <div className="relative w-full h-auto px-18 py-6 z-10">
           <div className="relative z-10">
             <div className="flex w-full justify-center text-center">
-              <h1 className="font-anton max-w-217.5 text-white text-[100px] font-normal text-center leading-[120%] uppercase">
+              <h1 className="font-anton max-w-217.5 text-white text-[70px]! 2xl:text-[100px]! font-normal text-center leading-[120%] uppercase">
                 All <span className="text-[#9A85FF]">your car services</span>
                 <br />
                 in one place
@@ -89,7 +89,7 @@ const HeroSection = () => {
 
             <div className="flex w-full justify-center">
               <div
-                className="flex w-[53%] flex-col items-center mt-10 relative z-20 gap-2 max-w-156"
+                className="flex w-[53%] flex-col items-center mt-4 2xl:mt-10 relative z-20 gap-2 max-w-156"
                 onMouseLeave={() => {
                   setActiveTab(null);
                 }}

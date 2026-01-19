@@ -4,6 +4,7 @@ import {
   BOOKING_ROUTES,
   PAYMENT_ROUTES,
   PROFILE_ROUTES,
+  PARTNER_ROUTES,
 } from "./routes";
 
 export const appRoutes = [
@@ -13,4 +14,5 @@ export const appRoutes = [
   ...BOOKING_ROUTES,
   ...PROFILE_ROUTES,
   ...PAYMENT_ROUTES,
+  ...PARTNER_ROUTES,
 ];

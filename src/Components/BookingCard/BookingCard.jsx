@@ -1,8 +1,4 @@
-import { Avatar, Checkbox } from "antd";
 import Button from "../../ui/Button/Button";
-import StarActive from "../../assets/svg/star-active.svg?react";
-import StarDefault from "../../assets/svg/star-default.svg?react";
-
 const BookingCard = ({
   profileImage,
   tag,

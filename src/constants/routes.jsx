@@ -15,8 +15,12 @@ export const ROUTES = {
   VERIFY_OTP: "/verify-otp",
   PROFILE: "/profile",
 
-  // Private routes
+  // Private routes Customer
   BOOKINGS: "/bookings",
   MY_WALLET: "/my-wallet",
   PAYMENT: "/payment",
+
+  // Partners Private routes
+  PARTNER_DASHBOARD: "partner/dashboard",
+  PARTNER_MANAGE_SERVICES: "partner/manage-services",
 };
