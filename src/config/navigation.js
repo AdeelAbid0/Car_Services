@@ -70,4 +70,104 @@ export const getNavItems = (user) => {
 };
 
 // Export NAV_ITEMS for backward compatibility if needed
+// Dropdown menu items for different user roles
+const dropdownItems = {
+  customer: [
+    {
+      id: 1,
+      label: "Profile",
+      icon: "User",
+      path: ROUTES.PROFILE,
+    },
+    {
+      id: 2,
+      label: "Bookmark",
+      icon: "Bookmark",
+      path: ROUTES.HOME,
+    },
+    {
+      id: 3,
+      label: "Contact Us",
+      icon: "Phone",
+      path: ROUTES.CONTACT,
+    },
+    {
+      id: 4,
+      label: "About Us",
+      icon: "Info",
+      path: ROUTES.ABOUT,
+    },
+    {
+      id: 5,
+      label: "Have Question in Mind?",
+      icon: "Question",
+      path: ROUTES.FAQs,
+    },
+    {
+      id: 6,
+      label: "Logout",
+      icon: "Logout",
+      action: "handleLogout",
+      className: "text-[#EF4444] hover:text-[#DC2626]",
+    },
+  ],
+  partner: [
+    {
+      id: 1,
+      label: "Profile",
+      icon: "User",
+      path: ROUTES.PARTNER_PROFILE,
+    },
+    {
+      id: 2,
+      label: "Payment & Payout",
+      icon: "Payment",
+      path: ROUTES.PARTNER_PAYMENT,
+    },
+    {
+      id: 3,
+      label: "Support and Help",
+      icon: "Support",
+      path: ROUTES.PARTNER_SUPPORT,
+    },
+    {
+      id: 4,
+      label: "Logout",
+      icon: "Logout",
+      action: "handleLogout",
+      className: "text-[#EF4444] hover:text-[#DC2626]",
+    },
+  ],
+  admin: [
+    {
+      id: 6,
+      label: "Logout",
+      icon: "Logout",
+      action: "handleLogout",
+      className: "text-[#EF4444] hover:text-[#DC2626]",
+    },
+  ],
+};
+
+// Function to get dropdown items based on user role
+export const getDropdownItems = (user, handleLogout) => {
+  let items = [];
+
+  if (user?.user?.role === "isPartner") {
+    items = [...dropdownItems.partner];
+  } else if (user?.user?.role === "isAdmin") {
+    items = [...dropdownItems.admin];
+  } else {
+    items = [...dropdownItems.customer];
+  }
+
+  // Replace the handleLogout action
+  return items.map((item) => {
+    if (item.action === "handleLogout") {
+      return { ...item, action: handleLogout };
+    }
+    return item;
+  });
+};
+
 export const NAV_ITEMS = baseNavItems;

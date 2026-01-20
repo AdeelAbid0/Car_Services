@@ -23,4 +23,8 @@ export const ROUTES = {
   // Partners Private routes
   PARTNER_DASHBOARD: "partner/dashboard",
   PARTNER_MANAGE_SERVICES: "partner/manage-services",
+  // partner profile menu
+  PARTNER_PROFILE: "/partner/profile",
+  PARTNER_PAYMENT: "/partner/payment",
+  PARTNER_SUPPORT: "/partner/support",
 };

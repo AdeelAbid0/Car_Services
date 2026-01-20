@@ -12,7 +12,6 @@ const Manage_Services = () => {
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  console.log({ deleteModalOpen });
   const items = [
     {
       key: "1",

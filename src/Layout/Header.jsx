@@ -13,8 +13,10 @@ import Phone from "../assets/svg/call-border.svg?react";
 import Logout from "../assets/svg/logout.svg?react";
 import Bookmark from "../assets/svg/bookmark.svg?react";
 import Question from "../assets/svg/question.svg?react";
+import Payment from "../assets/svg/payment-partner.svg?react";
+import Support from "../assets/svg/support.svg?react";
 import { useSelector } from "react-redux";
-import { getNavItems } from "../config/navigation";
+import { getNavItems, getDropdownItems } from "../config/navigation";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -45,46 +47,19 @@ const Header = () => {
   };
 
   const navItems = getNavItems(userData);
+  const dropdownItems = getDropdownItems(userData, handleLogout);
 
-  const dropdownItems = [
-    {
-      id: 1,
-      label: "Profile",
-      icon: <User />,
-      path: ROUTES.PROFILE,
-    },
-    {
-      id: 2,
-      label: "Bookmark",
-      icon: <Bookmark />,
-      path: ROUTES.HOME,
-    },
-    {
-      id: 3,
-      label: "Contact Us",
-      icon: <Phone />,
-      path: ROUTES.CONTACT,
-    },
-    {
-      id: 4,
-      label: "About Us",
-      icon: <Info />,
-      path: ROUTES.ABOUT,
-    },
-    {
-      id: 5,
-      label: "Have Question in Mind?",
-      icon: <Question />,
-      path: ROUTES.FAQs,
-    },
-    {
-      id: 6,
-      label: "Logout",
-      icon: <Logout />,
-      action: handleLogout,
-      className: "text-[#EF4444] hover:text-[#DC2626]",
-    },
-  ];
+  const iconComponents = {
+    User: <User />,
+    Bookmark: <Bookmark />,
+    Phone: <Phone />,
+    Info: <Info />,
+    Question: <Question />,
+    Logout: <Logout />,
+    Profile: <User />,
+    Payment: <Payment />,
+    Support: <Support />,
+  };
 
   return (
     <header
@@ -198,45 +173,86 @@ const Header = () => {
                 }`}
               >
                 {dropdownItems.map((item) => {
-                  if (item.id === 6) {
+                  const IconComponent = iconComponents[item.icon] || null;
+
+                  if (item.id === 6 || item.label === "Logout") {
                     return (
-                      <div className="border-t-[0.5px] border-[#E5E5E5]">
-                        <button
-                          key={item.id}
-                          onClick={item.action}
-                          className={`mt-2! flex gap-3 px-2.5 py-2 rounded-[10px] items-center w-full text-[#EF4444]! text-sm! hover:bg-gray-50 transition-colors ${
-                            item.className || ""
-                          } ${
-                            location.pathname === ROUTES.HOME
-                              ? "hover:bg-[#F5F5F5]"
-                              : ""
-                          }`}
-                        >
-                          {item.icon}
-                          <span>{item.label}</span>
-                        </button>
+                      <div
+                        key={item.id}
+                        className="border-t-[0.5px] border-[#E5E5E5] pt-2 mt-1"
+                      >
+                        {item.path ? (
+                          <NavLink
+                            to={item.path}
+                            className={({ isActive }) =>
+                              `flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${
+                                isActive ? "bg-gray-100 font-medium" : ""
+                              } ${item.className || ""}`
+                            }
+                            onClick={() => {
+                              if (item.action) item.action();
+                              setShowDropdown(false);
+                            }}
+                          >
+                            <span className="w-5 h-5 flex items-center justify-center">
+                              {IconComponent}
+                            </span>
+                            <span>{item.label}</span>
+                          </NavLink>
+                        ) : (
+                          <div
+                            onClick={() => {
+                              if (item.action) item.action();
+                              setShowDropdown(false);
+                            }}
+                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${item.className || ""}`}
+                          >
+                            <span className="w-5 h-5 flex items-center justify-center">
+                              {IconComponent}
+                            </span>
+                            <span>{item.label}</span>
+                          </div>
+                        )}
                       </div>
                     );
                   }
 
-                  return (
+                  // For regular items
+                  return item.path ? (
                     <NavLink
                       key={item.id}
                       to={item.path}
                       className={({ isActive }) =>
-                        `flex gap-3 px-2.5 py-2 rounded-[10px] items-center w-full text-sm! hover:bg-gray-50 transition-colors ${
-                          isActive ? "bg-[#F5F5F5]" : ""
-                        } ${item.className || ""} ${
-                          location.pathname === ROUTES.HOME
-                            ? "hover:bg-[#F5F5F5]"
-                            : ""
-                        }`
+                        `flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${
+                          isActive ? "bg-gray-100 font-medium" : ""
+                        } ${item.className || ""}`
                       }
-                      onClick={() => setShowDropdown(false)}
+                      onClick={() => {
+                        if (item.action) item.action();
+                        setShowDropdown(false);
+                      }}
                     >
-                      {item.icon}
-                      <span>{item.label}</span>
+                      <span className="w-5 h-5 flex items-center justify-center">
+                        {IconComponent}
+                      </span>
+                      <span className="text-sm! text-[#262626] font-normal!">
+                        {item.label}
+                      </span>
                     </NavLink>
+                  ) : (
+                    <div
+                      key={item.id}
+                      onClick={() => {
+                        if (item.action) item.action();
+                        setShowDropdown(false);
+                      }}
+                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${item.className || ""}`}
+                    >
+                      <span className="w-5 h-5 flex items-center justify-center">
+                        {IconComponent}
+                      </span>
+                      <span>{item.label}</span>
+                    </div>
                   );
                 })}
               </div>
