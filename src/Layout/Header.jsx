@@ -44,66 +44,38 @@ const Header = () => {
     setShowDropdown(false);
   };
 
-  // Navigation items
-  // const navItems = [
-  //   {
-  //     id: 1,
-  //     label: "Home",
-  //     path: ROUTES.HOME,
-  //   },
-  //   {
-  //     id: 2,
-  //     label: "Services",
-  //     path: ROUTES.SERVICES,
-  //   },
-  //   {
-  //     id: 3,
-  //     label: "Partners",
-  //     path: ROUTES.PARTNERS,
-  //   },
-  // ];
   const navItems = getNavItems(userData);
 
-  // Add My Bookings if authenticated
-  // if (isAuthenticated) {
-  //   navItems.push({
-  //     id: 4,
-  //     label: "My Bookings",
-  //     path: ROUTES.BOOKINGS,
-  //   });
-  // }
-
-  // Dropdown menu items
   const dropdownItems = [
     {
       id: 1,
       label: "Profile",
       icon: <User />,
-      path: "/profile",
+      path: ROUTES.PROFILE,
     },
     {
       id: 2,
       label: "Bookmark",
       icon: <Bookmark />,
-      path: "/bookmark",
+      path: ROUTES.HOME,
     },
     {
       id: 3,
       label: "Contact Us",
       icon: <Phone />,
-      path: "/contact",
+      path: ROUTES.CONTACT,
     },
     {
       id: 4,
       label: "About Us",
       icon: <Info />,
-      path: "/about",
+      path: ROUTES.ABOUT,
     },
     {
       id: 5,
       label: "Have Question in Mind?",
       icon: <Question />,
-      path: "/faq",
+      path: ROUTES.FAQs,
     },
     {
       id: 6,

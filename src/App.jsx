@@ -74,7 +74,6 @@ const App = () => {
               multipleItemBg: "#F3F1FD",
               multipleItemBorderColor: "#F3F1FD",
               activeBorderColor: "#6E44FF",
-              // boxShadowSecondary: "0px 0px 0px 4px #DBEAFE",
             },
           },
         }}

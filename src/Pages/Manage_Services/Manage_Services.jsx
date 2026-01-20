@@ -1,12 +1,47 @@
 import { useState } from "react";
 import AddIcon from "../../assets/svg/add.svg?react";
 import Button from "../../ui/Button/Button";
-import CommonDrawer from "../../ui/Drawer/Drawer";
-import CommonSelect from "../../ui/SelectWrap/Select";
-import InputText from "../../ui/InputText/InputText";
+import MoreIcon from "../../assets/svg/more.svg?react";
+import EditIcon from "../../assets/svg/edit-2.svg?react";
+import DeleteIcon from "../../assets/svg/delete.svg?react";
+import { Dropdown } from "antd";
+import AddServicesDrawer from "./Components/AddServicesDrawer";
+import CommonModal from "../../ui/Modal/Modal";
 
 const Manage_Services = () => {
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  console.log({ deleteModalOpen });
+  const items = [
+    {
+      key: "1",
+      label: (
+        <div className="flex w-full gap-3 justify-between items-center">
+          <p className="text-xs font-normal! text-[#262626]">Edit</p>
+          <EditIcon />
+        </div>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <div className="flex w-full gap-3 justify-between items-center">
+          <p className="text-xs font-normal! text-[#262626]">Delete</p>
+          <DeleteIcon />
+        </div>
+      ),
+    },
+  ];
+
+  const handleMenuClick = (e) => {
+    console.log("Menu item clicked:", e.key);
+    setDropdownOpen(false);
+    if (e.key === "2") {
+      setDeleteModalOpen(true);
+    }
+  };
+
   return (
     <div className="w-full">
       <div className="flex w-full justify-center items-start">
@@ -29,54 +64,131 @@ const Manage_Services = () => {
               />
             </div>
           </div>
+          {/* Card */}
+          <div className="flex w-full justify-between rounded-2xl bg-white hover:bg-white p-6 cursor-pointer mt-6">
+            <div className="flex gap-4 w-[90%]">
+              <div className="w-83.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-2 p-4 ">
+                <p className="text-[#737373] font-medium! text-xs">Services</p>
+
+                <div className="flex items-center w-full gap-2 flex-wrap">
+                  <div className="bg-white rounded-full">
+                    <p className="px-2.5 py-1.5 text-xs! font-medium text-[#262626]">
+                      Interior Cleaning
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-full">
+                    <p className="px-2.5 py-1.5 text-xs! font-medium text-[#262626]">
+                      Battery Replacement
+                    </p>
+                  </div>
+                  <div className="bg-white rounded-full">
+                    <p className="px-2.5 py-1.5 text-xs! font-medium text-[#262626]">
+                      Interior Cleaning
+                    </p>
+                  </div>
+                  <p className="text-xs font-medium! text-[#737373]">+3</p>
+                </div>
+              </div>
+              <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+                <img
+                  src="/Images/hero-image.png"
+                  alt=""
+                  className="w-7 h-7 object-cover"
+                />
+                <h1 className="text-[#262626] text-sm!  font-semibold!">
+                  User Name
+                </h1>
+              </div>
+              <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+                <img
+                  src="/Images/hero-image.png"
+                  alt=""
+                  className="w-7 h-7 object-cover"
+                />
+                <h1 className="text-[#262626] text-sm!  font-semibold!">
+                  Service
+                </h1>
+              </div>
+              <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+                <img
+                  src="/Images/hero-image.png"
+                  alt=""
+                  className="w-7 h-7 object-cover"
+                />
+                <h1 className="text-[#262626] text-sm!  font-semibold!">
+                  Time remaining
+                </h1>
+              </div>
+            </div>
+            <div className="flex items-center justify-between w-[10%] relative">
+              <div className="flex items-center gap-1">
+                <span className="w-1.5 h-1.5 bg-[#22C55E] rounded-full"></span>
+                <p className="text-xs font-medium! text-[#22C55E]">Active</p>
+              </div>
+
+              {/* Dropdown Menu */}
+              <Dropdown
+                menu={{
+                  items,
+                  onClick: handleMenuClick,
+                }}
+                placement="bottomRight"
+                trigger={["click"]}
+                open={dropdownOpen}
+                onOpenChange={(open) => setDropdownOpen(open)}
+              >
+                <div className="cursor-pointer hover:bg-gray-100 p-2 rounded-full transition-colors">
+                  <MoreIcon className="w-5 h-5 text-gray-600" />
+                </div>
+              </Dropdown>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Card */}
-
       {/* Add service Drawer */}
-      <div className="w-full">
-        <CommonDrawer
-          open={addServiceDrawer}
-          onClose={() => setAddServiceDrawer(false)}
-          title="Add Service"
-          footerButtonLabel={"Save"}
+      <AddServicesDrawer
+        addServiceDrawer={addServiceDrawer}
+        setAddServiceDrawer={setAddServiceDrawer}
+      />
+      {/* Delete Modal */}
+      <div className="flex w-[31%]">
+        <CommonModal
+          open={deleteModalOpen}
+          onClose={() => setDeleteModalOpen(false)}
+          className="bg-white!"
         >
-          <div className="flex flex-col gap-3">
-            <div className="flex w-full ">
-              <CommonSelect
-                label={"Services"}
-                defaultValue={[]}
-                placeholder={"Select service"}
-                mode="multiple"
+          <div className="flex flex-col gap-3 p-6">
+            <div className="flex border-b border-[#E5E5E5] h-10 items-start">
+              <h1 className="text-[20px] font-bold! text-[#262626]">
+                Delete Service?
+              </h1>
+            </div>
+            <div className="flex flex-col">
+              <h2 className="text-[#262626] text-sm! font-normal leading-5">
+                Are you sure you want to delete this service?
+              </h2>
+              <p className="text-[#737373] text-sm! font-normal!">
+                This action will remove it from your profile and customers will
+                no longer be able to book it.
+              </p>
+            </div>
+            <div className="flex gap-3 mt-5 w-full justify-end">
+              <Button
+                type={"default"}
+                label={"Cancel"}
+                className={"h-10!"}
+                onClick={() => setDeleteModalOpen(false)}
               />
-            </div>
-            <div className="flex w-full ">
-              <CommonSelect
-                label={"Category"}
-                defaultValue={[]}
-                placeholder={"Select category"}
-              />
-            </div>
-            <div className="flex w-full ">
-              <CommonSelect
-                label={"Duration"}
-                defaultValue={[]}
-                placeholder={"Select service"}
-              />
-            </div>
-            <div className="flex w-full ">
-              <InputText label={"Price"} placeholder={"Select service"} />
-            </div>
-            <div className="flex w-full ">
-              <CommonSelect
-                label={"Status"}
-                defaultValue={[]}
-                placeholder={"Select service"}
+              <Button
+                type={"primary"}
+                label={"Delete"}
+                className={"bg-[#EF4444]! h-10!"}
+                onClick={() => setDeleteModalOpen(false)}
               />
             </div>
           </div>
-        </CommonDrawer>
+        </CommonModal>
       </div>
     </div>
   );
