@@ -23,7 +23,7 @@ const PersonalInfo = () => {
 
   return (
     <div className="flex flex-col gap-4 max-w-[50%]">
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 items-center mt-8">
         <div className="flex gap-3 w-16 h-16 rounded-xl overflow-hidden cursor-pointer">
           <img
             src={imageUrl}

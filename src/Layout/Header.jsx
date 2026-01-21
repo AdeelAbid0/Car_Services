@@ -175,7 +175,7 @@ const Header = () => {
                 {dropdownItems.map((item) => {
                   const IconComponent = iconComponents[item.icon] || null;
 
-                  if (item.id === 6 || item.label === "Logout") {
+                  if (item.label === "Logout") {
                     return (
                       <div
                         key={item.id}
@@ -185,8 +185,8 @@ const Header = () => {
                           <NavLink
                             to={item.path}
                             className={({ isActive }) =>
-                              `flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${
-                                isActive ? "bg-gray-100 font-medium" : ""
+                              `flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer ${
+                                isActive ? "bg-[#F5F5F5] font-medium" : ""
                               } ${item.className || ""}`
                             }
                             onClick={() => {
@@ -205,7 +205,7 @@ const Header = () => {
                               if (item.action) item.action();
                               setShowDropdown(false);
                             }}
-                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${item.className || ""}`}
+                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer ${item.className || ""}`}
                           >
                             <span className="w-5 h-5 flex items-center justify-center">
                               {IconComponent}
@@ -223,8 +223,10 @@ const Header = () => {
                       key={item.id}
                       to={item.path}
                       className={({ isActive }) =>
-                        `flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${
-                          isActive ? "bg-gray-100 font-medium" : ""
+                        `flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer text-sm! ${
+                          isActive
+                            ? "bg-[#F5F5F5] font-normal! text-[#262626]!"
+                            : ""
                         } ${item.className || ""}`
                       }
                       onClick={() => {
@@ -235,9 +237,7 @@ const Header = () => {
                       <span className="w-5 h-5 flex items-center justify-center">
                         {IconComponent}
                       </span>
-                      <span className="text-sm! text-[#262626] font-normal!">
-                        {item.label}
-                      </span>
+                      <span>{item.label}</span>
                     </NavLink>
                   ) : (
                     <div
@@ -246,7 +246,7 @@ const Header = () => {
                         if (item.action) item.action();
                         setShowDropdown(false);
                       }}
-                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 cursor-pointer ${item.className || ""}`}
+                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer ${item.className || ""}`}
                     >
                       <span className="w-5 h-5 flex items-center justify-center">
                         {IconComponent}

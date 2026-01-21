@@ -36,7 +36,7 @@ const InputText = ({
         style={{ height: "44px" }}
         status={hasError ? "error" : ""}
         {...rest}
-        rootClassName="[&_.ant-input-prefix]:!mr-2"
+        rootClassName="[&_.ant-input]:leading-0! [&_.ant-input-prefix]:!mr-2"
       />
       {hasError && (
         <div className="flex w-full justify-start">

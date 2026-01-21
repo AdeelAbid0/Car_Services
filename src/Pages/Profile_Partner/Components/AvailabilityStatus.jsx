@@ -1,0 +1,55 @@
+import { Radio } from "antd";
+import { useState } from "react";
+
+const AvailabilityStatus = ({ onChange }) => {
+  const [selectedStatus, setSelectedStatus] = useState("available");
+
+  const handleStatusChange = (status) => {
+    setSelectedStatus(status);
+    console.log("Selected status:", status);
+
+    if (onChange) {
+      onChange(status);
+    }
+  };
+
+  return (
+    <div className="flex flex-col gap-4 max-w-[50%]">
+      <div className="flex flex-col gap-2 mt-8 max-w-55">
+        <label className="text-[#737373] font-medium! text-xs!">Status</label>
+
+        <div
+          className="flex gap-2.5 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-[#FAFAFA]"
+          onClick={() => handleStatusChange("available")}
+        >
+          <Radio
+            checked={selectedStatus === "available"}
+            rootClassName="[&_.ant-radio-inner]:!border-[#22C55E] [&_.ant-radio-checked_.ant-radio-inner]:!bg-[#22C55E] [&_.ant-radio-checked_.ant-radio-inner]:!border-[#22C55E]"
+          />
+          <p
+            className={`text-sm! font-medium! leading-[129%] ${
+              selectedStatus === "available"
+                ? "text-[#22C55E]"
+                : "text-[#262626]"
+            }`}
+          >
+            Available now
+          </p>
+        </div>
+
+        {/* Offline - Default */}
+        <div
+          className="flex gap-3 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-[#FAFAFA]"
+          onClick={() => handleStatusChange("offline")}
+        >
+          <Radio checked={selectedStatus === "offline"} />
+          <p className="text-sm! font-medium! text-[#262626] leading-[129%]">
+            Offline
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AvailabilityStatus;

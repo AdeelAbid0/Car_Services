@@ -73,7 +73,6 @@ const App = () => {
               multipleItemHeight: 32,
               multipleItemBg: "#F3F1FD",
               multipleItemBorderColor: "#F3F1FD",
-              activeBorderColor: "#6E44FF",
             },
           },
         }}
