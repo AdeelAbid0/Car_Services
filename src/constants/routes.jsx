@@ -27,4 +27,9 @@ export const ROUTES = {
   PARTNER_PROFILE: "/partner/profile",
   PARTNER_PAYMENT: "/partner/payment",
   PARTNER_SUPPORT: "/partner/support",
+
+  //Super Admin Routes
+  SUPERADMIN_DASHBOARD: "superadmin/dashboard",
+  SUPERADMIN_SERVICES: "superadmin/services",
+  SUPERADMIN_PARTNERS: "superadmin/partners",
 };

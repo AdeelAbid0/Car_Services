@@ -84,7 +84,6 @@ const Overview = () => {
         <div
           className="cursor-pointer flex justify-center items-center"
           onClick={() => {
-            console.log({ record });
             setOpenDetailDrawer((prev) => !prev);
           }}
         >

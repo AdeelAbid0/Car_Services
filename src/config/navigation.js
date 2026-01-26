@@ -51,6 +51,32 @@ const baseNavItems = {
   admin: [
     // Will be added later
   ],
+  superAdmin: [
+    {
+      id: 1,
+      label: "Home",
+      path: ROUTES.HOME,
+      auth: false,
+    },
+    {
+      id: 2,
+      label: "Dashboard",
+      path: ROUTES.SUPERADMIN_DASHBOARD,
+      auth: true,
+    },
+    {
+      id: 3,
+      label: "Services",
+      path: ROUTES.SUPERADMIN_SERVICES,
+      auth: true,
+    },
+    {
+      id: 4,
+      label: "Partners",
+      path: ROUTES.SUPERADMIN_PARTNERS,
+      auth: true,
+    },
+  ],
 };
 export const getNavItems = (user) => {
   const isAuthenticated = !!localStorage.getItem("token");
@@ -60,6 +86,8 @@ export const getNavItems = (user) => {
     navItems = [...baseNavItems.partner];
   } else if (user?.user?.role === "isAdmin") {
     navItems = [...baseNavItems.admin];
+  } else if (user?.user?.role === "isSuperAdmin") {
+    navItems = [...baseNavItems.superAdmin];
   } else {
     navItems = [...baseNavItems.customer];
   }

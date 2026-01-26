@@ -5,6 +5,7 @@ import {
   PAYMENT_ROUTES,
   PROFILE_ROUTES,
   PARTNER_ROUTES,
+  SUPERADMIN_ROUTES,
 } from "./routes";
 
 export const appRoutes = [
@@ -15,4 +16,5 @@ export const appRoutes = [
   ...PROFILE_ROUTES,
   ...PAYMENT_ROUTES,
   ...PARTNER_ROUTES,
+  ...SUPERADMIN_ROUTES,
 ];
