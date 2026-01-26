@@ -1,8 +1,8 @@
-import UploadImage from "../../../Components/UploadImage/UploadImage";
-import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
-import InputTextArea from "../../../ui/InputTextArea/InputTextArea";
-import Button from "../../../ui/Button/Button";
-import EditIcon from "../../../assets/svg/edit-2.svg?react";
+import UploadImage from "../../../../Components/UploadImage/UploadImage";
+import UploadIcon from "../../../../assets/svg/upload-cloud.svg?react";
+import InputTextArea from "../../../../ui/InputTextArea/InputTextArea";
+import Button from "../../../../ui/Button/Button";
+import EditIcon from "../../../../assets/svg/edit-2.svg?react";
 
 const Gallery = () => {
   return (

@@ -1,11 +1,11 @@
 import { useState, lazy, Suspense } from "react";
-import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
+import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
+import Segment from "../../../Components/Segment/Segment";
 
 // Lazy load components
 const NewRequests = lazy(() => import("./Components/NewRequests"));
 const ActiveJobs = lazy(() => import("./Components/ActiveJobs"));
 const Ratings = lazy(() => import("./Components/Ratings"));
-const Segment = lazy(() => import("../../Components/Segment/Segment"));
 
 const PartnerDashboard = () => {
   const [activeComponent, setActiveComponent] = useState(1);

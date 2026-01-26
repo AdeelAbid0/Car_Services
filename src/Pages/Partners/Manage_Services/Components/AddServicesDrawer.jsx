@@ -1,6 +1,6 @@
-import CommonDrawer from "../../../ui/Drawer/Drawer";
-import CommonSelect from "../../../ui/SelectWrap/Select";
-import InputText from "../../../ui/InputText/InputText";
+import CommonDrawer from "../../../../ui/Drawer/Drawer";
+import CommonSelect from "../../../../ui/SelectWrap/Select";
+import InputText from "../../../../ui/InputText/InputText";
 
 const AddServicesDrawer = ({ addServiceDrawer, setAddServiceDrawer }) => {
   return (
@@ -9,7 +9,7 @@ const AddServicesDrawer = ({ addServiceDrawer, setAddServiceDrawer }) => {
         open={addServiceDrawer}
         onClose={() => setAddServiceDrawer(false)}
         title="Add Service"
-        footerButtonLabel={"Save"}
+        footerButtonPrimaryLabel={"Save"}
       >
         <div className="flex flex-col gap-3">
           <div className="flex w-full ">

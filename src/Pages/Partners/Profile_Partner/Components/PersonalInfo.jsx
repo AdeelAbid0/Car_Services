@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Upload } from "antd";
-import InputText from "../../../ui/InputText/InputText";
-import UserIcon from "../../../assets/svg/user.svg?react";
-import PhoneIcon from "../../../assets/svg/call-filled.svg?react";
-import EditIcon from "../../../assets/svg/edit-2.svg?react";
-import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
-import Button from "../../../ui/Button/Button";
+import InputText from "../../../../ui/InputText/InputText";
+import UserIcon from "../../../../assets/svg/user.svg?react";
+import PhoneIcon from "../../../../assets/svg/call-filled.svg?react";
+import EditIcon from "../../../../assets/svg/edit-2.svg?react";
+import MailIcon from "../../../../assets/svg/mail-placeholder.svg?react";
+import Button from "../../../../ui/Button/Button";
 
 const PersonalInfo = () => {
   const [imageUrl, setImageUrl] = useState("/Images/hero-image.png");

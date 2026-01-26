@@ -1,12 +1,12 @@
 import { useState } from "react";
-import AddIcon from "../../assets/svg/add.svg?react";
-import Button from "../../ui/Button/Button";
-import MoreIcon from "../../assets/svg/more.svg?react";
-import EditIcon from "../../assets/svg/edit-2.svg?react";
-import DeleteIcon from "../../assets/svg/delete.svg?react";
+import AddIcon from "../../../assets/svg/add.svg?react";
+import Button from "../../../ui/Button/Button";
+import MoreIcon from "../../../assets/svg/more.svg?react";
+import EditIcon from "../../../assets/svg/edit-2.svg?react";
+import DeleteIcon from "../../../assets/svg/delete.svg?react";
 import { Dropdown } from "antd";
 import AddServicesDrawer from "./Components/AddServicesDrawer";
-import CommonModal from "../../ui/Modal/Modal";
+import CommonModal from "../../../ui/Modal/Modal";
 
 const Manage_Services = () => {
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);

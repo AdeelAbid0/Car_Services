@@ -1,5 +1,5 @@
-import StarActive from "../.././../assets/svg/star-active.svg?react";
-import StarDefault from "../.././../assets/svg/star-default.svg?react";
+import StarActive from "../.././../../assets/svg/star-active.svg?react";
+import StarDefault from "../.././../../assets/svg/star-default.svg?react";
 const Ratings = () => {
   return (
     <div className="flex w-full justify-between rounded-2xl bg-[#FAFAFA] hover:bg-white p-6 cursor-pointer">

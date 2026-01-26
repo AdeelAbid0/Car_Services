@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense } from "react";
-import Segment from "../../Components/Segment/Segment";
+import Segment from "../../../Components/Segment/Segment";
 const Payout = lazy(() => import("./Components/Payout"));
 const Overview = lazy(() => import("./Components/Overview"));
 

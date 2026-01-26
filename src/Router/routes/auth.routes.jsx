@@ -5,8 +5,8 @@ import PublicRoutes from "../PublicRoutes";
 // Lazy load components
 const Login = lazy(() => import("../../Pages/Login/Login"));
 const Register = lazy(() => import("../../Pages/Register/Register"));
-const RegisterPartner = lazy(() =>
-  import("../../Pages/RegisterPartner/RegisterPartner")
+const RegisterPartner = lazy(
+  () => import("../../Pages/Partners/RegisterPartner/RegisterPartner"),
 );
 const VerifyOTP = lazy(() => import("../../Pages/VerifyOTP/VerifyOTP"));
 

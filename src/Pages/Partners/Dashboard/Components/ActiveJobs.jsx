@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CallIcon from "../../../assets/svg/call.svg?react";
-import Button from "../../../ui/Button/Button";
+import CallIcon from "../../../../assets/svg/call.svg?react";
+import Button from "../../../../ui/Button/Button";
 const ActiveJobs = () => {
   const [activeTab, setActiveTab] = useState("today");
   return (
