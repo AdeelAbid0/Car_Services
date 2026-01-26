@@ -7,7 +7,9 @@ const CommonDrawer = ({
   title,
   description,
   children,
-  footerButtonLabel,
+  footerButtonPrimaryLabel,
+  footerButtonSecondaryLabel,
+  footerButtonSecondaryType,
 }) => {
   return (
     <Drawer
@@ -19,7 +21,7 @@ const CommonDrawer = ({
     >
       <div className="flex flex-col h-full">
         {/* Header - Fixed Top */}
-        <div className="shrink-0 border-b border-[#E5E5E5] p-8 pb-3 bg-white">
+        <div className="shrink-0 border-b border-[#E5E5E5] p-8 pb-3 bg-[#F5F5F5]">
           <div className="flex justify-between items-start">
             <div className="flex flex-col gap-1 flex-1">
               <h1 className="text-2xl! font-bold! text-[#262626]">{title}</h1>
@@ -37,11 +39,25 @@ const CommonDrawer = ({
         </div>
 
         {/* Content Area - Scrollable */}
-        <div className="flex-1 overflow-y-auto p-8">{children}</div>
+        <div className="flex-1 overflow-y-auto p-8 bg-[#F5F5F5]">
+          {children}
+        </div>
 
         {/* Footer - Fixed Bottom */}
-        <div className="shrink-0 border-t border-[#E5E5E5] py-3 px-8 flex justify-end bg-white">
-          <Button type={"primary"} label={footerButtonLabel} />
+        <div className="shrink-0 border-t border-[#E5E5E5] py-3 px-8 flex gap-3 justify-end bg-[#F5F5F5]">
+          {footerButtonSecondaryLabel && (
+            <Button
+              variant={"outlined"}
+              type={footerButtonSecondaryType}
+              label={footerButtonSecondaryLabel}
+              className={"h-8!"}
+            />
+          )}
+          <Button
+            type={"primary"}
+            label={footerButtonPrimaryLabel}
+            className={"h-8!"}
+          />
         </div>
       </div>
     </Drawer>
