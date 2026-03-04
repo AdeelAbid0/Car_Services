@@ -175,6 +175,15 @@ const dropdownItems = {
       className: "text-[#EF4444] hover:text-[#DC2626]",
     },
   ],
+  superAdmin: [
+    {
+      id: 6,
+      label: "Logout",
+      icon: "Logout",
+      action: "handleLogout",
+      className: "text-[#EF4444] hover:text-[#DC2626]",
+    },
+  ],
 };
 
 // Function to get dropdown items based on user role
@@ -185,6 +194,8 @@ export const getDropdownItems = (user, handleLogout) => {
     items = [...dropdownItems.partner];
   } else if (user?.user?.role === "isAdmin") {
     items = [...dropdownItems.admin];
+  } else if (user?.user?.role === "isSuperAdmin") {
+    items = [...dropdownItems.superAdmin];
   } else {
     items = [...dropdownItems.customer];
   }

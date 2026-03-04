@@ -13,7 +13,7 @@ const Layout = () => {
 
   useEffect(() => {
     const isCurrentPathAuthRoute = auth_routes?.some(
-      (route) => route.path === location.pathname
+      (route) => route.path === location.pathname,
     );
     setIsAuthRoute(isCurrentPathAuthRoute);
   }, [location, auth_routes]);

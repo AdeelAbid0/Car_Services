@@ -2,14 +2,14 @@ import CommonDrawer from "../../../../ui/Drawer/Drawer";
 import CommonSelect from "../../../../ui/SelectWrap/Select";
 import InputText from "../../../../ui/InputText/InputText";
 
-const AddServicesDrawer = ({ addServiceDrawer, setAddServiceDrawer }) => {
+const EditServicesDrawer = ({ editServiceDrawer, setEditServiceDrawer }) => {
   return (
     <div className="w-full">
       <CommonDrawer
-        open={addServiceDrawer}
-        onClose={() => setAddServiceDrawer(false)}
-        title={"Add Service"}
-        footerButtonPrimaryLabel={"Save"}
+        open={editServiceDrawer}
+        onClose={() => setEditServiceDrawer(false)}
+        title={"Edit Service"}
+        footerButtonPrimaryLabel={"Save changes"}
       >
         <div className="flex flex-col gap-3">
           <div className="flex w-full ">
@@ -50,4 +50,4 @@ const AddServicesDrawer = ({ addServiceDrawer, setAddServiceDrawer }) => {
   );
 };
 
-export default AddServicesDrawer;
+export default EditServicesDrawer;

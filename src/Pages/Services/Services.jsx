@@ -113,7 +113,7 @@ const Services = () => {
           <div className="flex w-full">
             <InputText placeholder={"Search"} prefixIcon={SearchIcon} />
           </div>
-          <div className="flex w-auto gap-6 border-b border-[#E5E5E5]">
+          <div className="flex w-fit gap-6 border-b border-[#E5E5E5]">
             {carServices.map((service) => (
               <div
                 key={service.id}
