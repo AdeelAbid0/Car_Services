@@ -87,7 +87,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
         <div className="flex h-17.5 items-center justify-end border-t border-[#E5E5E5] bg-[#F5F5F5] rounded-bl-[25px] rounded-br-[25px] px-10">
           <Button
             type="primary"
-            label={showCalendarScreen ? "Book Service" : "Conntinue"}
+            label={showCalendarScreen ? "Book Service" : "Continue"}
             onClick={() => {
               if (showCalendarScreen) {
                 navigate(ROUTES.LOGIN);

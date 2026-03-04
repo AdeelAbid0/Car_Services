@@ -1,9 +1,9 @@
-import InputText from "../../ui/InputText/InputText";
-import SearchIcon from "../../assets/svg/search-normal.svg?react";
-import DummyIcon from "../../assets/svg/dummy.svg?react";
+import InputText from "../../../ui/InputText/InputText";
+import SearchIcon from "../../../assets/svg/search-normal.svg?react";
+import DummyIcon from "../../../assets/svg/dummy.svg?react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BookingModal from "../../Components/BookingModal/BookingModal";
+import BookingModal from "../../../Components/BookingModal/BookingModal";
 const Services = () => {
   const navigate = useNavigate();
   const [serviceCategory, setServiceCategory] = useState(1);
