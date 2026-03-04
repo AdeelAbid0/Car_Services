@@ -1,9 +1,9 @@
 import { useState } from "react";
-import EmptyView from "../../Components/EmptyView/EmptyView";
-import BookingEmptyIcon from "../../assets/Images/booking-empty.svg?react";
-import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
-import BookingCard from "../../Components/BookingCard/BookingCard";
-import { ROUTES } from "../../constants/routes";
+import EmptyView from "../../../Components/EmptyView/EmptyView";
+import BookingEmptyIcon from "../../../assets/Images/booking-empty.svg?react";
+import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
+import BookingCard from "../../../Components/BookingCard/BookingCard";
+import { ROUTES } from "../../../constants/routes";
 import { useNavigate } from "react-router-dom";
 
 const Bookings = () => {

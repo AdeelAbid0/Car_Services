@@ -3,7 +3,7 @@ import { lazy } from "react";
 import PrivateRoutes from "../PrivateRoutes";
 
 const My_Wallet = lazy(() => import("../../Pages/My_Wallet/My_Wallet"));
-const Bookings = lazy(() => import("../../Pages/Bookings/Bookings"));
+const Bookings = lazy(() => import("../../Pages/Customers/Bookings/Bookings"));
 
 export const BOOKING_ROUTES = [
   {
