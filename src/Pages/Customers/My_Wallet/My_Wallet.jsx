@@ -1,12 +1,12 @@
 import { useState } from "react";
-import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
-import SearchIcon from "../../assets/svg/search-normal.svg?react";
-import PlusIcon from "../../assets/svg/add.svg?react";
-import CardImage from "../../assets/Images/cards.svg?react";
+import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
+import SearchIcon from "../../../assets/svg/search-normal.svg?react";
+import PlusIcon from "../../../assets/svg/add.svg?react";
+import CardImage from "../../../assets/Images/cards.svg?react";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../constants/routes";
-import InputText from "../../ui/InputText/InputText";
-import Button from "../../ui/Button/Button";
+import { ROUTES } from "../../../constants/routes";
+import InputText from "../../../ui/InputText/InputText";
+import Button from "../../../ui/Button/Button";
 
 const My_Wallet = () => {
   const navigate = useNavigate();

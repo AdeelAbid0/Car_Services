@@ -1,4 +1,4 @@
-import Button from "../../../ui/Button/Button";
+import Button from "../../../../ui/Button/Button";
 
 const PaymentSuccess = ({ setCurrentStep }) => {
   return (

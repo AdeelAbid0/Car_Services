@@ -1,13 +1,13 @@
 import { Radio } from "antd";
 import { useState } from "react";
-import VisaLogo from "../../assets/svg/visa-logo.svg?react";
-import EasypaisaLogo from "../../assets/svg/easypaisa-logo.svg?react";
-import JazzcashLogo from "../../assets/svg/jazzcash-logo.svg?react";
-import ArrowRight from "../../assets/svg/arrow-right.svg?react";
-import Button from "../../ui/Button/Button";
+import VisaLogo from "../../../assets/svg/visa-logo.svg?react";
+import EasypaisaLogo from "../../../assets/svg/easypaisa-logo.svg?react";
+import JazzcashLogo from "../../../assets/svg/jazzcash-logo.svg?react";
+import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
 import CardDetails from "./Components/CardDetails";
 import LoadingPayment from "./Components/LoadingPayment";
 import PaymentSuccess from "./Components/PaymentSuccess";
+import Button from "../../../ui/Button/Button";
 
 const SelectPaymentMethod = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);
