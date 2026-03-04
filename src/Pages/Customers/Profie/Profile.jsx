@@ -38,7 +38,7 @@ const Profile = () => {
   ];
 
   const ActiveComponent = tabs.find(
-    (item) => item.id === selectedTab
+    (item) => item.id === selectedTab,
   )?.Component;
 
   return (

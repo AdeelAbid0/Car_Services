@@ -1,12 +1,12 @@
 import { Dropdown, Tag } from "antd";
-import MenuIcon from "../../../assets/svg/menu-icon.svg?react";
-import Edit from "../../../assets/svg/edit-2.svg?react";
-import Delete from "../../../assets/svg/delete.svg?react";
-import TickSquare from "../../../assets/svg/tick-square.svg?react";
-import Card from "../../../assets/svg/card.svg?react";
-import Plus from "../../../assets/svg/add.svg?react";
-import CardImage from "../../../assets/Images/cards.svg?react";
-import Button from "../../../ui/Button/Button";
+import MenuIcon from "../../../../assets/svg/menu-icon.svg?react";
+import Edit from "../../../../assets/svg/edit-2.svg?react";
+import Delete from "../../../../assets/svg/delete.svg?react";
+import TickSquare from "../../../../assets/svg/tick-square.svg?react";
+import Card from "../../../../assets/svg/card.svg?react";
+import Plus from "../../../../assets/svg/add.svg?react";
+import CardImage from "../../../../assets/Images/cards.svg?react";
+import Button from "../../../../ui/Button/Button";
 const PaymentMethod = () => {
   const paymentData = [
     {

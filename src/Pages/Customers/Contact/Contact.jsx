@@ -1,14 +1,14 @@
-import ChatUsIcon from "../../assets/svg/chat-us.svg?react";
-import CallUsIcon from "../../assets/svg/call-us.svg?react";
-import VisitUsIcon from "../../assets/svg/visit-us.svg?react";
-import UserIcon from "../../assets/svg/user.svg?react";
-import MailIcon from "../../assets/svg/mail-placeholder.svg?react";
-import ContactSendIcon from "../../assets/svg/contact-send.svg?react";
-import ContactHeartIcon from "../../assets/svg/contact-heart.svg?react";
-import ContactBg from "../../assets/Images/contact-bg.svg?react";
-import InputText from "../../ui/InputText/InputText";
-import InputTextArea from "../../ui/InputTextArea/InputTextArea";
-import Button from "../../ui/Button/Button";
+import ChatUsIcon from "../../../assets/svg/chat-us.svg?react";
+import CallUsIcon from "../../../assets/svg/call-us.svg?react";
+import VisitUsIcon from "../../../assets/svg/visit-us.svg?react";
+import UserIcon from "../../../assets/svg/user.svg?react";
+import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
+import ContactSendIcon from "../../../assets/svg/contact-send.svg?react";
+import ContactHeartIcon from "../../../assets/svg/contact-heart.svg?react";
+import ContactBg from "../../../assets/Images/contact-bg.svg?react";
+import InputText from "../../../ui/InputText/InputText";
+import InputTextArea from "../../../ui/InputTextArea/InputTextArea";
+import Button from "../../../ui/Button/Button";
 
 const Contact = () => {
   return (

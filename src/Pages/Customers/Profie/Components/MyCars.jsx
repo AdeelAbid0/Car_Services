@@ -1,14 +1,14 @@
-import { Dropdown } from "antd";
-import MenuIcon from "../../../assets/svg/menu-icon.svg?react";
-import Edit from "../../../assets/svg/edit-2.svg?react";
-import Delete from "../../../assets/svg/delete.svg?react";
-import Plus from "../../../assets/svg/add.svg?react";
-import Button from "../../../ui/Button/Button";
 import { useState } from "react";
-import CommonDrawer from "../../../ui/Drawer/Drawer";
-import InputText from "../../../ui/InputText/InputText";
-import UploadImage from "../../../Components/UploadImage/UploadImage";
-import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
+import { Dropdown } from "antd";
+import MenuIcon from "../../../../assets/svg/menu-icon.svg?react";
+import Edit from "../../../../assets/svg/edit-2.svg?react";
+import Delete from "../../../../assets/svg/delete.svg?react";
+import Plus from "../../../../assets/svg/add.svg?react";
+import Button from "../../../../ui/Button/Button";
+import CommonDrawer from "../../../../ui/Drawer/Drawer";
+import InputText from "../../../../ui/InputText/InputText";
+import UploadImage from "../../../../Components/UploadImage/UploadImage";
+import UploadIcon from "../../../../assets/svg/upload-cloud.svg?react";
 const MyCars = () => {
   const [addNewCar, setAddNewCar] = useState(false);
   const carsData = [
