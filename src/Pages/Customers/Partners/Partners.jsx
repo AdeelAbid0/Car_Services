@@ -1,4 +1,4 @@
-import PartnerCard from "../../Components/PartnerCard/PartnerCard";
+import PartnerCard from "../../../Components/PartnerCard/PartnerCard";
 
 const Partners = () => {
   return (
