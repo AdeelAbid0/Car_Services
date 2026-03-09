@@ -104,8 +104,8 @@ const HeroSection = () => {
                       <div
                         className={`shrink-0 px-10 py-2 rounded-full transition-colors duration-300 cursor-pointer ${
                           activeTab === input.id
-                            ? "bg-[#F4F2FF]"
-                            : "hover:bg-[#F4F2FF]"
+                            ? "bg-background"
+                            : "hover:bg-background"
                         }`}
                       >
                         <p className="text-muted-foreground text-xs font-normal">
@@ -122,7 +122,7 @@ const HeroSection = () => {
                         </p>
                       </div>
                       {index < searchInputs.length && (
-                        <div className="h-6 border-l border-[#F5F5F5] mx-1" />
+                        <div className="h-6 border-l border-muted-background mx-1" />
                       )}
                     </div>
                   ))}

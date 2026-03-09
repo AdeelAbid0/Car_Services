@@ -40,8 +40,8 @@ const Services = () => {
               key={service.id}
               className={`flex flex-col items-start p-4 rounded-xl border cursor-pointer transition-all ${
                 selectedServices.includes(service.id)
-                  ? "border-[#BCB1FF] bg-[#EAE8FF]"
-                  : "border-[#E5E5E5] bg-white"
+                  ? "border-[#BCB1FF] bg-background"
+                  : "border-border bg-white"
               }`}
               onClick={() => handleServiceToggle(service.id)}
             >

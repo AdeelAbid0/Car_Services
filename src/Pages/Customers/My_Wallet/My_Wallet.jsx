@@ -145,7 +145,7 @@ const My_Wallet = () => {
                   />
                 </div>
               </div>
-              <div className="border-b border-[#E5E5E5]"></div>
+              <div className="border-b border-border"></div>
             </div>
 
             <div className="py-6">
@@ -160,7 +160,7 @@ const My_Wallet = () => {
                       .map((item) => (
                         <div
                           key={item.id}
-                          className="flex w-full p-3 bg-[#F9F9F9] hover:bg-white cursor-pointer transition-colors rounded-xl"
+                          className="flex w-full p-3 bg-muted-background hover:bg-muted-background/70 cursor-pointer transition-colors rounded-xl"
                         >
                           <div className="flex items-center w-full gap-4">
                             <div className="flex shrink-0 w-12 h-12 rounded-xl bg-gray-100">

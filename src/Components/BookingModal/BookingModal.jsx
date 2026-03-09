@@ -19,9 +19,9 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
     >
       <div className="flex flex-col w-full relative">
         {/* Header */}
-        <div className="sticky top-0 flex w-full justify-between h-24.5 bg-white rounded-tl-[25px] rounded-tr-[25px] border-b border-[#E5E5E5]">
-          <div className="flex gap-3 w-full justify-center items-center border-r border-[#E5E5E5]">
-            <span className="flex justify-center items-center w-13 h-13 bg-muted-foreground/30 rounded-xl">
+        <div className="sticky top-0 flex w-full justify-between h-24.5 bg-white rounded-tl-[25px] rounded-tr-[25px] border-b border-border">
+          <div className="flex gap-3 w-full justify-center items-center border-r border-border">
+            <span className="flex justify-center items-center w-13 h-13 bg-background/30 rounded-xl">
               <DummyIcon />
             </span>
             <div className="flex flex-col gap-0.5">
@@ -33,7 +33,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
               </p>
             </div>
           </div>
-          <div className="flex w-full justify-center items-center border-r border-[#E5E5E5]">
+          <div className="flex w-full justify-center items-center border-r border-border">
             <div className="flex items-center justify-center gap-3 w-13 h-13">
               <img
                 src="/Images/hero-image.png"
@@ -46,7 +46,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
             </div>
           </div>
           <div className="flex gap-3 w-full justify-center items-center">
-            <span className="flex justify-center items-center w-13 h-13 bg-muted-foreground/30 rounded-xl"></span>
+            <span className="flex justify-center items-center w-13 h-13 bg-background/30 rounded-xl"></span>
             <div className="flex flex-col gap-0.5">
               <h1 className="text-muted-foreground text-[16px] font-normal! leading-6">
                 N/A
@@ -84,7 +84,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
           </div>
         )}
         {/* Footer */}
-        <div className="flex h-17.5 items-center justify-end border-t border-[#E5E5E5] bg-muted-foreground/30 rounded-bl-[25px] rounded-br-[25px] px-10">
+        <div className="flex h-17.5 items-center justify-end border-t border-border bg-transparent rounded-bl-[25px] rounded-br-[25px] px-10">
           <Button
             type="primary"
             label={showCalendarScreen ? "Book Service" : "Continue"}

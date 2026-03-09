@@ -1,14 +1,14 @@
 import InputText from "../../../ui/InputText/InputText";
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import DummyIcon from "../../../assets/svg/dummy.svg?react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingModal from "../../../Components/BookingModal/BookingModal";
+import Segment from "../../../Components/Segment/Segment";
 const Services = () => {
   const navigate = useNavigate();
   const [serviceCategory, setServiceCategory] = useState(1);
   const [selectedService, setSelectedService] = useState();
-  const [servicesData, setServicesData] = useState([]);
   const [showBookingModal, setShowBookingModal] = useState(false);
   const carServices = [
     {
@@ -94,12 +94,39 @@ const Services = () => {
       ],
     },
   ];
-  useEffect(() => {
-    if (serviceCategory) {
-      const service = carServices.find((s) => s.id === serviceCategory);
-      setServicesData(service?.subServices || []);
-    }
-  }, [serviceCategory]);
+
+  const ServicesGrid = ({ services }) => {
+    return (
+      <div className="flex w-full flex-wrap gap-6">
+        {services.map((service) => (
+          <div
+            key={service.id}
+            className={`flex flex-col gap-2 justify-center items-center rounded-xl w-38  h-30 cursor-pointer bg-muted-background hover:bg-white ${
+              selectedService === service?.id
+                ? "bg-white border border-primary"
+                : ""
+            }`}
+            onClick={() => {
+              setSelectedService(service?.id);
+              setShowBookingModal(true);
+            }}
+          >
+            {service.icon}
+            <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-4">
+              {service.name}
+            </p>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const tabs = carServices.map((category) => ({
+    id: category.id,
+    label: category.name,
+    component: <ServicesGrid services={category.subServices} />,
+  }));
+
   return (
     <>
       <div className="flex w-full justify-center h-full overflow-auto">
@@ -113,45 +140,12 @@ const Services = () => {
           <div className="flex w-full">
             <InputText placeholder={"Search"} prefixIcon={SearchIcon} />
           </div>
-          <div className="flex w-fit gap-6 border-b border-[#E5E5E5]">
-            {carServices.map((service) => (
-              <div
-                key={service.id}
-                className={`pb-2  ${
-                  serviceCategory === service?.id
-                    ? "border-b-[1.5px] border-primary"
-                    : ""
-                }`}
-                onClick={() => {
-                  setServiceCategory(service?.id);
-                }}
-              >
-                <h2 className="cursor-pointer text-muted-foreground text-sm font-medium">
-                  {service.name}
-                </h2>
-              </div>
-            ))}
-          </div>
-          <div className="flex w-full flex-wrap gap-6">
-            {servicesData.map((service) => (
-              <div
-                key={service.id}
-                className={`flex flex-col gap-2 justify-center items-center rounded-xl w-38  h-30 cursor-pointer bg-background hover:bg-white ${
-                  selectedService === service?.id
-                    ? "bg-white border border-primary"
-                    : ""
-                }`}
-                onClick={() => {
-                  setSelectedService(service?.id);
-                  setShowBookingModal(true);
-                }}
-              >
-                {service.icon}
-                <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-4">
-                  {service.name}
-                </p>
-              </div>
-            ))}
+          <div className="w-full">
+            <Segment
+              tabs={tabs}
+              defaultActiveTab={serviceCategory}
+              onTabChange={setServiceCategory}
+            />
           </div>
         </div>
       </div>

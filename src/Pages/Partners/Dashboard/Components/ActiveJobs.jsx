@@ -8,7 +8,7 @@ const ActiveJobs = () => {
       <div className="flex w-fit bg-white rounded-lg h-11 items-center mb-5 px-0.5 gap-2">
         <div
           className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-            activeTab === "today" ? "bg-muted-foreground/30" : "bg-white"
+            activeTab === "today" ? "bg-background/30" : "bg-white"
           }`}
           onClick={() => setActiveTab("today")}
         >
@@ -16,7 +16,7 @@ const ActiveJobs = () => {
         </div>
         <div
           className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-            activeTab === "tomorrow" ? "bg-muted-foreground/30" : "bg-white"
+            activeTab === "tomorrow" ? "bg-background/30" : "bg-white"
           }`}
           onClick={() => setActiveTab("tomorrow")}
         >
@@ -25,7 +25,7 @@ const ActiveJobs = () => {
       </div>
       <div className="flex w-full justify-between rounded-2xl bg-white hover:bg-white p-6 cursor-pointer">
         <div className="flex gap-4 w-[80%]">
-          <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
+          <div className="w-33.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
             <img
               src="/Images/hero-image.png"
               alt=""
@@ -35,7 +35,7 @@ const ActiveJobs = () => {
               User Name
             </h1>
           </div>
-          <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
+          <div className="w-33.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
             <img
               src="/Images/hero-image.png"
               alt=""
@@ -45,7 +45,7 @@ const ActiveJobs = () => {
               Service
             </h1>
           </div>
-          <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
+          <div className="w-33.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
             <img
               src="/Images/hero-image.png"
               alt=""
@@ -64,7 +64,7 @@ const ActiveJobs = () => {
             </div>
           </div>
           <div className="flex gap-4 w-full justify-end ">
-            <div className="flex shrink-0 justify-center items-center bg-[#F4F2FF] rounded-full h-8 w-8">
+            <div className="flex shrink-0 justify-center items-center bg-background rounded-full h-8 w-8">
               <CallIcon />
             </div>
             <div>

@@ -30,7 +30,7 @@ const Contact = () => {
             </p>
             <div className="flex w-full flex-wrap gap-3 mt-7">
               <div className="flex w-full gap-3">
-                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-background rounded-2xl pb-14">
+                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-muted-background rounded-2xl pb-14">
                   <ChatUsIcon />
                   <h1 className="pt-6! text-foreground font-medium! text-[19px]!">
                     Chat with us
@@ -42,7 +42,7 @@ const Contact = () => {
                     team@fixngo.com
                   </p>
                 </div>
-                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-background rounded-2xl pb-14">
+                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-muted-background rounded-2xl pb-14">
                   <CallUsIcon />
                   <h1 className="pt-6! text-foreground font-medium! text-[19px]!">
                     Call us
@@ -55,7 +55,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-background rounded-2xl pb-14">
+              <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-muted-background rounded-2xl pb-14">
                 <VisitUsIcon />
                 <h1 className="pt-6! text-foreground font-medium! text-[19px]!">
                   Visit us
@@ -77,7 +77,7 @@ const Contact = () => {
                 prefixIcon={<UserIcon />}
                 name="name"
                 // formik={formik}
-                className="w-full bg-background!"
+                className="w-full bg-muted-background!"
               />
               <InputText
                 label="Email"
@@ -85,20 +85,20 @@ const Contact = () => {
                 prefixIcon={<MailIcon />}
                 name="email"
                 // formik={formik}
-                className="w-full bg-background!"
+                className="w-full bg-muted-background!"
               />
               <InputTextArea
                 placeholder={"Type your message here"}
                 rows={12}
-                className={"bg-background!"}
+                className={"bg-muted-background!"}
               />
               <Button type={"primary"} label={"Send message"} />
             </div>
           </div>
-          <div className="flex shrink-0 justify-center items-center w-18.75 h-18.75 rounded-full bg-white border-8 border-[#F5F5F5] absolute -top-5 -left-8">
+          <div className="flex shrink-0 justify-center items-center w-18.75 h-18.75 rounded-full bg-white border-8 border-muted-background absolute -top-5 -left-8">
             <ContactSendIcon />
           </div>
-          <div className="flex shrink-0 justify-center items-center w-18.75 h-18.75 rounded-full bg-white border-8 border-[#F5F5F5] absolute -bottom-5 -right-8">
+          <div className="flex shrink-0 justify-center items-center w-18.75 h-18.75 rounded-full bg-white border-8 border-muted-background absolute -bottom-5 -right-8">
             <ContactHeartIcon />
           </div>
         </div>

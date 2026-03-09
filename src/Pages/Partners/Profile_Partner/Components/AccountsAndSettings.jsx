@@ -27,7 +27,7 @@ const AccountsAndSettings = () => {
     return (
       <div
         key={item.label}
-        className="flex items-center justify-between w-full px-4 h-10 rounded-lg cursor-pointer bg-background hover:bg-white"
+        className="flex items-center justify-between w-full px-4 h-10 rounded-lg cursor-pointer bg-muted-background hover:bg-white"
         onClick={() => {
           if (isDeactivateAccount) {
             console.log("Deactivate account clicked");

@@ -39,7 +39,7 @@ const Address = () => {
       {addressData?.map((address) => (
         <div
           key={address?.id}
-          className="bg-background hover:bg-white p-6 rounded-2xl flex justify-between"
+          className="bg-muted-background hover:bg-white p-6 rounded-2xl flex justify-between"
         >
           <div className="flex gap-5">
             <img

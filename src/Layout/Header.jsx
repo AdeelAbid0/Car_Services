@@ -66,7 +66,7 @@ const Header = () => {
       className={`flex w-full mx-auto justify-between h-21.75 transition-colors duration-300 px-19 pt-6 pb-6 ${
         location.pathname === ROUTES.HOME
           ? "bg-transparent"
-          : "bg-[#FFFFFF] shadow-[0px_0.5px_15px_0px_#0000012]"
+          : "bg-white shadow-[0px_0.5px_15px_0px_#0000012]"
       }`}
     >
       <NavLink to={ROUTES.HOME} className="cursor-pointer">
@@ -127,7 +127,7 @@ const Header = () => {
               }}
               className={`${
                 location.pathname === ROUTES.HOME
-                  ? "bg-[#F4F2FF]! hover:bg-[#E5E0FF]! text-primary!"
+                  ? "bg-background! hover:bg-[#E5E0FF]! text-primary!"
                   : "bg-foreground! hover:bg-[#303030]! text-white!"
               }`}
             />
@@ -143,7 +143,7 @@ const Header = () => {
               onClick={() => setShowDropdown(!showDropdown)}
               className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors cursor-pointer ${
                 location.pathname === ROUTES.HOME
-                  ? "text-white "
+                  ? "text-white"
                   : "text-foreground"
               }`}
             >
@@ -179,16 +179,14 @@ const Header = () => {
                     return (
                       <div
                         key={item.id}
-                        className="border-t-[0.5px] border-[#E5E5E5] pt-2 mt-1"
+                        className="border-t-[0.5px] border-border pt-2 mt-1"
                       >
                         {item.path ? (
                           <NavLink
                             to={item.path}
                             className={({ isActive }) =>
-                              `flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer ${
-                                isActive
-                                  ? "bg-muted-foreground/30 font-medium"
-                                  : ""
+                              `flex items-center gap-2 p-2 rounded-lg hover:bg-background/30 cursor-pointer ${
+                                isActive ? "bg-background/30 font-medium" : ""
                               } ${item.className || ""}`
                             }
                             onClick={() => {
@@ -207,7 +205,7 @@ const Header = () => {
                               if (item.action) item.action();
                               setShowDropdown(false);
                             }}
-                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer ${item.className || ""}`}
+                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-background/30 cursor-pointer ${item.className || ""}`}
                           >
                             <span className="w-5 h-5 flex items-center justify-center">
                               {IconComponent}
@@ -225,9 +223,9 @@ const Header = () => {
                       key={item.id}
                       to={item.path}
                       className={({ isActive }) =>
-                        `flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer text-sm! ${
+                        `flex items-center gap-2 p-2 rounded-lg hover:bg-background/30 cursor-pointer text-sm! ${
                           isActive
-                            ? "bg-muted-foreground/30 font-normal! text-foreground!"
+                            ? "bg-background/30 font-normal! text-foreground!"
                             : ""
                         } ${item.className || ""}`
                       }
@@ -248,7 +246,7 @@ const Header = () => {
                         if (item.action) item.action();
                         setShowDropdown(false);
                       }}
-                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer ${item.className || ""}`}
+                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-background/30 cursor-pointer ${item.className || ""}`}
                     >
                       <span className="w-5 h-5 flex items-center justify-center">
                         {IconComponent}

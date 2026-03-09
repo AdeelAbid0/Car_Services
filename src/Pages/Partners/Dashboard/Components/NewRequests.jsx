@@ -1,6 +1,6 @@
 const NewRequests = () => {
   return (
-    <div className="flex w-full justify-between rounded-2xl bg-background hover:bg-white p-6 cursor-pointer">
+    <div className="flex w-full justify-between rounded-2xl bg-muted-background hover:bg-white p-6 cursor-pointer">
       <div className="flex w-[80%] gap-5">
         <div className="flex shrink-0 w-12 h-12 rounded-xl">
           <img

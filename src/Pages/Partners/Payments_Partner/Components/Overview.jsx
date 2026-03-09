@@ -120,7 +120,7 @@ const Overview = () => {
             </h3>
             <div className="flex items-center gap-3 text-muted-foreground font-medium! text-sm!">
               <label>4242 4242 4242 4242</label>
-              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
+              <span className="w-1 h-1 rounded-full bg-background/30"></span>
               <p>Expiry: 16/29</p>
             </div>
             <div>
@@ -136,7 +136,7 @@ const Overview = () => {
           <h1 className="text-foreground font-semibold! text-[16px]!">
             Invoices
           </h1>
-          <div className="flex gap-2.5 borde border-[#E5E5E5] bg-background rounded-lg px-2.5 py-2 cursor-pointer hover:bg-white">
+          <div className="flex gap-2.5 borde border-border bg-muted-background rounded-lg px-2.5 py-2 cursor-pointer hover:bg-white">
             <FilterIcon />
             <p>Filters</p>
           </div>
@@ -159,24 +159,24 @@ const Overview = () => {
         <div>
           <p>Invoice</p>
           <div className="flex flex-col gap-1.5 mt-2.5">
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Hashtag />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 INV-2026-00485
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Calendar />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 12 Jan 2026
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Timer />
               </div>
               <h1 className="text-success text-xs! font-medium!">Paid</h1>
@@ -186,30 +186,30 @@ const Overview = () => {
         <div className="mt-4">
           <p>Services</p>
           <div className="flex flex-col gap-1.5 mt-2.5">
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Service />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 Brake inspection and repair
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Calendar />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 12 Jan 2026
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Clock />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">4:30 PM</h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Money />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
@@ -221,32 +221,32 @@ const Overview = () => {
         <div className="mt-4">
           <p>Customer details</p>
           <div className="flex flex-col gap-1.5 mt-2.5">
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <User />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 Ali Raza
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Mail />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 aliraza@gmail.com
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Call />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 03360999054
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Location />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
@@ -258,22 +258,22 @@ const Overview = () => {
         <div className="mt-4">
           <p>Payment information</p>
           <div className="flex flex-col gap-1.5 mt-2.5">
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Money />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">Online </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Hashtag />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 TXN-986547
               </h1>
             </div>
-            <div className="flex w-full bg-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
-              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-muted-foreground/30 rounded-lg">
+            <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
+              <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
                 <Calendar />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">

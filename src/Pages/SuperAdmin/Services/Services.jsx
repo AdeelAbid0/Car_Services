@@ -11,6 +11,7 @@ import Button from "../../../ui/Button/Button";
 import { Dropdown } from "antd";
 import AddServicesDrawer from "../../Partners/Manage_Services/Components/AddServicesDrawer";
 import EditServicesDrawer from "../../Partners/Manage_Services/Components/EditServicesDrawer";
+import Segment from "../../../Components/Segment/Segment";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -154,6 +155,19 @@ const Services = () => {
     }
   };
 
+  const tabs = [
+    {
+      id: "admin",
+      label: "Admin",
+      component: <></>,
+    },
+    {
+      id: "partner",
+      label: "Partners",
+      component: <></>,
+    },
+  ];
+
   return (
     <>
       <div className="flex w-full justify-center h-full overflow-auto">
@@ -169,35 +183,18 @@ const Services = () => {
             />
           </div>
           <div className="flex w-full justify-between">
-            <div className="flex w-fit bg-white rounded-lg h-11 items-center mb-5 px-0.5 gap-2">
-              <div
-                className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-                  activeTab === "admin" ? "bg-muted-foreground/30" : "bg-white"
-                }`}
-                onClick={() => setActiveTab("admin")}
-              >
-                <p className="text-foreground font-medium! text-[13px]!">
-                  Admin
-                </p>
-              </div>
-              <div
-                className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-                  activeTab === "partner"
-                    ? "bg-muted-foreground/30"
-                    : "bg-white"
-                }`}
-                onClick={() => setActiveTab("partner")}
-              >
-                <p className="text-foreground font-medium! text-[13px]!">
-                  Partners
-                </p>
-              </div>
+            <div className="flex w-fit shrink-0">
+              <Segment
+                tabs={tabs}
+                defaultActiveTab={activeTab}
+                onTabChange={setActiveTab}
+              />
             </div>
             <div className="flex w-full max-w-75">
               <InputText placeholder={"Search"} prefixIcon={<SearchIcon />} />
             </div>
           </div>
-          <div className="flex w-fit gap-6 border-b border-[#E5E5E5]">
+          <div className="flex w-fit gap-6 border-b border-border">
             {carServices.map((service) => (
               <div
                 key={service.id}
@@ -220,7 +217,7 @@ const Services = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className={`relative flex flex-col gap-2 justify-center items-center rounded-xl w-38 h-30 cursor-pointer bg-background hover:bg-white ${
+                className={`relative flex flex-col gap-2 justify-center items-center rounded-xl w-38 h-30 cursor-pointer bg-muted-background hover:bg-white ${
                   selectedService === service?.id
                     ? "bg-white border border-primary"
                     : ""

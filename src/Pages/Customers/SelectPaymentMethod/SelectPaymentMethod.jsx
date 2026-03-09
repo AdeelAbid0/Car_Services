@@ -97,7 +97,7 @@ const SelectPaymentMethod = () => {
           {currentStep === 1 ? (
             <div className="flex flex-col gap-4 w-full items-center">
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-border cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("paypal")}
               >
                 <div className="flex gap-3 items-center">
@@ -112,7 +112,7 @@ const SelectPaymentMethod = () => {
               </div>
 
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-border cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("debit")}
               >
                 <div className="flex gap-3 items-center">
@@ -125,7 +125,7 @@ const SelectPaymentMethod = () => {
               </div>
 
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-border cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("easypaisa")}
               >
                 <div className="flex gap-3 items-center">
@@ -138,7 +138,7 @@ const SelectPaymentMethod = () => {
               </div>
 
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-border cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("jazzcash")}
               >
                 <div className="flex gap-3 items-center">

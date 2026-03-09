@@ -35,7 +35,7 @@ const Settings = () => {
   const renderItem = (item) => (
     <div
       key={item.label}
-      className="flex items-center justify-between w-full px-4 h-10 bg-background rounded-lg cursor-pointer hover:bg-white"
+      className="flex items-center justify-between w-full px-4 h-10 bg-muted-background rounded-lg cursor-pointer hover:bg-white"
     >
       <p className="text-foreground text-sm font-medium">{item.label}</p>
       {item.type === "switch" ? (

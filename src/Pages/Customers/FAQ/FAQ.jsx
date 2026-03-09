@@ -68,7 +68,7 @@ const FAQ = () => {
                 <div
                   key={index}
                   className={`
-                    bg-background border border-[#E5E5E5] rounded-[26px] 
+                    bg-muted-background border border-border rounded-[26px] 
                     transition-all duration-300 overflow-hidden
                     ${activeIndex === index ? "border-primary" : ""}
                   `}

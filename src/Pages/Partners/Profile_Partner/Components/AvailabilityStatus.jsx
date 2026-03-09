@@ -21,7 +21,7 @@ const AvailabilityStatus = ({ onChange }) => {
         </label>
 
         <div
-          className="flex gap-2.5 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-background"
+          className="flex gap-2.5 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-muted-background"
           onClick={() => handleStatusChange("available")}
         >
           <Radio
@@ -41,7 +41,7 @@ const AvailabilityStatus = ({ onChange }) => {
 
         {/* Offline - Default */}
         <div
-          className="flex gap-3 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-background"
+          className="flex gap-3 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-muted-background"
           onClick={() => handleStatusChange("offline")}
         >
           <Radio checked={selectedStatus === "offline"} />

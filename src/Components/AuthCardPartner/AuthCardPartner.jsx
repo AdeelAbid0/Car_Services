@@ -17,7 +17,7 @@ const AuthCardPartner = ({
         <span
           key={i}
           className={`w-6 h-1.5 rounded-full ${
-            i <= currentStep ? "bg-primary" : "bg-[#F4F2FF]"
+            i <= currentStep ? "bg-primary" : "bg-background"
           }`}
         ></span>,
       );

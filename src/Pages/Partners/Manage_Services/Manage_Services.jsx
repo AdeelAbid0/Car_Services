@@ -66,7 +66,7 @@ const Manage_Services = () => {
           {/* Card */}
           <div className="flex w-full justify-between rounded-2xl bg-white hover:bg-white p-6 cursor-pointer mt-6">
             <div className="flex gap-4 w-[90%]">
-              <div className="w-83.5 h-28.5 bg-background rounded-2xl flex flex-col gap-2 p-4 ">
+              <div className="w-83.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-2 p-4 ">
                 <p className="text-muted-foreground font-medium! text-xs">
                   Services
                 </p>
@@ -92,7 +92,7 @@ const Manage_Services = () => {
                   </p>
                 </div>
               </div>
-              <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
+              <div className="w-33.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
                 <img
                   src="/Images/hero-image.png"
                   alt=""
@@ -102,7 +102,7 @@ const Manage_Services = () => {
                   User Name
                 </h1>
               </div>
-              <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
+              <div className="w-33.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
                 <img
                   src="/Images/hero-image.png"
                   alt=""
@@ -112,7 +112,7 @@ const Manage_Services = () => {
                   Service
                 </h1>
               </div>
-              <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
+              <div className="w-33.5 h-28.5 bg-muted-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
                 <img
                   src="/Images/hero-image.png"
                   alt=""
@@ -162,7 +162,7 @@ const Manage_Services = () => {
           className="bg-white!"
         >
           <div className="flex flex-col gap-3 p-6">
-            <div className="flex border-b border-[#E5E5E5] h-10 items-start">
+            <div className="flex border-b border-border h-10 items-start">
               <h1 className="text-[20px] font-bold! text-foreground">
                 Delete Service?
               </h1>

@@ -51,7 +51,7 @@ const MyCars = () => {
       {carsData?.map((car) => (
         <div
           key={car?.id}
-          className="bg-background hover:bg-white p-6 rounded-2xl flex justify-between"
+          className="bg-muted-background hover:bg-white p-6 rounded-2xl flex justify-between"
         >
           <div className="flex gap-5">
             <img

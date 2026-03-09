@@ -22,7 +22,7 @@ const Dashboard = () => {
               type={"primary"}
               prefixIcon={<FilterIcon />}
               className={
-                "bg-white! text-foreground! font-medium! border! border-[#E5E5E5]! rounded-lg! h-9!"
+                "bg-white! text-foreground! font-medium! border! border-border! rounded-lg! h-9!"
               }
             />
           </div>

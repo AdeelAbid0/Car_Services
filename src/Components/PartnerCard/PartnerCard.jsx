@@ -15,7 +15,7 @@ const PartnerCard = ({
   rating,
 }) => {
   return (
-    <div className="flex w-full justify-between rounded-2xl bg-background hover:bg-white p-1 pr-4">
+    <div className="flex w-full justify-between rounded-2xl bg-muted-background hover:bg-white p-1 pr-4">
       <div className="flex w-[80%] gap-5">
         <div className="flex shrink-0 w-38 h-38 rounded-xl m-1">
           <img

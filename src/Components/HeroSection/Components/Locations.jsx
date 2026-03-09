@@ -12,11 +12,11 @@ const Locations = () => {
         />
         <div className="flex w-full flex-col gap-4">
           <div className="flex w-full justify-between">
-            <div className="flex items-center gap-5 w-[49%] bg-[#F4F2FF] p-1 rounded-2xl">
+            <div className="flex items-center gap-5 w-[49%] bg-background p-1 rounded-2xl">
               <div className="flex justify-center items-center w-14 h-14 rounded-md bg-white">
                 <LocationIcon />
               </div>
-              <div className="flex flex-col gap-2 w-[49%] bg-[#F4F2FF]">
+              <div className="flex flex-col gap-2 w-[49%] bg-background">
                 <h1 className="text-foreground text-[13px] font-medium">
                   Nearby
                 </h1>
@@ -25,11 +25,11 @@ const Locations = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-5 w-[49%] bg-[#F4F2FF] p-1 rounded-2xl">
+            <div className="flex items-center gap-5 w-[49%] bg-background p-1 rounded-2xl">
               <div className="flex justify-center items-center w-14 h-14 rounded-md bg-white">
                 <RouteIcon />
               </div>
-              <div className="flex flex-col gap-2 w-[49%] bg-[#F4F2FF]">
+              <div className="flex flex-col gap-2 w-[49%] bg-background">
                 <h1 className="text-foreground text-[13px] font-medium">
                   Google Maps
                 </h1>

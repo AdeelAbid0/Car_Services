@@ -53,7 +53,7 @@ const PaymentMethod = () => {
         {paymentData?.map((payment) => (
           <div
             key={payment?.id}
-            className="bg-background hover:bg-white p-6 rounded-2xl flex justify-between"
+            className="bg-muted-background hover:bg-white p-6 rounded-2xl flex justify-between"
           >
             <div className="flex gap-5">
               <img
@@ -73,7 +73,7 @@ const PaymentMethod = () => {
                     <h1 className="text-sm! font-medium! text-muted-foreground">
                       {payment?.cardNumber}
                     </h1>
-                    <span className="w-1.5 h-1 bg-muted-foreground/30 rounded-full"></span>
+                    <span className="w-1.5 h-1 bg-background/30 rounded-full"></span>
                     <p className="text-sm! font-medium! text-muted-foreground">
                       Expiry: {payment?.expiryDate}
                     </p>

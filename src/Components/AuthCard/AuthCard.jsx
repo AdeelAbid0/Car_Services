@@ -66,7 +66,7 @@ const AuthCard = ({
                     label={buttonText}
                     suffixIcon={buttonIcon}
                     onClick={onButtonClick}
-                    className="w-full bg-primary hover:bg-[#7d6cd3] text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2"
+                    className="w-full bg-primary hover:bg-primary/40 text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2"
                   />
                 )}
 
@@ -74,7 +74,7 @@ const AuthCard = ({
                   <>
                     <div className="relative my-8">
                       <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t border-[#F5F5F5]" />
+                        <div className="w-full border-t border-muted-background" />
                       </div>
                       <div className="relative flex justify-center text-sm">
                         <span className="px-2 bg-white text-gray-500">or</span>

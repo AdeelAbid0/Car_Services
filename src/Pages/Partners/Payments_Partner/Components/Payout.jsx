@@ -59,7 +59,7 @@ const Payout = () => {
           <div className="flex flex-col gap-2">
             <label className="flex gap-3  items-center font-medium! text-sm text-muted-foreground">
               UBL{" "}
-              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
+              <span className="w-1 h-1 rounded-full bg-background/30"></span>
               <span className="text-primary">Linked</span>
             </label>
             <h3 className="text-foreground font-medium! text-sm!">
@@ -67,7 +67,7 @@ const Payout = () => {
             </h3>
             <div className="flex items-center gap-3 text-muted-foreground font-medium! text-sm!">
               <label>4242 4242 4242 4242</label>
-              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
+              <span className="w-1 h-1 rounded-full bg-background/30"></span>
               <p>Expiry: 16/29</p>
             </div>
             <div className="flex gap-2 items-center">
@@ -102,7 +102,7 @@ const Payout = () => {
             </h3>
             <div className="flex items-center gap-3 text-muted-foreground font-medium! text-sm!">
               <label>4242 4242 4242 4242</label>
-              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
+              <span className="w-1 h-1 rounded-full bg-background/30"></span>
               <p>Expiry: 16/29</p>
             </div>
             <div className="flex gap-2 items-center">

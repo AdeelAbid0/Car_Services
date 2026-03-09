@@ -63,7 +63,7 @@ const Bookings = () => {
           </div>
 
           {/* Tabs */}
-          <div className="flex w-full flex-wrap gap-6 mt-11 border-b border-[#E5E5E5]">
+          <div className="flex w-full flex-wrap gap-6 mt-11 border-b border-border">
             {tabs.map((item) => (
               <div
                 key={item.id}

@@ -156,13 +156,13 @@ const CustomCalendar = () => {
               </h2>
               <div className="flex gap-1">
                 <span
-                  className="flex justify-center items-center text-primary! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-primary transition cursor-pointer"
+                  className="flex justify-center items-center text-primary! w-6 h-6 border-[0.75px] border-muted-foreground rounded-md hover:border-primary transition cursor-pointer"
                   onClick={handlePrevMonth}
                 >
                   <LeftOutlined className="w-2 h-2" />
                 </span>
                 <span
-                  className="flex justify-center items-center text-primary! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-primary transition cursor-pointer"
+                  className="flex justify-center items-center text-primary! w-6 h-6 border-[0.75px] border-muted-foreground rounded-md hover:border-primary transition cursor-pointer"
                   onClick={handleNextMonth}
                 >
                   <RightOutlined className="w-2 h-2" />
@@ -206,7 +206,7 @@ const CustomCalendar = () => {
                       ${
                         isSelectedDay
                           ? "bg-primary! text-white! border-primary!"
-                          : "hover:bg-[#F4F2FF]"
+                          : "hover:bg-background"
                       }
                     `}
                   >
@@ -219,19 +219,19 @@ const CustomCalendar = () => {
             <div className="flex gap-2 mt-4">
               <button
                 onClick={handleToday}
-                className="flex-1 py-1.5 text-xs text-primary hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-primary hover:bg-background rounded-lg transition border border-background"
               >
                 Today
               </button>
               <button
                 onClick={handleTomorrow}
-                className="flex-1 py-1.5 text-xs text-primary hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-primary hover:bg-background rounded-lg transition border border-background"
               >
                 Tomorrow
               </button>
               <button
                 onClick={handleNextWeek}
-                className="flex-1 py-1.5 text-xs text-primary hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-primary hover:bg-background rounded-lg transition border border-background"
               >
                 Next Week
               </button>
@@ -262,7 +262,7 @@ const CustomCalendar = () => {
                     ${
                       selectedTime === time
                         ? "bg-primary text-white! border-primary"
-                        : "text-gray-700 border-[#EAE8FF] hover:bg-[#F4F2FF] hover:border-primary"
+                        : "text-gray-700 border-background hover:bg-background hover:border-primary"
                     }
                   `}
                 >

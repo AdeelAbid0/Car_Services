@@ -11,9 +11,7 @@ const InputTextArea = ({ placeholder, label, rows, className, ...rest }) => {
 
       <Input.TextArea
         placeholder={placeholder}
-        className={`w-full! rounded-lg border border-[#E5E5E5] ${
-          className ?? ""
-        }`}
+        className={`w-full! rounded-lg border border-border ${className ?? ""}`}
         {...rest}
         rows={rows}
       />

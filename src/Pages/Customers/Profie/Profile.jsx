@@ -53,7 +53,7 @@ const Profile = () => {
             place.
           </p>
         </div>
-        <div className="flex w-full gap-6 border-b border-[#E5E5E5]">
+        <div className="flex w-full gap-6 border-b border-border">
           {tabs.map((item) => (
             <div
               key={item.id}
