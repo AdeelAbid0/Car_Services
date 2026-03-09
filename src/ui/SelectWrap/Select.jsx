@@ -17,7 +17,7 @@ const CommonSelect = ({
   return (
     <div className="flex w-full items-center flex-col gap-2">
       {label && (
-        <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
+        <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
           {label}
         </p>
       )}
@@ -38,11 +38,11 @@ const CommonSelect = ({
                 SuffixIcon
               )
             ) : (
-              <ChevronDown className="w-5 h-5 text-[#171717]" />
+              <ChevronDown className="w-5 h-5 text-foreground" />
             )
           }
           className={`w-full! ${PrefixIcon ? "pl-10!" : ""} ${className ?? ""}`}
-          rootClassName="[&_.ant-select-content]:flex! [&_.ant-select-content]:items-center! [&_.ant-select-content]:h-full! [&_.ant-select-placeholder]:text-[#D4D4D4]! [&_.ant-select-placeholder]:font-normal! [&_.ant-select-placeholder]:text-sm!"
+          rootClassName="[&_.ant-select-content]:flex! [&_.ant-select-content]:items-center! [&_.ant-select-content]:h-full! [&_.ant-select-placeholder]:text-muted-foreground! [&_.ant-select-placeholder]:font-normal! [&_.ant-select-placeholder]:text-sm!"
           {...rest}
         />
       </div>

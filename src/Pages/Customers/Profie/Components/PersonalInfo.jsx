@@ -36,7 +36,7 @@ const PersonalInfo = () => {
           beforeUpload={() => false}
           onChange={handleChange}
         >
-          <p className="text-xs! font-medium! text-[#9A85FF] cursor-pointer hover:text-[#9A85FF]/70">
+          <p className="text-xs! font-medium! text-primary cursor-pointer hover:text-primary/70">
             Change Image
           </p>
         </Upload>

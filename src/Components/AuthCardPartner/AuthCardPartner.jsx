@@ -17,9 +17,9 @@ const AuthCardPartner = ({
         <span
           key={i}
           className={`w-6 h-1.5 rounded-full ${
-            i <= currentStep ? "bg-[#9A85FF]" : "bg-[#F4F2FF]"
+            i <= currentStep ? "bg-primary" : "bg-[#F4F2FF]"
           }`}
-        ></span>
+        ></span>,
       );
     }
     return steps;
@@ -29,16 +29,16 @@ const AuthCardPartner = ({
     <div className="flex w-full gap-2 h-screen">
       <div className="flex flex-col items-center w-1/2 bg-white rounded-4xl">
         <div className="flex flex-col items-center gap-2 mt-11">
-          <h1 className="text-[#9A85FF] font-medium text-[16px] leading-[129%]">
+          <h1 className="text-primary font-medium text-[16px] leading-[129%]">
             Step {currentStep}/{totalSteps}
           </h1>
           <div className="flex gap-1">{renderStepIndicators()}</div>
         </div>
         <div className="flex h-full justify-center flex-col gap-1 text-center w-[56%]">
-          <h1 className="text-[44px] leading-[129%]! text-[#262626]! font-bold!">
+          <h1 className="text-[44px] leading-[129%]! text-foreground! font-bold!">
             {title}
           </h1>
-          <p className="text-[16px] text-[#737373] leading-[129%] font-medium mb-8">
+          <p className="text-[16px] text-muted-foreground leading-[129%] font-medium mb-8">
             {description}
           </p>
           <div className="flex flex-col gap-3">{children}</div>

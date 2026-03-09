@@ -5,8 +5,8 @@ const Partners = () => {
     <div className="flex flex-col w-full items-center h-full">
       <div className="flex w-[72%] flex-col gap-6 py-11">
         <div className="flex flex-col gap-1">
-          <h1 className="text-[#262626] text-2xl! font-bold!">Partners</h1>
-          <p className="text-[#737373] text-[16px] font-normal">
+          <h1 className="text-foreground text-2xl! font-bold!">Partners</h1>
+          <p className="text-muted-foreground text-[16px] font-normal">
             Verified workshops and providers ready to care for your car.{" "}
           </p>
         </div>

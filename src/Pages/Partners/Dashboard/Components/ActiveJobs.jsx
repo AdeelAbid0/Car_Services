@@ -8,48 +8,50 @@ const ActiveJobs = () => {
       <div className="flex w-fit bg-white rounded-lg h-11 items-center mb-5 px-0.5 gap-2">
         <div
           className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-            activeTab === "today" ? "bg-[#F5F5F5]" : "bg-white"
+            activeTab === "today" ? "bg-muted-foreground/30" : "bg-white"
           }`}
           onClick={() => setActiveTab("today")}
         >
-          <p className="text-[#262626] font-medium! text-[13px]!">Today</p>
+          <p className="text-foreground font-medium! text-[13px]!">Today</p>
         </div>
         <div
           className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-            activeTab === "tomorrow" ? "bg-[#F5F5F5]" : "bg-white"
+            activeTab === "tomorrow" ? "bg-muted-foreground/30" : "bg-white"
           }`}
           onClick={() => setActiveTab("tomorrow")}
         >
-          <p className="text-[#262626] font-medium! text-[13px]!">Tomorrow</p>
+          <p className="text-foreground font-medium! text-[13px]!">Tomorrow</p>
         </div>
       </div>
       <div className="flex w-full justify-between rounded-2xl bg-white hover:bg-white p-6 cursor-pointer">
         <div className="flex gap-4 w-[80%]">
-          <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+          <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
             <img
               src="/Images/hero-image.png"
               alt=""
               className="w-7 h-7 object-cover"
             />
-            <h1 className="text-[#262626] text-sm!  font-semibold!">
+            <h1 className="text-foreground text-sm!  font-semibold!">
               User Name
             </h1>
           </div>
-          <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+          <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
             <img
               src="/Images/hero-image.png"
               alt=""
               className="w-7 h-7 object-cover"
             />
-            <h1 className="text-[#262626] text-sm!  font-semibold!">Service</h1>
+            <h1 className="text-foreground text-sm!  font-semibold!">
+              Service
+            </h1>
           </div>
-          <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+          <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
             <img
               src="/Images/hero-image.png"
               alt=""
               className="w-7 h-7 object-cover"
             />
-            <h1 className="text-[#262626] text-sm!  font-semibold!">
+            <h1 className="text-foreground text-sm!  font-semibold!">
               Time remaining
             </h1>
           </div>

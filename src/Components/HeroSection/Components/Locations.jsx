@@ -17,10 +17,10 @@ const Locations = () => {
                 <LocationIcon />
               </div>
               <div className="flex flex-col gap-2 w-[49%] bg-[#F4F2FF]">
-                <h1 className="text-[#262626] text-[13px] font-medium">
+                <h1 className="text-foreground text-[13px] font-medium">
                   Nearby
                 </h1>
-                <p className="text-[10px] font-normal text-[#737373]">
+                <p className="text-[10px] font-normal text-muted-foreground">
                   Find What’s around you
                 </p>
               </div>
@@ -30,26 +30,26 @@ const Locations = () => {
                 <RouteIcon />
               </div>
               <div className="flex flex-col gap-2 w-[49%] bg-[#F4F2FF]">
-                <h1 className="text-[#262626] text-[13px] font-medium">
+                <h1 className="text-foreground text-[13px] font-medium">
                   Google Maps
                 </h1>
-                <p className="text-[10px] font-normal text-[#737373]">
+                <p className="text-[10px] font-normal text-muted-foreground">
                   Choose on maps
                 </p>
               </div>
             </div>
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-[#737373] text-[10px] font-normal">
+            <label className="text-muted-foreground text-[10px] font-normal">
               Suggestions
             </label>
             {[1, 2, 3].map((item) => {
               return (
                 <div className="flex flex-col gap-1  mt-2.5">
-                  <h1 className="text-[13px] font-normal text-[#262626]">
+                  <h1 className="text-[13px] font-normal text-foreground">
                     F-8 Markaz, Islamabad
                   </h1>
-                  <p className="font-normal text-[#737373] text-[10px]">
+                  <p className="font-normal text-muted-foreground text-[10px]">
                     Mehmand Car Garage
                   </p>
                 </div>

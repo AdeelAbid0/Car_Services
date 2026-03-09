@@ -19,7 +19,7 @@ const Layout = () => {
   }, [location, auth_routes]);
 
   return (
-    <div className="relative w-full bg-[#F5F5F5]">
+    <div className="relative w-full bg-background">
       {!isAuthRoute && (
         <div className="w-full fixed z-40">
           <Header />

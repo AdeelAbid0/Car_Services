@@ -85,13 +85,13 @@ const CustomCalendar = () => {
 
   const handlePrevMonth = () => {
     setCurrentDate(
-      new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1)
+      new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1),
     );
   };
 
   const handleNextMonth = () => {
     setCurrentDate(
-      new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1)
+      new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1),
     );
   };
 
@@ -156,13 +156,13 @@ const CustomCalendar = () => {
               </h2>
               <div className="flex gap-1">
                 <span
-                  className="flex justify-center items-center text-[#9A85FF]! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-[#9A85FF] transition cursor-pointer"
+                  className="flex justify-center items-center text-primary! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-primary transition cursor-pointer"
                   onClick={handlePrevMonth}
                 >
                   <LeftOutlined className="w-2 h-2" />
                 </span>
                 <span
-                  className="flex justify-center items-center text-[#9A85FF]! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-[#9A85FF] transition cursor-pointer"
+                  className="flex justify-center items-center text-primary! w-6 h-6 border-[0.75px] border-[#F4F2FF] rounded-md hover:border-primary transition cursor-pointer"
                   onClick={handleNextMonth}
                 >
                   <RightOutlined className="w-2 h-2" />
@@ -200,12 +200,12 @@ const CustomCalendar = () => {
                       }
                       ${
                         isCurrentDay
-                          ? "border-[#9A85FF] text-[#9A85FF]"
+                          ? "border-primary text-primary"
                           : "border-none"
                       }
                       ${
                         isSelectedDay
-                          ? "bg-[#9A85FF]! text-white! border-[#9A85FF]!"
+                          ? "bg-primary! text-white! border-primary!"
                           : "hover:bg-[#F4F2FF]"
                       }
                     `}
@@ -219,19 +219,19 @@ const CustomCalendar = () => {
             <div className="flex gap-2 mt-4">
               <button
                 onClick={handleToday}
-                className="flex-1 py-1.5 text-xs text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-primary hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
               >
                 Today
               </button>
               <button
                 onClick={handleTomorrow}
-                className="flex-1 py-1.5 text-xs text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-primary hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
               >
                 Tomorrow
               </button>
               <button
                 onClick={handleNextWeek}
-                className="flex-1 py-1.5 text-xs text-[#9A85FF] hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
+                className="flex-1 py-1.5 text-xs text-primary hover:bg-[#F4F2FF] rounded-lg transition border border-[#EAE8FF]"
               >
                 Next Week
               </button>
@@ -261,8 +261,8 @@ const CustomCalendar = () => {
                     transition border cursor-pointer
                     ${
                       selectedTime === time
-                        ? "bg-[#9A85FF] text-white! border-[#9A85FF]"
-                        : "text-gray-700 border-[#EAE8FF] hover:bg-[#F4F2FF] hover:border-[#9A85FF]"
+                        ? "bg-primary text-white! border-primary"
+                        : "text-gray-700 border-[#EAE8FF] hover:bg-[#F4F2FF] hover:border-primary"
                     }
                   `}
                 >

@@ -31,7 +31,7 @@ const Services = () => {
   return (
     <div className="flex flex-col gap-4 max-w-[50%]">
       <div className="flex flex-col gap-2 mt-8">
-        <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
+        <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
           Select Services
         </p>
         <div className="grid grid-cols-2 gap-3">
@@ -45,10 +45,10 @@ const Services = () => {
               }`}
               onClick={() => handleServiceToggle(service.id)}
             >
-              <span className="text-[16px] leading-5 text-[#262626] font-medium">
+              <span className="text-[16px] leading-5 text-foreground font-medium">
                 {service.name}
               </span>
-              <span className="text-[#737373] leading-5 text-sm font-normal">
+              <span className="text-muted-foreground leading-5 text-sm font-normal">
                 {service.description}
               </span>
             </div>

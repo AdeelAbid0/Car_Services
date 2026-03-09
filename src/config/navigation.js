@@ -136,7 +136,7 @@ const dropdownItems = {
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-[#EF4444] hover:text-[#DC2626]",
+      className: "text-danger hover:text-danger/80",
     },
   ],
   partner: [
@@ -163,7 +163,7 @@ const dropdownItems = {
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-[#EF4444] hover:text-[#DC2626]",
+      className: "text-danger hover:text-danger/80",
     },
   ],
   admin: [
@@ -172,7 +172,7 @@ const dropdownItems = {
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-[#EF4444] hover:text-[#DC2626]",
+      className: "text-danger hover:text-danger/80",
     },
   ],
   superAdmin: [
@@ -181,7 +181,7 @@ const dropdownItems = {
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-[#EF4444] hover:text-[#DC2626]",
+      className: "text-danger hover:text-danger/80",
     },
   ],
 };

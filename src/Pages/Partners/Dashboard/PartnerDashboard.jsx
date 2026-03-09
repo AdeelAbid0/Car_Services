@@ -31,12 +31,12 @@ const PartnerDashboard = () => {
       <div className="mt-11 w-full max-w-[72%]">
         <div className="flex w-full justify-between items-center">
           <div className="flex flex-col gap-1 justify-center">
-            <h1 className="text-2xl font-bold! text-[#262626]">Dashboard</h1>
+            <h1 className="text-2xl font-bold! text-foreground">Dashboard</h1>
           </div>
           <div className="flex items-center">
-            <div className="flex items-center px-4 py-1.75 gap-2 bg-[#262626] rounded-lg cursor-pointer hover:bg-[#404040] transition-colors">
+            <div className="flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors">
               <p className="text-white font-normal text-sm">PKR 23,600</p>
-              <span className="h-3 border border-[#404040] "></span>
+              <span className="h-3 border border-foreground/80 "></span>
               <p className="text-white font-normal text-sm">Earnings</p>
               <ArrowRightIcon className="text-white" />
             </div>

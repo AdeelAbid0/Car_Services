@@ -28,8 +28,8 @@ const MyCars = () => {
       key: "1",
       label: (
         <div className="flex w-full justify-between gap-2">
-          <p className="text-[13px]! text-[#262626]! font-normal">Edit</p>
-          <Edit className="text-[#262626c3]" />
+          <p className="text-[13px]! text-foreground! font-normal">Edit</p>
+          <Edit className="text-foreground/70" />
         </div>
       ),
     },
@@ -37,7 +37,7 @@ const MyCars = () => {
       key: "2",
       label: (
         <div className="flex w-full justify-between gap-2">
-          <p className="text-[13px]! text-[#262626]! font-normal">Delete</p>
+          <p className="text-[13px]! text-foreground! font-normal">Delete</p>
           <Delete />
         </div>
       ),
@@ -51,7 +51,7 @@ const MyCars = () => {
       {carsData?.map((car) => (
         <div
           key={car?.id}
-          className="bg-[#FAFAFA] hover:bg-white p-6 rounded-2xl flex justify-between"
+          className="bg-background hover:bg-white p-6 rounded-2xl flex justify-between"
         >
           <div className="flex gap-5">
             <img
@@ -61,43 +61,43 @@ const MyCars = () => {
             />
             <div className="flex flex-col justify-center gap-3.5">
               <div className="flex flex-col gap-0.5">
-                <h1 className="text-[20px]! font-bold! text-[#262626]">
+                <h1 className="text-[20px]! font-bold! text-foreground">
                   {car?.name}
                 </h1>
-                <p className="text-[13px]! font-normal text-[#737373]">
+                <p className="text-[13px]! font-normal text-muted-foreground">
                   {car?.year}
                 </p>
               </div>
               <div className="flex gap-5">
                 <div>
-                  <label className="text-xs! font-medium! text-[#737373]">
+                  <label className="text-xs! font-medium! text-muted-foreground">
                     Variant
                   </label>
-                  <p className="text-sm! font-medium! text-[#262626]">
+                  <p className="text-sm! font-medium! text-foreground">
                     {car?.variant}
                   </p>
                 </div>
                 <div>
-                  <label className="text-xs! font-medium! text-[#737373]">
+                  <label className="text-xs! font-medium! text-muted-foreground">
                     Registration City
                   </label>
-                  <p className="text-sm! font-medium! text-[#262626]">
+                  <p className="text-sm! font-medium! text-foreground">
                     {car?.regCity}
                   </p>
                 </div>
                 <div>
-                  <label className="text-xs! font-medium! text-[#737373]">
+                  <label className="text-xs! font-medium! text-muted-foreground">
                     License Plate
                   </label>
-                  <p className="text-sm! font-medium! text-[#262626]">
+                  <p className="text-sm! font-medium! text-foreground">
                     {car?.licensePlate}
                   </p>
                 </div>
                 <div>
-                  <label className="text-xs! font-medium! text-[#737373]">
+                  <label className="text-xs! font-medium! text-muted-foreground">
                     Fuel Type
                   </label>
-                  <p className="text-sm! font-medium! text-[#262626]">
+                  <p className="text-sm! font-medium! text-foreground">
                     {car?.fuelType}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ const MyCars = () => {
               placement="bottomRight"
             >
               <span className="cursor-pointer">
-                <MenuIcon className="text-[#737373]" />
+                <MenuIcon className="text-muted-foreground" />
               </span>
             </Dropdown>
           </div>

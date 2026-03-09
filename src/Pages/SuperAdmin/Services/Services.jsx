@@ -112,7 +112,7 @@ const Services = () => {
       key: "1",
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
-          <p className="text-xs font-normal! text-[#262626]">Edit</p>
+          <p className="text-xs font-normal! text-foreground">Edit</p>
           <EditIcon />
         </div>
       ),
@@ -121,7 +121,7 @@ const Services = () => {
       key: "2",
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
-          <p className="text-xs font-normal! text-[#262626]">Delete</p>
+          <p className="text-xs font-normal! text-foreground">Delete</p>
           <DeleteIcon />
         </div>
       ),
@@ -159,7 +159,7 @@ const Services = () => {
       <div className="flex w-full justify-center h-full overflow-auto">
         <div className="flex w-[72%] flex-col gap-6 h-full py-11">
           <div className="flex justify-between w-full">
-            <h1 className="text-[#262626] text-2xl! font-bold!">Services</h1>
+            <h1 className="text-foreground text-2xl! font-bold!">Services</h1>
             <Button
               type={"primary"}
               label={"Add New Service"}
@@ -172,21 +172,23 @@ const Services = () => {
             <div className="flex w-fit bg-white rounded-lg h-11 items-center mb-5 px-0.5 gap-2">
               <div
                 className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-                  activeTab === "admin" ? "bg-[#F5F5F5]" : "bg-white"
+                  activeTab === "admin" ? "bg-muted-foreground/30" : "bg-white"
                 }`}
                 onClick={() => setActiveTab("admin")}
               >
-                <p className="text-[#262626] font-medium! text-[13px]!">
+                <p className="text-foreground font-medium! text-[13px]!">
                   Admin
                 </p>
               </div>
               <div
                 className={`flex justify-center items-center w-27 h-10 rounded-lg cursor-pointer ${
-                  activeTab === "partner" ? "bg-[#F5F5F5]" : "bg-white"
+                  activeTab === "partner"
+                    ? "bg-muted-foreground/30"
+                    : "bg-white"
                 }`}
                 onClick={() => setActiveTab("partner")}
               >
-                <p className="text-[#262626] font-medium! text-[13px]!">
+                <p className="text-foreground font-medium! text-[13px]!">
                   Partners
                 </p>
               </div>
@@ -201,14 +203,14 @@ const Services = () => {
                 key={service.id}
                 className={`pb-2  ${
                   serviceCategory === service?.id
-                    ? "border-b-[1.5px] border-[#9A85FF]"
+                    ? "border-b-[1.5px] border-primary"
                     : ""
                 }`}
                 onClick={() => {
                   setServiceCategory(service?.id);
                 }}
               >
-                <h2 className="cursor-pointer text-[#737373] text-sm font-medium">
+                <h2 className="cursor-pointer text-muted-foreground text-sm font-medium">
                   {service.name}
                 </h2>
               </div>
@@ -218,9 +220,9 @@ const Services = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className={`relative flex flex-col gap-2 justify-center items-center rounded-xl w-38 h-30 cursor-pointer bg-[#FAFAFA] hover:bg-white ${
+                className={`relative flex flex-col gap-2 justify-center items-center rounded-xl w-38 h-30 cursor-pointer bg-background hover:bg-white ${
                   selectedService === service?.id
-                    ? "bg-white border border-[#9A85FF]"
+                    ? "bg-white border border-primary"
                     : ""
                 }`}
                 onClick={() => {
@@ -228,7 +230,7 @@ const Services = () => {
                 }}
               >
                 {service.icon}
-                <p className="cursor-pointer text-[#737373] text-sm font-medium leading-4">
+                <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-4">
                   {service.name}
                 </p>
                 <div className="absolute right-1 top-2">

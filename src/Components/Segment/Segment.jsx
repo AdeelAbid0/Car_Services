@@ -25,8 +25,8 @@ const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
             <p
               className={`w-full ${
                 activeTab === tab.id
-                  ? "text-[#9A85FF] font-medium border-b-2 border-[#9A85FF] pb-2"
-                  : "text-[#737373] hover:text-[#262626]"
+                  ? "text-primary font-medium border-b-2 border-primary pb-2"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {tab.label}

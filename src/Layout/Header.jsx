@@ -86,13 +86,13 @@ const Header = () => {
                 className={({ isActive }) =>
                   `cursor-pointer transition-colors relative ${
                     location.pathname === ROUTES.HOME
-                      ? "text-[#737373] hover:text-white"
-                      : "text-[#737373] hover:text-[#262626]"
+                      ? "text-muted-foreground hover:text-white"
+                      : "text-muted-foreground hover:text-foreground"
                   } ${
                     isActive && location.pathname === ROUTES.HOME
                       ? "text-white"
                       : isActive
-                        ? "text-[#262626]!"
+                        ? "text-foreground!"
                         : ""
                   }`
                 }
@@ -105,7 +105,7 @@ const Header = () => {
                         className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1.25 h-1.5 rounded-full shrink-0 ${
                           location.pathname === ROUTES.HOME
                             ? "bg-white"
-                            : "bg-[#262626]"
+                            : "bg-foreground"
                         }`}
                       ></span>
                     )}
@@ -127,8 +127,8 @@ const Header = () => {
               }}
               className={`${
                 location.pathname === ROUTES.HOME
-                  ? "bg-[#F4F2FF]! hover:bg-[#E5E0FF]! text-[#9A85FF]!"
-                  : "bg-[#262626]! hover:bg-[#303030]! text-white!"
+                  ? "bg-[#F4F2FF]! hover:bg-[#E5E0FF]! text-primary!"
+                  : "bg-foreground! hover:bg-[#303030]! text-white!"
               }`}
             />
             {location.pathname === ROUTES.HOME ? (
@@ -144,7 +144,7 @@ const Header = () => {
               className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors cursor-pointer ${
                 location.pathname === ROUTES.HOME
                   ? "text-white "
-                  : "text-[#262626]"
+                  : "text-foreground"
               }`}
             >
               <div className="w-11 h-11 rounded-full bg-gray-300 flex items-center justify-center"></div>
@@ -152,7 +152,7 @@ const Header = () => {
                 className={`${
                   location.pathname === ROUTES.HOME
                     ? "text-white"
-                    : "text-[#262626]"
+                    : "text-foreground"
                 }`}
               >
                 <ChevronDown
@@ -168,7 +168,7 @@ const Header = () => {
               <div
                 className={`absolute right-0 top-0 mt-19 w-61 rounded-2xl shadow-lg z-50 p-4 flex flex-col gap-2.5 bg-white ${
                   location.pathname === ROUTES.HOME
-                    ? "text-[#262626]"
+                    ? "text-foreground"
                     : "bg-white border border-gray-200"
                 }`}
               >
@@ -185,8 +185,10 @@ const Header = () => {
                           <NavLink
                             to={item.path}
                             className={({ isActive }) =>
-                              `flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer ${
-                                isActive ? "bg-[#F5F5F5] font-medium" : ""
+                              `flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer ${
+                                isActive
+                                  ? "bg-muted-foreground/30 font-medium"
+                                  : ""
                               } ${item.className || ""}`
                             }
                             onClick={() => {
@@ -205,7 +207,7 @@ const Header = () => {
                               if (item.action) item.action();
                               setShowDropdown(false);
                             }}
-                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer ${item.className || ""}`}
+                            className={`flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer ${item.className || ""}`}
                           >
                             <span className="w-5 h-5 flex items-center justify-center">
                               {IconComponent}
@@ -223,9 +225,9 @@ const Header = () => {
                       key={item.id}
                       to={item.path}
                       className={({ isActive }) =>
-                        `flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer text-sm! ${
+                        `flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer text-sm! ${
                           isActive
-                            ? "bg-[#F5F5F5] font-normal! text-[#262626]!"
+                            ? "bg-muted-foreground/30 font-normal! text-foreground!"
                             : ""
                         } ${item.className || ""}`
                       }
@@ -246,7 +248,7 @@ const Header = () => {
                         if (item.action) item.action();
                         setShowDropdown(false);
                       }}
-                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-[#F5F5F5] cursor-pointer ${item.className || ""}`}
+                      className={`flex items-center gap-2 p-2 rounded-lg hover:bg-muted-foreground/30 cursor-pointer ${item.className || ""}`}
                     >
                       <span className="w-5 h-5 flex items-center justify-center">
                         {IconComponent}

@@ -47,16 +47,16 @@ const SelectPaymentMethod = () => {
       <div className="flex w-[72%] flex-col gap-6 h-full py-11">
         {/* Static Heading - Same for all components */}
         <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold! text-[#262626] leading-11">
+          <h1 className="text-2xl font-bold! text-foreground leading-11">
             Payment Method
           </h1>
-          <p className="text-[16px] font-normal text-[#737373] leading-6">
+          <p className="text-[16px] font-normal text-muted-foreground leading-6">
             Add or manage your payment options for quick and secure checkout.
           </p>
         </div>
 
         <div className="mt-4 flex w-full justify-center">
-          <div className="flex max-w-87 items-center gap-1 text-sm text-[#737373]">
+          <div className="flex max-w-87 items-center gap-1 text-sm text-muted-foreground">
             {getFullBreadcrumb()
               .split(" › ")
               .map((part, index, array) => (
@@ -75,8 +75,8 @@ const SelectPaymentMethod = () => {
                     className={`
                     ${
                       index === array.length - 1
-                        ? "text-[#262626] font-medium cursor-default"
-                        : "text-[#737373] hover:text-[#9A85FF] cursor-pointer hover:underline"
+                        ? "text-foreground font-medium cursor-default"
+                        : "text-muted-foreground hover:text-primary cursor-pointer hover:underline"
                     }
                     transition-colors duration-200
                     disabled:opacity-50 disabled:cursor-not-allowed
@@ -86,7 +86,7 @@ const SelectPaymentMethod = () => {
                     {part}
                   </button>
                   {index < array.length - 1 && (
-                    <span className="mx-1 text-[#737373]">›</span>
+                    <span className="mx-1 text-muted-foreground">›</span>
                   )}
                 </div>
               ))}
@@ -97,27 +97,27 @@ const SelectPaymentMethod = () => {
           {currentStep === 1 ? (
             <div className="flex flex-col gap-4 w-full items-center">
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("paypal")}
               >
                 <div className="flex gap-3 items-center">
                   <Radio checked={selectedMethod === "paypal"} />
-                  <p className="text-sm! font-medium! text-[#262626] leading-[129%]">
+                  <p className="text-sm! font-medium! text-foreground leading-[129%]">
                     Paypal
                   </p>
                 </div>
-                <label className="text-[10px]! font-medium! text-[#737373] leading-[100%]">
+                <label className="text-[10px]! font-medium! text-muted-foreground leading-[100%]">
                   Powered by Stripe
                 </label>
               </div>
 
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("debit")}
               >
                 <div className="flex gap-3 items-center">
                   <Radio checked={selectedMethod === "debit"} />
-                  <p className="text-sm! font-medium! text-[#262626] leading-[129%]">
+                  <p className="text-sm! font-medium! text-foreground leading-[129%]">
                     Debit Card
                   </p>
                 </div>
@@ -125,12 +125,12 @@ const SelectPaymentMethod = () => {
               </div>
 
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("easypaisa")}
               >
                 <div className="flex gap-3 items-center">
                   <Radio checked={selectedMethod === "easypaisa"} />
-                  <p className="text-sm! font-medium! text-[#262626] leading-[129%]">
+                  <p className="text-sm! font-medium! text-foreground leading-[129%]">
                     Easypaisa
                   </p>
                 </div>
@@ -138,12 +138,12 @@ const SelectPaymentMethod = () => {
               </div>
 
               <div
-                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-[#9A85FF] transition-colors"
+                className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-[#E5E5E5] cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("jazzcash")}
               >
                 <div className="flex gap-3 items-center">
                   <Radio checked={selectedMethod === "jazzcash"} />
-                  <p className="text-sm! font-medium! text-[#262626] leading-[129%]">
+                  <p className="text-sm! font-medium! text-foreground leading-[129%]">
                     Jazzcash
                   </p>
                 </div>

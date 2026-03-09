@@ -2,7 +2,7 @@ import StarActive from "../.././../../assets/svg/star-active.svg?react";
 import StarDefault from "../.././../../assets/svg/star-default.svg?react";
 const Ratings = () => {
   return (
-    <div className="flex w-full justify-between rounded-2xl bg-[#FAFAFA] hover:bg-white p-6 cursor-pointer">
+    <div className="flex w-full justify-between rounded-2xl bg-background hover:bg-white p-6 cursor-pointer">
       <div className="flex w-full flex-col gap-3">
         <div className="flex w-full justify-between">
           <div className="flex w-[80%] gap-5">
@@ -16,10 +16,10 @@ const Ratings = () => {
             <div className="flex w-auto flex-col gap-4 justify-center">
               <div className="flex items-start gap-4">
                 <div>
-                  <h1 className="text-[20px]! font-bold! text-[#262626] leading-7">
+                  <h1 className="text-[20px]! font-bold! text-foreground leading-7">
                     Emma Brown
                   </h1>
-                  <p className="text-[13px] font-normal text-[#737373] pt-0.5">
+                  <p className="text-[13px] font-normal text-muted-foreground pt-0.5">
                     Suzuki Swift 2021
                   </p>
                 </div>
@@ -37,18 +37,18 @@ const Ratings = () => {
           </div>
         </div>
         <div>
-          <p className="text-sm! font-normal! text-[#737373] leading-4">
+          <p className="text-sm! font-normal! text-muted-foreground leading-4">
             Very smooth experience. The mechanic arrived on time and explained
             everything clearly. My car feels much better after the service.
             Highly recommended!
           </p>
         </div>
         <div className="flex justify-center items-center gap-3">
-          <h1 className="text-sm! font-normal! text-[#262626]">
+          <h1 className="text-sm! font-normal! text-foreground">
             Engine Oil Change
           </h1>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#262626] inline-block"></span>
-          <h1 className="text-sm! font-normal! text-[#262626]">2 days</h1>
+          <span className="w-1.5 h-1.5 rounded-full bg-foreground inline-block"></span>
+          <h1 className="text-sm! font-normal! text-foreground">2 days</h1>
         </div>
       </div>
     </div>

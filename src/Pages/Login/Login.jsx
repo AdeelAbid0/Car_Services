@@ -73,7 +73,7 @@ const Login = () => {
         <div className="flex w-full justify-between items-center">
           <div className="flex items-center gap-2">
             <Checkbox className="m-0" />
-            <span className="text-[#262626] font-medium leading-5">
+            <span className="text-foreground font-medium leading-5">
               Remember me
             </span>
           </div>

@@ -26,9 +26,9 @@ const Button = ({
       suffixIcon={suffixIcon}
       className={`${getWidthClass()} ${
         type === "default"
-          ? "text-[#9A85FF]! bg-[#F4F2FF]! hover:bg-[#F4F2FF]! hover:text-[#9A85FF]!"
+          ? "text-primary! bg-[#F4F2FF]! hover:bg-[#F4F2FF]! hover:text-primary!"
           : type === "danger"
-            ? "text-[#EF4444]! bg-[#FEE2E2]! border border-[#FCA5A5]! hover:bg-[#FEE2E2]/80! hover:text-[#EF4444]!"
+            ? "text-danger! bg-[#FEE2E2]! border border-[#FCA5A5]! hover:bg-[#FEE2E2]/80! hover:text-danger!"
             : type === "link"
               ? "flex px-0! py-0! h-auto! underline cursor-pointer font-medium underline-offset-3"
               : ""

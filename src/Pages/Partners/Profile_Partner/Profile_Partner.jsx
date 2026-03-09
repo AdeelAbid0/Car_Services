@@ -52,10 +52,10 @@ const Profile_Partner = () => {
     <div className="flex flex-col w-full items-center h-full overflow-auto py-11 relative z-10 overflow-x-hidden">
       <div className="flex flex-col gap-10 w-[72%]">
         <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold! text-[#262626] leading-11">
+          <h1 className="text-2xl font-bold! text-foreground leading-11">
             Profile Overview
           </h1>
-          <p className="text-[16px] font-normal text-[#737373] leading-6 mb-11">
+          <p className="text-[16px] font-normal text-muted-foreground leading-6 mb-11">
             Manage your personal details, cars, and service preferences in one
             place.
           </p>

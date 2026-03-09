@@ -27,7 +27,7 @@ const AccountsAndSettings = () => {
     return (
       <div
         key={item.label}
-        className="flex items-center justify-between w-full px-4 h-10 rounded-lg cursor-pointer bg-[#FAFAFA] hover:bg-white"
+        className="flex items-center justify-between w-full px-4 h-10 rounded-lg cursor-pointer bg-background hover:bg-white"
         onClick={() => {
           if (isDeactivateAccount) {
             console.log("Deactivate account clicked");
@@ -36,7 +36,7 @@ const AccountsAndSettings = () => {
       >
         <p
           className={`text-sm font-medium ${
-            isDeactivateAccount ? "text-[#EF4444]" : "text-[#262626]"
+            isDeactivateAccount ? "text-danger" : "text-foreground"
           }`}
         >
           {item.label}
@@ -45,7 +45,7 @@ const AccountsAndSettings = () => {
         {item.type === "switch" ? (
           <Switch />
         ) : item.type === "arrow" ? (
-          <ArrowRight className="rotate-145 text-[#262626]" />
+          <ArrowRight className="rotate-145 text-foreground" />
         ) : (
           ""
         )}
@@ -57,7 +57,7 @@ const AccountsAndSettings = () => {
     <div className="flex flex-col gap-8 max-w-[35%]">
       {settingsSections.map((section) => (
         <div key={section.title} className="flex flex-col gap-2">
-          <h1 className="text-xs text-[#737373] font-medium">
+          <h1 className="text-xs text-muted-foreground font-medium">
             {section.title}
           </h1>
           {section.items.map(renderItem)}

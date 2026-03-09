@@ -8,7 +8,9 @@ const Services = () => {
             <div className="flex justify-center items-center min-w-21 min-h-21 rounded-xl bg-[#F4F2FF] border border-[#D8D4FF]">
               <LocationIcon />
             </div>
-            <h1 className="text-[#737373] text-xs font-normal">oil change</h1>
+            <h1 className="text-muted-foreground text-xs font-normal">
+              oil change
+            </h1>
           </div>
         );
       })}

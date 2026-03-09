@@ -66,7 +66,7 @@ const HeroSection = () => {
         </div>
         <div className="absolute z-10 bottom-22 left-15 w-[24%]">
           <div className="flex gap-3 items-center">
-            <span className="h-8 border-[3px] border-[#9A85FF]"></span>
+            <span className="h-8 border-[3px] border-primary"></span>
             <p className="text-[14px] font-medium text-white leading-5">
               Book trusted car services, compare prices, and manage everything
               online.
@@ -81,7 +81,7 @@ const HeroSection = () => {
           <div className="relative z-10">
             <div className="flex w-full justify-center text-center">
               <h1 className="font-anton max-w-217.5 text-white text-[70px]! 2xl:text-[100px]! font-normal text-center leading-[120%] uppercase">
-                All <span className="text-[#9A85FF]">your car services</span>
+                All <span className="text-primary">your car services</span>
                 <br />
                 in one place
               </h1>
@@ -108,14 +108,14 @@ const HeroSection = () => {
                             : "hover:bg-[#F4F2FF]"
                         }`}
                       >
-                        <p className="text-[#737373] text-xs font-normal">
+                        <p className="text-muted-foreground text-xs font-normal">
                           {input.label}
                         </p>
                         <p
                           className={`font-normal text-sm ${
                             activeTab === input.id
-                              ? "text-[#9A85FF]"
-                              : "text-[#262626]"
+                              ? "text-primary"
+                              : "text-foreground"
                           }`}
                         >
                           {input.placeholder}

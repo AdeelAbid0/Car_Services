@@ -23,7 +23,7 @@ const PaymentMethod = () => {
       key: "1",
       label: (
         <div className="flex w-full justify-between gap-2">
-          <p className="text-[13px]! text-[#262626]! font-normal">Default</p>
+          <p className="text-[13px]! text-foreground! font-normal">Default</p>
           <TickSquare />
         </div>
       ),
@@ -32,8 +32,8 @@ const PaymentMethod = () => {
       key: "2",
       label: (
         <div className="flex w-full justify-between gap-2">
-          <p className="text-[13px]! text-[#262626]! font-normal">Edit</p>
-          <Edit className="text-[#262626c3]" />
+          <p className="text-[13px]! text-foreground! font-normal">Edit</p>
+          <Edit className="text-foreground/70" />
         </div>
       ),
     },
@@ -41,7 +41,7 @@ const PaymentMethod = () => {
       key: "3",
       label: (
         <div className="flex w-full justify-between gap-2">
-          <p className="text-[13px]! text-[#262626]! font-normal">Delete</p>
+          <p className="text-[13px]! text-foreground! font-normal">Delete</p>
           <Delete />
         </div>
       ),
@@ -53,7 +53,7 @@ const PaymentMethod = () => {
         {paymentData?.map((payment) => (
           <div
             key={payment?.id}
-            className="bg-[#FAFAFA] hover:bg-white p-6 rounded-2xl flex justify-between"
+            className="bg-background hover:bg-white p-6 rounded-2xl flex justify-between"
           >
             <div className="flex gap-5">
               <img
@@ -63,16 +63,18 @@ const PaymentMethod = () => {
               />
               <div className="flex flex-col justify-center gap-3">
                 <div className="flex flex-col gap-2">
-                  <p className="text-xs! font-medium! text-[#737373]">Paypal</p>
-                  <h1 className="flex items-center gap-2 text-sm! font-medium! text-[#262626]">
+                  <p className="text-xs! font-medium! text-muted-foreground">
+                    Paypal
+                  </p>
+                  <h1 className="flex items-center gap-2 text-sm! font-medium! text-foreground">
                     <Card /> {payment?.cardHolderName}
                   </h1>
                   <div className="flex gap-3 items-center">
-                    <h1 className="text-sm! font-medium! text-[#737373]">
+                    <h1 className="text-sm! font-medium! text-muted-foreground">
                       {payment?.cardNumber}
                     </h1>
-                    <span className="w-1.5 h-1 bg-[#737373] rounded-full"></span>
-                    <p className="text-sm! font-medium! text-[#737373]">
+                    <span className="w-1.5 h-1 bg-muted-foreground/30 rounded-full"></span>
+                    <p className="text-sm! font-medium! text-muted-foreground">
                       Expiry: {payment?.expiryDate}
                     </p>
                   </div>
@@ -89,7 +91,7 @@ const PaymentMethod = () => {
                 placement="bottomRight"
               >
                 <span className="cursor-pointer">
-                  <MenuIcon className="text-[#737373]" />
+                  <MenuIcon className="text-muted-foreground" />
                 </span>
               </Dropdown>
             </div>

@@ -89,7 +89,7 @@ const Register = () => {
             onChange={(e) => {
               formik.setFieldValue("terms", e.target.checked);
             }}
-            className="text-[#262626] font-medium"
+            className="text-foreground font-medium"
           >
             I agree to the Terms of Service and Privacy Policy
           </Checkbox>

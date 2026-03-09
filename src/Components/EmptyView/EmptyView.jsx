@@ -6,8 +6,8 @@ const EmptyView = ({ icon, title, description, buttonText }) => {
       <div className="flex flex-col justify-center items-center max-w-[25%] text-center gap-8">
         {icon}
         <div className="flex flex-col gap-2">
-          <h1 className="text-[#262626] text-[20px] font-semibold">{title}</h1>
-          <p className="text-[##737373] text-sm font-normal leading-6">
+          <h1 className="text-foreground text-[20px] font-semibold">{title}</h1>
+          <p className="text-muted-foreground text-sm font-normal leading-6">
             {description}
           </p>
         </div>

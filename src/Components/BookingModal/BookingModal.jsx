@@ -21,14 +21,14 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
         {/* Header */}
         <div className="sticky top-0 flex w-full justify-between h-24.5 bg-white rounded-tl-[25px] rounded-tr-[25px] border-b border-[#E5E5E5]">
           <div className="flex gap-3 w-full justify-center items-center border-r border-[#E5E5E5]">
-            <span className="flex justify-center items-center w-13 h-13 bg-[#F5F5F5] rounded-xl">
+            <span className="flex justify-center items-center w-13 h-13 bg-muted-foreground/30 rounded-xl">
               <DummyIcon />
             </span>
             <div className="flex flex-col gap-0.5">
-              <h1 className="text-[#737373] text-[16px] font-normal! leading-6">
+              <h1 className="text-muted-foreground text-[16px] font-normal! leading-6">
                 Accumulator
               </h1>
-              <p className="text-[#9A85FF] text-[13px] font-normal">
+              <p className="text-primary text-[13px] font-normal">
                 2.8 km away
               </p>
             </div>
@@ -40,15 +40,15 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
                 alt=""
                 className="w-full h-full object-cover rounded-xl"
               />
-              <h1 className="text-[#737373] text-[16px] font-normal! leading-6">
+              <h1 className="text-muted-foreground text-[16px] font-normal! leading-6">
                 Accumulator
               </h1>
             </div>
           </div>
           <div className="flex gap-3 w-full justify-center items-center">
-            <span className="flex justify-center items-center w-13 h-13 bg-[#F5F5F5] rounded-xl"></span>
+            <span className="flex justify-center items-center w-13 h-13 bg-muted-foreground/30 rounded-xl"></span>
             <div className="flex flex-col gap-0.5">
-              <h1 className="text-[#737373] text-[16px] font-normal! leading-6">
+              <h1 className="text-muted-foreground text-[16px] font-normal! leading-6">
                 N/A
               </h1>
             </div>
@@ -63,7 +63,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
           </div>
         ) : (
           <div className="flex w-full flex-col gap-2 p-10 max-h-[70vh] overflow-auto">
-            <h1 className="text-[#262626] text-2xl font-semibold!">
+            <h1 className="text-foreground text-2xl font-semibold!">
               Choose Partner
             </h1>
             {[1, 2, 3].map((item) => {
@@ -84,7 +84,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
           </div>
         )}
         {/* Footer */}
-        <div className="flex h-17.5 items-center justify-end border-t border-[#E5E5E5] bg-[#F5F5F5] rounded-bl-[25px] rounded-br-[25px] px-10">
+        <div className="flex h-17.5 items-center justify-end border-t border-[#E5E5E5] bg-muted-foreground/30 rounded-bl-[25px] rounded-br-[25px] px-10">
           <Button
             type="primary"
             label={showCalendarScreen ? "Book Service" : "Continue"}
@@ -96,7 +96,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
               }
             }}
             suffixIcon={<ArrowRightIcon />}
-            className="max-w-37 h-12 bg-[#9A85FF] text-white font-medium"
+            className="max-w-37 h-12 bg-primary text-white font-medium"
           />
         </div>
       </div>

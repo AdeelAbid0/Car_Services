@@ -40,10 +40,10 @@ const Bookings = () => {
         <div className="mt-11 w-full max-w-[72%]">
           <div className="flex w-full justify-between items-center">
             <div className="flex flex-col gap-1 justify-center">
-              <h1 className="text-2xl font-bold! text-[#262626]">
+              <h1 className="text-2xl font-bold! text-foreground">
                 My Bookings
               </h1>
-              <p className="text-[16px] text-[#737373] font-normal">
+              <p className="text-[16px] text-muted-foreground font-normal">
                 Track your upcoming, ongoing, and completed services.
               </p>
             </div>
@@ -53,9 +53,9 @@ const Bookings = () => {
                 navigate(ROUTES.MY_WALLET);
               }}
             >
-              <div className="flex items-center px-4 py-1.75 gap-2 bg-[#262626] rounded-lg cursor-pointer hover:bg-[#404040] transition-colors">
+              <div className="flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors">
                 <p className="text-white font-normal text-sm">PKR 0</p>
-                <span className="h-3 border border-[#404040] "></span>
+                <span className="h-3 border border-foreground/80 "></span>
                 <p className="text-white font-normal text-sm">My wallet</p>
                 <ArrowRightIcon className="text-white" />
               </div>
@@ -69,8 +69,8 @@ const Bookings = () => {
                 key={item.id}
                 className={`pb-2 relative cursor-pointer transition-all duration-200 ${
                   selectedTab === item.value
-                    ? "text-[#9A85FF] font-medium"
-                    : "text-[#737373] hover:text-[#262626]"
+                    ? "text-primary font-medium"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
                 onClick={() => setSelectedTab(item.value)}
               >
@@ -78,7 +78,7 @@ const Bookings = () => {
                   {item.label}
                 </h2>
                 {selectedTab === item.value && (
-                  <div className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#9A85FF] z-10"></div>
+                  <div className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-primary z-10"></div>
                 )}
               </div>
             ))}

@@ -27,7 +27,7 @@ const Payout = () => {
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
           <Ticksquare />
-          <p className="text-xs font-normal! text-[#262626]">
+          <p className="text-xs font-normal! text-foreground">
             Set for withdrawl
           </p>
         </div>
@@ -38,7 +38,7 @@ const Payout = () => {
       label: (
         <div className="flex w-full gap-3  items-center">
           <EditIcon />
-          <p className="text-xs font-normal! text-[#262626]">Edit</p>
+          <p className="text-xs font-normal! text-foreground">Edit</p>
         </div>
       ),
     },
@@ -47,7 +47,7 @@ const Payout = () => {
       label: (
         <div className="flex w-full gap-3  items-center">
           <DeleteIcon />
-          <p className="text-xs font-normal! text-[#262626]">Delete</p>
+          <p className="text-xs font-normal! text-foreground">Delete</p>
         </div>
       ),
     },
@@ -57,19 +57,22 @@ const Payout = () => {
       <div className="flex w-full flex-col gap-3">
         <AccountDetailCard icon={<DummyIcon />} image={<CardPrimary />}>
           <div className="flex flex-col gap-2">
-            <label className="flex gap-3  items-center font-medium! text-sm text-[#737373]">
-              UBL <span className="w-1 h-1 rounded-full bg-[#737373]"></span>
-              <span className="text-[#9A85FF]">Linked</span>
+            <label className="flex gap-3  items-center font-medium! text-sm text-muted-foreground">
+              UBL{" "}
+              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
+              <span className="text-primary">Linked</span>
             </label>
-            <h3 className="text-[#262626] font-medium! text-sm!">Adeel Abid</h3>
-            <div className="flex items-center gap-3 text-[#737373] font-medium! text-sm!">
+            <h3 className="text-foreground font-medium! text-sm!">
+              Adeel Abid
+            </h3>
+            <div className="flex items-center gap-3 text-muted-foreground font-medium! text-sm!">
               <label>4242 4242 4242 4242</label>
-              <span className="w-1 h-1 rounded-full bg-[#737373]"></span>
+              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
               <p>Expiry: 16/29</p>
             </div>
             <div className="flex gap-2 items-center">
-              <span className="w-1.5! h-1.5! rounded-full bg-[#9A85FF]"></span>
-              <span className="text-[#9A85FF] font-medium! text-sm!">
+              <span className="w-1.5! h-1.5! rounded-full bg-primary"></span>
+              <span className="text-primary font-medium! text-sm!">
                 Verified
               </span>
             </div>
@@ -91,18 +94,20 @@ const Payout = () => {
         </AccountDetailCard>
         <AccountDetailCard icon={<DummyIcon />} image={<CardSecondary />}>
           <div className="flex flex-col gap-2">
-            <label className="font-medium! text-sm text-[#737373]">
+            <label className="font-medium! text-sm text-muted-foreground">
               Bank Alfalah
             </label>
-            <h3 className="text-[#262626] font-medium! text-sm!">Adeel Abid</h3>
-            <div className="flex items-center gap-3 text-[#737373] font-medium! text-sm!">
+            <h3 className="text-foreground font-medium! text-sm!">
+              Adeel Abid
+            </h3>
+            <div className="flex items-center gap-3 text-muted-foreground font-medium! text-sm!">
               <label>4242 4242 4242 4242</label>
-              <span className="w-1 h-1 rounded-full bg-[#737373]"></span>
+              <span className="w-1 h-1 rounded-full bg-muted-foreground/30"></span>
               <p>Expiry: 16/29</p>
             </div>
             <div className="flex gap-2 items-center">
-              <span className="w-1.5! h-1.5! rounded-full bg-[#FBBF24]"></span>
-              <span className="text-[#FBBF24] font-medium! text-sm!">
+              <span className="w-1.5! h-1.5! rounded-full bg-warning"></span>
+              <span className="text-warning font-medium! text-sm!">
                 Pending
               </span>
             </div>

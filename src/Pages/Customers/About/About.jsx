@@ -3,10 +3,10 @@ const About = () => {
     <div className="flex w-full justify-center">
       <div className="flex justify-between w-[50%] py-11">
         <div className="flex flex-col gap-1 w-[50%] relative z-0">
-          <h1 className="text-2xl! font-bold! text-[#262626] leading-11">
+          <h1 className="text-2xl! font-bold! text-foreground leading-11">
             About us
           </h1>
-          <p className="text-[16px] font-normal text-[#737373] leading-6">
+          <p className="text-[16px] font-normal text-muted-foreground leading-6">
             We’re building a simple and reliable way to manage all your car
             services in one place. <br />
             From routine maintenance to emergency assistance, our platform
@@ -17,13 +17,13 @@ const About = () => {
           </p>
           <div className="flex w-full gap-12 mt-10">
             <div className="flex flex-col gap-2 ">
-              <h1 className="text-[#9A85FF] leading-11 text-[48px]! font-bold!">
+              <h1 className="text-primary leading-11 text-[48px]! font-bold!">
                 500 +
               </h1>
               <p className="text-[16px]! font-medium!">Happy Clients</p>
             </div>
             <div className="flex flex-col gap-2 ">
-              <h1 className="text-[#9A85FF] leading-11 text-[48px]! font-bold!">
+              <h1 className="text-primary leading-11 text-[48px]! font-bold!">
                 300 +
               </h1>
               <p className="text-[16px]! font-medium!">Happy Clients</p>

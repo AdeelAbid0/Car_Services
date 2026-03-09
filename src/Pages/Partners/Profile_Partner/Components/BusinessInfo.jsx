@@ -54,7 +54,7 @@ const BusinessInfo = () => {
           onChange={(e) => handleInputChange("location", e.target.value)}
         />
         <div className="flex flex-col gap-2">
-          <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
+          <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
             Map pin selection
           </p>
           <div className="flex w-full rounded-2xl">

@@ -56,10 +56,10 @@ const FAQ = () => {
       <div className="flex w-[72%]">
         <div className="flex-1">
           <div className="flex flex-col gap-1">
-            <h1 className="text-2xl font-bold! text-[#262626] leading-11">
+            <h1 className="text-2xl font-bold! text-foreground leading-11">
               Frequently Asked Questions
             </h1>
-            <p className="text-[16px] font-normal text-[#737373] leading-6 mb-11">
+            <p className="text-[16px] font-normal text-muted-foreground leading-6 mb-11">
               Got questions? We've compiled answers to common queries to help
               you get started and book services confidently.
             </p>
@@ -68,16 +68,16 @@ const FAQ = () => {
                 <div
                   key={index}
                   className={`
-                    bg-[#FAFAFA] border border-[#E5E5E5] rounded-[26px] 
+                    bg-background border border-[#E5E5E5] rounded-[26px] 
                     transition-all duration-300 overflow-hidden
-                    ${activeIndex === index ? "border-[#9A85FF]" : ""}
+                    ${activeIndex === index ? "border-primary" : ""}
                   `}
                 >
                   <div
                     className="flex w-full justify-between items-center cursor-pointer"
                     onClick={() => toggleQuestion(index)}
                   >
-                    <h1 className="px-6 py-4 text-[#262626] font-medium">
+                    <h1 className="px-6 py-4 text-foreground font-medium">
                       {faq.question}
                     </h1>
                     <span
@@ -96,7 +96,9 @@ const FAQ = () => {
                       ${activeIndex === index ? "max-h-40 pb-6" : "max-h-0"}
                     `}
                   >
-                    <p className="text-[#737373] leading-6">{faq.answer}</p>
+                    <p className="text-muted-foreground leading-6">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -113,10 +115,10 @@ const FAQ = () => {
       </div>
       <div className="flex flex-col gap-3 w-[72%] mt-6">
         <div className="flex flex-col gap-1">
-          <h1 className="text-[#9A85FF] font-bold! text-2xl!">
+          <h1 className="text-primary font-bold! text-2xl!">
             Have a Question?
           </h1>
-          <p className="text-[#737373] font-normal! text-sm!">
+          <p className="text-muted-foreground font-normal! text-sm!">
             You can ask anything you want to know
           </p>
         </div>
@@ -127,7 +129,7 @@ const FAQ = () => {
           formik={formik}
           placeholder="Ask your question"
           suffixIcon={
-            <div className="flex absolute right-0.5 items-center bg-[#9A85FF] rounded-full justify-center w-10 h-10 ml-7!">
+            <div className="flex absolute right-0.5 items-center bg-primary rounded-full justify-center w-10 h-10 ml-7!">
               <Send className="w-5 h-5 text-blue" />
             </div>
           }

@@ -17,7 +17,7 @@ const Manage_Services = () => {
       key: "1",
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
-          <p className="text-xs font-normal! text-[#262626]">Edit</p>
+          <p className="text-xs font-normal! text-foreground">Edit</p>
           <EditIcon />
         </div>
       ),
@@ -26,7 +26,7 @@ const Manage_Services = () => {
       key: "2",
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
-          <p className="text-xs font-normal! text-[#262626]">Delete</p>
+          <p className="text-xs font-normal! text-foreground">Delete</p>
           <DeleteIcon />
         </div>
       ),
@@ -47,7 +47,7 @@ const Manage_Services = () => {
         <div className="mt-11 w-full max-w-[72%]">
           <div className="flex w-full justify-between items-center">
             <div className="flex flex-col gap-1 justify-center">
-              <h1 className="text-2xl font-bold! text-[#262626]">
+              <h1 className="text-2xl font-bold! text-foreground">
                 Manage Services
               </h1>
             </div>
@@ -66,63 +66,67 @@ const Manage_Services = () => {
           {/* Card */}
           <div className="flex w-full justify-between rounded-2xl bg-white hover:bg-white p-6 cursor-pointer mt-6">
             <div className="flex gap-4 w-[90%]">
-              <div className="w-83.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-2 p-4 ">
-                <p className="text-[#737373] font-medium! text-xs">Services</p>
+              <div className="w-83.5 h-28.5 bg-background rounded-2xl flex flex-col gap-2 p-4 ">
+                <p className="text-muted-foreground font-medium! text-xs">
+                  Services
+                </p>
 
                 <div className="flex items-center w-full gap-2 flex-wrap">
                   <div className="bg-white rounded-full">
-                    <p className="px-2.5 py-1.5 text-xs! font-medium text-[#262626]">
+                    <p className="px-2.5 py-1.5 text-xs! font-medium text-foreground">
                       Interior Cleaning
                     </p>
                   </div>
                   <div className="bg-white rounded-full">
-                    <p className="px-2.5 py-1.5 text-xs! font-medium text-[#262626]">
+                    <p className="px-2.5 py-1.5 text-xs! font-medium text-foreground">
                       Battery Replacement
                     </p>
                   </div>
                   <div className="bg-white rounded-full">
-                    <p className="px-2.5 py-1.5 text-xs! font-medium text-[#262626]">
+                    <p className="px-2.5 py-1.5 text-xs! font-medium text-foreground">
                       Interior Cleaning
                     </p>
                   </div>
-                  <p className="text-xs font-medium! text-[#737373]">+3</p>
+                  <p className="text-xs font-medium! text-muted-foreground">
+                    +3
+                  </p>
                 </div>
               </div>
-              <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+              <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
                 <img
                   src="/Images/hero-image.png"
                   alt=""
                   className="w-7 h-7 object-cover"
                 />
-                <h1 className="text-[#262626] text-sm!  font-semibold!">
+                <h1 className="text-foreground text-sm!  font-semibold!">
                   User Name
                 </h1>
               </div>
-              <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+              <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
                 <img
                   src="/Images/hero-image.png"
                   alt=""
                   className="w-7 h-7 object-cover"
                 />
-                <h1 className="text-[#262626] text-sm!  font-semibold!">
+                <h1 className="text-foreground text-sm!  font-semibold!">
                   Service
                 </h1>
               </div>
-              <div className="w-33.5 h-28.5 bg-[#FAFAFA] rounded-2xl flex flex-col gap-4 justify-center items-center ">
+              <div className="w-33.5 h-28.5 bg-background rounded-2xl flex flex-col gap-4 justify-center items-center ">
                 <img
                   src="/Images/hero-image.png"
                   alt=""
                   className="w-7 h-7 object-cover"
                 />
-                <h1 className="text-[#262626] text-sm!  font-semibold!">
+                <h1 className="text-foreground text-sm!  font-semibold!">
                   Time remaining
                 </h1>
               </div>
             </div>
             <div className="flex items-center justify-between w-[10%] relative">
               <div className="flex items-center gap-1">
-                <span className="w-1.5 h-1.5 bg-[#22C55E] rounded-full"></span>
-                <p className="text-xs font-medium! text-[#22C55E]">Active</p>
+                <span className="w-1.5 h-1.5 bg-success rounded-full"></span>
+                <p className="text-xs font-medium! text-success">Active</p>
               </div>
 
               {/* Dropdown Menu */}
@@ -159,15 +163,15 @@ const Manage_Services = () => {
         >
           <div className="flex flex-col gap-3 p-6">
             <div className="flex border-b border-[#E5E5E5] h-10 items-start">
-              <h1 className="text-[20px] font-bold! text-[#262626]">
+              <h1 className="text-[20px] font-bold! text-foreground">
                 Delete Service?
               </h1>
             </div>
             <div className="flex flex-col">
-              <h2 className="text-[#262626] text-sm! font-normal leading-5">
+              <h2 className="text-foreground text-sm! font-normal leading-5">
                 Are you sure you want to delete this service?
               </h2>
-              <p className="text-[#737373] text-sm! font-normal!">
+              <p className="text-muted-foreground text-sm! font-normal!">
                 This action will remove it from your profile and customers will
                 no longer be able to book it.
               </p>
@@ -182,7 +186,7 @@ const Manage_Services = () => {
               <Button
                 type={"primary"}
                 label={"Delete"}
-                className={"bg-[#EF4444]! h-10!"}
+                className={"bg-danger! h-10!"}
                 onClick={() => setDeleteModalOpen(false)}
               />
             </div>

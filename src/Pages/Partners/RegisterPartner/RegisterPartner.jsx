@@ -1,14 +1,14 @@
 import { useState } from "react";
-import InputText from "../../ui/InputText/InputText";
-import AuthCardPartner from "../../Components/AuthCardPartner/AuthCardPartner";
-import PartnerIcon from "../../assets/svg/partner.svg?react";
-import UserIcon from "../../assets/svg/user.svg?react";
-import EmailIcon from "../../assets/svg/mail-placeholder.svg?react";
-import LocationPlaceholder from "../../assets/svg/location-placeholder.svg?react";
-import EditIcon from "../../assets/svg/edit.svg?react";
-import UploadIcon from "../../assets/svg/upload-cloud.svg?react";
-import InputTextArea from "../../ui/InputTextArea/InputTextArea";
-import UploadImage from "../../Components/UploadImage/UploadImage";
+import AuthCardPartner from "../../../Components/AuthCardPartner/AuthCardPartner";
+import PartnerIcon from "../../../assets/svg/partner.svg?react";
+import UserIcon from "../../../assets/svg/user.svg?react";
+import EmailIcon from "../../../assets/svg/mail-placeholder.svg?react";
+import LocationPlaceholder from "../../../assets/svg/location-placeholder.svg?react";
+import EditIcon from "../../../assets/svg/edit.svg?react";
+import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
+import InputTextArea from "../../../ui/InputTextArea/InputTextArea";
+import UploadImage from "../../../Components/UploadImage/UploadImage";
+import InputText from "../../../ui/InputText/InputText";
 
 const RegisterPartner = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -123,7 +123,7 @@ const RegisterPartner = () => {
               onChange={(e) => handleInputChange("location", e.target.value)}
             />
             <div className="flex flex-col gap-2">
-              <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
+              <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
                 Map pin selection
               </p>
               <div className="flex w-full rounded-2xl">
@@ -142,7 +142,7 @@ const RegisterPartner = () => {
       case 3:
         return (
           <div className="flex flex-col gap-2 mt-9">
-            <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
+            <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
               Select Services
             </p>
             <div className="grid grid-cols-2 gap-3">
@@ -156,10 +156,10 @@ const RegisterPartner = () => {
                   }`}
                   onClick={() => handleServiceToggle(service.id)}
                 >
-                  <span className="text-[16px] leading-5 text-[#262626] font-medium">
+                  <span className="text-[16px] leading-5 text-foreground font-medium">
                     {service.name}
                   </span>
-                  <span className="text-[#737373] leading-5 text-sm font-normal">
+                  <span className="text-muted-foreground leading-5 text-sm font-normal">
                     {service.description}
                   </span>
                 </div>

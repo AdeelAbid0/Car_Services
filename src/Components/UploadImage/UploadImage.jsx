@@ -39,15 +39,17 @@ const UploadImage = ({ svg, title, description, onFileSelect }) => {
   };
 
   return (
-    <div className="flex w-full bg-[#FAFAFA] p-1.25 rounded-2xl">
+    <div className="flex w-full bg-background p-1.25 rounded-2xl">
       <Upload {...props} className="w-full! [&_.ant-upload]:w-full!">
         <div className="flex w-full! flex-col gap-6 items-center justify-center border border-[#E5E5E5] h-auto rounded-[10.5px] py-10 cursor-pointer">
           <div className="flex w-14.5 h-14.5 justify-center items-center rounded-[11px] border-[2.4px] border-[#FFFFFF] bg-linear-to-b from-[#CFC6F8] to-transparent">
             {svg}
           </div>
           <div className="flex flex-col gap-1 text-center">
-            <h1 className="text-[#292929] text-sm font-medium">{title}</h1>
-            <p className="text-sm text-[#777777] leading-4.5">{description}</p>
+            <h1 className="text-foreground text-sm font-medium">{title}</h1>
+            <p className="text-sm text-muted-foreground leading-4.5">
+              {description}
+            </p>
             {/* <p className="text-xs text-[#999999] mt-2">
               Supports: PNG, JPG (Max 5MB)
             </p> */}

@@ -19,7 +19,7 @@ const InputText = ({
   return (
     <div className="flex w-full items-center flex-col gap-2">
       {label && (
-        <p className="flex w-full justify-start text-[#171717] font-semibold text-[16px] leading-6">
+        <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
           {label}
         </p>
       )}
@@ -40,7 +40,7 @@ const InputText = ({
       />
       {hasError && (
         <div className="flex w-full justify-start">
-          <span className="text-[#EF4444] text-sm">{formik.errors[name]}</span>
+          <span className="text-danger text-sm">{formik.errors[name]}</span>
         </div>
       )}
     </div>

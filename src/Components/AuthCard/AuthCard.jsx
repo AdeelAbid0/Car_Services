@@ -43,11 +43,11 @@ const AuthCard = ({
           <div className="min-h-full flex items-center justify-center">
             <div className="flex flex-col w-full px-10 md:px-20 py-10 gap-9">
               <div className="flex flex-col items-center gap-2 text-center">
-                <h1 className="font-bold text-[#262626] text-3xl md:text-4xl lg:text-5xl leading-tight">
+                <h1 className="font-bold text-foreground text-3xl md:text-4xl lg:text-5xl leading-tight">
                   {title}
                 </h1>
                 {description && (
-                  <p className="text-[#737373] text-sm md:text-base max-w-md">
+                  <p className="text-muted-foreground text-sm md:text-base max-w-md">
                     {description}
                   </p>
                 )}
@@ -66,7 +66,7 @@ const AuthCard = ({
                     label={buttonText}
                     suffixIcon={buttonIcon}
                     onClick={onButtonClick}
-                    className="w-full bg-[#9A85FF] hover:bg-[#7d6cd3] text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2"
+                    className="w-full bg-primary hover:bg-[#7d6cd3] text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2"
                   />
                 )}
 
@@ -93,7 +93,7 @@ const AuthCard = ({
 
               {/* Footer */}
               {footerText && (
-                <div className="flex justify-center gap-1 text-[#262626] font-medium text-sm">
+                <div className="flex justify-center gap-1 text-foreground font-medium text-sm">
                   <span>{footerText}</span>
                   <Button
                     type="link"

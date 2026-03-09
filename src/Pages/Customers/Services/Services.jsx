@@ -105,8 +105,8 @@ const Services = () => {
       <div className="flex w-full justify-center h-full overflow-auto">
         <div className="flex w-[72%] flex-col gap-6 h-full py-11">
           <div className="flex flex-col gap-1">
-            <h1 className="text-[#262626] text-2xl! font-bold!">Services</h1>
-            <p className="text-[#737373] text-[16px] font-normal">
+            <h1 className="text-foreground text-2xl! font-bold!">Services</h1>
+            <p className="text-muted-foreground text-[16px] font-normal">
               Top car services chosen by customers near you.
             </p>
           </div>
@@ -119,14 +119,14 @@ const Services = () => {
                 key={service.id}
                 className={`pb-2  ${
                   serviceCategory === service?.id
-                    ? "border-b-[1.5px] border-[#9A85FF]"
+                    ? "border-b-[1.5px] border-primary"
                     : ""
                 }`}
                 onClick={() => {
                   setServiceCategory(service?.id);
                 }}
               >
-                <h2 className="cursor-pointer text-[#737373] text-sm font-medium">
+                <h2 className="cursor-pointer text-muted-foreground text-sm font-medium">
                   {service.name}
                 </h2>
               </div>
@@ -136,9 +136,9 @@ const Services = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className={`flex flex-col gap-2 justify-center items-center rounded-xl w-38  h-30 cursor-pointer bg-[#FAFAFA] hover:bg-white ${
+                className={`flex flex-col gap-2 justify-center items-center rounded-xl w-38  h-30 cursor-pointer bg-background hover:bg-white ${
                   selectedService === service?.id
-                    ? "bg-white border border-[#9A85FF]"
+                    ? "bg-white border border-primary"
                     : ""
                 }`}
                 onClick={() => {
@@ -147,7 +147,7 @@ const Services = () => {
                 }}
               >
                 {service.icon}
-                <p className="cursor-pointer text-[#737373] text-sm font-medium leading-4">
+                <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-4">
                   {service.name}
                 </p>
               </div>

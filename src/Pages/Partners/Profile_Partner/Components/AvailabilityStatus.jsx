@@ -16,21 +16,23 @@ const AvailabilityStatus = ({ onChange }) => {
   return (
     <div className="flex flex-col gap-4 max-w-[50%]">
       <div className="flex flex-col gap-2 mt-8 max-w-55">
-        <label className="text-[#737373] font-medium! text-xs!">Status</label>
+        <label className="text-muted-foreground font-medium! text-xs!">
+          Status
+        </label>
 
         <div
-          className="flex gap-2.5 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-[#FAFAFA]"
+          className="flex gap-2.5 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-background"
           onClick={() => handleStatusChange("available")}
         >
           <Radio
             checked={selectedStatus === "available"}
-            rootClassName="[&_.ant-radio-inner]:!border-[#22C55E] [&_.ant-radio-checked_.ant-radio-inner]:!bg-[#22C55E] [&_.ant-radio-checked_.ant-radio-inner]:!border-[#22C55E]"
+            rootClassName="[&_.ant-radio-inner]:!border-success [&_.ant-radio-checked_.ant-radio-inner]:!bg-success [&_.ant-radio-checked_.ant-radio-inner]:!border-success"
           />
           <p
             className={`text-sm! font-medium! leading-[129%] ${
               selectedStatus === "available"
-                ? "text-[#22C55E]"
-                : "text-[#262626]"
+                ? "text-success"
+                : "text-foreground"
             }`}
           >
             Available now
@@ -39,11 +41,11 @@ const AvailabilityStatus = ({ onChange }) => {
 
         {/* Offline - Default */}
         <div
-          className="flex gap-3 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-[#FAFAFA]"
+          className="flex gap-3 items-center px-4 py-2 rounded-lg cursor-pointer transition-all bg-background"
           onClick={() => handleStatusChange("offline")}
         >
           <Radio checked={selectedStatus === "offline"} />
-          <p className="text-sm! font-medium! text-[#262626] leading-[129%]">
+          <p className="text-sm! font-medium! text-foreground leading-[129%]">
             Offline
           </p>
         </div>

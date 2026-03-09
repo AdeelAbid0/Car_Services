@@ -35,13 +35,13 @@ const Settings = () => {
   const renderItem = (item) => (
     <div
       key={item.label}
-      className="flex items-center justify-between w-full px-4 h-10 bg-[#FAFAFA] rounded-lg cursor-pointer hover:bg-white"
+      className="flex items-center justify-between w-full px-4 h-10 bg-background rounded-lg cursor-pointer hover:bg-white"
     >
-      <p className="text-[#262626] text-sm font-medium">{item.label}</p>
+      <p className="text-foreground text-sm font-medium">{item.label}</p>
       {item.type === "switch" ? (
         <Switch />
       ) : (
-        <ArrowRight className="rotate-145 text-[#262626]" />
+        <ArrowRight className="rotate-145 text-foreground" />
       )}
     </div>
   );
@@ -50,7 +50,7 @@ const Settings = () => {
     <div className="flex flex-col gap-8 max-w-[35%]">
       {settingsSections.map((section) => (
         <div key={section.title} className="flex flex-col gap-2">
-          <h1 className="text-xs text-[#737373] font-medium">
+          <h1 className="text-xs text-muted-foreground font-medium">
             {section.title}
           </h1>
           {section.items.map(renderItem)}

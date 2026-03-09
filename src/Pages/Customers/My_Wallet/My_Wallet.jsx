@@ -47,13 +47,13 @@ const My_Wallet = () => {
       <div className="mt-11 w-full max-w-[72%]">
         <div className="flex w-full justify-between items-center">
           <div className="flex flex-col gap-1 justify-center">
-            <h1 className="text-2xl font-bold! text-[#262626]">My Wallet</h1>
-            <p className="text-[16px] text-[#737373] font-normal">
+            <h1 className="text-2xl font-bold! text-foreground">My Wallet</h1>
+            <p className="text-[16px] text-muted-foreground font-normal">
               Verified workshops and providers ready to care for your car.{" "}
             </p>
           </div>
           <div
-            className="flex items-center px-4 py-1.75 gap-2 bg-[#262626] rounded-lg cursor-pointer hover:bg-[#404040] transition-colors"
+            className="flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors"
             onClick={() => {
               navigate(ROUTES.BOOKINGS);
             }}
@@ -69,23 +69,23 @@ const My_Wallet = () => {
             <div className="flex flex-col gap-2 w-full">
               <div className="flex flex-col gap-2 items-center w-full bg-white rounded-[10px] py-6">
                 <div className="flex flex-col gap-1">
-                  <p className="text-[#737373] font-medium! text-sm!">
+                  <p className="text-muted-foreground font-medium! text-sm!">
                     Your Balance
                   </p>
-                  <h1 className="text-[#262626] font-semibold! text-[20px]">
+                  <h1 className="text-foreground font-semibold! text-[20px]">
                     PKR 524.00
                   </h1>
                 </div>
                 <div className="flex w-full gap-5 justify-center">
-                  <p className="text-xs! text-[#737373] font-medium!">
+                  <p className="text-xs! text-muted-foreground font-medium!">
                     Currency:{" "}
-                    <span className="font-semibold! text-[#262626] text-sm!">
+                    <span className="font-semibold! text-foreground text-sm!">
                       PKR
                     </span>
                   </p>
-                  <p className="text-xs! text-[#737373] font-medium!">
+                  <p className="text-xs! text-muted-foreground font-medium!">
                     Staus:{" "}
-                    <span className="font-semibold! text-[#9A85FF] text-sm!">
+                    <span className="font-semibold! text-primary text-sm!">
                       Active
                     </span>
                   </p>
@@ -103,7 +103,7 @@ const My_Wallet = () => {
             </div>
           </div>
           <div className="w-[60%]">
-            <h1 className="text-2xl font-bold! text-[#262626]">
+            <h1 className="text-2xl font-bold! text-foreground">
               Payment History
             </h1>
 
@@ -113,27 +113,27 @@ const My_Wallet = () => {
                   <button
                     className={`relative pb-4 cursor-pointer text-[16px] font-medium transition-colors ${
                       activeTab === "all"
-                        ? "text-[#9A85FF]!"
-                        : "text-[#737373]! hover:text-[#262626]!"
+                        ? "text-primary!"
+                        : "text-muted-foreground! hover:text-foreground!"
                     }`}
                     onClick={() => setActiveTab("all")}
                   >
                     All Payments
                     {activeTab === "all" && (
-                      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#9A85FF] z-10"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-primary z-10"></div>
                     )}
                   </button>
                   <button
                     className={`relative pb-4 cursor-pointer text-[16px] font-medium transition-colors ${
                       activeTab === "regular"
-                        ? "text-[#9A85FF]!"
-                        : "text-[#737373]! hover:text-[#262626]!"
+                        ? "text-primary!"
+                        : "text-muted-foreground! hover:text-foreground!"
                     }`}
                     onClick={() => setActiveTab("regular")}
                   >
                     Regular Payments
                     {activeTab === "regular" && (
-                      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#9A85FF] z-10"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-primary z-10"></div>
                     )}
                   </button>
                 </div>
@@ -151,7 +151,7 @@ const My_Wallet = () => {
             <div className="py-6">
               <div className="flex flex-col gap-4">
                 <div>
-                  <h3 className="text-[14px] font-medium text-[#737373] pb-3">
+                  <h3 className="text-[14px] font-medium text-muted-foreground pb-3">
                     Today
                   </h3>
                   <div className="flex flex-col gap-2">
@@ -167,16 +167,16 @@ const My_Wallet = () => {
                               {item.icon}
                             </div>
                             <div className="flex flex-col gap-1">
-                              <h1 className="text-[18px] font-semibold text-[#262626]">
+                              <h1 className="text-[18px] font-semibold text-foreground">
                                 {item.name}
                               </h1>
-                              <p className="font-medium text-sm text-[#737373]">
+                              <p className="font-medium text-sm text-muted-foreground">
                                 {item.date}
                               </p>
                             </div>
                           </div>
                           <div className="flex w-full justify-end items-center">
-                            <h1 className="text-[16px] font-medium text-[#262626]">
+                            <h1 className="text-[16px] font-medium text-foreground">
                               {item.amount}
                             </h1>
                           </div>
@@ -189,10 +189,10 @@ const My_Wallet = () => {
                   <div className="flex flex-col items-center justify-center py-12">
                     <div className="text-center">
                       <div className="text-[60px] mb-4">📄</div>
-                      <h3 className="text-[18px] font-medium text-[#262626] mb-2">
+                      <h3 className="text-[18px] font-medium text-foreground mb-2">
                         No payments found
                       </h3>
-                      <p className="text-[14px] text-[#737373]">
+                      <p className="text-[14px] text-muted-foreground">
                         {activeTab === "all"
                           ? "You haven't made any payments yet."
                           : "You don't have any regular payments."}

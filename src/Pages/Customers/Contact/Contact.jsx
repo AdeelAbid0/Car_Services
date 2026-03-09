@@ -15,55 +15,55 @@ const Contact = () => {
     <div className="flex flex-col w-full items-center h-full overflow-auto py-11 relative z-10 overflow-x-hidden">
       <div className="flex flex-col gap-16 w-[72%]">
         <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold! text-[#262626] leading-11">
+          <h1 className="text-2xl font-bold! text-foreground leading-11">
             Contact us
           </h1>
-          <p className="text-[16px] font-normal text-[#737373] leading-6 mb-11">
+          <p className="text-[16px] font-normal text-muted-foreground leading-6 mb-11">
             Get in touch with us. We’re here to assist you.
           </p>
         </div>
         <div className="flex w-full bg-white! rounded-[20px] px-9 pt-16 pb-14 gap-11 relative z-10">
           <div className="flex flex-col w-full">
-            <p className="font-normal text-sm! text-[#777777] leading-6">
+            <p className="font-normal text-sm! text-muted-foreground leading-6">
               We’ll answer within 24 hours, stay tuned and stay connected with
               FIXnGo.
             </p>
             <div className="flex w-full flex-wrap gap-3 mt-7">
               <div className="flex w-full gap-3">
-                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-[#FAFAFA] rounded-2xl pb-14">
+                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-background rounded-2xl pb-14">
                   <ChatUsIcon />
-                  <h1 className="pt-6! text-[#292929] font-medium! text-[19px]!">
+                  <h1 className="pt-6! text-foreground font-medium! text-[19px]!">
                     Chat with us
                   </h1>
-                  <p className="text-[#777777] font-normal! text-[13px]! leading-5 pt-2.5">
+                  <p className="text-muted-foreground font-normal! text-[13px]! leading-5 pt-2.5">
                     Our friendly team is here to help
                   </p>
-                  <p className="text-[#777777] font-medium! text-[13px]! leading-5">
+                  <p className="text-muted-foreground font-medium! text-[13px]! leading-5">
                     team@fixngo.com
                   </p>
                 </div>
-                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-[#FAFAFA] rounded-2xl pb-14">
+                <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-background rounded-2xl pb-14">
                   <CallUsIcon />
-                  <h1 className="pt-6! text-[#292929] font-medium! text-[19px]!">
+                  <h1 className="pt-6! text-foreground font-medium! text-[19px]!">
                     Call us
                   </h1>
-                  <p className="text-[#777777] font-normal! text-[13px]! leading-5">
+                  <p className="text-muted-foreground font-normal! text-[13px]! leading-5">
                     Toll free call
                   </p>
-                  <p className="text-[#777777] font-medium! text-[13px]! leading-5">
+                  <p className="text-muted-foreground font-medium! text-[13px]! leading-5">
                     727-362-3617
                   </p>
                 </div>
               </div>
-              <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-[#FAFAFA] rounded-2xl pb-14">
+              <div className="flex h-auto min-w-56.5 w-full flex-col p-4 bg-background rounded-2xl pb-14">
                 <VisitUsIcon />
-                <h1 className="pt-6! text-[#292929] font-medium! text-[19px]!">
+                <h1 className="pt-6! text-foreground font-medium! text-[19px]!">
                   Visit us
                 </h1>
-                <p className="text-[#777777] font-normal! text-[13px]! leading-5">
+                <p className="text-muted-foreground font-normal! text-[13px]! leading-5">
                   Come and say hello at our office
                 </p>
-                <p className="text-[#777777] font-medium! text-[13px]! leading-5">
+                <p className="text-muted-foreground font-medium! text-[13px]! leading-5">
                   team@fixngo.com
                 </p>
               </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                 prefixIcon={<UserIcon />}
                 name="name"
                 // formik={formik}
-                className="w-full bg-[#FAFAFA]!"
+                className="w-full bg-background!"
               />
               <InputText
                 label="Email"
@@ -85,12 +85,12 @@ const Contact = () => {
                 prefixIcon={<MailIcon />}
                 name="email"
                 // formik={formik}
-                className="w-full bg-[#FAFAFA]!"
+                className="w-full bg-background!"
               />
               <InputTextArea
                 placeholder={"Type your message here"}
                 rows={12}
-                className={"bg-[#FAFAFA]!"}
+                className={"bg-background!"}
               />
               <Button type={"primary"} label={"Send message"} />
             </div>

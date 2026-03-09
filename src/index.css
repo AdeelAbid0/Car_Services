@@ -5,6 +5,14 @@
   --font-roboto: "Roboto", sans-serif;
   --font-dmsans: "DM sans", sans-serif;
   --font-anton: "Anton", sans-serif;
+
+  --color-primary: #9a85ff;
+  --color-foreground: #262626;
+  --color-muted-foreground: #737373;
+  --color-background: #f5f5f5;
+  --color-success: #22c55e;
+  --color-warning: #fbbf24;
+  --color-danger: #ef4444;
 }
 
 /* Base styles */
