@@ -1,8 +1,8 @@
-import PartnerLogo from "../../assets/svg/partner-logo.svg?react";
-import CarLogo from "../../assets/svg/car.svg?react";
-import Logo from "../../assets/svg/logo-dark.svg?react";
+import PartnerLogo from "../../../assets/svg/partner-logo.svg?react";
+import CarLogo from "../../../assets/svg/car.svg?react";
+import Logo from "../../../assets/svg/logo-dark.svg?react";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../../constants/routes";
 
 const Join = ({ imageSrc = "/Images/hero-image.png" }) => {
   const navigate = useNavigate();

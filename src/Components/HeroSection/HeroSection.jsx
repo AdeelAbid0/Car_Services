@@ -89,7 +89,7 @@ const HeroSection = () => {
 
             <div className="flex w-full justify-center">
               <div
-                className="flex w-[53%] flex-col items-center mt-4 2xl:mt-10 relative z-20 gap-2 max-w-156"
+                className="flex w-[53%] flex-col items-center mt-4 2xl:mt-10 relative z-20 gap-0 max-w-156"
                 onMouseLeave={() => {
                   setActiveTab(null);
                 }}
@@ -137,17 +137,17 @@ const HeroSection = () => {
                 {/* Dropdown Content */}
                 <div className="relative w-full">
                   {activeTab === 1 && (
-                    <div className="absolute top-2 left-0 right-0 z-40">
+                    <div className="absolute top-1 left-0 right-0 z-40">
                       <Services />
                     </div>
                   )}
                   {activeTab === 2 && (
-                    <div className="absolute top-2 left-0 right-0 z-40">
+                    <div className="absolute top-1 left-0 right-0 z-40">
                       <Locations />
                     </div>
                   )}
                   {activeTab === 3 && (
-                    <div className="absolute top-2 left-0 right-0 z-40">
+                    <div className="absolute top-1 left-0 right-0 z-40">
                       <CustomCalendar />
                     </div>
                   )}
