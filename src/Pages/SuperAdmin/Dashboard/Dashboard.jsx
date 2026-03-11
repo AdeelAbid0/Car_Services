@@ -5,11 +5,80 @@ import TotalUser from "../../../assets/svg/total-user.svg?react";
 import ActiveCustomer from "../../../assets/svg/active-customer.svg?react";
 import PolygonInc from "../../../assets/svg/polygon.svg?react";
 import PolygonDec from "../../../assets/svg/polygon-2.svg?react";
+import DetailIcon from "../../../assets/svg/eye-2.svg?react";
 import EmptyView from "./Components/EmptyView";
+import { DataTable } from "../../../ui/DataTable/DataTable";
+import { useState } from "react";
+import BusinessDetail from "./Components/BusinessDetail/BusinessDetail";
 
 const Dashboard = () => {
+  const [showDetailDrawer, setShowDetailDrawer] = useState(false);
+  const [selectedBusiness, setSelectedBusiness] = useState(null);
+  console.log({ showDetailDrawer });
+  console.log({ selectedBusiness });
+  const data = [
+    {
+      key: "1",
+      name: "Mike",
+      age: 32,
+      address: "10 Downing Street",
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+    },
+  ];
+
+  const columns = [
+    {
+      title: "Business name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Owner",
+      dataIndex: "age",
+      key: "age",
+    },
+    {
+      title: "Service category",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "Submitted on",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "Location",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "Status",
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: "Details",
+      key: "details",
+      render: (_, record) => (
+        <div className="flex items-center justify-center w-full">
+          <DetailIcon
+            onClick={() => {
+              setShowDetailDrawer(true);
+              setSelectedBusiness(record);
+            }}
+          />
+        </div>
+      ),
+    },
+  ];
   return (
-    <div className="flex flex-col w-full h-full justify-start items-center bg-gray-50">
+    <div className="flex flex-col gap-6 w-full h-full justify-start items-center">
       <div className="mt-11 w-full max-w-[72%]">
         {/* Header Section */}
         <div className="flex w-full justify-between items-center">
@@ -22,14 +91,14 @@ const Dashboard = () => {
               type={"primary"}
               prefixIcon={<FilterIcon />}
               className={
-                "bg-white! text-foreground! font-medium! border! border-border! rounded-lg! h-9!"
+                "bg-muted-background! text-foreground! font-medium! border! border-border! rounded-lg! h-9!"
               }
             />
           </div>
         </div>
 
         <div className="flex gap-3 w-full mt-6">
-          <div className="w-[24.2%] bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
+          <div className="w-[24.2%] bg-muted-background rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
             <div className="flex items-center gap-3">
               <div className="flex w-10 h-10 justify-center items-center shrink-0 rounded-lg bg-[#DCFCE7]">
                 <TotalUser className="w-5 h-5 text-success" />
@@ -58,7 +127,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="w-[24.2%] bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
+          <div className="w-[24.2%] bg-muted-background rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
             <div className="flex items-center gap-3">
               <div className="flex w-10 h-10 justify-center items-center shrink-0 rounded-lg bg-[#EDE9FA]">
                 <ActiveCustomer className="w-5 h-5 text-danger" />
@@ -87,7 +156,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="w-[24.2%] bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
+          <div className="w-[24.2%] bg-muted-background rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
             <div className="flex items-center gap-3">
               <div className="flex w-10 h-10 justify-center items-center shrink-0 rounded-lg bg-[#DCFCE7]">
                 <TotalUser className="w-5 h-5 text-success" />
@@ -116,7 +185,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <div className="w-[24.2%] bg-white rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
+          <div className="w-[24.2%] bg-muted-background rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
             <div className="flex items-center gap-3">
               <div className="flex w-10 h-10 justify-center items-center shrink-0 rounded-lg bg-[#DCFCE7]">
                 <TotalUser className="w-5 h-5 text-success" />
@@ -146,10 +215,25 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <div className="flex w-full mt-6">
+          {data?.length >= 1 ? (
+            <div className="flex flex-col gap-3 w-full">
+              <h1 className="text-[16px] font-semibold! text-foreground">
+                New Partner’s Request
+              </h1>
+              <DataTable data={data} columns={columns} pagination={false} />
+            </div>
+          ) : (
+            <EmptyView />
+          )}
+        </div>
       </div>
-      <div className="flex w-full h-full items-center justify-center">
-        <EmptyView />
-      </div>
+      {showDetailDrawer && (
+        <BusinessDetail
+          setShowDetailDrawer={setShowDetailDrawer}
+          BusinessDetail={BusinessDetail}
+        />
+      )}
     </div>
   );
 };

@@ -74,18 +74,16 @@ const App = () => {
               multipleItemBg: "#F3F1FD",
               multipleItemBorderColor: "#F3F1FD",
             },
+
             Table: {
-              headerBg: "#FFFFFF",
+              headerBg: "#FAFAFA",
               headerColor: "#878787",
               headerBorderRadius: 12,
               borderColor: "#F5F5F5",
-              colorBgContainer: "#FFFFFF",
-              rowHoverBg: "none",
-              colorText: "#343333",
+              colorBgContainer: "#FAFAFA",
+              rowHoverBg: "#F3F3F3",
+              colorText: "#262626",
               fontSize: 14,
-              headerSplitColor: "transparent",
-              cellPaddingInline: 16,
-              borderRadius: 0,
             },
           },
         }}

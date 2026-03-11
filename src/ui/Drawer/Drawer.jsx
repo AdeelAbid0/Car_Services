@@ -21,7 +21,7 @@ const CommonDrawer = ({
     >
       <div className="flex flex-col h-full">
         {/* Header - Fixed Top */}
-        <div className="shrink-0 border-b border-border p-8 pb-3 bg-background/30">
+        <div className="shrink-0 border-b border-border p-8 pb-3 bg-background">
           <div className="flex justify-between items-start">
             <div className="flex flex-col gap-1 flex-1">
               <h1 className="text-2xl! font-bold! text-foreground">{title}</h1>
@@ -39,12 +39,12 @@ const CommonDrawer = ({
         </div>
 
         {/* Content Area - Scrollable */}
-        <div className="flex-1 overflow-y-auto p-8 bg-background/30">
+        <div className="flex-1 overflow-y-auto p-8 bg-background">
           {children}
         </div>
 
         {/* Footer - Fixed Bottom */}
-        <div className="shrink-0 border-t border-border py-3 px-8 flex gap-3 justify-end bg-background/30">
+        <div className="shrink-0 border-t border-border py-3 px-8 flex gap-3 justify-end bg-background">
           {footerButtonSecondaryLabel && (
             <Button
               variant={"outlined"}

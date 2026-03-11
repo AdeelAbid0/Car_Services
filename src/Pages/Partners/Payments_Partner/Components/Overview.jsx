@@ -121,7 +121,9 @@ const Overview = () => {
             <div className="flex items-center gap-3 text-muted-foreground font-medium! text-sm!">
               <label>4242 4242 4242 4242</label>
               <span className="w-1 h-1 rounded-full bg-background/30"></span>
-              <p>Expiry: 16/29</p>
+              <p className="text-muted-foreground text-xs! font-medium!">
+                Expiry: 16/29
+              </p>
             </div>
             <div>
               <span className="text-primary font-medium! text-sm! hover:text-primary/80 cursor-pointer">
@@ -138,7 +140,9 @@ const Overview = () => {
           </h1>
           <div className="flex gap-2.5 borde border-border bg-muted-background rounded-lg px-2.5 py-2 cursor-pointer hover:bg-white">
             <FilterIcon />
-            <p>Filters</p>
+            <p className="text-muted-foreground text-xs! font-medium!">
+              Filters
+            </p>
           </div>
         </div>
         <Table
@@ -157,7 +161,7 @@ const Overview = () => {
         footerButtonSecondaryType={"danger"}
       >
         <div>
-          <p>Invoice</p>
+          <p className="text-muted-foreground text-xs! font-medium!">Invoice</p>
           <div className="flex flex-col gap-1.5 mt-2.5">
             <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
               <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
@@ -184,7 +188,9 @@ const Overview = () => {
           </div>
         </div>
         <div className="mt-4">
-          <p>Services</p>
+          <p className="text-muted-foreground text-xs! font-medium!">
+            Services
+          </p>
           <div className="flex flex-col gap-1.5 mt-2.5">
             <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
               <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
@@ -219,7 +225,9 @@ const Overview = () => {
           </div>
         </div>
         <div className="mt-4">
-          <p>Customer details</p>
+          <p className="text-muted-foreground text-xs! font-medium!">
+            Customer details
+          </p>
           <div className="flex flex-col gap-1.5 mt-2.5">
             <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
               <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
@@ -256,7 +264,9 @@ const Overview = () => {
           </div>
         </div>
         <div className="mt-4">
-          <p>Payment information</p>
+          <p className="text-muted-foreground text-xs! font-medium!">
+            Payment information
+          </p>
           <div className="flex flex-col gap-1.5 mt-2.5">
             <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
               <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background/30 rounded-lg">
