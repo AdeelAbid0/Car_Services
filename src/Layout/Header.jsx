@@ -121,21 +121,33 @@ const Header = () => {
         {!isAuthenticated ? (
           <>
             <Button
-              label="Join as Partner"
+              label="Sign In"
               onClick={() => {
-                navigate(ROUTES.PARTNER_REGISTER);
+                navigate(ROUTES.LOGIN);
+              }}
+              className={`${
+                !location.pathname === ROUTES.HOME
+                  ? "bg-background! hover:bg-[#E5E0FF]! text-primary!"
+                  : "bg-foreground! hover:bg-[#303030]! text-white! border! border-border!"
+              }`}
+            />
+            {/* {location.pathname === ROUTES.HOME ? (
+              <HamburgerIconDark className="w-full!" />
+            ) : (
+              <HamburgerIconLight className="w-full!" />
+            )} */}
+            <Button
+              label="Join"
+              onClick={() => {
+                // navigate(ROUTES.PARTNER_REGISTER);
+                navigate(ROUTES.JOIN);
               }}
               className={`${
                 location.pathname === ROUTES.HOME
                   ? "bg-background! hover:bg-[#E5E0FF]! text-primary!"
-                  : "bg-foreground! hover:bg-[#303030]! text-white!"
+                  : "bg-foreground! hover:bg-[#303030]! text-white! "
               }`}
             />
-            {location.pathname === ROUTES.HOME ? (
-              <HamburgerIconDark className="w-full!" />
-            ) : (
-              <HamburgerIconLight className="w-full!" />
-            )}
           </>
         ) : (
           <div className="relative" ref={dropdownRef}>

@@ -8,6 +8,7 @@ export const ROUTES = {
   CONTACT: "/contact",
 
   // Auth routes
+  JOIN: "/join",
   LOGIN: "/login",
   REGISTER_USER: "/register-user",
   PARTNER_REGISTER: "/register-partner",

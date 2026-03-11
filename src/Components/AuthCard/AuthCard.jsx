@@ -1,5 +1,6 @@
 import GoogleIcon from "../../assets/svg/google-icon.svg?react";
 import Button from "../../ui/Button/Button";
+import Logo from "../../assets/svg/logo-dark.svg?react";
 
 const AuthCard = ({
   title,
@@ -30,7 +31,10 @@ const AuthCard = ({
       />
 
       {/* Left Side */}
-      <div className="w-1/2 p-2 pr-0 z-40 flex items-center">
+      <div className="w-1/2 p-2 pr-0 z-40 flex items-center relative">
+        <span className="absolute left-11 top-11">
+          <Logo />
+        </span>
         <img
           src={imageSrc}
           alt="auth"
