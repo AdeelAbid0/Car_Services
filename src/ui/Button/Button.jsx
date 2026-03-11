@@ -2,6 +2,7 @@ import { Button as AntdButton } from "antd";
 
 const Button = ({
   type,
+  size,
   label,
   onClick,
   disabled,
@@ -21,6 +22,7 @@ const Button = ({
   return (
     <AntdButton
       type={type}
+      size={size}
       onClick={onClick}
       disabled={disabled}
       suffixIcon={suffixIcon}

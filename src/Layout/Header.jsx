@@ -122,6 +122,7 @@ const Header = () => {
           <>
             <Button
               label="Sign In"
+              size="small"
               onClick={() => {
                 navigate(ROUTES.LOGIN);
               }}
@@ -138,6 +139,7 @@ const Header = () => {
             )} */}
             <Button
               label="Join"
+              size="small"
               onClick={() => {
                 // navigate(ROUTES.PARTNER_REGISTER);
                 navigate(ROUTES.JOIN);
