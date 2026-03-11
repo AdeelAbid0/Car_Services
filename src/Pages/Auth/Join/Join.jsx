@@ -34,14 +34,14 @@ const Join = ({ imageSrc = "/Images/hero-image.png" }) => {
                   experience.
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-4 w-full bg-background hover:bg-muted-background cursor-pointer px-15 py-7 rounded-2xl mt-6">
+              <div
+                className="flex flex-col items-center gap-4 w-full bg-background hover:bg-muted-background cursor-pointer px-15 py-7 rounded-2xl mt-6"
+                onClick={() => {
+                  navigate(ROUTES.REGISTER_USER);
+                }}
+              >
                 <CarLogo />
-                <div
-                  className="flex flex-col gap-1"
-                  onClick={() => {
-                    navigate(ROUTES.REGISTER_USER);
-                  }}
-                >
+                <div className="flex flex-col gap-1">
                   <h1 className="text-[18px]! text-foreground! font-semibold">
                     Join as a Customer
                   </h1>

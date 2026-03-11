@@ -47,7 +47,7 @@ const AuthCard = ({
           <div className="min-h-full flex items-center justify-center">
             <div className="flex flex-col w-full px-10 md:px-20 py-10 gap-9">
               <div className="flex flex-col items-center gap-2 text-center">
-                <h1 className="font-bold text-foreground text-3xl md:text-4xl lg:text-5xl leading-tight">
+                <h1 className="font-bold! text-foreground text-3xl md:text-4xl lg:text-5xl leading-tight">
                   {title}
                 </h1>
                 {description && (

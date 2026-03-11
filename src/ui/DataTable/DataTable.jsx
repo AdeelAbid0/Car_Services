@@ -2,7 +2,7 @@ import { Table } from "antd";
 
 export const DataTable = ({ data, columns, pagination }) => {
   return (
-    <div className="w-full overflow-x-auto">
+    <div className="w-full">
       <Table
         dataSource={data}
         columns={columns}

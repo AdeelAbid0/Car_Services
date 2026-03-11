@@ -29,6 +29,24 @@ const Dashboard = () => {
       age: 42,
       address: "10 Downing Street",
     },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+    },
   ];
 
   const columns = [
@@ -64,6 +82,7 @@ const Dashboard = () => {
     },
     {
       title: "Details",
+      align: "center",
       key: "details",
       render: (_, record) => (
         <div className="flex items-center justify-center w-full">
@@ -78,7 +97,7 @@ const Dashboard = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-6 w-full h-full justify-start items-center">
+    <div className="flex flex-col gap-6 w-full h-full! justify-start items-center">
       <div className="mt-11 w-full max-w-[72%]">
         {/* Header Section */}
         <div className="flex w-full justify-between items-center">
