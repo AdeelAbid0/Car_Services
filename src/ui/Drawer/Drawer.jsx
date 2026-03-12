@@ -10,6 +10,8 @@ const CommonDrawer = ({
   footerButtonPrimaryLabel,
   footerButtonSecondaryLabel,
   footerButtonSecondaryType,
+  footerButtonPrimaryClick,
+  footerButtonSecondaryClick,
 }) => {
   return (
     <Drawer
@@ -51,12 +53,14 @@ const CommonDrawer = ({
               type={footerButtonSecondaryType}
               label={footerButtonSecondaryLabel}
               className={"h-8!"}
+              onClick={footerButtonSecondaryClick}
             />
           )}
           <Button
             type={"primary"}
             label={footerButtonPrimaryLabel}
             className={"h-8!"}
+            onClick={footerButtonPrimaryClick}
           />
         </div>
       </div>

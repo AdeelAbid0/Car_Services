@@ -3,15 +3,15 @@ import ShopIcon from "../../../../../assets/svg/shop.svg?react";
 import ProfileIcon from "../../../../../assets/svg/profile-circle.svg?react";
 import LocationIcon from "../../../../../assets/svg/location-2.svg?react";
 import Calendar from "../../../../../assets/svg/calendar.svg?react";
-import Timer from "../../../../../assets/svg/timer.svg?react";
 import Service from "../../../../../assets/svg/service.svg?react";
-import Money from "../../../../../assets/svg/money.svg?react";
 import Clock from "../../../../../assets/svg/clock.svg?react";
-import User from "../../../../../assets/svg/user.svg?react";
 import Mail from "../../../../../assets/svg/mail.svg?react";
 import Call from "../../../../../assets/svg/call-filled.svg?react";
-import Location from "../../../../../assets/svg/location-2.svg?react";
-const BusinessDetail = ({ setShowDetailDrawer, BusinessDetail }) => {
+const BusinessDetail = ({
+  setShowDetailDrawer,
+  BusinessDetail,
+  setRejectDrawer,
+}) => {
   return (
     <div>
       <CommonDrawer
@@ -21,6 +21,8 @@ const BusinessDetail = ({ setShowDetailDrawer, BusinessDetail }) => {
         footerButtonPrimaryLabel="Approve"
         footerButtonSecondaryLabel="Reject"
         footerButtonSecondaryType={"danger"}
+        footerButtonPrimaryClick={() => {}}
+        footerButtonSecondaryClick={() => setRejectDrawer(true)}
       >
         <div>
           <p className="text-muted-foreground text-xs! font-medium!">
@@ -113,7 +115,7 @@ const BusinessDetail = ({ setShowDetailDrawer, BusinessDetail }) => {
 
             <div className="flex w-full bg-muted-background rounded-lg  gap-4 items-center p-0.5 h-10! ">
               <div className="flex w-9 h-9 shrink-0 justify-center items-center bg-background rounded-lg">
-                <Timer className="w-4 h-4" />
+                <Clock className="w-4 h-4" />
               </div>
               <h1 className="text-foreground text-xs! font-medium!">
                 12:15 PM

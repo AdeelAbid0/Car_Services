@@ -13,38 +13,16 @@ import BusinessDetail from "./Components/BusinessDetail/BusinessDetail";
 
 const Dashboard = () => {
   const [showDetailDrawer, setShowDetailDrawer] = useState(false);
+  const [rejectDrawer, setRejectDrawer] = useState(false);
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   console.log({ showDetailDrawer });
   console.log({ selectedBusiness });
+  console.log({ rejectDrawer });
   const data = [
     {
       key: "1",
       name: "Mike",
       age: 32,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
       address: "10 Downing Street",
     },
   ];
@@ -97,7 +75,8 @@ const Dashboard = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-6 w-full h-full! justify-start items-center">
+    // <div className="flex flex-col gap-6 w-full h-full! justify-start items-center">
+    <div className="flex w-full justify-center h-full overflow-auto">
       <div className="mt-11 w-full max-w-[72%]">
         {/* Header Section */}
         <div className="flex w-full justify-between items-center">
@@ -116,7 +95,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex gap-3 w-full mt-6">
+        <div className="flex flex-wrap gap-3 w-full mt-6">
           <div className="w-[24.2%] bg-muted-background rounded-xl p-5 shadow-sm border border-gray-100 flex flex-col min-w-65">
             <div className="flex items-center gap-3">
               <div className="flex w-10 h-10 justify-center items-center shrink-0 rounded-lg bg-[#DCFCE7]">
@@ -251,6 +230,7 @@ const Dashboard = () => {
         <BusinessDetail
           setShowDetailDrawer={setShowDetailDrawer}
           BusinessDetail={BusinessDetail}
+          setRejectDrawer={setRejectDrawer}
         />
       )}
     </div>
