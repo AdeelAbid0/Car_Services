@@ -9,15 +9,14 @@ import DetailIcon from "../../../assets/svg/eye-2.svg?react";
 import EmptyView from "./Components/EmptyView";
 import { DataTable } from "../../../ui/DataTable/DataTable";
 import { useState } from "react";
-import BusinessDetail from "./Components/BusinessDetail/BusinessDetail";
+import BusinessDetailDrawer from "./Components/BusinessDetailDrawer/BusinessDetailDrawer";
+import RejectReasonDrawer from "./Components/RejectReasonDrawer/RejectReasonDrawer";
 
 const Dashboard = () => {
   const [showDetailDrawer, setShowDetailDrawer] = useState(false);
   const [rejectDrawer, setRejectDrawer] = useState(false);
   const [selectedBusiness, setSelectedBusiness] = useState(null);
-  console.log({ showDetailDrawer });
-  console.log({ selectedBusiness });
-  console.log({ rejectDrawer });
+
   const data = [
     {
       key: "1",
@@ -26,7 +25,6 @@ const Dashboard = () => {
       address: "10 Downing Street",
     },
   ];
-
   const columns = [
     {
       title: "Business name",
@@ -227,12 +225,14 @@ const Dashboard = () => {
         </div>
       </div>
       {showDetailDrawer && (
-        <BusinessDetail
+        <BusinessDetailDrawer
           setShowDetailDrawer={setShowDetailDrawer}
-          BusinessDetail={BusinessDetail}
+          selectedBusiness={selectedBusiness}
+          rejectDrawer={rejectDrawer}
           setRejectDrawer={setRejectDrawer}
         />
       )}
+      {rejectDrawer && <RejectReasonDrawer setRejectDrawer={setRejectDrawer} />}
     </div>
   );
 };

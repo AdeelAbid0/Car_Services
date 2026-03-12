@@ -7,11 +7,13 @@ import Service from "../../../../../assets/svg/service.svg?react";
 import Clock from "../../../../../assets/svg/clock.svg?react";
 import Mail from "../../../../../assets/svg/mail.svg?react";
 import Call from "../../../../../assets/svg/call-filled.svg?react";
-const BusinessDetail = ({
+const BusinessDetailDrawer = ({
   setShowDetailDrawer,
-  BusinessDetail,
+  selectedBusiness,
+  rejectDrawer,
   setRejectDrawer,
 }) => {
+  console.log({ selectedBusiness });
   return (
     <div>
       <CommonDrawer
@@ -23,6 +25,7 @@ const BusinessDetail = ({
         footerButtonSecondaryType={"danger"}
         footerButtonPrimaryClick={() => {}}
         footerButtonSecondaryClick={() => setRejectDrawer(true)}
+        rootClassName={`${rejectDrawer ? "[&_.ant-drawer-content-wrapper]:mr-[64px]! [&_.ant-drawer-content-wrapper]:my-[87px]! [&_.ant-drawer-content-wrapper]:transition-all! [&_.ant-drawer-content-wrapper]:duration-600! [&_.ant-drawer-content-wrapper]:ease-in-out!" : ""}`}
       >
         <div>
           <p className="text-muted-foreground text-xs! font-medium!">
@@ -140,4 +143,4 @@ const BusinessDetail = ({
   );
 };
 
-export default BusinessDetail;
+export default BusinessDetailDrawer;

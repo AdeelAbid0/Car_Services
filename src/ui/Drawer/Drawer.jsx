@@ -7,11 +7,13 @@ const CommonDrawer = ({
   title,
   description,
   children,
+  childrenPadding, // set {false} if you want no padding on children
   footerButtonPrimaryLabel,
   footerButtonSecondaryLabel,
   footerButtonSecondaryType,
   footerButtonPrimaryClick,
   footerButtonSecondaryClick,
+  rootClassName,
 }) => {
   return (
     <Drawer
@@ -19,7 +21,7 @@ const CommonDrawer = ({
       open={open}
       width={463}
       closable={false}
-      rootClassName="[&_.ant-drawer-body]:p-0! [&_.ant-drawer-header]:display-none"
+      rootClassName={`[&_.ant-drawer-body]:p-0! [&_.ant-drawer-header]:display-none ${rootClassName}`}
     >
       <div className="flex flex-col h-full">
         {/* Header - Fixed Top */}
@@ -41,7 +43,9 @@ const CommonDrawer = ({
         </div>
 
         {/* Content Area - Scrollable */}
-        <div className="flex-1 overflow-y-auto p-8 bg-background">
+        <div
+          className={`flex-1 overflow-y-auto bg-background ${childrenPadding == null ? "p-8" : "p-0"}`}
+        >
           {children}
         </div>
 
