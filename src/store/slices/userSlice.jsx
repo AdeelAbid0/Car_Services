@@ -4,7 +4,7 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     user: {
-      role: "isSuperAdmin",
+      role: "iscustomer",
       // isCustomer,
       // isPartner,
       // isAdmin:,
