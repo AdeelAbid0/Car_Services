@@ -26,6 +26,7 @@ const App = () => {
               paddingInline: 16,
               borderRadius: 12,
               controlHeight: 44,
+              controlHeightSM: 40,
               hoverBorderColor: "#6E44FF",
               activeBorderColor: "#6E44FF",
               activeShadow: "0px 0px 0px 4px #DBEAFE",
@@ -35,6 +36,12 @@ const App = () => {
               colorErrorText: "#EF4444  ",
               errorActiveShadow: "0px 0px 0px 4px #EF444422",
               errorHoverShadow: "0px 0px 0px 4px black",
+            },
+            DatePicker: {
+              controlHeight: 44,
+              controlHeightSM: 32,
+              borderRadiusLG: 12,
+              borderRadiusSM: 8,
             },
             Button: {
               controlHeight: 44,
