@@ -5,8 +5,16 @@ import ArrowRightIcon from '../../../../assets/svg/arrow-right.svg?react'
 
 export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
     const[currentStep, setCurrentStep] = useState(1)
-    const TOTAL_STEPS =3
-    
+    const TOTAL_STEPS = 4
+    const BOOKING_DRAWER_WIDTH = {
+        2: "75%",
+        3: "45%",
+        4: "45%"
+    }
+
+    const Drawer_Width = BOOKING_DRAWER_WIDTH[currentStep]
+    const isConfirmStep = currentStep === TOTAL_STEPS
+
     const handleClick = () => {
         if(currentStep < TOTAL_STEPS){
             setCurrentStep(prev => prev + 1)
@@ -15,7 +23,7 @@ export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
 
     const handleClose = () => {
         setShowBookingDrawer(false)
-        setCurrentStep(1)
+        setCurrentStep(2)
     }
 
   return (
@@ -23,10 +31,10 @@ export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
         <CommonDrawer
         open={showBookingDrawer}
         onClose={handleClose}    
-        footerButtonPrimaryLabel="Continue"
-        footerButtonPrimarySuffixIcon={<ArrowRightIcon/>}   
-        footerButtonPrimaryClick={handleClick}
-        width="75%" 
+        footerButtonPrimaryLabel={isConfirmStep ? "Close" : "Continue"}
+        footerButtonPrimarySuffixIcon={isConfirmStep ? null : <ArrowRightIcon/>}   
+        footerButtonPrimaryClick={isConfirmStep ? handleClose : handleClick}
+        width={Drawer_Width} 
         >
             <StepsModal currentStep={currentStep}/>
 
