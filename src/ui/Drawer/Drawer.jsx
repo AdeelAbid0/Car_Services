@@ -15,6 +15,7 @@ const CommonDrawer = ({
   footerButtonPrimaryClick,
   footerButtonSecondaryClick,
   rootClassName,
+  showHeader = true,
 }) => {
   return (
     <Drawer
@@ -26,6 +27,7 @@ const CommonDrawer = ({
     >
       <div className="flex flex-col h-full">
         {/* Header - Fixed Top */}
+        {showHeader && (
         <div className="shrink-0 border-b border-border p-8 pb-3 bg-background">
           <div className="flex justify-between items-start">
             <div className="flex flex-col gap-1 flex-1">
@@ -42,6 +44,7 @@ const CommonDrawer = ({
             </div>
           </div>
         </div>
+         )}
 
         {/* Content Area - Scrollable */}
         <div
