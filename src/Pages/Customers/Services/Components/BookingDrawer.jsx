@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import CommonDrawer from '../../../../ui/Drawer/Drawer'
-import StepsModal from './StepsModal'
+import BookingSteps from './BookingSteps'
 import ArrowRightIcon from '../../../../assets/svg/arrow-right.svg?react'
 
 export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
@@ -32,11 +32,10 @@ export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
         open={showBookingDrawer}
         onClose={handleClose}    
         footerButtonPrimaryLabel={isConfirmStep ? "Close" : "Continue"}
-        footerButtonPrimarySuffixIcon={isConfirmStep ? null : <ArrowRightIcon/>}   
         footerButtonPrimaryClick={isConfirmStep ? handleClose : handleClick}
         width={Drawer_Width} 
         >
-            <StepsModal currentStep={currentStep}/>
+            <BookingSteps currentStep={currentStep}/>
 
         </CommonDrawer>
     </div>

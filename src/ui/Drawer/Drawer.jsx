@@ -1,6 +1,7 @@
 import { Drawer } from "antd";
 import CloseIcon from "../../assets/svg/add.svg?react";
 import Button from "../Button/Button";
+import ArrowRightIcon from '../../assets/svg/arrow-right.svg?react'
 const CommonDrawer = ({
   open,
   onClose,
@@ -10,7 +11,6 @@ const CommonDrawer = ({
   width,
   childrenPadding, // set {false} if you want no padding on children
   footerButtonPrimaryLabel,
-  footerButtonPrimarySuffixIcon,
   footerButtonSecondaryLabel,
   footerButtonSecondaryType,
   footerButtonPrimaryClick,
@@ -67,7 +67,7 @@ const CommonDrawer = ({
             label={footerButtonPrimaryLabel}
             className={"h-8!"}
             onClick={footerButtonPrimaryClick}
-             suffixIcon={footerButtonPrimarySuffixIcon}
+             suffixIcon={<ArrowRightIcon />}
           />
         </div>
       </div>

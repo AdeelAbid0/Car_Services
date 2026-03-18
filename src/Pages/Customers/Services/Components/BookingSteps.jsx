@@ -1,8 +1,9 @@
 import React from 'react'
 import PartnerCard from '../../../../Components/PartnerCard/PartnerCard'
 import CustomCalendar from '../../../../Components/Calendar/Calendar'
+import bookingConfirmImage from '../../../../assets/Images/booking-confirm.svg'
 
-const StepsModal = ({ currentStep = 1 }) => {
+const BookingSteps = ({ currentStep = 1 }) => {
 
     const STEPS = [
         { id: 1, label: 'Service' },
@@ -84,15 +85,15 @@ const StepsModal = ({ currentStep = 1 }) => {
             <h1 className="text-foreground text-2xl font-semibold!">
               Booking Confirmed
             </h1>
-            <div className='relative overflow-hidden flex flex-col gap-6 bg-white p-15 justify-center items-center border-[1px] h-[55vh] rounded-2xl border-border w-full'>
+            <div className='relative overflow-hidden h-full flex flex-col gap-6 bg-white p-15 justify-center items-center border-[1px] h-[55vh] rounded-2xl border-border w-full'>
               <div className='pointer-events-none absolute -top-24 left-0 h-44 w-[80%] -translate-x-1/2 rounded-full bg-gradient-to-r from-[#f05800]/30 to-[#ffd02f]/30 blur-3xl' />
               <div className='pointer-events-none absolute -bottom-24 right-0 h-59 w-[50%] rounded-full bg-gradient-to-r from-[#a04df0]/20 to-[#4062d9]/20 blur-3xl' />
 
               <div className='relative z-10 flex flex-col gap-3'>
-                    <h2 className='font-semibold weight-600 text-[44px]'>Congratulations! 🎉</h2>
-                    <span className='font-medium text-[16px] weight-500 text-muted-foreground'>You've completed your first car service with us.</span>
+                    <h2 className='font-semibold text-[44px]'>Congratulations! 🎉</h2>
+                    <span className='font-medium text-[16px] text-muted-foreground'>You've completed your first car service with us.</span>
                 </div>
-              <img className='relative z-10' src='booking-confirm.svg'/>
+              <img className='relative z-10' src={bookingConfirmImage} alt='Booking confirmed'/>
               <span className='relative z-10 mt-2 text-primary font-medium underline cursor-pointer'>View Booking</span>
             </div>
           
@@ -102,6 +103,6 @@ const StepsModal = ({ currentStep = 1 }) => {
   )
 }
 
-export default StepsModal
+export default BookingSteps
 
 
