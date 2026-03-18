@@ -1,7 +1,6 @@
 import { Drawer } from "antd";
 import CloseIcon from "../../assets/svg/add.svg?react";
 import Button from "../Button/Button";
-import ArrowRightIcon from '../../assets/svg/arrow-right.svg?react'
 const CommonDrawer = ({
   open,
   onClose,
@@ -67,7 +66,6 @@ const CommonDrawer = ({
             label={footerButtonPrimaryLabel}
             className={"h-8!"}
             onClick={footerButtonPrimaryClick}
-             suffixIcon={<ArrowRightIcon />}
           />
         </div>
       </div>

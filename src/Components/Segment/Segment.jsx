@@ -15,7 +15,7 @@ const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
 
   return (
     <div className="w-full">
-      <div className="flex w-fit shrink-0 gap-6 border-b border-border min-h-7 h-auto">
+      <div className="flex w-fit shrink-0 gap-6 border-b border-border min-h-7 h-auto mb-4">
         {tabs.map((tab) => (
           <div
             key={tab.id}
@@ -34,17 +34,15 @@ const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
           </div>
         ))}
       </div>
-      <div className="mt-4">
-        <Suspense
-          fallback={
-            <div className="w-full h-64 flex items-center justify-center">
-              Loading content...
-            </div>
-          }
-        >
-          {TabComponent}
-        </Suspense>
-      </div>
+      <Suspense
+        fallback={
+          <div className="w-full h-64 flex items-center justify-center mt-4">
+            Loading content...
+          </div>
+        }
+      >
+        {TabComponent}
+      </Suspense>
     </div>
   );
 };
