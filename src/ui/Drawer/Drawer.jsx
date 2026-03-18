@@ -7,6 +7,7 @@ const CommonDrawer = ({
   title,
   description,
   children,
+  width,
   childrenPadding, // set {false} if you want no padding on children
   footerButtonPrimaryLabel,
   footerButtonSecondaryLabel,
@@ -19,7 +20,7 @@ const CommonDrawer = ({
     <Drawer
       onClose={onClose}
       open={open}
-      width={463}
+      width={width || 463}
       closable={false}
       rootClassName={`[&_.ant-drawer-body]:p-0! [&_.ant-drawer-header]:display-none ${rootClassName}`}
     >

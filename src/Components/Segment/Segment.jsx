@@ -15,7 +15,7 @@ const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
 
   return (
     <div className="w-full">
-      <div className="flex w-fit shrink-0 gap-6 border-b border-border min-h-7 h-auto">
+      <div className="flex w-fit shrink-0 gap-6 border-b border-border min-h-7 h-auto mb-4">
         {tabs.map((tab) => (
           <div
             key={tab.id}

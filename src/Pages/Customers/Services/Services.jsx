@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingModal from "../../../Components/BookingModal/BookingModal";
 import Segment from "../../../Components/Segment/Segment";
+import { BookingDrawer } from "./Components/BookingDrawer";
 const Services = () => {
   const navigate = useNavigate();
   const [serviceCategory, setServiceCategory] = useState(1);
@@ -138,7 +139,7 @@ const Services = () => {
             </p>
           </div>
           <div className="flex w-full">
-            <InputText placeholder={"Search"} prefixIcon={SearchIcon} />
+            <InputText placeholder={"Search"} prefixIcon={<SearchIcon/>} />
           </div>
           <div className="w-full">
             <Segment
@@ -150,10 +151,14 @@ const Services = () => {
         </div>
       </div>
       <div className="flex w-full relative">
-        <BookingModal
+        <BookingDrawer
+        showBookingDrawer={showBookingModal}
+        setShowBookingDrawer={setShowBookingModal}
+        />
+        {/* <BookingModal
           showBookingModal={showBookingModal}
           setShowBookingModal={setShowBookingModal}
-        />
+        /> */}
       </div>
     </>
   );
