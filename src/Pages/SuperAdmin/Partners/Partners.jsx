@@ -3,9 +3,8 @@ import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import AddIcon from "../../../assets/svg/add.svg?react";
 import { lazy, Suspense, useState } from "react";
 import Button from "../../../ui/Button/Button";
-import AddServicesDrawer from "../../Partners/Manage_Services/Components/AddServicesDrawer";
-import EditServicesDrawer from "../../Partners/Manage_Services/Components/EditServicesDrawer";
 import Segment from "../../../Components/Segment/Segment";
+import AddPartnerDrawer from "./Components/AddPartnerDrawer/AddPartnerDrawer";
 const AddedByAdmin = lazy(
   () => import("./Components/AddedByAdmin/AddedByAdmin"),
 );
@@ -15,8 +14,7 @@ const AddedByPartners = lazy(
 
 const Partners = () => {
   const [activeTab, setActiveTab] = useState(1);
-  const [addServiceDrawer, setAddServiceDrawer] = useState(false);
-  const [editServiceDrawer, setEditServiceDrawer] = useState(false);
+  const [addPartnerDrawer, setAddPartnerDrawer] = useState(false);
 
   const tabs = [
     {
@@ -40,7 +38,7 @@ const Partners = () => {
               label={"Add New Partner"}
               prefixIcon={<AddIcon />}
               className={"rounded-lg! h-8!"}
-              onClick={() => setAddServiceDrawer(true)}
+              onClick={() => setAddPartnerDrawer(true)}
             />
           </div>
           <div className="flex w-full justify-between items-end">
@@ -69,13 +67,9 @@ const Partners = () => {
           </div>
         </div>
       </div>
-      <AddServicesDrawer
-        addServiceDrawer={addServiceDrawer}
-        setAddServiceDrawer={setAddServiceDrawer}
-      />
-      <EditServicesDrawer
-        editServiceDrawer={editServiceDrawer}
-        setEditServiceDrawer={setEditServiceDrawer}
+      <AddPartnerDrawer
+        addPartnerDrawer={addPartnerDrawer}
+        setAddPartnerDrawer={setAddPartnerDrawer}
       />
     </>
   );
