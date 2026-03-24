@@ -5,6 +5,8 @@ import { lazy, Suspense, useState } from "react";
 import Button from "../../../ui/Button/Button";
 import Segment from "../../../Components/Segment/Segment";
 import AddPartnerDrawer from "./Components/AddPartnerDrawer/AddPartnerDrawer";
+import PartnerDetails from "./Components/PartnerDetails/PartnerDetails";
+import RemovePartnerDrawer from "./Components/RemovePartnerDrawer/RemovePartnerDrawer";
 const AddedByAdmin = lazy(
   () => import("./Components/AddedByAdmin/AddedByAdmin"),
 );
@@ -15,6 +17,8 @@ const AddedByPartners = lazy(
 const Partners = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [addPartnerDrawer, setAddPartnerDrawer] = useState(false);
+  const [viewPartnerDetail, setViewPartnerDetail] = useState(false);
+  const [rejectDrawer, setRejectDrawer] = useState(false);
 
   const tabs = [
     {
@@ -62,7 +66,17 @@ const Partners = () => {
                 </div>
               }
             >
-              {activeTab === 1 ? <AddedByPartners /> : <AddedByAdmin />}
+              {activeTab === 1 ? (
+                <AddedByPartners
+                  viewPartnerDetail={viewPartnerDetail}
+                  setViewPartnerDetail={setViewPartnerDetail}
+                />
+              ) : (
+                <AddedByAdmin
+                  viewPartnerDetail={viewPartnerDetail}
+                  setViewPartnerDetail={setViewPartnerDetail}
+                />
+              )}
             </Suspense>
           </div>
         </div>
@@ -71,6 +85,17 @@ const Partners = () => {
         addPartnerDrawer={addPartnerDrawer}
         setAddPartnerDrawer={setAddPartnerDrawer}
       />
+      {viewPartnerDetail && (
+        <PartnerDetails
+          viewPartnerDetail={viewPartnerDetail}
+          setViewPartnerDetail={setViewPartnerDetail}
+          rejectDrawer={rejectDrawer}
+          setRejectDrawer={setRejectDrawer}
+        />
+      )}
+      {rejectDrawer && (
+        <RemovePartnerDrawer setRejectDrawer={setRejectDrawer} />
+      )}
     </>
   );
 };

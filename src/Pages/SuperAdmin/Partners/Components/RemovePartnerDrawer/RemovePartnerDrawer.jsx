@@ -1,8 +1,9 @@
 import { useState } from "react";
 import CommonDrawer from "../../../../../ui/Drawer/Drawer";
 import { Checkbox } from "antd";
+import InputTextArea from "../../../../../ui/InputTextArea/InputTextArea";
 
-const RejectReasonDrawer = ({ setRejectDrawer }) => {
+const RemovePartnerDrawer = ({ setRejectDrawer }) => {
   const [selectedReasons, setSelectedReasons] = useState([]);
   const reasons = [
     {
@@ -53,11 +54,11 @@ const RejectReasonDrawer = ({ setRejectDrawer }) => {
         title={"Reason"}
         open={true}
         onClose={() => setRejectDrawer(false)}
-        footerButtonPrimaryLabel="Confirm Rejection"
+        footerButtonPrimaryLabel="Confirm Removal"
         footerButtonPrimaryClick={() => {}}
         childrenPadding={false}
       >
-        <div className="flex w-full relative">
+        <div className="flex flex-col gap-4 w-full relative">
           <div className="flex flex-col gap-6 absolute top-0 left-0 w-full">
             <div className="flex flex-col gap-6 w-full bg-muted-danger px-5 py-2.5">
               <p className="text-danger font-medium! text-sm leading-4.5!">
@@ -95,6 +96,14 @@ const RejectReasonDrawer = ({ setRejectDrawer }) => {
                 );
               })}
             </div>
+            <div className="px-5 mb-4">
+              <InputTextArea
+                placeholder={"Additional Notes (Optional)"}
+                // prefix={<EditIcon />}
+                rows={4}
+                className={"bg-muted-background!"}
+              />
+            </div>
           </div>
         </div>
       </CommonDrawer>
@@ -102,4 +111,4 @@ const RejectReasonDrawer = ({ setRejectDrawer }) => {
   );
 };
 
-export default RejectReasonDrawer;
+export default RemovePartnerDrawer;

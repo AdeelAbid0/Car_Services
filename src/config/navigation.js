@@ -177,6 +177,12 @@ const dropdownItems = {
   ],
   superAdmin: [
     {
+      id: 1,
+      label: "Profile",
+      icon: "User",
+      path: ROUTES.SUPERADMIN_PROFILE,
+    },
+    {
       id: 6,
       label: "Logout",
       icon: "Logout",

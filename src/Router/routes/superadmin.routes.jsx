@@ -6,6 +6,7 @@ const Dashboard = lazy(
 );
 const Services = lazy(() => import("../../Pages/SuperAdmin/Services/Services"));
 const Partners = lazy(() => import("../../Pages/SuperAdmin/Partners/Partners"));
+const Profile = lazy(() => import("../../Pages/SuperAdmin/Profile/Profile"));
 
 export const SUPERADMIN_ROUTES = [
   {
@@ -29,6 +30,14 @@ export const SUPERADMIN_ROUTES = [
     element: (
       <PrivateRoutes>
         <Partners />
+      </PrivateRoutes>
+    ),
+  },
+  {
+    path: ROUTES.SUPERADMIN_PROFILE,
+    element: (
+      <PrivateRoutes>
+        <Profile />
       </PrivateRoutes>
     ),
   },
