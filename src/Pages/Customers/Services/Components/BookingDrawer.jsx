@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import CommonDrawer from '../../../../ui/Drawer/Drawer'
 import BookingSteps from './BookingSteps'
-import ArrowRightIcon from '../../../../assets/svg/arrow-right.svg?react'
+import CloseIcon from '../../../../assets/svg/add.svg?react'
 
 export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
     const[currentStep, setCurrentStep] = useState(1)
@@ -31,11 +31,26 @@ export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
         <CommonDrawer
         open={showBookingDrawer}
         onClose={handleClose}    
+        childrenPadding={false}
         footerButtonPrimaryLabel={isConfirmStep ? "Close" : "Continue"}
         footerButtonPrimaryClick={isConfirmStep ? handleClose : handleClick}
-        width={Drawer_Width} 
+        width={Drawer_Width}
+        showHeader={false} 
         >
-            <BookingSteps currentStep={currentStep}/>
+            <div className='flex h-full flex-col bg-background'>
+                <div className='sticky top-0 z-10 flex items-start gap-6 border-b border-border bg-background px-8 py-6'>
+                    <div className='flex h-6 w-6 shrink-0 cursor-pointer items-center justify-center rounded-full' onClick={handleClose}>
+                        <CloseIcon className='rotate-45' />
+                    </div>
+                    <div className='min-w-0 flex-1'>
+                        <BookingSteps currentStep={currentStep} showContent={false} />
+                    </div>
+                </div>
+
+                <div className='flex-1 overflow-y-auto'>
+                    <BookingSteps currentStep={currentStep} showStepper={false} />
+                </div>
+            </div>
 
         </CommonDrawer>
     </div>

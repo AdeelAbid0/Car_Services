@@ -3,7 +3,11 @@ import PartnerCard from '../../../../Components/PartnerCard/PartnerCard'
 import CustomCalendar from '../../../../Components/Calendar/Calendar'
 import bookingConfirmImage from '../../../../assets/Images/booking-confirm.svg'
 
-const BookingSteps = ({ currentStep = 1 }) => {
+const BookingSteps = ({
+  currentStep = 1,
+  showStepper = true,
+  showContent = true,
+}) => {
 
     const STEPS = [
         { id: 1, label: 'Service' },
@@ -34,8 +38,8 @@ const BookingSteps = ({ currentStep = 1 }) => {
     }
   return (
     <>
-    {currentStep <= 3 && (
-    <div className='flex gap-[1px] items-start justify-center px-10 '>
+    {showStepper && currentStep <= 3 && (
+    <div className='flex gap-[1px] items-start justify-center px-10'>
         {STEPS.map((step, index) => (
             <React.Fragment key={step.id}>
                 <StepCircle stepId={step.id} currentStep={currentStep} />
@@ -46,8 +50,8 @@ const BookingSteps = ({ currentStep = 1 }) => {
         ))}
     </div>
     )}
-    {currentStep === 2 && (
-    <div className="flex w-full flex-col gap-2 p-10 max-h-[70vh] overflow-auto">
+    {showContent && currentStep === 2 && (
+    <div className="flex w-full flex-col gap-2 p-10 max-h-[70vh] ">
             <h1 className="text-foreground text-2xl font-semibold!">
               Select Partner
             </h1>
@@ -69,7 +73,7 @@ const BookingSteps = ({ currentStep = 1 }) => {
     </div>
      )}
 
-     {currentStep === 3 && (
+    {showContent && currentStep === 3 && (
         <div className="flex flex-col gap-4 p-10 max-h-[70vh] w-full overflow-auto">
              <h1 className="text-foreground text-2xl font-semibold!">
               Select Date & Time
@@ -80,7 +84,7 @@ const BookingSteps = ({ currentStep = 1 }) => {
           </div>
      )}
 
-     {currentStep === 4 && (
+    {showContent && currentStep === 4 && (
         <div className="flex flex-col gap-4 p-10">
             <h1 className="text-foreground text-2xl font-semibold!">
               Booking Confirmed
