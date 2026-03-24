@@ -1,6 +1,6 @@
 import PartnerCard from "../../../../../Components/PartnerCard/PartnerCard";
 
-const AddedByPartners = () => {
+const AddedByPartners = ({ viewPartnerDetail, setViewPartnerDetail }) => {
   return (
     <div className="flex w-full flex-wrap gap-6">
       <PartnerCard
@@ -13,6 +13,9 @@ const AddedByPartners = () => {
         services={"Leather Conditioning"}
         price={"3000"}
         rating={5}
+        onCLick={() => {
+          setViewPartnerDetail(true);
+        }}
       />
     </div>
   );

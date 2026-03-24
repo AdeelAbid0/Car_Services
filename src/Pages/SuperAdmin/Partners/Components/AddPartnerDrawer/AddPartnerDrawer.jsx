@@ -11,7 +11,7 @@ import InputTextArea from "../../../../../ui/InputTextArea/InputTextArea";
 import UploadImage from "../../../../../Components/UploadImage/UploadImage";
 export const Basic = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <InputText
         label={"Full name"}
         placeholder={"Enter full name"}
@@ -130,6 +130,7 @@ export const Gallery = () => {
 };
 const AddPartnerDrawer = ({ addPartnerDrawer, setAddPartnerDrawer }) => {
   const [currentStep, setCurrentStep] = useState(1);
+
   const STEPS = [
     {
       id: 1,
@@ -156,7 +157,10 @@ const AddPartnerDrawer = ({ addPartnerDrawer, setAddPartnerDrawer }) => {
     <div>
       <CommonDrawer
         open={addPartnerDrawer}
-        onClose={() => setAddPartnerDrawer(false)}
+        onClose={() => {
+          setAddPartnerDrawer(false);
+          setCurrentStep(1);
+        }}
         title={"Add Partner"}
         footerButtonPrimaryLabel={`${currentStep === STEPS.length ? "Save" : "Continue"}`}
         footerButtonSecondaryLabel={currentStep > 1 ? "Back" : ""}

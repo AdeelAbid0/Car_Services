@@ -61,12 +61,14 @@ const CommonDrawer = ({
               onClick={footerButtonSecondaryClick}
             />
           )}
-          <Button
-            type={"primary"}
-            label={footerButtonPrimaryLabel}
-            className={"h-8!"}
-            onClick={footerButtonPrimaryClick}
-          />
+          {footerButtonPrimaryLabel && (
+            <Button
+              type={"primary"}
+              label={footerButtonPrimaryLabel}
+              className={"h-8!"}
+              onClick={footerButtonPrimaryClick}
+            />
+          )}
         </div>
       </div>
     </Drawer>
