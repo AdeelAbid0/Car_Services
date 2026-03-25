@@ -6,6 +6,7 @@ import EmailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import LocationPlaceholder from "../../../assets/svg/location-placeholder.svg?react";
 import EditIcon from "../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
+import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
 import InputTextArea from "../../../ui/InputTextArea/InputTextArea";
 import UploadImage from "../../../Components/UploadImage/UploadImage";
 import InputText from "../../../ui/InputText/InputText";
@@ -24,12 +25,12 @@ const RegisterPartner = () => {
   });
 
   const servicesList = [
-    { id: 1, name: "Individual", description: "Solo professional" },
-    { id: 2, name: "Small Shop", description: "1-5 employees" },
-    { id: 3, name: "Medium Shop", description: "6-20 employees" },
-    { id: 4, name: "Service Center", description: "20+ employees" },
-    { id: 5, name: "Individual", description: "Solo professional" },
-    { id: 6, name: "Small Shop", description: "1-5 employees" },
+    { id: 1, name: "Engine Oil" },
+    { id: 2, name: "Brake Service" },
+    { id: 3, name: "Tire Replacement" },
+    { id: 4, name: "Battery Service" },
+    { id: 5, name: "Oil Filter" },
+    { id: 6, name: "Air Filter" },
   ];
 
   const handleNext = () => {
@@ -142,16 +143,13 @@ const RegisterPartner = () => {
       case 3:
         return (
           <div className="flex flex-col gap-2 mt-9">
-            <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
-              Select Services
-            </p>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3">
               {servicesList.map((service) => (
                 <div
                   key={service.id}
-                  className={`flex flex-col items-start p-4 rounded-xl border cursor-pointer transition-all ${
+                  className={`flex justify-between p-4 rounded-xl border cursor-pointer transition-all ${
                     formData.services.includes(service.id)
-                      ? "border-[#BCB1FF] bg-background"
+                      ? "border-primary bg-primary-hover"
                       : "border-border bg-white"
                   }`}
                   onClick={() => handleServiceToggle(service.id)}
@@ -159,9 +157,7 @@ const RegisterPartner = () => {
                   <span className="text-[16px] leading-5 text-foreground font-medium">
                     {service.name}
                   </span>
-                  <span className="text-muted-foreground leading-5 text-sm font-normal">
-                    {service.description}
-                  </span>
+                  {formData.services.includes(service.id) && <TickCircleIcon />}
                 </div>
               ))}
             </div>

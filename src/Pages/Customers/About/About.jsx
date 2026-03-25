@@ -30,7 +30,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="w-full mx-auto max-w-[620px] relative z-0">
+        <div className="w-full mx-auto max-w-155 relative z-0 flex justify-center">
           <img src="/Images/about-main.png" alt="" className="w-[80%]" />
           <img
             src="/Images/about-primary.png"
