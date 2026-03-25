@@ -4,7 +4,7 @@ import BookingSteps from './BookingSteps'
 import CloseIcon from '../../../../assets/svg/add.svg?react'
 
 export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
-    const[currentStep, setCurrentStep] = useState(1)
+    const[currentStep, setCurrentStep] = useState(2)
     const TOTAL_STEPS = 4
     const BOOKING_DRAWER_WIDTH = {
         2: "75%",
@@ -23,7 +23,9 @@ export const BookingDrawer = ({showBookingDrawer,setShowBookingDrawer}) => {
 
     const handleClose = () => {
         setShowBookingDrawer(false)
-        setCurrentStep(2)
+        setTimeout(() => {
+            setCurrentStep(2)
+        }, 50)
     }
 
   return (
