@@ -1,11 +1,16 @@
 import PartnerLogo from "../../../assets/svg/partner-logo.svg?react";
 import CarLogo from "../../../assets/svg/car.svg?react";
+import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
 import Logo from "../../../assets/svg/logo-dark.svg?react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
+import Button from "../../../ui/Button/Button";
+import { useState } from "react";
 
 const Join = ({ imageSrc = "/Images/hero-image.png" }) => {
   const navigate = useNavigate();
+  const [selectedCard, setSelectedCard] = useState("partner"); // set null when enable customer card
+  const [selectedPath, setSelectedPath] = useState(ROUTES.PARTNER_REGISTER); // set null when enable customer card
   return (
     <div className="relative flex w-full h-screen">
       {/* Background Images */}
@@ -34,15 +39,44 @@ const Join = ({ imageSrc = "/Images/hero-image.png" }) => {
                   experience.
                 </p>
               </div>
+
               <div
-                className="flex flex-col items-center gap-4 w-full bg-background hover:bg-muted-background cursor-pointer px-15 py-7 rounded-2xl mt-6"
+                className={`flex flex-col items-center gap-4 w-full bg-background mt-6 hover:bg-primary-hover cursor-pointer px-13 py-7 rounded-2xl border border-transparent hover:border hover:border-primary hover:shadow-primary group ${selectedCard === "partner" ? "border-primary! bg-primary-hover!" : ""}`}
                 onClick={() => {
-                  navigate(ROUTES.REGISTER_USER);
+                  setSelectedCard("partner");
+                  setSelectedPath(ROUTES.PARTNER_REGISTER);
                 }}
               >
-                <CarLogo />
+                <PartnerLogo
+                  className={`group-hover:scale-110 transition-transform duration-300 fill-muted-foreground group-hover:stroke-primary group-hover:text-primary group-hover:fill-primary ${selectedCard === "partner" ? "fill-primary!" : ""}`}
+                />
+                <div className="flex flex-col gap-1 ">
+                  <h1
+                    className={`text-[18px]! text-foreground! font-semibold group-hover:text-primary! ${selectedCard === "partner" ? "text-primary!" : ""}`}
+                  >
+                    Join as a Service Partner
+                  </h1>
+                  <p className="text-xs text-muted-foreground font-normal leading-4">
+                    Grow your auto service business with real bookings, manage
+                    services, and get paid securely.
+                  </p>
+                </div>
+              </div>
+              <div
+                className="opacity-50 flex flex-col items-center gap-4 w-full bg-background hover:bg-primary-hover cursor-pointer px-13 py-7 rounded-2xl border border-transparent"
+                // className={`flex flex-col items-center gap-4 w-full bg-background hover:bg-primary-hover cursor-pointer px-15 py-7 rounded-2xl border border-transparent hover:border hover:border-primary hover:shadow-primary group ${selectedCard === "customer" ? "border-primary! bg-primary-hover!" : ""}`}
+                // onClick={() => {
+                //   setSelectedCard("customer");
+                //   setSelectedPath(ROUTES.REGISTER_USER);
+                // }}
+              >
+                <CarLogo
+                  className={`group-hover:scale-110 transition-transform duration-300 fill-muted-foreground group-hover:stroke-primary group-hover:text-primary group-hover:fill-primary ${selectedCard === "customer" ? "fill-primary!" : ""}`}
+                />
                 <div className="flex flex-col gap-1">
-                  <h1 className="text-[18px]! text-foreground! font-semibold">
+                  <h1
+                    className={`text-[18px]! text-foreground! font-semibold group-hover:text-primary! ${selectedCard === "customer" ? "text-primary!" : ""}`}
+                  >
                     Join as a Customer
                   </h1>
                   <p className="text-xs text-muted-foreground font-normal leading-4">
@@ -51,22 +85,16 @@ const Join = ({ imageSrc = "/Images/hero-image.png" }) => {
                   </p>
                 </div>
               </div>
-              <div
-                className="flex flex-col items-center gap-4 w-full bg-background hover:bg-muted-background cursor-pointer px-15 py-7 rounded-2xl"
-                onClick={() => {
-                  navigate(ROUTES.PARTNER_REGISTER);
-                }}
-              >
-                <PartnerLogo />
-                <div className="flex flex-col gap-1 ">
-                  <h1 className="text-[18px]! text-foreground! font-semibold">
-                    Join as a Service Partner
-                  </h1>
-                  <p className="text-xs text-muted-foreground font-normal leading-4">
-                    Grow your auto service business with real bookings, manage
-                    services, and get paid securely.
-                  </p>
-                </div>
+              <div className="w-full">
+                <Button
+                  type={"primary"}
+                  label="Continue"
+                  suffixIcon={<ArrowRight className="w-5 h-5" />}
+                  className="w-full"
+                  onClick={() => {
+                    navigate(selectedPath);
+                  }}
+                />
               </div>
             </div>
           </div>

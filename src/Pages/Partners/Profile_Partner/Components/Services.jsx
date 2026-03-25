@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InputText from "../../../../ui/InputText/InputText";
 import EditIcon from "../../../../assets/svg/edit.svg?react";
+import TickCircleIcon from "../../../../assets/svg/tick-circle.svg?react";
 import Button from "../../../../ui/Button/Button";
 
 const Services = () => {
@@ -31,16 +32,13 @@ const Services = () => {
   return (
     <div className="flex flex-col gap-4 max-w-[50%]">
       <div className="flex flex-col gap-2 mt-8">
-        <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">
-          Select Services
-        </p>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3">
           {servicesList.map((service) => (
             <div
               key={service.id}
-              className={`flex flex-col items-start p-4 rounded-xl border cursor-pointer transition-all ${
+              className={`flex justify-between p-4 rounded-xl border cursor-pointer transition-all ${
                 selectedServices.includes(service.id)
-                  ? "border-[#BCB1FF] bg-background"
+                  ? "border-primary bg-primary-hover"
                   : "border-border bg-white"
               }`}
               onClick={() => handleServiceToggle(service.id)}
@@ -48,9 +46,9 @@ const Services = () => {
               <span className="text-[16px] leading-5 text-foreground font-medium">
                 {service.name}
               </span>
-              <span className="text-muted-foreground leading-5 text-sm font-normal">
-                {service.description}
-              </span>
+              {selectedServices.includes(service.id) && (
+                <TickCircleIcon className="w-5 h-5 text-primary" />
+              )}
             </div>
           ))}
         </div>
