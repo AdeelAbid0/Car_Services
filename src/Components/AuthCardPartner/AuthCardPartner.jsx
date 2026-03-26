@@ -5,10 +5,11 @@ const AuthCardPartner = ({
   title,
   description,
   children,
-  currentStep = 1,
-  totalSteps = 4,
+  currentStep,
+  totalSteps,
   onNext,
   onBack,
+  loading,
 }) => {
   const renderStepIndicators = () => {
     const steps = [];
@@ -54,6 +55,7 @@ const AuthCardPartner = ({
 
             <Button
               type="primary"
+              loading={loading}
               label={currentStep === totalSteps ? "Submit" : "Continue"}
               onClick={onNext}
               width="full"
