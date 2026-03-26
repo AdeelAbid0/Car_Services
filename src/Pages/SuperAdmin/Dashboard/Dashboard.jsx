@@ -10,8 +10,8 @@ import DetailIcon from "../../../assets/svg/eye-2.svg?react";
 import EmptyView from "./Components/EmptyView";
 import { DataTable } from "../../../ui/DataTable/DataTable";
 import { useState } from "react";
-import RejectReasonDrawer from "./Components/RejectReasonDrawer/RejectReasonDrawer";
 import BusinessDetailDrawer from "./Components/BusinessDetailDrawer/BusinessDetailDrawer";
+import RejectReasonDrawer from "./Components/RejectReasonDrawer/RejectReasonDrawer";
 import { Radio } from "antd";
 import Datepicker from "../../../ui/Datepicker/Datepicker";
 
@@ -329,6 +329,7 @@ const Dashboard = () => {
           setRejectDrawer={setRejectDrawer}
         />
       )}
+      {rejectDrawer && <RejectReasonDrawer setRejectDrawer={setRejectDrawer} />}
     </div>
   );
 };
