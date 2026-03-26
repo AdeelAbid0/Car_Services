@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { ROUTES } from "../constants/routes";
 
 const PrivateRoutes = ({ children, allowedRoles = [] }) => {
-  console.log({ allowedRoles });
   const { user, token } = useSelector((state) => state.auth);
   const location = useLocation();
 
