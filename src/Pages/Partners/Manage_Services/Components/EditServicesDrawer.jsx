@@ -1,6 +1,6 @@
-import CommonDrawer from "../../../../ui/Drawer/Drawer";
-import CommonSelect from "../../../../ui/SelectWrap/Select";
-import InputText from "../../../../ui/InputText/InputText";
+import CommonDrawer from "../../../../ui/Drawer";
+import CommonSelect from "../../../../ui/Select";
+import InputText from "../../../../ui/InputText";
 
 const EditServicesDrawer = ({ editServiceDrawer, setEditServiceDrawer }) => {
   return (

@@ -7,9 +7,9 @@ import LocationPlaceholder from "../../../assets/svg/location-placeholder.svg?re
 import EditIcon from "../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
 import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
-import InputTextArea from "../../../ui/InputTextArea/InputTextArea";
+import InputTextArea from "../../../ui/InputTextArea";
 import UploadImage from "../../../Components/UploadImage";
-import InputText from "../../../ui/InputText/InputText";
+import InputText from "../../../ui/InputText";
 const FinalScreen = lazy(() => import("./Components/FinalScreen"));
 
 const RegisterPartner = () => {

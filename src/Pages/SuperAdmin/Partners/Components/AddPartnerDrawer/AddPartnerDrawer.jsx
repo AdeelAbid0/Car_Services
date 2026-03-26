@@ -1,13 +1,13 @@
 import { useState } from "react";
-import CommonDrawer from "../../../../../ui/Drawer/Drawer";
-import InputText from "../../../../../ui/InputText/InputText";
+import CommonDrawer from "../../../../../ui/Drawer";
+import InputText from "../../../../../ui/InputText";
 import UserIcon from "../../../../../assets/svg/user.svg?react";
 import EmailIcon from "../../../../../assets/svg/mail-placeholder.svg?react";
 import PhoneIcon from "../../../../../assets/svg/call-filled.svg?react";
 import LocationPlaceholder from "../../../../../assets/svg/location-placeholder.svg?react";
 import EditIcon from "../../../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../../../assets/svg/upload-cloud.svg?react";
-import InputTextArea from "../../../../../ui/InputTextArea/InputTextArea";
+import InputTextArea from "../../../../../ui/InputTextArea";
 import UploadImage from "../../../../../components/UploadImage";
 export const Basic = () => {
   return (

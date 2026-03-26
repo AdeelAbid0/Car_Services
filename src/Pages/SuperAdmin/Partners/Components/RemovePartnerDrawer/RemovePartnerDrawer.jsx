@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CommonDrawer from "../../../../../ui/Drawer/Drawer";
+import CommonDrawer from "../../../../../ui/Drawer";
 import { Checkbox } from "antd";
-import InputTextArea from "../../../../../ui/InputTextArea/InputTextArea";
+import InputTextArea from "../../../../../ui/InputTextArea";
 
 const RemovePartnerDrawer = ({ setRejectDrawer }) => {
   const [selectedReasons, setSelectedReasons] = useState([]);

@@ -1,4 +1,4 @@
-import InputText from "../../../ui/InputText/InputText";
+import InputText from "../../../ui/InputText";
 import RouteIcon from "../../../assets/svg/route.svg?react";
 import LocationIcon from "../../../assets/svg/location.svg?react";
 

@@ -15,10 +15,10 @@ import User from "../../../../assets/svg/user.svg?react";
 import Mail from "../../../../assets/svg/mail.svg?react";
 import Call from "../../../../assets/svg/call-filled.svg?react";
 import Location from "../../../../assets/svg/location-2.svg?react";
-import Button from "../../../../ui/Button/Button";
+import Button from "../../../../ui/Button";
 import { Table } from "antd";
 import { useState } from "react";
-import CommonDrawer from "../../../../ui/Drawer/Drawer";
+import CommonDrawer from "../../../../ui/Drawer";
 
 const Overview = () => {
   const [openDetailDrawer, setOpenDetailDrawer] = useState(false);

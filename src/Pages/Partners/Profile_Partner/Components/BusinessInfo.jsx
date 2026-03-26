@@ -1,10 +1,10 @@
-import InputText from "../../../../ui/InputText/InputText";
+import InputText from "../../../../ui/InputText";
 import UserIcon from "../../../../assets/svg/user.svg?react";
 import LocationPlaceholder from "../../../../assets/svg/location-placeholder.svg?react";
 import EditIcon from "../../../../assets/svg/edit-2.svg?react";
 import { useState } from "react";
-import CommonSelect from "../../../../ui/SelectWrap/Select";
-import Button from "../../../../ui/Button/Button";
+import CommonSelect from "../../../../ui/Select";
+import Button from "../../../../ui/Button";
 
 const categories = [
   { label: "Home", value: "Home" },

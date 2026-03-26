@@ -1,5 +1,5 @@
 import { Checkbox } from "antd";
-import InputText from "../../../ui/InputText/InputText";
+import InputText from "../../../ui/InputText";
 import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
 import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import PasswordIcon from "../../../assets/svg/password-placeholder.svg?react";

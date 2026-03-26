@@ -1,7 +1,7 @@
 import { Avatar, Checkbox } from "antd";
 import StarActive from "../assets/svg/star-active.svg?react";
 import StarDefault from "../assets/svg/star-default.svg?react";
-import Button from "../ui/Button/Button";
+import Button from "../ui/Button";
 
 const PartnerCard = ({
   profileImage,

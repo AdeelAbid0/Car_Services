@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Upload } from "antd";
-import InputText from "../../../../ui/InputText/InputText";
+import InputText from "../../../../ui/InputText";
 import UserIcon from "../../../../assets/svg/user.svg?react";
 import UserTickIcon from "../../../../assets/svg/user-tick.svg?react";
 import EditIcon from "../../../../assets/svg/edit-2.svg?react";
 import AccountStatusIcon from "../../../../assets/svg/verify.svg?react";
-import Button from "../../../../ui/Button/Button";
+import Button from "../../../../ui/Button";
 
 const Overview = () => {
   const [imageUrl, setImageUrl] = useState("/Images/hero-image.png");

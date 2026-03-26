@@ -3,7 +3,7 @@ import MenuIcon from "../../../../assets/svg/menu-icon.svg?react";
 import Edit from "../../../../assets/svg/edit-2.svg?react";
 import Delete from "../../../../assets/svg/delete.svg?react";
 import Plus from "../../../../assets/svg/add.svg?react";
-import Button from "../../../../ui/Button/Button";
+import Button from "../../../../ui/Button";
 const Address = () => {
   const addressData = [
     {

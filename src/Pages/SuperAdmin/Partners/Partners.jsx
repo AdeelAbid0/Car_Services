@@ -1,8 +1,8 @@
-import InputText from "../../../ui/InputText/InputText";
+import InputText from "../../../ui/InputText";
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import AddIcon from "../../../assets/svg/add.svg?react";
 import { lazy, Suspense, useState } from "react";
-import Button from "../../../ui/Button/Button";
+import Button from "../../../ui/Button";
 import Segment from "../../../components/Segment";
 import AddPartnerDrawer from "./Components/AddPartnerDrawer/AddPartnerDrawer";
 import PartnerDetails from "./Components/PartnerDetails/PartnerDetails";

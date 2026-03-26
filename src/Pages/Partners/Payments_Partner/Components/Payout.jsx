@@ -10,7 +10,7 @@ import AddIcon from "../../../../assets/svg/add.svg?react";
 import CardImage from "../../../../assets/Images/cards.svg?react";
 import { Dropdown } from "antd";
 import { useState } from "react";
-import Button from "../../../../ui/Button/Button";
+import Button from "../../../../ui/Button";
 
 const Payout = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

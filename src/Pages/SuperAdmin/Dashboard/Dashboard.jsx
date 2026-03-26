@@ -1,5 +1,5 @@
 import AreaChart from "../../../components/AreaChart";
-import Button from "../../../ui/Button/Button";
+import Button from "../../../ui/Button";
 import FilterIcon from "../../../assets/svg/filter.svg?react";
 import TotalUser from "../../../assets/svg/total-user.svg?react";
 import ActiveCustomer from "../../../assets/svg/active-customer.svg?react";
@@ -8,12 +8,12 @@ import PolygonInc from "../../../assets/svg/polygon.svg?react";
 import PolygonDec from "../../../assets/svg/polygon-2.svg?react";
 import DetailIcon from "../../../assets/svg/eye-2.svg?react";
 import EmptyView from "./Components/EmptyView";
-import { DataTable } from "../../../ui/DataTable/DataTable";
+import { DataTable } from "../../../ui/DataTable";
 import { useState } from "react";
 import BusinessDetailDrawer from "./Components/BusinessDetailDrawer/BusinessDetailDrawer";
 import RejectReasonDrawer from "./Components/RejectReasonDrawer/RejectReasonDrawer";
 import { Radio } from "antd";
-import Datepicker from "../../../ui/Datepicker/Datepicker";
+import Datepicker from "../../../ui/Datepicker";
 
 const Dashboard = () => {
   const [showDetailDrawer, setShowDetailDrawer] = useState(false);

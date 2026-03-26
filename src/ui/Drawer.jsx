@@ -1,6 +1,6 @@
 import { Drawer } from "antd";
-import CloseIcon from "../../assets/svg/add.svg?react";
-import Button from "../Button/Button";
+import CloseIcon from "../assets/svg/add.svg?react";
+import Button from "./Button";
 const CommonDrawer = ({
   open,
   onClose,
@@ -28,23 +28,25 @@ const CommonDrawer = ({
       <div className="flex flex-col h-full">
         {/* Header - Fixed Top */}
         {showHeader && (
-        <div className="shrink-0 border-b border-border p-8 pb-3 bg-background">
-          <div className="flex justify-between items-start">
-            <div className="flex flex-col gap-1 flex-1">
-              <h1 className="text-2xl! font-bold! text-foreground">{title}</h1>
-              <p className="text-[16px]! font-normal! text-muted-foreground leading-6">
-                {description}
-              </p>
-            </div>
-            <div
-              className="flex w-6 h-6 shrink-0 rounded-full cursor-pointer"
-              onClick={onClose}
-            >
-              <CloseIcon className="rotate-45" />
+          <div className="shrink-0 border-b border-border p-8 pb-3 bg-background">
+            <div className="flex justify-between items-start">
+              <div className="flex flex-col gap-1 flex-1">
+                <h1 className="text-2xl! font-bold! text-foreground">
+                  {title}
+                </h1>
+                <p className="text-[16px]! font-normal! text-muted-foreground leading-6">
+                  {description}
+                </p>
+              </div>
+              <div
+                className="flex w-6 h-6 shrink-0 rounded-full cursor-pointer"
+                onClick={onClose}
+              >
+                <CloseIcon className="rotate-45" />
+              </div>
             </div>
           </div>
-        </div>
-         )}
+        )}
 
         {/* Content Area - Scrollable */}
         <div
