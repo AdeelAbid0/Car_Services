@@ -4,9 +4,12 @@ import App from "./App.jsx";
 import "antd/dist/reset.css";
 import { Provider } from "react-redux";
 import store from "./store/store.jsx";
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <ErrorBoundary>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </ErrorBoundary>,
 );
