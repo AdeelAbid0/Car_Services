@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
+import { ROLES } from "../../constants/roles";
 
 const About = lazy(() => import("../../Pages/Customers/About/About"));
 const Contact = lazy(() => import("../../Pages/Customers/Contact/Contact"));
@@ -21,7 +22,7 @@ export const LANDINGPAGE_ROUTES = [
   {
     path: ROUTES.SERVICES,
     element: (
-      <PublicRoutes>
+      <PublicRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Services />
       </PublicRoutes>
     ),
@@ -29,7 +30,7 @@ export const LANDINGPAGE_ROUTES = [
   {
     path: ROUTES.PARTNERS,
     element: (
-      <PublicRoutes>
+      <PublicRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Partners />
       </PublicRoutes>
     ),
@@ -37,7 +38,7 @@ export const LANDINGPAGE_ROUTES = [
   {
     path: ROUTES.ABOUT,
     element: (
-      <PublicRoutes>
+      <PublicRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <About />
       </PublicRoutes>
     ),
@@ -45,7 +46,7 @@ export const LANDINGPAGE_ROUTES = [
   {
     path: ROUTES.CONTACT,
     element: (
-      <PublicRoutes>
+      <PublicRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Contact />
       </PublicRoutes>
     ),
@@ -53,7 +54,7 @@ export const LANDINGPAGE_ROUTES = [
   {
     path: ROUTES.FAQs,
     element: (
-      <PublicRoutes>
+      <PublicRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <FAQ />
       </PublicRoutes>
     ),

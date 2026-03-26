@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import LogoIconDark from "../assets/svg/logo-dark.svg?react";
 import LogoIconLight from "../assets/svg/logo-light.svg?react";
-import HamburgerIconDark from "../assets/svg/hamburger-dark.svg?react";
-import HamburgerIconLight from "../assets/svg/hamburger-light.svg?react";
 import Button from "../ui/Button/Button";
 import { ROUTES } from "../constants/routes";
 import User from "../assets/svg/profile.svg?react";
@@ -15,12 +13,10 @@ import Bookmark from "../assets/svg/bookmark.svg?react";
 import Question from "../assets/svg/question.svg?react";
 import Payment from "../assets/svg/payment-partner.svg?react";
 import Support from "../assets/svg/support.svg?react";
-import { useSelector } from "react-redux";
 import { getNavItems, getDropdownItems } from "../config/navigation";
 
-const Header = () => {
+const Header = ({ user, token }) => {
   const navigate = useNavigate();
-  const userData = useSelector((state) => state.user);
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
@@ -46,8 +42,8 @@ const Header = () => {
     setShowDropdown(false);
   };
 
-  const navItems = getNavItems(userData);
-  const dropdownItems = getDropdownItems(userData, handleLogout);
+  const navItems = getNavItems(user);
+  const dropdownItems = getDropdownItems(user, handleLogout);
 
   const iconComponents = {
     User: <User />,
