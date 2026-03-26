@@ -49,7 +49,7 @@ const App = () => {
               borderRadius: 99,
               borderRadiusSM: 99,
               colorPrimaryText: "white",
-              paddingInline: 16,
+              paddingInline: 24,
               paddingInlineSM: 16,
               defaultBg: "#F3F1FD",
               defaultColor: "#000000",

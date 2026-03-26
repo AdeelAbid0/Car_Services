@@ -6,6 +6,7 @@ const Button = ({
   label,
   onClick,
   disabled,
+  isLoading,
   prefixIcon,
   suffixIcon,
   className,
@@ -25,6 +26,7 @@ const Button = ({
       size={size}
       onClick={onClick}
       disabled={disabled}
+      isLoading={isLoading}
       suffixIcon={suffixIcon}
       className={`${getWidthClass()} ${
         type === "default"
