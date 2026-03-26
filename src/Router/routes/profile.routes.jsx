@@ -3,7 +3,7 @@ import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
 import { ROLES } from "../../constants/roles";
 
-const Profile = lazy(() => import("../../Pages/Customers/Profie/Profile"));
+const Profile = lazy(() => import("../../pages/Customers/Profie/Profile"));
 
 export const PROFILE_ROUTES = [
   {

@@ -1,11 +1,11 @@
 import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 import PrivateRoutes from "../PrivateRoutes";
-import Manage_Services from "../../Pages/Partners/Manage_Services/Manage_Services";
-import Profile_Partner from "../../Pages/Partners/Profile_Partner/Profile_Partner";
-import Payments_Partner from "../../Pages/Partners/Payments_Partner/Payments_Partner";
-import Support from "../../Pages/Partners/Support/Support";
-import PartnerDashboard from "../../Pages/Partners/Dashboard/PartnerDashboard";
+import Manage_Services from "../../pages/Partners/Manage_Services/Manage_Services";
+import Profile_Partner from "../../pages/Partners/Profile_Partner/Profile_Partner";
+import Payments_Partner from "../../pages/Partners/Payments_Partner/Payments_Partner";
+import Support from "../../pages/Partners/Support/Support";
+import PartnerDashboard from "../../pages/Partners/Dashboard/PartnerDashboard";
 import { ROLES } from "../../constants/roles";
 
 export const PARTNER_ROUTES = [

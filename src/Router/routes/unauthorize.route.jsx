@@ -1,4 +1,4 @@
-import Unauthorized from "../../Pages/Common/Unauthorized";
+import Unauthorized from "../../pages/Common/Unauthorized";
 import PublicRoutes from "../PublicRoutes";
 
 export const UNAUTHORIZED_ROUTES = [

@@ -3,14 +3,14 @@ import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
 import { ROLES } from "../../constants/roles";
 import PrivateRoutes from "../PrivateRoutes";
-import NotFound from "../../Pages/Common/NotFound";
+import NotFound from "../../pages/Common/NotFound";
 
-const About = lazy(() => import("../../Pages/Customers/About/About"));
-const Contact = lazy(() => import("../../Pages/Customers/Contact/Contact"));
-const FAQ = lazy(() => import("../../Pages/Customers/FAQ/FAQ"));
-const LandingPage = lazy(() => import("../../Pages/LandingPage/LandingPage"));
-const Services = lazy(() => import("../../Pages/Customers/Services/Services"));
-const Partners = lazy(() => import("../../Pages/Customers/Partners/Partners"));
+const About = lazy(() => import("../../pages/Customers/About/About"));
+const Contact = lazy(() => import("../../pages/Customers/Contact/Contact"));
+const FAQ = lazy(() => import("../../pages/Customers/FAQ/FAQ"));
+const LandingPage = lazy(() => import("../../pages/LandingPage/LandingPage"));
+const Services = lazy(() => import("../../pages/Customers/Services/Services"));
+const Partners = lazy(() => import("../../pages/Customers/Partners/Partners"));
 
 export const LANDINGPAGE_ROUTES = [
   {
