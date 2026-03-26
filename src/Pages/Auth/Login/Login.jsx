@@ -4,7 +4,7 @@ import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
 import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import PasswordIcon from "../../../assets/svg/password-placeholder.svg?react";
 import EyeIcon from "../../../assets/svg/eye-icon.svg?react";
-import AuthCard from "../../../Components/AuthCard/AuthCard";
+import AuthCard from "../../../Components/AuthCard";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../ui/Button/Button";
 import { ROUTES } from "../../../constants/routes";

@@ -1,4 +1,4 @@
-import Button from "../../ui/Button/Button";
+import Button from "../ui/Button/Button";
 
 const EmptyView = ({ icon, title, description, buttonText }) => {
   return (

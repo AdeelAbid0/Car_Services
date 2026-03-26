@@ -7,7 +7,7 @@ import Plus from "../../../../assets/svg/add.svg?react";
 import Button from "../../../../ui/Button/Button";
 import CommonDrawer from "../../../../ui/Drawer/Drawer";
 import InputText from "../../../../ui/InputText/InputText";
-import UploadImage from "../../../../Components/UploadImage/UploadImage";
+import UploadImage from "../../../../Components/UploadImage";
 import UploadIcon from "../../../../assets/svg/upload-cloud.svg?react";
 const MyCars = () => {
   const [addNewCar, setAddNewCar] = useState(false);

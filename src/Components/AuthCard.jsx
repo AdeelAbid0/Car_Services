@@ -1,5 +1,5 @@
 import GoogleIcon from "../../assets/svg/google-icon.svg?react";
-import Button from "../../ui/Button/Button";
+import Button from "../ui/Button/Button";
 import Logo from "../../assets/svg/logo-dark.svg?react";
 
 const AuthCard = ({

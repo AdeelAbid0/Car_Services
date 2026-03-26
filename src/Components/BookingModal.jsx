@@ -1,12 +1,12 @@
-import CommonModal from "../../ui/Modal/Modal";
-import DummyIcon from "../../assets/svg/dummy.svg?react";
-import PartnerCard from "../PartnerCard/PartnerCard";
-import Button from "../../ui/Button/Button";
+import DummyIcon from "../assets/svg/dummy.svg?react";
+import Button from "../ui/Button/Button";
 import { useNavigate } from "react-router-dom";
-import ArrowRightIcon from "../../assets/svg/arrow-right.svg?react";
+import ArrowRightIcon from "../assets/svg/arrow-right.svg?react";
 import { useState } from "react";
-import { ROUTES } from "../../constants/routes";
-import CustomCalendar from "../Calendar/Calendar";
+import { ROUTES } from "../constants/routes";
+import CommonModal from "../ui/Modal/Modal";
+import PartnerCard from "./PartnerCard";
+import CustomCalendar from "./Calendar";
 
 const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
   const [showCalendarScreen, setShowCalendarScreen] = useState(false);

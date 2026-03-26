@@ -1,4 +1,4 @@
-import UploadImage from "../../../../Components/UploadImage/UploadImage";
+import UploadImage from "../../../../Components/UploadImage";
 import UploadIcon from "../../../../assets/svg/upload-cloud.svg?react";
 import InputTextArea from "../../../../ui/InputTextArea/InputTextArea";
 import Button from "../../../../ui/Button/Button";

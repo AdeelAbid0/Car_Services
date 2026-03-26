@@ -11,7 +11,7 @@ import Button from "../../../ui/Button/Button";
 import { Dropdown } from "antd";
 import AddServicesDrawer from "../../Partners/Manage_Services/Components/AddServicesDrawer";
 import EditServicesDrawer from "../../Partners/Manage_Services/Components/EditServicesDrawer";
-import Segment from "../../../Components/Segment/Segment";
+import Segment from "../../../components/Segment";
 
 const Services = () => {
   const navigate = useNavigate();

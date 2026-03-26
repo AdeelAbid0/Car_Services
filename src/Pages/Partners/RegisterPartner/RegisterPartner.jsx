@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from "react";
-import AuthCardPartner from "../../../Components/AuthCardPartner/AuthCardPartner";
+import AuthCardPartner from "../../../Components/AuthCardPartner";
 import PartnerIcon from "../../../assets/svg/partner.svg?react";
 import UserIcon from "../../../assets/svg/user.svg?react";
 import EmailIcon from "../../../assets/svg/mail-placeholder.svg?react";
@@ -8,7 +8,7 @@ import EditIcon from "../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
 import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
 import InputTextArea from "../../../ui/InputTextArea/InputTextArea";
-import UploadImage from "../../../Components/UploadImage/UploadImage";
+import UploadImage from "../../../Components/UploadImage";
 import InputText from "../../../ui/InputText/InputText";
 const FinalScreen = lazy(() => import("./Components/FinalScreen"));
 

@@ -8,7 +8,7 @@ import LocationPlaceholder from "../../../../../assets/svg/location-placeholder.
 import EditIcon from "../../../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../../../assets/svg/upload-cloud.svg?react";
 import InputTextArea from "../../../../../ui/InputTextArea/InputTextArea";
-import UploadImage from "../../../../../Components/UploadImage/UploadImage";
+import UploadImage from "../../../../../components/UploadImage";
 export const Basic = () => {
   return (
     <div className="flex flex-col gap-3">

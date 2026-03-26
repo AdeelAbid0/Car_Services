@@ -1,4 +1,5 @@
-import Button from "../../ui/Button/Button";
+import Button from "../ui/Button/Button";
+
 const BookingCard = ({
   profileImage,
   tag,

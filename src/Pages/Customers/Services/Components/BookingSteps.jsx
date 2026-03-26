@@ -1,5 +1,5 @@
-import PartnerCard from "../../../../Components/PartnerCard/PartnerCard";
-import CustomCalendar from "../../../../Components/Calendar/Calendar";
+import PartnerCard from "../../../../components/PartnerCard";
+import CustomCalendar from "../../../../Components/Calendar";
 import bookingConfirmImage from "../../../../assets/Images/booking-confirm.svg";
 
 const BookingSteps = ({

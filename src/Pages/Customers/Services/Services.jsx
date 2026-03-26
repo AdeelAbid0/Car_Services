@@ -3,8 +3,8 @@ import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import DummyIcon from "../../../assets/svg/dummy.svg?react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BookingModal from "../../../Components/BookingModal/BookingModal";
-import Segment from "../../../Components/Segment/Segment";
+import BookingModal from "../../../Components/BookingModal";
+import Segment from "../../../components/Segment";
 import { BookingDrawer } from "./Components/BookingDrawer";
 const Services = () => {
   const navigate = useNavigate();
@@ -139,7 +139,7 @@ const Services = () => {
             </p>
           </div>
           <div className="flex w-full">
-            <InputText placeholder={"Search"} prefixIcon={<SearchIcon/>} />
+            <InputText placeholder={"Search"} prefixIcon={<SearchIcon />} />
           </div>
           <div className="w-full">
             <Segment
@@ -152,8 +152,8 @@ const Services = () => {
       </div>
       <div className="flex w-full relative">
         <BookingDrawer
-        showBookingDrawer={showBookingModal}
-        setShowBookingDrawer={setShowBookingModal}
+          showBookingDrawer={showBookingModal}
+          setShowBookingDrawer={setShowBookingModal}
         />
         {/* <BookingModal
           showBookingModal={showBookingModal}

@@ -1,4 +1,4 @@
-import AreaChart from "../../../Components/Charts/AreaChart";
+import AreaChart from "../../../components/AreaChart";
 import Button from "../../../ui/Button/Button";
 import FilterIcon from "../../../assets/svg/filter.svg?react";
 import TotalUser from "../../../assets/svg/total-user.svg?react";

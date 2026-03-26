@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import SearchIcon from "../../assets/svg/search.svg?react";
 import HeroSendIcon from "../../assets/svg/hero-send.svg?react";
 import { Button } from "antd";
-import CustomCalendar from "../Calendar/Calendar";
+import CustomCalendar from "../Calendar";
 import Locations from "./Components/Locations";
 import Services from "./Components/Services";
 
