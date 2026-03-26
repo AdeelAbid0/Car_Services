@@ -48,7 +48,7 @@ class ErrorBoundary extends React.Component {
             />
 
             {process.env.NODE_ENV === "development" && (
-              <div className="mt-8 p-4 bg-danger/10 border border-danger/20 rounded-lg">
+              <div className="p-4 bg-danger/10 border border-danger/20 rounded-lg">
                 <h3 className="text-lg font-semibold text-danger mb-2">
                   Error Details (Development Mode)
                 </h3>

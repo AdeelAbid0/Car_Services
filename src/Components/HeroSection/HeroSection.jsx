@@ -128,7 +128,7 @@ const HeroSection = () => {
                   ))}
                   <Button
                     type="primary"
-                    className="ml-4 w-12 h-12 flex items-center justify-center rounded-full cursor-pointer transition-colors"
+                    className="ml-4 w-12 h-12 flex items-center justify-center rounded-full! cursor-pointer transition-colors"
                   >
                     <SearchIcon className="w-6 h-6 text-white shrink-0" />
                   </Button>
