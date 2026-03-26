@@ -1,6 +1,7 @@
 import { ROUTES } from "../../constants/routes";
 import { lazy } from "react";
 import PrivateRoutes from "../PrivateRoutes";
+import { ROLES } from "../../constants/roles";
 
 const My_Wallet = lazy(
   () => import("../../Pages/Customers/My_Wallet/My_Wallet"),
@@ -11,7 +12,7 @@ export const BOOKING_ROUTES = [
   {
     path: ROUTES.BOOKINGS,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Bookings />
       </PrivateRoutes>
     ),
@@ -19,7 +20,7 @@ export const BOOKING_ROUTES = [
   {
     path: ROUTES.MY_WALLET,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <My_Wallet />
       </PrivateRoutes>
     ),

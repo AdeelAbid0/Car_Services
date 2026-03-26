@@ -3,8 +3,13 @@ import { appRoutes } from "../Router";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 import { AUTH_ROUTES } from "../Router/routes";
+import { useSelector } from "react-redux";
 
 const Layout = () => {
+  const { user, token } = useSelector((state) => state.auth);
+  console.log({ user });
+  console.log({ token });
+
   const [isAuthRoute, setIsAuthRoute] = useState(false);
   const location = useLocation();
   const auth_routes = AUTH_ROUTES;
@@ -22,7 +27,7 @@ const Layout = () => {
     <div className="relative w-full bg-background">
       {!isAuthRoute && (
         <div className="w-full fixed z-40">
-          <Header />
+          <Header user={user} token={token} />
         </div>
       )}
 

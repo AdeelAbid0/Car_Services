@@ -6,12 +6,13 @@ import Profile_Partner from "../../Pages/Partners/Profile_Partner/Profile_Partne
 import Payments_Partner from "../../Pages/Partners/Payments_Partner/Payments_Partner";
 import Support from "../../Pages/Partners/Support/Support";
 import PartnerDashboard from "../../Pages/Partners/Dashboard/PartnerDashboard";
+import { ROLES } from "../../constants/roles";
 
 export const PARTNER_ROUTES = [
   {
     path: ROUTES.PARTNER_DASHBOARD,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.PARTNER]}>
         <PartnerDashboard />
       </PrivateRoutes>
     ),
@@ -19,7 +20,7 @@ export const PARTNER_ROUTES = [
   {
     path: ROUTES.PARTNER_MANAGE_SERVICES,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.PARTNER]}>
         <Manage_Services />
       </PrivateRoutes>
     ),
@@ -27,7 +28,7 @@ export const PARTNER_ROUTES = [
   {
     path: ROUTES.PARTNER_PROFILE,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.PARTNER]}>
         <Profile_Partner />
       </PrivateRoutes>
     ),
@@ -35,7 +36,7 @@ export const PARTNER_ROUTES = [
   {
     path: ROUTES.PARTNER_PAYMENT,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.PARTNER]}>
         <Payments_Partner />
       </PrivateRoutes>
     ),
@@ -43,7 +44,7 @@ export const PARTNER_ROUTES = [
   {
     path: ROUTES.PARTNER_SUPPORT,
     element: (
-      <PrivateRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.PARTNER]}>
         <Support />
       </PrivateRoutes>
     ),

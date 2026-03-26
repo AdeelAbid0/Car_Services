@@ -1,6 +1,9 @@
 import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
+import { ROLES } from "../../constants/roles";
+import PrivateRoutes from "../PrivateRoutes";
+import NotFound from "../../Pages/Common/NotFound";
 
 const About = lazy(() => import("../../Pages/Customers/About/About"));
 const Contact = lazy(() => import("../../Pages/Customers/Contact/Contact"));
@@ -21,48 +24,48 @@ export const LANDINGPAGE_ROUTES = [
   {
     path: ROUTES.SERVICES,
     element: (
-      <PublicRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Services />
-      </PublicRoutes>
+      </PrivateRoutes>
     ),
   },
   {
     path: ROUTES.PARTNERS,
     element: (
-      <PublicRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Partners />
-      </PublicRoutes>
+      </PrivateRoutes>
     ),
   },
   {
     path: ROUTES.ABOUT,
     element: (
-      <PublicRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <About />
-      </PublicRoutes>
+      </PrivateRoutes>
     ),
   },
   {
     path: ROUTES.CONTACT,
     element: (
-      <PublicRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Contact />
-      </PublicRoutes>
+      </PrivateRoutes>
     ),
   },
   {
     path: ROUTES.FAQs,
     element: (
-      <PublicRoutes>
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <FAQ />
-      </PublicRoutes>
+      </PrivateRoutes>
     ),
   },
   {
     path: "*",
     element: (
       <PublicRoutes>
-        <LandingPage />
+        <NotFound />
       </PublicRoutes>
     ),
   },

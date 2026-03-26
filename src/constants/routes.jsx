@@ -16,6 +16,9 @@ export const ROUTES = {
   VERIFY_OTP: "/verify-otp",
   PROFILE: "/profile",
 
+  // Unauthorized route
+  UNAUTHORIZED: "/unauthorized",
+
   // Private routes Customer
   BOOKINGS: "/bookings",
   MY_WALLET: "/my-wallet",

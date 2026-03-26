@@ -82,11 +82,11 @@ export const getNavItems = (user) => {
   const isAuthenticated = !!localStorage.getItem("token");
   let navItems = [];
 
-  if (user?.user?.role === "isPartner") {
+  if (user?.role === "partner") {
     navItems = [...baseNavItems.partner];
-  } else if (user?.user?.role === "isAdmin") {
+  } else if (user?.role === "admin") {
     navItems = [...baseNavItems.admin];
-  } else if (user?.user?.role === "isSuperAdmin") {
+  } else if (user?.role === "superadmin") {
     navItems = [...baseNavItems.superAdmin];
   } else {
     navItems = [...baseNavItems.customer];
@@ -196,11 +196,11 @@ const dropdownItems = {
 export const getDropdownItems = (user, handleLogout) => {
   let items = [];
 
-  if (user?.user?.role === "isPartner") {
+  if (user?.role === "partner") {
     items = [...dropdownItems.partner];
-  } else if (user?.user?.role === "isAdmin") {
+  } else if (user?.role === "admin") {
     items = [...dropdownItems.admin];
-  } else if (user?.user?.role === "isSuperAdmin") {
+  } else if (user?.role === "superadmin") {
     items = [...dropdownItems.superAdmin];
   } else {
     items = [...dropdownItems.customer];
