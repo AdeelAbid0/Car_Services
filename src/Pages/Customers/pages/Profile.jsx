@@ -1,10 +1,14 @@
 import { useState, lazy, Suspense } from "react";
 
-const PersonalInfo = lazy(() => import("./components/PersonalInfo"));
-const MyCars = lazy(() => import("./components/MyCars"));
-const Address = lazy(() => import("./components/Address"));
-const PaymentMethod = lazy(() => import("./components/PaymentMethod"));
-const Settings = lazy(() => import("./components/Settings"));
+const PersonalInfo = lazy(
+  () => import("../components/ProfileComponents/PersonalInfo"),
+);
+const MyCars = lazy(() => import("../components/ProfileComponents/MyCars"));
+const Address = lazy(() => import("../components/ProfileComponents/Address"));
+const PaymentMethod = lazy(
+  () => import("../components/ProfileComponents/PaymentMethod"),
+);
+const Settings = lazy(() => import("../components/ProfileComponents/Settings"));
 
 const Profile = () => {
   const [selectedTab, setSelectedTab] = useState(1);

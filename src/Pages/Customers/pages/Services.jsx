@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingModal from "../../../components/BookingModal";
 import Segment from "../../../components/Segment";
-import { BookingDrawer } from "./components/BookingDrawer";
+import { BookingDrawer } from "../components/ServicesComponents/BookingDrawer";
 const Services = () => {
   const navigate = useNavigate();
   const [serviceCategory, setServiceCategory] = useState(1);
