@@ -9,7 +9,9 @@ const About = lazy(() => import("../../pages/Customers/pages/About"));
 const Contact = lazy(() => import("../../pages/Customers/pages/Contact"));
 const FAQ = lazy(() => import("../../pages/Customers/pages/FAQ"));
 const LandingPage = lazy(() => import("../../pages/LandingPage/LandingPage"));
-const Services = lazy(() => import("../../pages/Customers/pages/Services"));
+const Services = lazy(
+  () => import("../../pages/Customers/pages/Services/Services"),
+);
 const Partners = lazy(() => import("../../pages/Customers/pages/Partners"));
 
 export const LANDINGPAGE_ROUTES = [

@@ -1,13 +1,13 @@
 import { Radio } from "antd";
 import { useState } from "react";
-import VisaLogo from "../../../assets/svg/visa-logo.svg?react";
-import EasypaisaLogo from "../../../assets/svg/easypaisa-logo.svg?react";
-import JazzcashLogo from "../../../assets/svg/jazzcash-logo.svg?react";
-import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
-import CardDetails from "../components/PaymentComponents/CardDetails";
-import LoadingPayment from "../components/PaymentComponents/LoadingPayment";
-import PaymentSuccess from "../components/PaymentComponents/PaymentSuccess";
-import Button from "../../../components/ui/Button";
+import VisaLogo from "../../../../assets/svg/visa-logo.svg?react";
+import EasypaisaLogo from "../../../../assets/svg/easypaisa-logo.svg?react";
+import JazzcashLogo from "../../../../assets/svg/jazzcash-logo.svg?react";
+import ArrowRight from "../../../../assets/svg/arrow-right.svg?react";
+import CardDetails from "./components/CardDetails";
+import LoadingPayment from "./components/LoadingPayment";
+import PaymentSuccess from "./components/PaymentSuccess";
+import Button from "../../../../components/ui/Button";
 
 const SelectPaymentMethod = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);
