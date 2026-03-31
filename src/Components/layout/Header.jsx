@@ -1,19 +1,19 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import LogoIconDark from "../assets/svg/logo-dark.svg?react";
-import LogoIconLight from "../assets/svg/logo-light.svg?react";
+import LogoIconDark from "../../assets/svg/logo-dark.svg?react";
+import LogoIconLight from "../../assets/svg/logo-light.svg?react";
+import { ROUTES } from "../../constants/routes";
+import User from "../../assets/svg/profile.svg?react";
+import ChevronDown from "../../assets/svg/chevron-down.svg?react";
+import Info from "../../assets/svg/info.svg?react";
+import Phone from "../../assets/svg/call-border.svg?react";
+import Logout from "../../assets/svg/logout.svg?react";
+import Bookmark from "../../assets/svg/bookmark.svg?react";
+import Question from "../../assets/svg/question.svg?react";
+import Payment from "../../assets/svg/payment-partner.svg?react";
+import Support from "../../assets/svg/support.svg?react";
+import { getNavItems, getDropdownItems } from "../../config/navigation";
 import Button from "../ui/Button";
-import { ROUTES } from "../constants/routes";
-import User from "../assets/svg/profile.svg?react";
-import ChevronDown from "../assets/svg/chevron-down.svg?react";
-import Info from "../assets/svg/info.svg?react";
-import Phone from "../assets/svg/call-border.svg?react";
-import Logout from "../assets/svg/logout.svg?react";
-import Bookmark from "../assets/svg/bookmark.svg?react";
-import Question from "../assets/svg/question.svg?react";
-import Payment from "../assets/svg/payment-partner.svg?react";
-import Support from "../assets/svg/support.svg?react";
-import { getNavItems, getDropdownItems } from "../config/navigation";
 
 const Header = ({ user, token }) => {
   const navigate = useNavigate();

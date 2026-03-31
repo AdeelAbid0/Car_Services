@@ -1,4 +1,4 @@
-import CommonDrawer from "../../../../../ui/Drawer";
+import CommonDrawer from "../../../../../components/ui/Drawer";
 import ShopIcon from "../../../../../assets/svg/shop.svg?react";
 import ProfileIcon from "../../../../../assets/svg/profile-circle.svg?react";
 import LocationIcon from "../../../../../assets/svg/location-2.svg?react";

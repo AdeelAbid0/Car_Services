@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import CommonDrawer from "../../../../ui/Drawer"
+import CommonDrawer from "../../../../components/ui/Drawer"
 import BookingSteps from './BookingSteps'
 import CloseIcon from '../../../../assets/svg/add.svg?react'
 

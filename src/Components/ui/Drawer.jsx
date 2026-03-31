@@ -1,5 +1,5 @@
 import { Drawer } from "antd";
-import CloseIcon from "../assets/svg/add.svg?react";
+import CloseIcon from "../../assets/svg/add.svg?react";
 import Button from "./Button";
 const CommonDrawer = ({
   open,

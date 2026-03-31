@@ -1,6 +1,6 @@
-import Button from "../ui/Button";
-import Logo from "../../assets/svg/logo-partner.svg?react";
-import ArrowLeft from "../../assets/svg/arrow-left.svg?react";
+import Button from "./ui/Button";
+import Logo from "../assets/svg/logo-partner.svg?react";
+import ArrowLeft from "../assets/svg/arrow-left.svg?react";
 const AuthCardPartner = ({
   title,
   description,

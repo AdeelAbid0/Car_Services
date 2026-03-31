@@ -5,8 +5,8 @@ import PlusIcon from "../../../assets/svg/add.svg?react";
 import CardImage from "../../../assets/Images/cards.svg?react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
-import InputText from "../../../ui/InputText";
-import Button from "../../../ui/Button";
+import InputText from "../../../components/ui/InputText";
+import Button from "../../../components/ui/Button";
 
 const My_Wallet = () => {
   const navigate = useNavigate();

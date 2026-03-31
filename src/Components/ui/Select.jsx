@@ -1,5 +1,5 @@
 import { Select } from "antd";
-import ChevronDown from "../assets/svg/chevron-down.svg?react";
+import ChevronDown from "../../assets/svg/chevron-down.svg?react";
 
 const CommonSelect = ({
   label,

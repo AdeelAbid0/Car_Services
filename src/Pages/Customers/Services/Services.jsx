@@ -1,4 +1,4 @@
-import InputText from "../../../ui/InputText";
+import InputText from "../../../components/ui/InputText";
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import DummyIcon from "../../../assets/svg/dummy.svg?react";
 import { useState } from "react";

@@ -5,7 +5,7 @@ const hardcodedUser = {
   id: 1,
   name: "Adeel Abid",
   email: "adeel@example.com",
-  role: "customer",
+  role: "superadmin",
 };
 
 const hardcodedToken = "test-token-123456";

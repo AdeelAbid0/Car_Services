@@ -1,8 +1,8 @@
 import { useState } from "react";
-import InputText from "../../../../ui/InputText";
+import InputText from "../../../../components/ui/InputText";
 import EditIcon from "../../../../assets/svg/edit.svg?react";
 import TickCircleIcon from "../../../../assets/svg/tick-circle.svg?react";
-import Button from "../../../../ui/Button";
+import Button from "../../../../components/ui/Button";
 
 const Services = () => {
   const [selectedServices, setSelectedServices] = useState([]);

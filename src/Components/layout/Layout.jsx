@@ -1,8 +1,8 @@
 import { useLocation, useRoutes } from "react-router-dom";
-import { appRoutes } from "../Router";
+import { appRoutes } from "../../router";
 import Header from "./Header";
 import { useEffect, useState } from "react";
-import { AUTH_ROUTES } from "../Router/routes";
+import { AUTH_ROUTES } from "../../router/routes";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
