@@ -12,7 +12,7 @@ import DeleteIcon from "../../../assets/svg/delete.svg?react";
 
 import { Dropdown } from "antd";
 
-import AddServicesDrawer from "./Components/AddServicesDrawer";
+import AddServicesDrawer from "./components/AddServicesDrawer";
 
 import CommonModal from "../../../components/ui/Modal";
 

@@ -3,9 +3,9 @@ import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import DummyIcon from "../../../assets/svg/dummy.svg?react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BookingModal from "../../../Components/BookingModal";
+import BookingModal from "../../../components/BookingModal";
 import Segment from "../../../components/Segment";
-import { BookingDrawer } from "./Components/BookingDrawer";
+import { BookingDrawer } from "./components/BookingDrawer";
 const Services = () => {
   const navigate = useNavigate();
   const [serviceCategory, setServiceCategory] = useState(1);

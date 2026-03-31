@@ -20,9 +20,9 @@ import Button from "../../../components/ui/Button";
 
 import { Dropdown } from "antd";
 
-import AddServicesDrawer from "../../Partners/Manage_Services/Components/AddServicesDrawer";
+import AddServicesDrawer from "../../Partners/Manage_Services/components/AddServicesDrawer";
 
-import EditServicesDrawer from "../../Partners/Manage_Services/Components/EditServicesDrawer";
+import EditServicesDrawer from "../../Partners/Manage_Services/components/EditServicesDrawer";
 
 import Segment from "../../../components/Segment";
 

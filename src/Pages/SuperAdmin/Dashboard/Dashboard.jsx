@@ -16,15 +16,15 @@ import PolygonDec from "../../../assets/svg/polygon-2.svg?react";
 
 import DetailIcon from "../../../assets/svg/eye-2.svg?react";
 
-import EmptyView from "./Components/EmptyView";
+import EmptyView from "./components/EmptyView";
 
 import { DataTable } from "../../../components/ui/DataTable";
 
 import { useState } from "react";
 
-import BusinessDetailDrawer from "./Components/BusinessDetailDrawer/BusinessDetailDrawer";
+import BusinessDetailDrawer from "./components/BusinessDetailDrawer/BusinessDetailDrawer";
 
-import RejectReasonDrawer from "./Components/RejectReasonDrawer/RejectReasonDrawer";
+import RejectReasonDrawer from "./components/RejectReasonDrawer/RejectReasonDrawer";
 
 import { Radio } from "antd";
 

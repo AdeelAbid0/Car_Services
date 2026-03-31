@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from "react";
-import AuthCardPartner from "../../../Components/AuthCardPartner";
+import AuthCardPartner from "../../../components/AuthCardPartner";
 import PartnerIcon from "../../../assets/svg/partner.svg?react";
 import UserIcon from "../../../assets/svg/user.svg?react";
 import EmailIcon from "../../../assets/svg/mail-placeholder.svg?react";
@@ -8,9 +8,9 @@ import EditIcon from "../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
 import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
 import InputTextArea from "../../../components/ui/InputTextArea";
-import UploadImage from "../../../Components/UploadImage";
+import UploadImage from "../../../components/UploadImage";
 import InputText from "../../../components/ui/InputText";
-const FinalScreen = lazy(() => import("./Components/FinalScreen"));
+const FinalScreen = lazy(() => import("./components/FinalScreen"));
 
 const RegisterPartner = () => {
   const [currentStep, setCurrentStep] = useState(1);

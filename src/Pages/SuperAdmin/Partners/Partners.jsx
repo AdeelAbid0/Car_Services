@@ -10,18 +10,18 @@ import Button from "../../../components/ui/Button";
 
 import Segment from "../../../components/Segment";
 
-import AddPartnerDrawer from "./Components/AddPartnerDrawer/AddPartnerDrawer";
+import AddPartnerDrawer from "./components/AddPartnerDrawer/AddPartnerDrawer";
 
-import PartnerDetails from "./Components/PartnerDetails/PartnerDetails";
+import PartnerDetails from "./components/PartnerDetails/PartnerDetails";
 
-import RemovePartnerDrawer from "./Components/RemovePartnerDrawer/RemovePartnerDrawer";
+import RemovePartnerDrawer from "./components/RemovePartnerDrawer/RemovePartnerDrawer";
 
 const AddedByAdmin = lazy(
-  () => import("./Components/AddedByAdmin/AddedByAdmin"),
+  () => import("./components/AddedByAdmin/AddedByAdmin"),
 );
 
 const AddedByPartners = lazy(
-  () => import("./Components/AddedByPartners/AddedByPartners"),
+  () => import("./components/AddedByPartners/AddedByPartners"),
 );
 
 const Partners = () => {

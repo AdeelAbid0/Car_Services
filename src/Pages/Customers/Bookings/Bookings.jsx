@@ -1,8 +1,8 @@
 import { useState } from "react";
-import EmptyView from "../../../Components/EmptyView";
+import EmptyView from "../../../components/EmptyView";
 import BookingEmptyIcon from "../../../assets/Images/booking-empty.svg?react";
 import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
-import BookingCard from "../../../Components/BookingCard";
+import BookingCard from "../../../components/BookingCard";
 import { ROUTES } from "../../../constants/routes";
 import { useNavigate } from "react-router-dom";
 

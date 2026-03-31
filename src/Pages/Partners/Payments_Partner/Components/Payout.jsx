@@ -1,4 +1,4 @@
-import AccountDetailCard from "../../../../Components/AccountDetailCard";
+import AccountDetailCard from "../../../../components/AccountDetailCard";
 import CardPrimary from "../../../../assets/svg/card-primary.svg?react";
 import CardSecondary from "../../../../assets/svg/card-secondary.svg?react";
 import MenuIcon from "../../../../assets/svg/menu-icon.svg?react";

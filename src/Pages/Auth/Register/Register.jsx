@@ -5,7 +5,7 @@ import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import PasswordIcon from "../../../assets/svg/password-placeholder.svg?react";
 import EyeIcon from "../../../assets/svg/eye-icon.svg?react";
 import UserIcon from "../../../assets/svg/user.svg?react";
-import AuthCard from "../../../Components/AuthCard";
+import AuthCard from "../../../components/AuthCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
 import { useFormik } from "formik";

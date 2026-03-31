@@ -4,9 +4,9 @@ import VisaLogo from "../../../assets/svg/visa-logo.svg?react";
 import EasypaisaLogo from "../../../assets/svg/easypaisa-logo.svg?react";
 import JazzcashLogo from "../../../assets/svg/jazzcash-logo.svg?react";
 import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
-import CardDetails from "./Components/CardDetails";
-import LoadingPayment from "./Components/LoadingPayment";
-import PaymentSuccess from "./Components/PaymentSuccess";
+import CardDetails from "./components/CardDetails";
+import LoadingPayment from "./components/LoadingPayment";
+import PaymentSuccess from "./components/PaymentSuccess";
 import Button from "../../../components/ui/Button";
 
 const SelectPaymentMethod = () => {
