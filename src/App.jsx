@@ -2,7 +2,7 @@ import { ConfigProvider, Spin } from "antd";
 import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import Layout from "./components/layout/Layout";
+import Layout from "./shared/layout/Layout";
 
 const LoadingFallback = () => (
   <div className="flex items-center justify-center h-screen">

@@ -3,9 +3,8 @@ import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
 import { ROLES } from "../../constants/roles";
 import PrivateRoutes from "../PrivateRoutes";
-
-const NotFound = lazy(() => import("../../pages/Common/NotFound"));
-const LandingPage = lazy(() => import("../../pages/LandingPage/LandingPage"));
+const NotFound = lazy(() => import("../../shared/pages/NotFound"));
+const Home = lazy(() => import("../../features/public/pages/Home"));
 const FAQ = lazy(() => import("../../features/customers/pages/FAQ"));
 const About = lazy(() => import("../../features/customers/pages/About"));
 const Contact = lazy(() => import("../../features/customers/pages/Contact"));
@@ -17,7 +16,7 @@ export const LANDINGPAGE_ROUTES = [
     path: ROUTES.HOME,
     element: (
       <PublicRoutes>
-        <LandingPage />
+        <Home />
       </PublicRoutes>
     ),
   },
