@@ -2,13 +2,13 @@ import { lazy } from "react";
 import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
 // Lazy load components
-const Login = lazy(() => import("../../pages/Auth/Login/Login"));
-const Register = lazy(() => import("../../pages/Auth/Register/Register"));
+const Login = lazy(() => import("../../features/auth/pages/Login"));
+const Register = lazy(() => import("../../features/auth/pages/Register"));
 const RegisterPartner = lazy(
   () => import("../../pages/Partners/RegisterPartner/RegisterPartner"),
 );
-const VerifyOTP = lazy(() => import("../../pages/Auth/VerifyOTP/VerifyOTP"));
-const Join = lazy(() => import("../../pages/Auth/Join/Join"));
+const VerifyOTP = lazy(() => import("../../features/auth/pages/VerifyOTP"));
+const Join = lazy(() => import("../../features/auth/pages/Join"));
 export const AUTH_ROUTES = [
   {
     path: ROUTES.LOGIN,

@@ -9,8 +9,8 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../../components/ui/Button";
 import { ROUTES } from "../../../constants/routes";
 import { useFormik } from "formik";
-import { LoginInitialValues } from "./Formik/login.initialvalues";
-import { LoginValidationSchema } from "./Formik/login.validationschema";
+import { LoginInitialValues } from "../forms/login/login.initialvalues";
+import { LoginValidationSchema } from "../forms/login/login.validationschema";
 
 const Login = () => {
   const navigate = useNavigate();

@@ -9,8 +9,8 @@ import AuthCard from "../../../components/AuthCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
 import { useFormik } from "formik";
-import { RegisterUserInitialValues } from "./Formik/register.initialvalues";
-import { RegisterValidationSchema } from "./Formik/register.validationschema";
+import { RegisterUserInitialValues } from "../forms/register/register.initialvalues";
+import { RegisterValidationSchema } from "../forms/register/register.validationschema";
 
 const Register = () => {
   const navigate = useNavigate();
