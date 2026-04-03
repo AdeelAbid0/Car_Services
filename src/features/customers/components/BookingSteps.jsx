@@ -1,0 +1,114 @@
+import PartnerCard from "../../../components/PartnerCard";
+import CustomCalendar from "../../../components/Calendar";
+import bookingConfirmImage from "../../../assets/Images/booking-confirm.svg";
+
+const BookingSteps = ({
+  currentStep = 1,
+  showStepper = true,
+  showContent = true,
+}) => {
+  const STEPS = [
+    { id: 1, label: "Service" },
+    { id: 2, label: "Partner" },
+    { id: 3, label: "Schedule" },
+  ];
+
+  const StepCircle = ({ stepId, currentStep }) => {
+    const isActive = stepId <= currentStep;
+    return (
+      <div className="flex flex-col items-center gap-2">
+        <div
+          className={`w-8 h-8 rounded-full border-2 flex items-center justify-center transition-colors duration-300 
+                    ${isActive ? "border-primary" : "border-neutral-300"}`}
+        >
+          <div
+            className={`w-4 h-4 rounded-full transition-colors duration-300 ${isActive ? "bg-primary" : "bg-neutral-300"}`}
+          />
+        </div>
+        <span
+          className={`text-[13px] font-semibold transition-colors duration-300 ${isActive ? "text-primary" : "text-muted-foreground"}`}
+        >
+          {STEPS.find((s) => s.id === stepId)?.label}
+        </span>
+      </div>
+    );
+  };
+  return (
+    <>
+      {showStepper && currentStep <= 3 && (
+        <div className="flex gap-px items-start justify-center px-10">
+          {STEPS.map((step, index) => (
+            <div key={step.id}>
+              <StepCircle stepId={step.id} currentStep={currentStep} />
+              {index < STEPS.length - 1 && (
+                <div className="flex-1 max-w-25 border-t-2 border-dashed border-neutral-300 mt-4 mx-2" />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+      {showContent && currentStep === 2 && (
+        <div className="flex w-full flex-col gap-2 p-10 max-h-[70vh] ">
+          <h1 className="text-foreground text-2xl font-semibold!">
+            Select Partner
+          </h1>
+          {[1, 2, 3].map((item) => {
+            return (
+              <PartnerCard
+                profileImage={"/Images/hero-image.png"}
+                tag={"Recommended"}
+                shopName={"Detail Kings"}
+                status={"Available Now  "}
+                location={"H-8 Sector, Islamabad"}
+                distance={"2.8 km away"}
+                services={"Leather Conditioning"}
+                price={"3000"}
+                rating={5}
+              />
+            );
+          })}
+        </div>
+      )}
+
+      {showContent && currentStep === 3 && (
+        <div className="flex flex-col gap-4 p-10 max-h-[70vh] w-full overflow-auto">
+          <h1 className="text-foreground text-2xl font-semibold!">
+            Select Date & Time
+          </h1>
+          <div className="flex items-center flex-col gap-2 max-h-[80vh] overflow-auto">
+            <CustomCalendar />
+          </div>
+        </div>
+      )}
+
+      {showContent && currentStep === 4 && (
+        <div className="flex flex-col gap-4 p-10">
+          <h1 className="text-foreground text-2xl font-semibold!">
+            Booking Confirmed
+          </h1>
+          <div className="relative overflow-hidden h-full flex flex-col gap-6 bg-white p-15 justify-center items-center border border-border rounded-2xl w-full">
+            <div className="pointer-events-none absolute -top-24 left-0 h-44 w-[80%] -translate-x-1/2 rounded-full bg-linear-to-r from-[#f05800]/30 to-[#ffd02f]/30 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-24 right-0 h-59 w-[50%] rounded-full bg-linear-to-r from-[#a04df0]/20 to-[#4062d9]/20 blur-3xl" />
+
+            <div className="relative z-10 flex flex-col gap-3">
+              <h2 className="font-semibold text-[44px]">Congratulations! 🎉</h2>
+              <span className="font-medium text-[16px] text-muted-foreground">
+                You've completed your first car service with us.
+              </span>
+            </div>
+            <img
+              className="relative z-10"
+              src={bookingConfirmImage}
+              alt="Booking confirmed"
+            />
+            <span className="relative z-10 mt-2 text-primary font-medium underline cursor-pointer">
+              View Booking
+            </span>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default BookingSteps;

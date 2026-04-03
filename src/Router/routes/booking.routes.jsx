@@ -4,9 +4,9 @@ import PrivateRoutes from "../PrivateRoutes";
 import { ROLES } from "../../constants/roles";
 
 const My_Wallet = lazy(
-  () => import("../../Pages/Customers/My_Wallet/My_Wallet"),
+  () => import("../../features/customers/pages/My_Wallet"),
 );
-const Bookings = lazy(() => import("../../Pages/Customers/Bookings/Bookings"));
+const Bookings = lazy(() => import("../../features/customers/pages/Bookings"));
 
 export const BOOKING_ROUTES = [
   {

@@ -1,4 +1,4 @@
-import PartnerCard from "../../../../../Components/PartnerCard/PartnerCard";
+import PartnerCard from "../../../../../components/PartnerCard";
 
 const AddedByPartners = ({ viewPartnerDetail, setViewPartnerDetail }) => {
   return (

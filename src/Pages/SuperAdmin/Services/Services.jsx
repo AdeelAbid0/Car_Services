@@ -1,108 +1,181 @@
-import InputText from "../../../ui/InputText/InputText";
+import InputText from "../../../components/ui/InputText";
+
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
+
 import MoreIcon from "../../../assets/svg/more.svg?react";
+
 import AddIcon from "../../../assets/svg/add.svg?react";
+
 import DummyIcon from "../../../assets/svg/dummy.svg?react";
+
 import EditIcon from "../../../assets/svg/edit-2.svg?react";
+
 import DeleteIcon from "../../../assets/svg/delete.svg?react";
+
 import { useEffect, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import Button from "../../../ui/Button/Button";
+
+import Button from "../../../components/ui/Button";
+
 import { Dropdown } from "antd";
-import AddServicesDrawer from "../../Partners/Manage_Services/Components/AddServicesDrawer";
-import EditServicesDrawer from "../../Partners/Manage_Services/Components/EditServicesDrawer";
-import Segment from "../../../Components/Segment/Segment";
+
+import AddServicesDrawer from "../../Partners/Manage_Services/components/AddServicesDrawer";
+
+import EditServicesDrawer from "../../Partners/Manage_Services/components/EditServicesDrawer";
+
+import Segment from "../../../components/Segment";
 
 const Services = () => {
   const navigate = useNavigate();
+
   const [serviceCategory, setServiceCategory] = useState(1);
+
   const [selectedService, setSelectedService] = useState();
+
   const [servicesData, setServicesData] = useState([]);
+
   const [activeTab, setActiveTab] = useState("admin");
+
   const [openDropdownId, setOpenDropdownId] = useState(null);
+
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);
+
   const [editServiceDrawer, setEditServiceDrawer] = useState(false);
 
   const carServices = [
     {
       id: 1,
+
       name: "All",
+
       subServices: [
         { id: 1, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 2, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 3, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 4, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 5, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 6, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 7, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 8, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 9, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 10, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 11, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 12, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 13, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 14, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 15, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 16, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 17, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 18, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 19, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 20, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 21, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 22, name: "Tire Rotation", icon: <DummyIcon /> },
       ],
     },
+
     {
       id: 2,
+
       name: "Tire Rotation",
+
       subServices: [
         { id: 1, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 2, name: "Tire Rotation", icon: <DummyIcon /> },
+
         { id: 3, name: "Tire Rotation", icon: <DummyIcon /> },
       ],
     },
+
     {
       id: 3,
+
       name: "Brake Service",
+
       subServices: [
         { id: 1, name: "Brake Service", icon: <DummyIcon /> },
+
         { id: 2, name: "Brake Service", icon: <DummyIcon /> },
+
         { id: 3, name: "Brake Service", icon: <DummyIcon /> },
       ],
     },
+
     {
       id: 4,
+
       name: "Engine Diagnostics",
+
       subServices: [
         { id: 1, name: "Engine Diagnostics", icon: <DummyIcon /> },
+
         { id: 2, name: "Engine Diagnostics", icon: <DummyIcon /> },
+
         { id: 3, name: "Engine Diagnostics", icon: <DummyIcon /> },
       ],
     },
+
     {
       id: 5,
+
       name: "AC Service",
+
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
+
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
+
         { id: 3, name: "AC Service", icon: <DummyIcon /> },
       ],
     },
+
     {
       id: 6,
+
       name: "AC Service",
+
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
+
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
+
         { id: 3, name: "AC Service", icon: <DummyIcon /> },
       ],
     },
+
     {
       id: 7,
+
       name: "AC Service",
+
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
+
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
+
         { id: 3, name: "AC Service", icon: <DummyIcon /> },
       ],
     },
@@ -111,18 +184,23 @@ const Services = () => {
   const items = [
     {
       key: "1",
+
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
           <p className="text-xs font-normal! text-foreground">Edit</p>
+
           <EditIcon />
         </div>
       ),
     },
+
     {
       key: "2",
+
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
           <p className="text-xs font-normal! text-foreground">Delete</p>
+
           <DeleteIcon />
         </div>
       ),
@@ -132,12 +210,14 @@ const Services = () => {
   useEffect(() => {
     if (serviceCategory) {
       const service = carServices.find((s) => s.id === serviceCategory);
+
       setServicesData(service?.subServices || []);
     }
   }, [serviceCategory]);
 
   const handleMenuClick = (e, serviceId) => {
     console.log("Menu item clicked:", e.key, "for service:", serviceId);
+
     setOpenDropdownId(null);
 
     if (e.key === "1") {
@@ -158,12 +238,17 @@ const Services = () => {
   const tabs = [
     {
       id: "admin",
+
       label: "Admin",
+
       component: <></>,
     },
+
     {
       id: "partner",
+
       label: "Partners",
+
       component: <></>,
     },
   ];
@@ -174,6 +259,7 @@ const Services = () => {
         <div className="flex w-[72%] flex-col gap-6 h-full py-11">
           <div className="flex justify-between w-full">
             <h1 className="text-foreground text-2xl! font-bold!">Services</h1>
+
             <Button
               type={"primary"}
               label={"Add New Service"}
@@ -182,6 +268,7 @@ const Services = () => {
               onClick={() => setAddServiceDrawer(true)}
             />
           </div>
+
           <div className="flex w-full justify-between">
             <div className="flex w-fit shrink-0">
               <Segment
@@ -190,10 +277,12 @@ const Services = () => {
                 onTabChange={setActiveTab}
               />
             </div>
+
             <div className="flex w-full max-w-75">
               <InputText placeholder={"Search"} prefixIcon={<SearchIcon />} />
             </div>
           </div>
+
           <div className="flex w-fit gap-6 border-b border-border">
             {carServices.map((service) => (
               <div
@@ -213,6 +302,7 @@ const Services = () => {
               </div>
             ))}
           </div>
+
           <div className="flex w-full flex-wrap gap-6">
             {servicesData.map((service) => (
               <div
@@ -227,13 +317,16 @@ const Services = () => {
                 }}
               >
                 {service.icon}
+
                 <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-4">
                   {service.name}
                 </p>
+
                 <div className="absolute right-1 top-2">
                   <Dropdown
                     menu={{
                       items,
+
                       onClick: (e) => handleMenuClick(e, service.id),
                     }}
                     placement="bottomRight"
@@ -248,8 +341,10 @@ const Services = () => {
                       className="cursor-pointer hover:bg-gray-100 p-2 rounded-full transition-colors"
                       onClick={(e) => {
                         e.stopPropagation();
+
                         handleDropdownOpenChange(
                           !(openDropdownId === service.id),
+
                           service.id,
                         );
                       }}
@@ -263,10 +358,12 @@ const Services = () => {
           </div>
         </div>
       </div>
+
       <AddServicesDrawer
         addServiceDrawer={addServiceDrawer}
         setAddServiceDrawer={setAddServiceDrawer}
       />
+
       <EditServicesDrawer
         editServiceDrawer={editServiceDrawer}
         setEditServiceDrawer={setEditServiceDrawer}

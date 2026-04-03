@@ -1,32 +1,48 @@
-import InputText from "../../../ui/InputText/InputText";
+import InputText from "../../../components/ui/InputText";
+
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
+
 import AddIcon from "../../../assets/svg/add.svg?react";
+
 import { lazy, Suspense, useState } from "react";
-import Button from "../../../ui/Button/Button";
-import Segment from "../../../Components/Segment/Segment";
-import AddPartnerDrawer from "./Components/AddPartnerDrawer/AddPartnerDrawer";
-import PartnerDetails from "./Components/PartnerDetails/PartnerDetails";
-import RemovePartnerDrawer from "./Components/RemovePartnerDrawer/RemovePartnerDrawer";
+
+import Button from "../../../components/ui/Button";
+
+import Segment from "../../../components/Segment";
+
+import AddPartnerDrawer from "./components/AddPartnerDrawer/AddPartnerDrawer";
+
+import PartnerDetails from "./components/PartnerDetails/PartnerDetails";
+
+import RemovePartnerDrawer from "./components/RemovePartnerDrawer/RemovePartnerDrawer";
+
 const AddedByAdmin = lazy(
-  () => import("./Components/AddedByAdmin/AddedByAdmin"),
+  () => import("./components/AddedByAdmin/AddedByAdmin"),
 );
+
 const AddedByPartners = lazy(
-  () => import("./Components/AddedByPartners/AddedByPartners"),
+  () => import("./components/AddedByPartners/AddedByPartners"),
 );
 
 const Partners = () => {
   const [activeTab, setActiveTab] = useState(1);
+
   const [addPartnerDrawer, setAddPartnerDrawer] = useState(false);
+
   const [viewPartnerDetail, setViewPartnerDetail] = useState(false);
+
   const [rejectDrawer, setRejectDrawer] = useState(false);
 
   const tabs = [
     {
       id: 1,
+
       label: "Added by Partners",
     },
+
     {
       id: 2,
+
       label: "Added by Admin",
     },
   ];
@@ -37,6 +53,7 @@ const Partners = () => {
         <div className="flex w-[72%] flex-col gap-6 h-full py-11">
           <div className="flex justify-between w-full">
             <h1 className="text-foreground text-2xl! font-bold!">Partners</h1>
+
             <Button
               type={"primary"}
               label={"Add New Partner"}
@@ -45,6 +62,7 @@ const Partners = () => {
               onClick={() => setAddPartnerDrawer(true)}
             />
           </div>
+
           <div className="flex w-full justify-between items-end">
             <div className="flex w-fit shrink-0">
               <Segment
@@ -53,6 +71,7 @@ const Partners = () => {
                 onTabChange={setActiveTab}
               />
             </div>
+
             <div className="flex w-full max-w-75">
               <InputText placeholder={"Search"} prefixIcon={<SearchIcon />} />
             </div>
@@ -81,10 +100,12 @@ const Partners = () => {
           </div>
         </div>
       </div>
+
       <AddPartnerDrawer
         addPartnerDrawer={addPartnerDrawer}
         setAddPartnerDrawer={setAddPartnerDrawer}
       />
+
       {viewPartnerDetail && (
         <PartnerDetails
           viewPartnerDetail={viewPartnerDetail}
@@ -93,6 +114,7 @@ const Partners = () => {
           setRejectDrawer={setRejectDrawer}
         />
       )}
+
       {rejectDrawer && (
         <RemovePartnerDrawer setRejectDrawer={setRejectDrawer} />
       )}

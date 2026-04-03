@@ -1,12 +1,12 @@
 import { useState, lazy, Suspense } from "react";
-import Segment from "../../../Components/Segment/Segment";
+import Segment from "../../../components/Segment";
 
-const PersonalInfo = lazy(() => import("./Components/PersonalInfo"));
-const Overview = lazy(() => import("./Components/Overview"));
+const PersonalInfo = lazy(() => import("./components/PersonalInfo"));
+const Overview = lazy(() => import("./components/Overview"));
 const SecurityAndLoginSettings = lazy(
-  () => import("./Components/SecurityAndLoginSettings"),
+  () => import("./components/SecurityAndLoginSettings"),
 );
-const Notifications = lazy(() => import("./Components/Notifications"));
+const Notifications = lazy(() => import("./components/Notifications"));
 
 const Proflie = () => {
   const [activeComponent, setActiveComponent] = useState(1);

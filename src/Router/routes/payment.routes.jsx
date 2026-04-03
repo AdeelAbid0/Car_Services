@@ -3,7 +3,7 @@ import { ROUTES } from "../../constants/routes";
 import PrivateRoutes from "../PrivateRoutes";
 import { ROLES } from "../../constants/roles";
 const SelectPaymentMethod = lazy(
-  () => import("../../Pages/Customers/SelectPaymentMethod/SelectPaymentMethod"),
+  () => import("../../features/customers/pages/SelectPaymentMethod"),
 );
 export const PAYMENT_ROUTES = [
   {

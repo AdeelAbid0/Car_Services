@@ -1,14 +1,14 @@
 import { useState } from "react";
-import CommonDrawer from "../../../../../ui/Drawer/Drawer";
-import InputText from "../../../../../ui/InputText/InputText";
+import CommonDrawer from "../../../../../components/ui/Drawer";
+import InputText from "../../../../../components/ui/InputText";
 import UserIcon from "../../../../../assets/svg/user.svg?react";
 import EmailIcon from "../../../../../assets/svg/mail-placeholder.svg?react";
 import PhoneIcon from "../../../../../assets/svg/call-filled.svg?react";
 import LocationPlaceholder from "../../../../../assets/svg/location-placeholder.svg?react";
 import EditIcon from "../../../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../../../assets/svg/upload-cloud.svg?react";
-import InputTextArea from "../../../../../ui/InputTextArea/InputTextArea";
-import UploadImage from "../../../../../Components/UploadImage/UploadImage";
+import InputTextArea from "../../../../../components/ui/InputTextArea";
+import UploadImage from "../../../../../components/UploadImage";
 export const Basic = () => {
   return (
     <div className="flex flex-col gap-3">
