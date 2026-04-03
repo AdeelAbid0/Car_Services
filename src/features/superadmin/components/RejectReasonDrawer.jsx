@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CommonDrawer from "../../../components/ui/Drawer";
+import CommonDrawer from "../../../shared/components/ui/Drawer";
 import { Checkbox } from "antd";
 
 const RejectReasonDrawer = ({ setRejectDrawer }) => {

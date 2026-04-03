@@ -1,5 +1,5 @@
 import { useState, lazy, Suspense } from "react";
-import Segment from "../../../components/Segment";
+import Segment from "../../../shared/components/common/Segment";
 const PersonalInfo = lazy(() => import("../components/PersonalInfo"));
 const Overview = lazy(() => import("../components/Overview"));
 const SecurityAndLoginSettings = lazy(

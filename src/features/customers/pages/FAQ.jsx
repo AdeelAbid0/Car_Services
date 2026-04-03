@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AddIcon from "../../../assets/svg/add.svg?react";
 import Send from "../../../assets/svg/send.svg?react";
-import InputText from "../../../components/ui/InputText";
+import InputText from "../../../shared/components/ui/InputText";
 import { useFormik } from "formik";
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);

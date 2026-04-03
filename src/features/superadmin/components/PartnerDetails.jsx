@@ -1,4 +1,4 @@
-import CommonDrawer from "../../../components/ui/Drawer";
+import CommonDrawer from "../../../shared/components/ui/Drawer";
 import StarActive from "../../../assets/svg/star-active.svg?react";
 import StarDefault from "../../../assets/svg/star-default.svg?react";
 import ProfileIcon from "../../../assets/svg/profile-circle.svg?react";

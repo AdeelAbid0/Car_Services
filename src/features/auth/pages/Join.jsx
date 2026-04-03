@@ -4,7 +4,7 @@ import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
 import Logo from "../../../assets/svg/logo-dark.svg?react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
-import Button from "../../../components/ui/Button";
+import Button from "../../../shared/components/ui/Button";
 import { useState } from "react";
 
 const Join = ({ imageSrc = "/Images/hero-image.png" }) => {

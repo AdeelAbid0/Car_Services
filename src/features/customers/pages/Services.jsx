@@ -2,9 +2,9 @@ import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import DummyIcon from "../../../assets/svg/dummy.svg?react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Segment from "../../../components/Segment";
+import Segment from "../../../shared/components/common/Segment";
 import { BookingDrawer } from "../components/BookingDrawer";
-import InputText from "../../../components/ui/InputText";
+import InputText from "../../../shared/components/ui/InputText";
 const Services = () => {
   const navigate = useNavigate();
   const [serviceCategory, setServiceCategory] = useState(1);

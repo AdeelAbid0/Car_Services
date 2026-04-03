@@ -1,9 +1,9 @@
-import InputText from "../../../components/ui/InputText";
+import InputText from "../../../shared/components/ui/InputText";
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import AddIcon from "../../../assets/svg/add.svg?react";
 import { lazy, Suspense, useState } from "react";
-import Button from "../../../components/ui/Button";
-import Segment from "../../../components/Segment";
+import Button from "../../../shared/components/ui/Button";
+import Segment from "../../../shared/components/common/Segment";
 import AddPartnerDrawer from "../components/AddPartnerDrawer";
 import PartnerDetails from "../components/PartnerDetails";
 import RemovePartnerDrawer from "../components/RemovePartnerDrawer";

@@ -1,5 +1,5 @@
 import { DatePicker } from "antd";
-import CalendarIcon from "../../assets/svg/calendar-outline.svg?react";
+import CalendarIcon from "../../../assets/svg/calendar-outline.svg?react";
 const Datepicker = ({ placeholder, handleDateChange, size }) => {
   return (
     <DatePicker

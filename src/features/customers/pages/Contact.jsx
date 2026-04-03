@@ -6,9 +6,9 @@ import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import ContactSendIcon from "../../../assets/svg/contact-send.svg?react";
 import ContactHeartIcon from "../../../assets/svg/contact-heart.svg?react";
 import ContactBg from "../../../assets/Images/contact-bg.svg?react";
-import InputText from "../../../components/ui/InputText";
-import InputTextArea from "../../../components/ui/InputTextArea";
-import Button from "../../../components/ui/Button";
+import InputText from "../../../shared/components/ui/InputText";
+import InputTextArea from "../../../shared/components/ui/InputTextArea";
+import Button from "../../../shared/components/ui/Button";
 
 const Contact = () => {
   return (

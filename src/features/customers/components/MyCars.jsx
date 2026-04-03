@@ -5,10 +5,10 @@ import Edit from "../../../assets/svg/edit-2.svg?react";
 import Delete from "../../../assets/svg/delete.svg?react";
 import Plus from "../../../assets/svg/add.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
-import Button from "../../../components/ui/Button";
-import CommonDrawer from "../../../components/ui/Drawer";
-import InputText from "../../../components/ui/InputText";
-import UploadImage from "../../../components/UploadImage";
+import Button from "../../../shared/components/ui/Button";
+import CommonDrawer from "../../../shared/components/ui/Drawer";
+import InputText from "../../../shared/components/ui/InputText";
+import UploadImage from "../../../shared/components/common/UploadImage";
 const MyCars = () => {
   const [addNewCar, setAddNewCar] = useState(false);
   const carsData = [

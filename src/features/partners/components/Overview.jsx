@@ -16,9 +16,9 @@ import User from "../../../assets/svg/user.svg?react";
 import Mail from "../../../assets/svg/mail.svg?react";
 import Call from "../../../assets/svg/call-filled.svg?react";
 import Location from "../../../assets/svg/location-2.svg?react";
-import Button from "../../../components/ui/Button";
-import CommonDrawer from "../../../components/ui/Drawer";
-import AccountDetailCard from "../../../components/AccountDetailCard";
+import Button from "../../../shared/components/ui/Button";
+import CommonDrawer from "../../../shared/components/ui/Drawer";
+import AccountDetailCard from "../../../shared/components/common/AccountDetailCard";
 
 const Overview = () => {
   const [openDetailDrawer, setOpenDetailDrawer] = useState(false);

@@ -7,7 +7,7 @@ import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
 import CardDetails from "../components/CardDetails";
 import LoadingPayment from "../components/LoadingPayment";
 import PaymentSuccess from "../components/PaymentSuccess";
-import Button from "../../../components/ui/Button";
+import Button from "../../../shared/components/ui/Button";
 
 const SelectPaymentMethod = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);

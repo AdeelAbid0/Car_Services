@@ -1,6 +1,6 @@
 import { Input } from "antd";
 import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
-import AuthCard from "../../../components/AuthCard";
+import AuthCard from "../../../shared/components/common/AuthCard";
 
 const VerifyOTP = () => {
   const handleVerifyOTP = () => {

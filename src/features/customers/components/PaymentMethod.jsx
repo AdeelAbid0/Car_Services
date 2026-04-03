@@ -6,7 +6,7 @@ import TickSquare from "../../../assets/svg/tick-square.svg?react";
 import Card from "../../../assets/svg/card.svg?react";
 import Plus from "../../../assets/svg/add.svg?react";
 import CardImage from "../../../assets/Images/cards.svg?react";
-import Button from "../../../components/ui/Button";
+import Button from "../../../shared/components/ui/Button";
 const PaymentMethod = () => {
   const paymentData = [
     {

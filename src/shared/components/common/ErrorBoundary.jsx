@@ -1,7 +1,7 @@
 import React from "react";
 import { Result } from "antd";
-import { ROUTES } from "../constants/routes";
-import Button from "./ui/Button";
+import { ROUTES } from "../../../constants/routes";
+import Button from "../ui/Button";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

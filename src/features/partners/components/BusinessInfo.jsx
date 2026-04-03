@@ -2,9 +2,9 @@ import UserIcon from "../../../assets/svg/user.svg?react";
 import LocationPlaceholder from "../../../assets/svg/location-placeholder.svg?react";
 import EditIcon from "../../../assets/svg/edit-2.svg?react";
 import { useState } from "react";
-import CommonSelect from "../../../components/ui/Select";
-import Button from "../../../components/ui/Button";
-import InputText from "../../../components/ui/InputText";
+import CommonSelect from "../../../shared/components/ui/Select";
+import Button from "../../../shared/components/ui/Button";
+import InputText from "../../../shared/components/ui/InputText";
 
 const categories = [
   { label: "Home", value: "Home" },

@@ -1,6 +1,6 @@
 import { useState, lazy, Suspense } from "react";
 import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
-import Segment from "../../../components/Segment";
+import Segment from "../../../shared/components/common/Segment";
 
 // Lazy load components
 const NewRequests = lazy(() => import("../components/NewRequests"));

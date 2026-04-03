@@ -1,4 +1,4 @@
-import InputText from "../../../components/ui/InputText";
+import InputText from "../../../shared/components/ui/InputText";
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import MoreIcon from "../../../assets/svg/more.svg?react";
 import AddIcon from "../../../assets/svg/add.svg?react";
@@ -7,9 +7,9 @@ import EditIcon from "../../../assets/svg/edit-2.svg?react";
 import DeleteIcon from "../../../assets/svg/delete.svg?react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../components/ui/Button";
+import Button from "../../../shared/components/ui/Button";
 import { Dropdown } from "antd";
-import Segment from "../../../components/Segment";
+import Segment from "../../../shared/components/common/Segment";
 import AddServicesDrawer from "../../partners/components/AddServicesDrawer";
 import EditServicesDrawer from "../../partners/components/EditServicesDrawer";
 

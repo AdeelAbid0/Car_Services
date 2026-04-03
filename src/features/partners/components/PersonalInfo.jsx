@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Upload } from "antd";
-import InputText from "../../../components/ui/InputText";
-import Button from "../../../components/ui/Button";
+import InputText from "../../../shared/components/ui/InputText";
+import Button from "../../../shared/components/ui/Button";
 import UserIcon from "../../../assets/svg/user.svg?react";
 import PhoneIcon from "../../../assets/svg/call-filled.svg?react";
 import EditIcon from "../../../assets/svg/edit-2.svg?react";

@@ -13,7 +13,7 @@ import Question from "../../assets/svg/question.svg?react";
 import Payment from "../../assets/svg/payment-partner.svg?react";
 import Support from "../../assets/svg/support.svg?react";
 import { getNavItems, getDropdownItems } from "../../config/navigation";
-import Button from "../../components/ui/Button";
+import Button from "../../shared/components/ui/Button";
 
 const Header = ({ user, token }) => {
   const navigate = useNavigate();

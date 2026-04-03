@@ -2,8 +2,8 @@ import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
 import CardIcon from "../../../assets/svg/password-placeholder.svg?react";
 import EasypaisaLogo from "../../../assets/svg/easypaisa-logo.svg?react";
 import JazzcashLogo from "../../../assets/svg/jazzcash-logo.svg?react";
-import InputText from "../../../components/ui/InputText";
-import Button from "../../../components/ui/Button";
+import InputText from "../../../shared/components/ui/InputText";
+import Button from "../../../shared/components/ui/Button";
 
 const CardDetails = ({ currentStep, setCurrentStep, selectedMethod }) => {
   return (

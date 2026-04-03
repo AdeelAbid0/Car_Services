@@ -4,9 +4,9 @@ import AddIcon from "../../../assets/svg/add.svg?react";
 import MoreIcon from "../../../assets/svg/more.svg?react";
 import EditIcon from "../../../assets/svg/edit-2.svg?react";
 import DeleteIcon from "../../../assets/svg/delete.svg?react";
-import Button from "../../../components/ui/Button";
+import Button from "../../../shared/components/ui/Button";
 import AddServicesDrawer from "../components/AddServicesDrawer";
-import CommonModal from "../../../components/ui/Modal";
+import CommonModal from "../../../shared/components/ui/Modal";
 const Manage_Services = () => {
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);
 

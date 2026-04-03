@@ -1,7 +1,7 @@
 import { Dropdown } from "antd";
 import { useState } from "react";
-import AccountDetailCard from "../../../components/AccountDetailCard";
-import Button from "../../../components/ui/Button";
+import AccountDetailCard from "../../../shared/components/common/AccountDetailCard";
+import Button from "../../../shared/components/ui/Button";
 import CardPrimary from "../../../assets/svg/card-primary.svg?react";
 import CardSecondary from "../../../assets/svg/card-secondary.svg?react";
 import MenuIcon from "../../../assets/svg/menu-icon.svg?react";

@@ -1,14 +1,14 @@
 import { useState } from "react";
-import CommonDrawer from "../../../components/ui/Drawer";
-import InputText from "../../../components/ui/InputText";
+import CommonDrawer from "../../../shared/components/ui/Drawer";
+import InputText from "../../../shared/components/ui/InputText";
 import UserIcon from "../../../assets/svg/user.svg?react";
 import EmailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import PhoneIcon from "../../../assets/svg/call-filled.svg?react";
 import LocationPlaceholder from "../../../assets/svg/location-placeholder.svg?react";
 import EditIcon from "../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
-import InputTextArea from "../../../components/ui/InputTextArea";
-import UploadImage from "../../../components/UploadImage";
+import InputTextArea from "../../../shared/components/ui/InputTextArea";
+import UploadImage from "../../../shared/components/common/UploadImage";
 export const Basic = () => {
   return (
     <div className="flex flex-col gap-3">

@@ -1,4 +1,4 @@
-import PartnerCard from "../../../components/PartnerCard";
+import PartnerCard from "../../../shared/components/common/PartnerCard";
 
 const Partners = () => {
   return (

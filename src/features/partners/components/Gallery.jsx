@@ -1,7 +1,7 @@
-import UploadImage from "../../../components/UploadImage";
+import UploadImage from "../../../shared/components/common/UploadImage";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
-import InputTextArea from "../../../components/ui/InputTextArea";
-import Button from "../../../components/ui/Button";
+import InputTextArea from "../../../shared/components/ui/InputTextArea";
+import Button from "../../../shared/components/ui/Button";
 import EditIcon from "../../../assets/svg/edit-2.svg?react";
 
 const Gallery = () => {

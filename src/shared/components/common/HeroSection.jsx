@@ -1,11 +1,88 @@
 import { useState, useRef, useEffect } from "react";
-import SearchIcon from "../../assets/svg/search.svg?react";
-import HeroSendIcon from "../../assets/svg/hero-send.svg?react";
+import SearchIcon from "../../../assets/svg/search.svg?react";
+import HeroSendIcon from "../../../assets/svg/hero-send.svg?react";
+import LocationIcon from "../../../assets/svg/location.svg?react";
+import RouteIcon from "../../../assets/svg/route.svg?react";
+import InputText from "../ui/InputText";
+import CustomCalendar from "./Calendar";
 import { Button } from "antd";
-import CustomCalendar from "../Calendar";
-import Locations from "./components/Locations";
-import Services from "./components/Services";
-
+export const Services = () => {
+  return (
+    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-[full] p-5">
+      {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => {
+        return (
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex justify-center items-center min-w-21 min-h-21 rounded-xl bg-background border border-[#D8D4FF]">
+              <LocationIcon />
+            </div>
+            <h1 className="text-muted-foreground text-xs font-normal">
+              oil change
+            </h1>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+export const Locations = () => {
+  return (
+    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-full p-5">
+      <div className="flex flex-col w-full justify-center items-center gap-2">
+        <InputText
+          placeholder={"Search place"}
+          className={"max-w-75 rounded-full!"}
+        />
+        <div className="flex w-full flex-col gap-4">
+          <div className="flex w-full justify-between">
+            <div className="flex items-center gap-5 w-[49%] bg-background p-1 rounded-2xl">
+              <div className="flex justify-center items-center w-14 h-14 rounded-md bg-white">
+                <LocationIcon />
+              </div>
+              <div className="flex flex-col gap-2 w-[49%] bg-background">
+                <h1 className="text-foreground text-[13px] font-medium">
+                  Nearby
+                </h1>
+                <p className="text-[10px] font-normal text-muted-foreground">
+                  Find What’s around you
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-5 w-[49%] bg-background p-1 rounded-2xl">
+              <div className="flex justify-center items-center w-14 h-14 rounded-md bg-white">
+                <RouteIcon />
+              </div>
+              <div className="flex flex-col gap-2 w-[49%] bg-background">
+                <h1 className="text-foreground text-[13px] font-medium">
+                  Google Maps
+                </h1>
+                <p className="text-[10px] font-normal text-muted-foreground">
+                  Choose on maps
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-muted-foreground text-[10px] font-normal">
+              Suggestions
+            </label>
+            {[1, 2, 3].map((item) => {
+              return (
+                <div className="flex flex-col gap-1  mt-2.5">
+                  <h1 className="text-[13px] font-normal text-foreground">
+                    F-8 Markaz, Islamabad
+                  </h1>
+                  <p className="font-normal text-muted-foreground text-[10px]">
+                    Mehmand Car Garage
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [heroHeight, setHeroHeight] = useState("100vh");

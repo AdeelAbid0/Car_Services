@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from "react";
-import AuthCardPartner from "../../../components/AuthCardPartner";
+import AuthCardPartner from "../../../shared/components/common/AuthCardPartner";
 import PartnerIcon from "../../../assets/svg/partner.svg?react";
 import UserIcon from "../../../assets/svg/user.svg?react";
 import EmailIcon from "../../../assets/svg/mail-placeholder.svg?react";
@@ -7,9 +7,9 @@ import LocationPlaceholder from "../../../assets/svg/location-placeholder.svg?re
 import EditIcon from "../../../assets/svg/edit.svg?react";
 import UploadIcon from "../../../assets/svg/upload-cloud.svg?react";
 import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
-import InputTextArea from "../../../components/ui/InputTextArea";
-import UploadImage from "../../../components/UploadImage";
-import InputText from "../../../components/ui/InputText";
+import InputTextArea from "../../../shared/components/ui/InputTextArea";
+import UploadImage from "../../../shared/components/common/UploadImage";
+import InputText from "../../../shared/components/ui/InputText";
 const FinalScreen = lazy(() => import("../components/FinalScreen"));
 
 const RegisterPartner = () => {

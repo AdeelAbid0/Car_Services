@@ -1,11 +1,11 @@
 import { Checkbox } from "antd";
-import InputText from "../../../components/ui/InputText";
+import InputText from "../../../shared/components/ui/InputText";
 import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
 import MailIcon from "../../../assets/svg/mail-placeholder.svg?react";
 import PasswordIcon from "../../../assets/svg/password-placeholder.svg?react";
 import EyeIcon from "../../../assets/svg/eye-icon.svg?react";
 import UserIcon from "../../../assets/svg/user.svg?react";
-import AuthCard from "../../../components/AuthCard";
+import AuthCard from "../../../shared/components/common/AuthCard";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
 import { useFormik } from "formik";

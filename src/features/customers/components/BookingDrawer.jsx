@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BookingSteps from "./BookingSteps";
 import CloseIcon from "../../../assets/svg/add.svg?react";
-import CommonDrawer from "../../../components/ui/Drawer";
+import CommonDrawer from "../../../shared/components/ui/Drawer";
 
 export const BookingDrawer = ({ showBookingDrawer, setShowBookingDrawer }) => {
   const [currentStep, setCurrentStep] = useState(2);

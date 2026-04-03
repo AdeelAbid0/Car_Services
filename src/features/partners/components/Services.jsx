@@ -1,6 +1,6 @@
 import { useState } from "react";
-import InputText from "../../../components/ui/InputText";
-import Button from "../../../components/ui/Button";
+import InputText from "../../../shared/components/ui/InputText";
+import Button from "../../../shared/components/ui/Button";
 import EditIcon from "../../../assets/svg/edit.svg?react";
 import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
 
