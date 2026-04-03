@@ -1,4 +1,4 @@
-import EmptyIcon from "../../../../assets/Images/dashboard-empty-view.svg?react";
+import EmptyIcon from "../../../assets/Images/dashboard-empty-view.svg?react";
 const EmptyView = () => {
   return (
     <div className="flex flex-col gap-5 text-center">

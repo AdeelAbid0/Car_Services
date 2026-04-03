@@ -1,11 +1,11 @@
-import CommonDrawer from "../../../../../components/ui/Drawer";
-import StarActive from "../../../../../assets/svg/star-active.svg?react";
-import StarDefault from "../../../../../assets/svg/star-default.svg?react";
-import ProfileIcon from "../../../../../assets/svg/profile-circle.svg?react";
-import Calendar from "../../../../../assets/svg/calendar.svg?react";
-import Service from "../../../../../assets/svg/service.svg?react";
-import Mail from "../../../../../assets/svg/mail.svg?react";
-import Call from "../../../../../assets/svg/call-filled.svg?react";
+import CommonDrawer from "../../../components/ui/Drawer";
+import StarActive from "../../../assets/svg/star-active.svg?react";
+import StarDefault from "../../../assets/svg/star-default.svg?react";
+import ProfileIcon from "../../../assets/svg/profile-circle.svg?react";
+import Calendar from "../../../assets/svg/calendar.svg?react";
+import Service from "../../../assets/svg/service.svg?react";
+import Mail from "../../../assets/svg/mail.svg?react";
+import Call from "../../../assets/svg/call-filled.svg?react";
 const PartnerDetails = ({
   viewPartnerDetail,
   setViewPartnerDetail,

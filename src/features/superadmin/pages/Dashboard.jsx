@@ -1,33 +1,18 @@
 import AreaChart from "../../../components/AreaChart";
-
 import Button from "../../../components/ui/Button";
-
 import FilterIcon from "../../../assets/svg/filter.svg?react";
-
 import TotalUser from "../../../assets/svg/total-user.svg?react";
-
 import ActiveCustomer from "../../../assets/svg/active-customer.svg?react";
-
 import CloseIcon from "../../../assets/svg/add.svg?react";
-
 import PolygonInc from "../../../assets/svg/polygon.svg?react";
-
 import PolygonDec from "../../../assets/svg/polygon-2.svg?react";
-
 import DetailIcon from "../../../assets/svg/eye-2.svg?react";
-
-import EmptyView from "./components/EmptyView";
-
+import EmptyView from "../components/EmptyView";
 import { DataTable } from "../../../components/ui/DataTable";
-
 import { useState } from "react";
-
-import BusinessDetailDrawer from "./components/BusinessDetailDrawer/BusinessDetailDrawer";
-
-import RejectReasonDrawer from "./components/RejectReasonDrawer/RejectReasonDrawer";
-
+import BusinessDetailDrawer from "../components/BusinessDetailDrawer";
+import RejectReasonDrawer from "../components/RejectReasonDrawer";
 import { Radio } from "antd";
-
 import Datepicker from "../../../components/ui/Datepicker";
 
 const Dashboard = () => {

@@ -1,5 +1,5 @@
 import { Switch } from "antd";
-import ArrowRight from "../../../../assets/svg/arrow-left.svg?react";
+import ArrowRight from "../../../assets/svg/arrow-left.svg?react";
 
 const SecurityAndLoginSettings = () => {
   const settingsSections = [

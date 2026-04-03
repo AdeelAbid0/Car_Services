@@ -3,11 +3,11 @@ import { ROUTES } from "../../constants/routes";
 import PrivateRoutes from "../PrivateRoutes";
 import { ROLES } from "../../constants/roles";
 const Dashboard = lazy(
-  () => import("../../pages/SuperAdmin/Dashboard/Dashboard"),
+  () => import("../../features/superadmin/pages/Dashboard"),
 );
-const Services = lazy(() => import("../../pages/SuperAdmin/Services/Services"));
-const Partners = lazy(() => import("../../pages/SuperAdmin/Partners/Partners"));
-const Profile = lazy(() => import("../../pages/SuperAdmin/Profile/Profile"));
+const Services = lazy(() => import("../../features/superadmin/pages/Services"));
+const Partners = lazy(() => import("../../features/superadmin/pages/Partners"));
+const Profile = lazy(() => import("../../features/superadmin/pages/Profile"));
 
 export const SUPERADMIN_ROUTES = [
   {

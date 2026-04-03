@@ -1,12 +1,12 @@
-import CommonDrawer from "../../../../../components/ui/Drawer";
-import ShopIcon from "../../../../../assets/svg/shop.svg?react";
-import ProfileIcon from "../../../../../assets/svg/profile-circle.svg?react";
-import LocationIcon from "../../../../../assets/svg/location-2.svg?react";
-import Calendar from "../../../../../assets/svg/calendar.svg?react";
-import Service from "../../../../../assets/svg/service.svg?react";
-import Clock from "../../../../../assets/svg/clock.svg?react";
-import Mail from "../../../../../assets/svg/mail.svg?react";
-import Call from "../../../../../assets/svg/call-filled.svg?react";
+import CommonDrawer from "../../../components/ui/Drawer";
+import ShopIcon from "../../../assets/svg/shop.svg?react";
+import ProfileIcon from "../../../assets/svg/profile-circle.svg?react";
+import LocationIcon from "../../../assets/svg/location-2.svg?react";
+import Calendar from "../../../assets/svg/calendar.svg?react";
+import Service from "../../../assets/svg/service.svg?react";
+import Clock from "../../../assets/svg/clock.svg?react";
+import Mail from "../../../assets/svg/mail.svg?react";
+import Call from "../../../assets/svg/call-filled.svg?react";
 const BusinessDetailDrawer = ({
   setShowDetailDrawer,
   selectedBusiness,

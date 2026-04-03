@@ -1,29 +1,14 @@
 import InputText from "../../../components/ui/InputText";
-
 import SearchIcon from "../../../assets/svg/search-normal.svg?react";
-
 import AddIcon from "../../../assets/svg/add.svg?react";
-
 import { lazy, Suspense, useState } from "react";
-
 import Button from "../../../components/ui/Button";
-
 import Segment from "../../../components/Segment";
-
-import AddPartnerDrawer from "./components/AddPartnerDrawer/AddPartnerDrawer";
-
-import PartnerDetails from "./components/PartnerDetails/PartnerDetails";
-
-import RemovePartnerDrawer from "./components/RemovePartnerDrawer/RemovePartnerDrawer";
-
-const AddedByAdmin = lazy(
-  () => import("./components/AddedByAdmin/AddedByAdmin"),
-);
-
-const AddedByPartners = lazy(
-  () => import("./components/AddedByPartners/AddedByPartners"),
-);
-
+import AddPartnerDrawer from "../components/AddPartnerDrawer";
+import PartnerDetails from "../components/PartnerDetails";
+import RemovePartnerDrawer from "../components/RemovePartnerDrawer";
+const AddedByAdmin = lazy(() => import("../components/AddedByAdmin"));
+const AddedByPartners = lazy(() => import("../components/AddedByPartners"));
 const Partners = () => {
   const [activeTab, setActiveTab] = useState(1);
 
