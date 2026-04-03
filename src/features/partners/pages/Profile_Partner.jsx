@@ -1,15 +1,15 @@
 import { useState, lazy, Suspense } from "react";
 import Segment from "../../../components/Segment";
 
-const PersonalInfo = lazy(() => import("./components/PersonalInfo"));
-const BusinessInfo = lazy(() => import("./components/BusinessInfo"));
-const Services = lazy(() => import("./components/Services"));
-const Gallery = lazy(() => import("./components/Gallery"));
+const PersonalInfo = lazy(() => import("../components/PersonalInfo"));
+const BusinessInfo = lazy(() => import("../components/BusinessInfo"));
+const Services = lazy(() => import("../components/Services"));
+const Gallery = lazy(() => import("../components/Gallery"));
 const AvailabilityStatus = lazy(
-  () => import("./components/AvailabilityStatus"),
+  () => import("../components/AvailabilityStatus"),
 );
 const AccountsAndSettings = lazy(
-  () => import("./components/AccountsAndSettings"),
+  () => import("../components/AccountsAndSettings"),
 );
 
 const Profile_Partner = () => {

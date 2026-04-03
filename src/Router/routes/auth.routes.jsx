@@ -5,7 +5,7 @@ import PublicRoutes from "../PublicRoutes";
 const Login = lazy(() => import("../../features/auth/pages/Login"));
 const Register = lazy(() => import("../../features/auth/pages/Register"));
 const RegisterPartner = lazy(
-  () => import("../../pages/Partners/RegisterPartner/RegisterPartner"),
+  () => import("../../features/auth/pages/RegisterPartner"),
 );
 const VerifyOTP = lazy(() => import("../../features/auth/pages/VerifyOTP"));
 const Join = lazy(() => import("../../features/auth/pages/Join"));

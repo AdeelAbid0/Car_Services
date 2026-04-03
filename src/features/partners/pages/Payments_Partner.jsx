@@ -1,7 +1,7 @@
 import { useState, lazy, Suspense } from "react";
 import Segment from "../../../components/Segment";
-const Payout = lazy(() => import("./components/Payout"));
-const Overview = lazy(() => import("./components/Overview"));
+const Payout = lazy(() => import("../components/Payout"));
+const Overview = lazy(() => import("../components/Overview"));
 
 const Payments_Partner = () => {
   const [activeComponent, setActiveComponent] = useState(1);

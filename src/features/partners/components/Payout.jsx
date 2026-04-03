@@ -1,16 +1,16 @@
-import AccountDetailCard from "../../../../components/AccountDetailCard";
-import CardPrimary from "../../../../assets/svg/card-primary.svg?react";
-import CardSecondary from "../../../../assets/svg/card-secondary.svg?react";
-import MenuIcon from "../../../../assets/svg/menu-icon.svg?react";
-import DummyIcon from "../../../../assets/svg/dummy.svg?react";
-import EditIcon from "../../../../assets/svg/edit-2.svg?react";
-import DeleteIcon from "../../../../assets/svg/delete.svg?react";
-import Ticksquare from "../../../../assets/svg/tick-square.svg?react";
-import AddIcon from "../../../../assets/svg/add.svg?react";
-import CardImage from "../../../../assets/Images/cards.svg?react";
 import { Dropdown } from "antd";
 import { useState } from "react";
-import Button from "../../../../components/ui/Button";
+import AccountDetailCard from "../../../components/AccountDetailCard";
+import Button from "../../../components/ui/Button";
+import CardPrimary from "../../../assets/svg/card-primary.svg?react";
+import CardSecondary from "../../../assets/svg/card-secondary.svg?react";
+import MenuIcon from "../../../assets/svg/menu-icon.svg?react";
+import DummyIcon from "../../../assets/svg/dummy.svg?react";
+import EditIcon from "../../../assets/svg/edit-2.svg?react";
+import DeleteIcon from "../../../assets/svg/delete.svg?react";
+import Ticksquare from "../../../assets/svg/tick-square.svg?react";
+import AddIcon from "../../../assets/svg/add.svg?react";
+import CardImage from "../../../assets/Images/cards.svg?react";
 
 const Payout = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

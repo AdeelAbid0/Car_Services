@@ -10,7 +10,7 @@ import TickCircleIcon from "../../../assets/svg/tick-circle.svg?react";
 import InputTextArea from "../../../components/ui/InputTextArea";
 import UploadImage from "../../../components/UploadImage";
 import InputText from "../../../components/ui/InputText";
-const FinalScreen = lazy(() => import("./components/FinalScreen"));
+const FinalScreen = lazy(() => import("../components/FinalScreen"));
 
 const RegisterPartner = () => {
   const [currentStep, setCurrentStep] = useState(1);

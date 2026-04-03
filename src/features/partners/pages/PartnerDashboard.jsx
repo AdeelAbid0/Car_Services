@@ -3,9 +3,9 @@ import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
 import Segment from "../../../components/Segment";
 
 // Lazy load components
-const NewRequests = lazy(() => import("./components/NewRequests"));
-const ActiveJobs = lazy(() => import("./components/ActiveJobs"));
-const Ratings = lazy(() => import("./components/Ratings"));
+const NewRequests = lazy(() => import("../components/NewRequests"));
+const ActiveJobs = lazy(() => import("../components/ActiveJobs"));
+const Ratings = lazy(() => import("../components/Ratings"));
 
 const PartnerDashboard = () => {
   const [activeComponent, setActiveComponent] = useState(1);
