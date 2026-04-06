@@ -7,46 +7,46 @@ const baseNavItems = {
       id: 1,
       label: "Home",
       path: ROUTES.HOME,
-      auth: false,
+      auth: false
     },
     {
       id: 2,
       label: "Services",
       path: ROUTES.SERVICES,
-      auth: false,
+      auth: false
     },
     {
       id: 3,
       label: "Partners",
       path: ROUTES.PARTNERS,
-      auth: false,
+      auth: false
     },
     {
       id: 4,
       label: "My Bookings",
       path: ROUTES.BOOKINGS,
-      auth: true,
-    },
+      auth: true
+    }
   ],
   partner: [
     {
       id: 1,
       label: "Home",
       path: ROUTES.HOME,
-      auth: false,
+      auth: false
     },
     {
       id: 2,
       label: "Dashboard",
       path: ROUTES.PARTNER_DASHBOARD,
-      auth: true,
+      auth: true
     },
     {
       id: 3,
       label: "Manage Services",
       path: ROUTES.PARTNER_MANAGE_SERVICES,
-      auth: true,
-    },
+      auth: true
+    }
   ],
   admin: [
     // Will be added later
@@ -56,29 +56,29 @@ const baseNavItems = {
       id: 1,
       label: "Home",
       path: ROUTES.HOME,
-      auth: false,
+      auth: false
     },
     {
       id: 2,
       label: "Dashboard",
       path: ROUTES.SUPERADMIN_DASHBOARD,
-      auth: true,
+      auth: true
     },
     {
       id: 3,
       label: "Services",
       path: ROUTES.SUPERADMIN_SERVICES,
-      auth: true,
+      auth: true
     },
     {
       id: 4,
       label: "Partners",
       path: ROUTES.SUPERADMIN_PARTNERS,
-      auth: true,
-    },
-  ],
+      auth: true
+    }
+  ]
 };
-export const getNavItems = (user) => {
+export const getNavItems = user => {
   const isAuthenticated = !!localStorage.getItem("token");
   let navItems = [];
 
@@ -92,9 +92,7 @@ export const getNavItems = (user) => {
     navItems = [...baseNavItems.customer];
   }
 
-  return navItems.filter(
-    (item) => !item.auth || (item.auth && isAuthenticated),
-  );
+  return navItems.filter(item => !item.auth || (item.auth && isAuthenticated));
 };
 
 // Export NAV_ITEMS for backward compatibility if needed
@@ -105,66 +103,66 @@ const dropdownItems = {
       id: 1,
       label: "Profile",
       icon: "User",
-      path: ROUTES.PROFILE,
+      path: ROUTES.PROFILE
     },
     {
       id: 2,
       label: "Bookmark",
       icon: "Bookmark",
-      path: ROUTES.HOME,
+      path: ROUTES.HOME
     },
     {
       id: 3,
       label: "Contact Us",
       icon: "Phone",
-      path: ROUTES.CONTACT,
+      path: ROUTES.CONTACT
     },
     {
       id: 4,
       label: "About Us",
       icon: "Info",
-      path: ROUTES.ABOUT,
+      path: ROUTES.ABOUT
     },
     {
       id: 5,
       label: "Have Question in Mind?",
       icon: "Question",
-      path: ROUTES.FAQs,
+      path: ROUTES.FAQs
     },
     {
       id: 6,
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-danger hover:text-danger/80",
-    },
+      className: "text-danger hover:text-danger/80"
+    }
   ],
   partner: [
     {
       id: 1,
       label: "Profile",
       icon: "User",
-      path: ROUTES.PARTNER_PROFILE,
+      path: ROUTES.PARTNER_PROFILE
     },
     {
       id: 2,
       label: "Payment & Payout",
       icon: "Payment",
-      path: ROUTES.PARTNER_PAYMENT,
+      path: ROUTES.PARTNER_PAYMENT
     },
     {
       id: 3,
       label: "Support and Help",
       icon: "Support",
-      path: ROUTES.PARTNER_SUPPORT,
+      path: ROUTES.PARTNER_SUPPORT
     },
     {
       id: 4,
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-danger hover:text-danger/80",
-    },
+      className: "text-danger hover:text-danger/80"
+    }
   ],
   admin: [
     {
@@ -172,24 +170,24 @@ const dropdownItems = {
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-danger hover:text-danger/80",
-    },
+      className: "text-danger hover:text-danger/80"
+    }
   ],
   superAdmin: [
     {
       id: 1,
       label: "Profile",
       icon: "User",
-      path: ROUTES.SUPERADMIN_PROFILE,
+      path: ROUTES.SUPERADMIN_PROFILE
     },
     {
       id: 6,
       label: "Logout",
       icon: "Logout",
       action: "handleLogout",
-      className: "text-danger hover:text-danger/80",
-    },
-  ],
+      className: "text-danger hover:text-danger/80"
+    }
+  ]
 };
 
 // Function to get dropdown items based on user role
@@ -207,7 +205,7 @@ export const getDropdownItems = (user, handleLogout) => {
   }
 
   // Replace the handleLogout action
-  return items.map((item) => {
+  return items.map(item => {
     if (item.action === "handleLogout") {
       return { ...item, action: handleLogout };
     }

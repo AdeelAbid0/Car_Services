@@ -36,5 +36,5 @@ export const ROUTES = {
   SUPERADMIN_DASHBOARD: "superadmin/dashboard",
   SUPERADMIN_SERVICES: "superadmin/services",
   SUPERADMIN_PARTNERS: "superadmin/partners",
-  SUPERADMIN_PROFILE: "superadmin/profile",
+  SUPERADMIN_PROFILE: "superadmin/profile"
 };

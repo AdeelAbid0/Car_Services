@@ -6,7 +6,7 @@ import {
   PROFILE_ROUTES,
   PARTNER_ROUTES,
   SUPERADMIN_ROUTES,
-  UNAUTHORIZED_ROUTES,
+  UNAUTHORIZED_ROUTES
 } from "./routes";
 
 export const appRoutes = [
@@ -18,5 +18,5 @@ export const appRoutes = [
   ...PAYMENT_ROUTES,
   ...PARTNER_ROUTES,
   ...SUPERADMIN_ROUTES,
-  ...UNAUTHORIZED_ROUTES,
+  ...UNAUTHORIZED_ROUTES
 ];
