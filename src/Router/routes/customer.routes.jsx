@@ -10,19 +10,22 @@ const Contact = lazy(() => import("../../features/customers/pages/Contact"));
 const Services = lazy(() => import("../../features/customers/pages/Services"));
 const Partners = lazy(() => import("../../features/customers/pages/Partners"));
 const My_Wallet = lazy(
-  () => import("../../features/customers/pages/My_Wallet"),
+  () => import("../../features/customers/pages/My_Wallet")
+);
+const SelectPaymentMethod = lazy(
+  () => import("../../features/customers/pages/SelectPaymentMethod")
 );
 const Bookings = lazy(() => import("../../features/customers/pages/Bookings"));
 const Profile = lazy(() => import("../../features/customers/pages/Profile"));
 
-export const LANDINGPAGE_ROUTES = [
+export const CUSTOMER_ROUTES = [
   {
     path: ROUTES.SERVICES,
     element: (
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Services />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.PARTNERS,
@@ -30,7 +33,7 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Partners />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.BOOKINGS,
@@ -38,7 +41,7 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Bookings />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.MY_WALLET,
@@ -46,7 +49,15 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <My_Wallet />
       </PrivateRoutes>
-    ),
+    )
+  },
+  {
+    path: ROUTES.PAYMENT,
+    element: (
+      <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
+        <SelectPaymentMethod />
+      </PrivateRoutes>
+    )
   },
   {
     path: ROUTES.PROFILE,
@@ -54,7 +65,7 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes>
         <Profile allowedRoles={[ROLES.CUSTOMER]} />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.ABOUT,
@@ -62,7 +73,7 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <About />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.CONTACT,
@@ -70,7 +81,7 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <Contact />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.FAQs,
@@ -78,7 +89,7 @@ export const LANDINGPAGE_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.CUSTOMER]}>
         <FAQ />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: "*",
@@ -86,6 +97,6 @@ export const LANDINGPAGE_ROUTES = [
       <PublicRoutes>
         <NotFound />
       </PublicRoutes>
-    ),
-  },
+    )
+  }
 ];

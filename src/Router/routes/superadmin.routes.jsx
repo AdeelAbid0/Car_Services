@@ -3,7 +3,7 @@ import { ROUTES } from "../../constants/routes";
 import PrivateRoutes from "../PrivateRoutes";
 import { ROLES } from "../../constants/roles";
 const Dashboard = lazy(
-  () => import("../../features/superadmin/pages/Dashboard"),
+  () => import("../../features/superadmin/pages/Dashboard")
 );
 const Services = lazy(() => import("../../features/superadmin/pages/Services"));
 const Partners = lazy(() => import("../../features/superadmin/pages/Partners"));
@@ -16,7 +16,7 @@ export const SUPERADMIN_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.SUPERADMIN]}>
         <Dashboard />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.SUPERADMIN_SERVICES,
@@ -24,7 +24,7 @@ export const SUPERADMIN_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.SUPERADMIN]}>
         <Services />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.SUPERADMIN_PARTNERS,
@@ -32,7 +32,7 @@ export const SUPERADMIN_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.SUPERADMIN]}>
         <Partners />
       </PrivateRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.SUPERADMIN_PROFILE,
@@ -40,6 +40,6 @@ export const SUPERADMIN_ROUTES = [
       <PrivateRoutes allowedRoles={[ROLES.SUPERADMIN]}>
         <Profile />
       </PrivateRoutes>
-    ),
-  },
+    )
+  }
 ];
