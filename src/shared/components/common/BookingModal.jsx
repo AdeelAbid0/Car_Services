@@ -66,7 +66,7 @@ const BookingModal = ({ showBookingModal, setShowBookingModal }) => {
             <h1 className="text-foreground text-2xl font-semibold!">
               Choose Partner
             </h1>
-            {[1, 2, 3].map((item) => {
+            {[1, 2, 3].map(item => {
               return (
                 <PartnerCard
                   profileImage={"/Images/hero-image.png"}

@@ -15,198 +15,128 @@ import EditServicesDrawer from "../../partners/components/EditServicesDrawer";
 
 const Services = () => {
   const navigate = useNavigate();
-
   const [serviceCategory, setServiceCategory] = useState(1);
-
   const [selectedService, setSelectedService] = useState();
-
   const [servicesData, setServicesData] = useState([]);
-
   const [activeTab, setActiveTab] = useState("admin");
-
   const [openDropdownId, setOpenDropdownId] = useState(null);
-
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);
-
   const [editServiceDrawer, setEditServiceDrawer] = useState(false);
-
   const carServices = [
     {
       id: 1,
-
       name: "All",
-
       subServices: [
         { id: 1, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 2, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 3, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 4, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 5, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 6, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 7, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 8, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 9, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 10, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 11, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 12, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 13, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 14, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 15, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 16, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 17, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 18, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 19, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 20, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 21, name: "Tire Rotation", icon: <DummyIcon /> },
-
-        { id: 22, name: "Tire Rotation", icon: <DummyIcon /> },
-      ],
+        { id: 22, name: "Tire Rotation", icon: <DummyIcon /> }
+      ]
     },
-
     {
       id: 2,
-
       name: "Tire Rotation",
-
       subServices: [
         { id: 1, name: "Tire Rotation", icon: <DummyIcon /> },
-
         { id: 2, name: "Tire Rotation", icon: <DummyIcon /> },
-
-        { id: 3, name: "Tire Rotation", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "Tire Rotation", icon: <DummyIcon /> }
+      ]
     },
-
     {
       id: 3,
-
       name: "Brake Service",
-
       subServices: [
         { id: 1, name: "Brake Service", icon: <DummyIcon /> },
-
         { id: 2, name: "Brake Service", icon: <DummyIcon /> },
-
-        { id: 3, name: "Brake Service", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "Brake Service", icon: <DummyIcon /> }
+      ]
     },
-
     {
       id: 4,
-
       name: "Engine Diagnostics",
-
       subServices: [
         { id: 1, name: "Engine Diagnostics", icon: <DummyIcon /> },
-
         { id: 2, name: "Engine Diagnostics", icon: <DummyIcon /> },
-
-        { id: 3, name: "Engine Diagnostics", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "Engine Diagnostics", icon: <DummyIcon /> }
+      ]
     },
-
     {
       id: 5,
-
       name: "AC Service",
-
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
-
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
-
-        { id: 3, name: "AC Service", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "AC Service", icon: <DummyIcon /> }
+      ]
     },
-
     {
       id: 6,
-
       name: "AC Service",
-
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
-
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
-
-        { id: 3, name: "AC Service", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "AC Service", icon: <DummyIcon /> }
+      ]
     },
-
     {
       id: 7,
-
       name: "AC Service",
-
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
-
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
-
-        { id: 3, name: "AC Service", icon: <DummyIcon /> },
-      ],
-    },
+        { id: 3, name: "AC Service", icon: <DummyIcon /> }
+      ]
+    }
   ];
 
   const items = [
     {
       key: "1",
-
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
           <p className="text-xs font-normal! text-foreground">Edit</p>
-
           <EditIcon />
         </div>
-      ),
+      )
     },
-
     {
       key: "2",
-
       label: (
         <div className="flex w-full gap-3 justify-between items-center">
           <p className="text-xs font-normal! text-foreground">Delete</p>
-
           <DeleteIcon />
         </div>
-      ),
-    },
+      )
+    }
   ];
 
   useEffect(() => {
     if (serviceCategory) {
-      const service = carServices.find((s) => s.id === serviceCategory);
-
+      const service = carServices.find(s => s.id === serviceCategory);
       setServicesData(service?.subServices || []);
     }
   }, [serviceCategory]);
-
   const handleMenuClick = (e, serviceId) => {
     console.log("Menu item clicked:", e.key, "for service:", serviceId);
-
     setOpenDropdownId(null);
-
     if (e.key === "1") {
       setEditServiceDrawer(true);
     } else if (e.key === "2") {
@@ -225,19 +155,14 @@ const Services = () => {
   const tabs = [
     {
       id: "admin",
-
       label: "Admin",
-
-      component: <></>,
+      component: <></>
     },
-
     {
       id: "partner",
-
       label: "Partners",
-
-      component: <></>,
-    },
+      component: <></>
+    }
   ];
 
   return (
@@ -271,7 +196,7 @@ const Services = () => {
           </div>
 
           <div className="flex w-fit gap-6 border-b border-border">
-            {carServices.map((service) => (
+            {carServices.map(service => (
               <div
                 key={service.id}
                 className={`pb-2  ${
@@ -291,7 +216,7 @@ const Services = () => {
           </div>
 
           <div className="flex w-full flex-wrap gap-6">
-            {servicesData.map((service) => (
+            {servicesData.map(service => (
               <div
                 key={service.id}
                 className={`relative flex flex-col gap-2 justify-center items-center rounded-xl w-38 h-30 cursor-pointer bg-muted-background hover:bg-white ${
@@ -314,25 +239,25 @@ const Services = () => {
                     menu={{
                       items,
 
-                      onClick: (e) => handleMenuClick(e, service.id),
+                      onClick: e => handleMenuClick(e, service.id)
                     }}
                     placement="bottomRight"
                     trigger={["click"]}
                     open={openDropdownId === service.id}
-                    onOpenChange={(open) =>
+                    onOpenChange={open =>
                       handleDropdownOpenChange(open, service.id)
                     }
                     overlayStyle={{ zIndex: 1050 }}
                   >
                     <div
                       className="cursor-pointer hover:bg-gray-100 p-2 rounded-full transition-colors"
-                      onClick={(e) => {
+                      onClick={e => {
                         e.stopPropagation();
 
                         handleDropdownOpenChange(
                           !(openDropdownId === service.id),
 
-                          service.id,
+                          service.id
                         );
                       }}
                     >

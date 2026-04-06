@@ -13,33 +13,31 @@ const Profile = () => {
     {
       id: 1,
       title: "Personal Info",
-      Component: PersonalInfo,
+      Component: PersonalInfo
     },
     {
       id: 2,
       title: "My Cars",
-      Component: MyCars,
+      Component: MyCars
     },
     {
       id: 3,
       title: "Saved Address",
-      Component: Address,
+      Component: Address
     },
     {
       id: 4,
       title: "Saved Payment Methods",
-      Component: PaymentMethod,
+      Component: PaymentMethod
     },
     {
       id: 5,
       title: "Accounts and Settings",
-      Component: Settings,
-    },
+      Component: Settings
+    }
   ];
 
-  const ActiveComponent = tabs.find(
-    (item) => item.id === selectedTab,
-  )?.Component;
+  const ActiveComponent = tabs.find(item => item.id === selectedTab)?.Component;
 
   return (
     <div className="flex flex-col w-full items-center h-full overflow-auto py-11 relative z-10 overflow-x-hidden">
@@ -54,7 +52,7 @@ const Profile = () => {
           </p>
         </div>
         <div className="flex w-full gap-6 border-b border-border">
-          {tabs.map((item) => (
+          {tabs.map(item => (
             <div
               key={item.id}
               className={`pb-2 cursor-pointer ${

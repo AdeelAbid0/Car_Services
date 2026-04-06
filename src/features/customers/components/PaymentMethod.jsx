@@ -15,8 +15,8 @@ const PaymentMethod = () => {
       cardHolderName: "Adeel Abid",
       cardNumber: "4859 4859 4859 4859",
       expiryDate: "12/24",
-      Tag: "Default",
-    },
+      Tag: "Default"
+    }
   ];
   const items = [
     {
@@ -26,7 +26,7 @@ const PaymentMethod = () => {
           <p className="text-[13px]! text-foreground! font-normal">Default</p>
           <TickSquare />
         </div>
-      ),
+      )
     },
     {
       key: "2",
@@ -35,7 +35,7 @@ const PaymentMethod = () => {
           <p className="text-[13px]! text-foreground! font-normal">Edit</p>
           <Edit className="text-foreground/70" />
         </div>
-      ),
+      )
     },
     {
       key: "3",
@@ -44,13 +44,13 @@ const PaymentMethod = () => {
           <p className="text-[13px]! text-foreground! font-normal">Delete</p>
           <Delete />
         </div>
-      ),
-    },
+      )
+    }
   ];
   return (
     <div className="flex w-full gap-16">
       <div className="flex w-[60%] flex-col gap-2">
-        {paymentData?.map((payment) => (
+        {paymentData?.map(payment => (
           <div
             key={payment?.id}
             className="bg-muted-background hover:bg-white p-6 rounded-2xl flex justify-between"

@@ -10,7 +10,7 @@ const Button = ({
   prefixIcon,
   suffixIcon,
   className,
-  width = "auto",
+  width = "auto"
 }) => {
   // Width classes based on type or prop
   const getWidthClass = () => {

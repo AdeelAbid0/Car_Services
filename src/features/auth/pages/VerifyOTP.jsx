@@ -36,7 +36,7 @@ const VerifyOTP = () => {
             style={{
               "--antd-otp-input-width": "48px",
               "--antd-otp-input-height": "48px",
-              "--antd-otp-input-padding": "0", // agar padding adjust karni ho
+              "--antd-otp-input-padding": "0" // agar padding adjust karni ho
             }}
           />
         </div>

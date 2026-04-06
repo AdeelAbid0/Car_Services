@@ -13,7 +13,7 @@ const PartnerCard = ({
   services,
   price,
   rating,
-  onCLick,
+  onCLick
 }) => {
   return (
     <div

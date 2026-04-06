@@ -9,19 +9,19 @@ const AccountsAndSettings = () => {
         { label: "Enable Notifications", type: "switch" },
         { label: "Payment and invoice alerts", type: "switch" },
         { label: "Review reminders", type: "switch" },
-        { label: "Promotions and offers", type: "switch" },
-      ],
+        { label: "Promotions and offers", type: "switch" }
+      ]
     },
     {
       title: "Account",
       items: [
         { label: "Deactivate account", type: "text" },
-        { label: "Contact support", type: "arrow" },
-      ],
-    },
+        { label: "Contact support", type: "arrow" }
+      ]
+    }
   ];
 
-  const renderItem = (item) => {
+  const renderItem = item => {
     const isDeactivateAccount = item.label.toLowerCase().includes("deactivate");
 
     return (
@@ -55,7 +55,7 @@ const AccountsAndSettings = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-[35%]">
-      {settingsSections.map((section) => (
+      {settingsSections.map(section => (
         <div key={section.title} className="flex flex-col gap-2">
           <h1 className="text-xs text-muted-foreground font-medium">
             {section.title}

@@ -6,49 +6,49 @@ import { useFormik } from "formik";
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleQuestion = (index) => {
+  const toggleQuestion = index => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   const formik = useFormik({
     initialValues: {
-      question: "",
+      question: ""
     },
-    onSubmit: (values) => {
+    onSubmit: values => {
       console.log(values);
-    },
+    }
   });
 
   const faqs = [
     {
       question: "What services do you offer?",
       answer:
-        "We provide comprehensive car services including oil changes, tire rotations, brake services, engine diagnostics, and more to keep your vehicle running smoothly.",
+        "We provide comprehensive car services including oil changes, tire rotations, brake services, engine diagnostics, and more to keep your vehicle running smoothly."
     },
     {
       question: "How do I book a service?",
       answer:
-        "You can book a service through our website or mobile app by selecting your preferred service, date, and time. You'll receive a confirmation once your booking is confirmed.",
+        "You can book a service through our website or mobile app by selecting your preferred service, date, and time. You'll receive a confirmation once your booking is confirmed."
     },
     {
       question: "What are your working hours?",
       answer:
-        "We're open Monday to Saturday from 9:00 AM to 8:00 PM. Our service center is closed on Sundays and public holidays.",
+        "We're open Monday to Saturday from 9:00 AM to 8:00 PM. Our service center is closed on Sundays and public holidays."
     },
     {
       question: "Do you offer emergency services?",
       answer:
-        "Yes, we provide 24/7 emergency towing and roadside assistance. Call our emergency hotline for immediate assistance.",
+        "Yes, we provide 24/7 emergency towing and roadside assistance. Call our emergency hotline for immediate assistance."
     },
     {
       question: "What payment methods do you accept?",
       answer:
-        "We accept all major credit/debit cards, mobile payments, and cash. We also offer flexible payment plans for major repairs.",
+        "We accept all major credit/debit cards, mobile payments, and cash. We also offer flexible payment plans for major repairs."
     },
     {
       question: "How often should I service my car?",
       answer:
-        "We recommend a basic service every 6 months or 5,000 miles, whichever comes first. However, this may vary based on your vehicle's make and model.",
-    },
+        "We recommend a basic service every 6 months or 5,000 miles, whichever comes first. However, this may vary based on your vehicle's make and model."
+    }
   ];
 
   return (

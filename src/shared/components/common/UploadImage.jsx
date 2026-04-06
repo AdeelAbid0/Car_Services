@@ -4,7 +4,7 @@ const UploadImage = ({ svg, title, description, onFileSelect }) => {
   // Allowed file types
   const allowedTypes = ["image/png", "image/jpeg", "image/jpg"];
 
-  const beforeUpload = (file) => {
+  const beforeUpload = file => {
     const isImage = allowedTypes.includes(file.type);
     if (!isImage) {
       message.error("You can only upload PNG or JPG files!");
@@ -35,7 +35,7 @@ const UploadImage = ({ svg, title, description, onFileSelect }) => {
       } else if (info.file.status === "error") {
         message.error(`${info.file.name} file upload failed.`);
       }
-    },
+    }
   };
 
   return (

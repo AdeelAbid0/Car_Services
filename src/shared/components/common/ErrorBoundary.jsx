@@ -16,7 +16,7 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     this.setState({
       error: error,
-      errorInfo: errorInfo,
+      errorInfo: errorInfo
     });
   }
 
@@ -43,7 +43,7 @@ class ErrorBoundary extends React.Component {
                   label="Refresh Page"
                   onClick={this.handleReload}
                 />,
-                <Button label="Go to Home" onClick={this.handleGoHome} />,
+                <Button label="Go to Home" onClick={this.handleGoHome} />
               ]}
             />
 

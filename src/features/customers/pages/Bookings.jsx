@@ -15,23 +15,23 @@ const Bookings = () => {
     {
       id: 1,
       label: "Upcoming",
-      value: "upcoming",
+      value: "upcoming"
     },
     {
       id: 2,
       label: "Ongoing",
-      value: "ongoing",
+      value: "ongoing"
     },
     {
       id: 3,
       label: "Completed",
-      value: "completed",
+      value: "completed"
     },
     {
       id: 4,
       label: "Canceled",
-      value: "canceled",
-    },
+      value: "canceled"
+    }
   ];
 
   return (
@@ -64,7 +64,7 @@ const Bookings = () => {
 
           {/* Tabs */}
           <div className="flex w-full flex-wrap gap-6 mt-11 border-b border-border">
-            {tabs.map((item) => (
+            {tabs.map(item => (
               <div
                 key={item.id}
                 className={`pb-2 relative cursor-pointer transition-all duration-200 ${

@@ -10,13 +10,13 @@ const Payments_Partner = () => {
     {
       id: 1,
       label: "Overview",
-      component: <Overview />,
+      component: <Overview />
     },
     {
       id: 2,
       label: "Payout",
-      component: <Payout />,
-    },
+      component: <Payout />
+    }
   ];
 
   return (

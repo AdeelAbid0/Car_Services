@@ -11,5 +11,5 @@ export const RegisterValidationSchema = Yup.object().shape({
     .required("Confirm password is required"),
   terms: Yup.boolean()
     .required("You must accept the terms and conditions")
-    .oneOf([true], "You must accept the terms and conditions"),
+    .oneOf([true], "You must accept the terms and conditions")
 });

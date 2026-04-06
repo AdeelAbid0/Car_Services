@@ -30,8 +30,8 @@ const Overview = () => {
       customer: "Meer Hadi",
       date: "14 july",
       netAmount: "PKR 4,000",
-      status: "Pending",
-    },
+      status: "Pending"
+    }
   ];
 
   const columns = [
@@ -39,58 +39,58 @@ const Overview = () => {
       title: "Invoice ID",
       dataIndex: "invoiceId",
       key: "invoiceId",
-      align: "center",
+      align: "center"
     },
     {
       title: "Services",
       dataIndex: "service",
       key: "service",
-      align: "center",
+      align: "center"
     },
     {
       title: "Customer",
       dataIndex: "customer",
       key: "customer",
-      align: "center",
+      align: "center"
     },
     {
       title: "Date",
       dataIndex: "date",
       key: "date",
-      align: "center",
+      align: "center"
     },
     {
       title: "Net Amount",
       dataIndex: "netAmount",
       key: "netAmount",
-      align: "center",
+      align: "center"
     },
     {
       title: "Status",
       dataIndex: "status",
       key: "status",
       align: "center",
-      render: (text) => (
+      render: text => (
         <div className="flex justify-center items-center">
           <span className="text-[#2E82FF] text-xs font-medium">{text}</span>
         </div>
-      ),
+      )
     },
     {
       title: "Summary",
       key: "summary",
       align: "center",
-      render: (record) => (
+      render: record => (
         <div
           className="cursor-pointer flex justify-center items-center"
           onClick={() => {
-            setOpenDetailDrawer((prev) => !prev);
+            setOpenDetailDrawer(prev => !prev);
           }}
         >
           <EyeIcon />
         </div>
-      ),
-    },
+      )
+    }
   ];
 
   return (

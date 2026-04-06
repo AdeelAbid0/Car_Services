@@ -14,18 +14,18 @@ const Services = () => {
     { id: 3, name: "Medium Shop", description: "6-20 employees" },
     { id: 4, name: "Service Center", description: "20+ employees" },
     { id: 5, name: "Individual", description: "Solo professional" },
-    { id: 6, name: "Small Shop", description: "1-5 employees" },
+    { id: 6, name: "Small Shop", description: "1-5 employees" }
   ];
 
-  const handleServiceToggle = (serviceId) => {
-    setSelectedServices((prev) =>
+  const handleServiceToggle = serviceId => {
+    setSelectedServices(prev =>
       prev.includes(serviceId)
-        ? prev.filter((id) => id !== serviceId)
-        : [...prev, serviceId],
+        ? prev.filter(id => id !== serviceId)
+        : [...prev, serviceId]
     );
   };
 
-  const handleOtherServiceChange = (e) => {
+  const handleOtherServiceChange = e => {
     setOtherService(e.target.value);
   };
 
@@ -33,7 +33,7 @@ const Services = () => {
     <div className="flex flex-col gap-4 max-w-[50%]">
       <div className="flex flex-col gap-2 mt-8">
         <div className="grid grid-cols-1 gap-3">
-          {servicesList.map((service) => (
+          {servicesList.map(service => (
             <div
               key={service.id}
               className={`flex justify-between p-4 rounded-xl border cursor-pointer transition-all ${

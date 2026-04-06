@@ -9,7 +9,7 @@ const BookingCard = ({
   dateTime,
   location,
   price,
-  rating,
+  rating
 }) => {
   return (
     <div className="flex w-full justify-between rounded-2xl bg-muted-background hover:bg-white p-6">

@@ -13,18 +13,18 @@ const PartnerDashboard = () => {
     {
       id: 1,
       label: "New requests",
-      component: <NewRequests />,
+      component: <NewRequests />
     },
     {
       id: 2,
       label: "Active jobs",
-      component: <ActiveJobs />,
+      component: <ActiveJobs />
     },
     {
       id: 3,
       label: "Ratings",
-      component: <Ratings />,
-    },
+      component: <Ratings />
+    }
   ];
   return (
     <div className="flex w-full justify-center items-start">

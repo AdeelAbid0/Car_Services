@@ -23,7 +23,7 @@ const Header = ({ user, token }) => {
   const isAuthenticated = !!localStorage.getItem("token");
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = event => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setShowDropdown(false);
       }
@@ -54,7 +54,7 @@ const Header = ({ user, token }) => {
     Logout: <Logout />,
     Profile: <User />,
     Payment: <Payment />,
-    Support: <Support />,
+    Support: <Support />
   };
 
   return (
@@ -75,7 +75,7 @@ const Header = ({ user, token }) => {
 
       <div className={`flex font-medium text-[16px] items-center pt-2`}>
         <ul className="flex items-center gap-11">
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <li key={item.id}>
               <NavLink
                 to={item.path}
@@ -182,7 +182,7 @@ const Header = ({ user, token }) => {
                     : "bg-white border border-gray-200"
                 }`}
               >
-                {dropdownItems.map((item) => {
+                {dropdownItems.map(item => {
                   const IconComponent = iconComponents[item.icon] || null;
 
                   if (item.label === "Logout") {

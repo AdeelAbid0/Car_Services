@@ -10,7 +10,7 @@ const PartnerDetails = ({
   viewPartnerDetail,
   setViewPartnerDetail,
   rejectDrawer,
-  setRejectDrawer,
+  setRejectDrawer
 }) => {
   return (
     <div>

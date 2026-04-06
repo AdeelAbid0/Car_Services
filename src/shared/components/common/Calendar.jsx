@@ -19,7 +19,7 @@ const CustomCalendar = () => {
     "September",
     "October",
     "November",
-    "December",
+    "December"
   ];
 
   const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -32,7 +32,7 @@ const CustomCalendar = () => {
     "7:00 PM",
     "7:30 PM",
     "8:00 PM",
-    "8:30 PM",
+    "8:30 PM"
     // "9:00 PM",
     // "9:30 PM",
     // "10:00 PM",
@@ -40,7 +40,7 @@ const CustomCalendar = () => {
     // "11:00 PM",
   ];
 
-  const getDaysInMonth = (date) => {
+  const getDaysInMonth = date => {
     const year = date.getFullYear();
     const month = date.getMonth();
     const firstDay = new Date(year, month, 1);
@@ -57,7 +57,7 @@ const CustomCalendar = () => {
       days.push({
         day: prevMonthDays - i,
         isCurrentMonth: false,
-        date: new Date(year, month - 1, prevMonthDays - i),
+        date: new Date(year, month - 1, prevMonthDays - i)
       });
     }
 
@@ -66,7 +66,7 @@ const CustomCalendar = () => {
       days.push({
         day: i,
         isCurrentMonth: true,
-        date: new Date(year, month, i),
+        date: new Date(year, month, i)
       });
     }
 
@@ -76,7 +76,7 @@ const CustomCalendar = () => {
       days.push({
         day: i,
         isCurrentMonth: false,
-        date: new Date(year, month + 1, i),
+        date: new Date(year, month + 1, i)
       });
     }
 
@@ -85,22 +85,22 @@ const CustomCalendar = () => {
 
   const handlePrevMonth = () => {
     setCurrentDate(
-      new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1),
+      new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1)
     );
   };
 
   const handleNextMonth = () => {
     setCurrentDate(
-      new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1),
+      new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1)
     );
   };
 
-  const handleDateClick = (dateObj) => {
+  const handleDateClick = dateObj => {
     setSelectedDate(dateObj.date);
     console.log("Selected Date:", dateObj.date.toDateString());
   };
 
-  const handleTimeClick = (time) => {
+  const handleTimeClick = time => {
     setSelectedTime(time);
     console.log("Selected Time:", time);
   };
@@ -133,7 +133,7 @@ const CustomCalendar = () => {
     );
   };
 
-  const isToday = (date) => {
+  const isToday = date => {
     const today = new Date();
     return (
       date.getDate() === today.getDate() &&
@@ -171,7 +171,7 @@ const CustomCalendar = () => {
             </div>
             {/* Day Headers */}
             <div className="grid grid-cols-7 gap-2.5 mb-1">
-              {dayNames.map((day) => (
+              {dayNames.map(day => (
                 <div
                   key={day}
                   className="text-center text-xs font-medium text-gray-500 py-1"
@@ -252,7 +252,7 @@ const CustomCalendar = () => {
             </div>
             {/* Time slots with scroll */}
             <div className="flex flex-col gap-2 max-h-70 overflow-y-auto pr-1">
-              {times.map((time) => (
+              {times.map(time => (
                 <button
                   key={time}
                   onClick={() => handleTimeClick(time)}

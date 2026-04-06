@@ -8,20 +8,20 @@ import InputText from "../../../shared/components/ui/InputText";
 
 const categories = [
   { label: "Home", value: "Home" },
-  { label: "Automotive", value: "Automotive" },
+  { label: "Automotive", value: "Automotive" }
 ];
 
 const BusinessInfo = () => {
   const [formData, setFormData] = useState({
     businessName: "",
     category: undefined,
-    location: "",
+    location: ""
   });
 
   const handleInputChange = (field, value) => {
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [field]: value,
+      [field]: value
     }));
   };
 
@@ -33,7 +33,7 @@ const BusinessInfo = () => {
           placeholder={"Enter business name"}
           prefixIcon={<UserIcon />}
           value={formData.businessName}
-          onChange={(e) => handleInputChange("businessName", e.target.value)}
+          onChange={e => handleInputChange("businessName", e.target.value)}
         />
         <div className="w-full">
           <CommonSelect
@@ -42,7 +42,7 @@ const BusinessInfo = () => {
             className="w-full h-12 rounded-lg"
             value={formData.category}
             options={categories}
-            onChange={(value) => handleInputChange("category", value)}
+            onChange={value => handleInputChange("category", value)}
             prefixIcon={<UserIcon />}
           />
         </div>
@@ -51,7 +51,7 @@ const BusinessInfo = () => {
           placeholder={"Enter location"}
           prefixIcon={<LocationPlaceholder />}
           value={formData.location}
-          onChange={(e) => handleInputChange("location", e.target.value)}
+          onChange={e => handleInputChange("location", e.target.value)}
         />
         <div className="flex flex-col gap-2">
           <p className="flex w-full justify-start text-foreground font-semibold text-[16px] leading-6">

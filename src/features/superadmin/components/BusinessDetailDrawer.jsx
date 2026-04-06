@@ -11,7 +11,7 @@ const BusinessDetailDrawer = ({
   setShowDetailDrawer,
   selectedBusiness,
   rejectDrawer,
-  setRejectDrawer,
+  setRejectDrawer
 }) => {
   console.log({ selectedBusiness });
   return (

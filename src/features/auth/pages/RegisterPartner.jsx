@@ -25,7 +25,7 @@ const RegisterPartner = () => {
     location: "",
     services: [],
     description: "",
-    images: [],
+    images: []
   });
 
   const servicesList = [
@@ -34,14 +34,14 @@ const RegisterPartner = () => {
     { id: 3, name: "Tire Replacement" },
     { id: 4, name: "Battery Service" },
     { id: 5, name: "Oil Filter" },
-    { id: 6, name: "Air Filter" },
+    { id: 6, name: "Air Filter" }
   ];
 
   // Get selected service names for email
   const getSelectedServices = () => {
     return formData.services
-      .map((id) => servicesList.find((service) => service.id === id)?.name)
-      .filter((name) => name)
+      .map(id => servicesList.find(service => service.id === id)?.name)
+      .filter(name => name)
       .join(", ");
   };
 
@@ -64,12 +64,12 @@ const RegisterPartner = () => {
       // Add subject for better email organization
       submitData.append(
         "subject",
-        `New Partner Registration: ${formData.businessName}`,
+        `New Partner Registration: ${formData.businessName}`
       );
       setLoading(true);
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: submitData,
+        body: submitData
       });
 
       const result = await response.json();
@@ -83,7 +83,7 @@ const RegisterPartner = () => {
           location: "",
           services: [],
           description: "",
-          images: [],
+          images: []
         });
         setCurrentStep(1);
         setLoading(false);
@@ -96,7 +96,7 @@ const RegisterPartner = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       alert(
-        "Something went wrong. Please check your connection and try again.",
+        "Something went wrong. Please check your connection and try again."
       );
     } finally {
       setIsSubmitting(false);
@@ -120,33 +120,33 @@ const RegisterPartner = () => {
   };
 
   const handleInputChange = (field, value) => {
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [field]: value,
+      [field]: value
     }));
   };
 
-  const handleServiceToggle = (serviceId) => {
-    setFormData((prev) => {
+  const handleServiceToggle = serviceId => {
+    setFormData(prev => {
       const isSelected = prev.services.includes(serviceId);
       if (isSelected) {
         return {
           ...prev,
-          services: prev.services.filter((id) => id !== serviceId),
+          services: prev.services.filter(id => id !== serviceId)
         };
       } else {
         return {
           ...prev,
-          services: [...prev.services, serviceId],
+          services: [...prev.services, serviceId]
         };
       }
     });
   };
 
-  const handleUpload = (uploadedImages) => {
-    setFormData((prev) => ({
+  const handleUpload = uploadedImages => {
+    setFormData(prev => ({
       ...prev,
-      images: uploadedImages,
+      images: uploadedImages
     }));
   };
 
@@ -160,7 +160,7 @@ const RegisterPartner = () => {
               placeholder={"Enter full name"}
               prefixIcon={<UserIcon />}
               value={formData.fullName}
-              onChange={(e) => handleInputChange("fullName", e.target.value)}
+              onChange={e => handleInputChange("fullName", e.target.value)}
               required
             />
             <InputText
@@ -168,7 +168,7 @@ const RegisterPartner = () => {
               placeholder={"Enter email"}
               prefixIcon={<EmailIcon />}
               value={formData.email}
-              onChange={(e) => handleInputChange("email", e.target.value)}
+              onChange={e => handleInputChange("email", e.target.value)}
               required
             />
             <InputText
@@ -176,7 +176,7 @@ const RegisterPartner = () => {
               placeholder={"Enter phone"}
               prefixIcon={<EmailIcon />}
               value={formData.phone}
-              onChange={(e) => handleInputChange("phone", e.target.value)}
+              onChange={e => handleInputChange("phone", e.target.value)}
               required
             />
           </div>
@@ -190,9 +190,7 @@ const RegisterPartner = () => {
               placeholder={"Enter business name"}
               prefixIcon={<UserIcon />}
               value={formData.businessName}
-              onChange={(e) =>
-                handleInputChange("businessName", e.target.value)
-              }
+              onChange={e => handleInputChange("businessName", e.target.value)}
               required
             />
             <InputText
@@ -200,7 +198,7 @@ const RegisterPartner = () => {
               placeholder={"Enter location"}
               prefixIcon={<LocationPlaceholder />}
               value={formData.location}
-              onChange={(e) => handleInputChange("location", e.target.value)}
+              onChange={e => handleInputChange("location", e.target.value)}
               required
             />
             <div className="flex flex-col gap-2">
@@ -224,7 +222,7 @@ const RegisterPartner = () => {
         return (
           <div className="flex flex-col gap-2 mt-9">
             <div className="grid grid-cols-1 gap-3">
-              {servicesList.map((service) => (
+              {servicesList.map(service => (
                 <div
                   key={service.id}
                   className={`flex justify-between p-4 rounded-xl border cursor-pointer transition-all ${
@@ -246,7 +244,7 @@ const RegisterPartner = () => {
                 label={"other"}
                 placeholder={"Other service name"}
                 prefixIcon={<EditIcon />}
-                onChange={(e) =>
+                onChange={e =>
                   handleInputChange("otherService", e.target.value)
                 }
               />
@@ -271,9 +269,7 @@ const RegisterPartner = () => {
                 prefix={<EditIcon />}
                 rows={4}
                 value={formData.description}
-                onChange={(e) =>
-                  handleInputChange("description", e.target.value)
-                }
+                onChange={e => handleInputChange("description", e.target.value)}
                 required
               />
             </div>

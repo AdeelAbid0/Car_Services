@@ -5,12 +5,12 @@ import bookingConfirmImage from "../../../assets/Images/booking-confirm.svg";
 const BookingSteps = ({
   currentStep = 1,
   showStepper = true,
-  showContent = true,
+  showContent = true
 }) => {
   const STEPS = [
     { id: 1, label: "Service" },
     { id: 2, label: "Partner" },
-    { id: 3, label: "Schedule" },
+    { id: 3, label: "Schedule" }
   ];
 
   const StepCircle = ({ stepId, currentStep }) => {
@@ -28,7 +28,7 @@ const BookingSteps = ({
         <span
           className={`text-[13px] font-semibold transition-colors duration-300 ${isActive ? "text-primary" : "text-muted-foreground"}`}
         >
-          {STEPS.find((s) => s.id === stepId)?.label}
+          {STEPS.find(s => s.id === stepId)?.label}
         </span>
       </div>
     );
@@ -52,7 +52,7 @@ const BookingSteps = ({
           <h1 className="text-foreground text-2xl font-semibold!">
             Select Partner
           </h1>
-          {[1, 2, 3].map((item) => {
+          {[1, 2, 3].map(item => {
             return (
               <PartnerCard
                 profileImage={"/Images/hero-image.png"}

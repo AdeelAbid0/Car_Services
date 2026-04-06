@@ -17,21 +17,21 @@ export const Basic = () => {
         placeholder={"Enter full name"}
         prefixIcon={<UserIcon />}
         // value={formData.fullName}
-        onChange={(e) => handleInputChange("fullName", e.target.value)}
+        onChange={e => handleInputChange("fullName", e.target.value)}
       />
       <InputText
         label={"Email"}
         placeholder={"Enter email"}
         prefixIcon={<EmailIcon />}
         // value={formData.email}
-        onChange={(e) => handleInputChange("email", e.target.value)}
+        onChange={e => handleInputChange("email", e.target.value)}
       />
       <InputText
         label={"Phone"}
         placeholder={"Enter phone"}
         prefixIcon={<PhoneIcon />}
         // value={formData.phone}
-        onChange={(e) => handleInputChange("phone", e.target.value)}
+        onChange={e => handleInputChange("phone", e.target.value)}
       />
     </div>
   );
@@ -77,12 +77,12 @@ export const Services = () => {
     { id: 3, name: "Medium Shop" },
     { id: 4, name: "Service Center" },
     { id: 5, name: "Individual" },
-    { id: 6, name: "Small Shop" },
+    { id: 6, name: "Small Shop" }
   ];
   return (
     <div className="flex flex-col gap-2 mt-6">
       <div className="grid grid-cols-1 gap-3">
-        {servicesList.map((service) => (
+        {servicesList.map(service => (
           <div
             key={service.id}
             className="flex flex-col items-start p-4 rounded-xl border cursor-pointer transition-all border-border bg-white"
@@ -135,23 +135,23 @@ const AddPartnerDrawer = ({ addPartnerDrawer, setAddPartnerDrawer }) => {
     {
       id: 1,
       label: "Basic",
-      component: <Basic />,
+      component: <Basic />
     },
     {
       id: 2,
       label: "Business",
-      component: <Business />,
+      component: <Business />
     },
     {
       id: 3,
       label: "Services",
-      component: <Services />,
+      component: <Services />
     },
     {
       id: 4,
       label: "Gallery",
-      component: <Gallery />,
-    },
+      component: <Gallery />
+    }
   ];
   return (
     <div>
@@ -175,7 +175,7 @@ const AddPartnerDrawer = ({ addPartnerDrawer, setAddPartnerDrawer }) => {
         }}
       >
         <div className="flex w-full justify-between">
-          {STEPS.map((step) => (
+          {STEPS.map(step => (
             <div key={step.id} className="cursor-pointer flex flex-col gap-1.5">
               <p
                 className={`text-sm! font-medium! transition-all duration-500 ${currentStep >= step.id ? "text-primary" : "text-muted-foreground opacity-50"}`}
@@ -196,7 +196,7 @@ const AddPartnerDrawer = ({ addPartnerDrawer, setAddPartnerDrawer }) => {
           </p>
         </div>
         <div className="mt-5">
-          {STEPS?.find((item) => item?.id === currentStep)?.component}
+          {STEPS?.find(item => item?.id === currentStep)?.component}
         </div>
       </CommonDrawer>
     </div>

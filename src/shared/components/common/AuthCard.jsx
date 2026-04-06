@@ -14,7 +14,7 @@ const AuthCard = ({
   footerText,
   footerLinkText,
   onFooterLinkClick,
-  imageSrc = "/Images/hero-image.png",
+  imageSrc = "/Images/hero-image.png"
 }) => {
   return (
     <div className="relative flex w-full h-screen">

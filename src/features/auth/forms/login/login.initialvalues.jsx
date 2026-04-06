@@ -1,4 +1,4 @@
 export const LoginInitialValues = {
   email: "",
-  password: "",
+  password: ""
 };

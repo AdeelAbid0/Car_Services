@@ -3,20 +3,20 @@ import { useState, Suspense } from "react";
 const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
   const [activeTab, setActiveTab] = useState(defaultActiveTab || tabs[0]?.id);
 
-  const handleTabChange = (tabId) => {
+  const handleTabChange = tabId => {
     setActiveTab(tabId);
     if (onTabChange) {
       onTabChange(tabId);
     }
   };
 
-  const activeTabData = tabs.find((tab) => tab.id === activeTab);
+  const activeTabData = tabs.find(tab => tab.id === activeTab);
   const TabComponent = activeTabData?.component;
 
   return (
     <div className="w-full">
       <div className="flex w-fit shrink-0 gap-6 border-b border-border min-h-7 h-auto mb-4">
-        {tabs.map((tab) => (
+        {tabs.map(tab => (
           <div
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}

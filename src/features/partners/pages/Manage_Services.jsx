@@ -9,9 +9,7 @@ import AddServicesDrawer from "../components/AddServicesDrawer";
 import CommonModal from "../../../shared/components/ui/Modal";
 const Manage_Services = () => {
   const [addServiceDrawer, setAddServiceDrawer] = useState(false);
-
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
-
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const items = [
@@ -24,9 +22,8 @@ const Manage_Services = () => {
 
           <EditIcon />
         </div>
-      ),
+      )
     },
-
     {
       key: "2",
 
@@ -36,11 +33,11 @@ const Manage_Services = () => {
 
           <DeleteIcon />
         </div>
-      ),
-    },
+      )
+    }
   ];
 
-  const handleMenuClick = (e) => {
+  const handleMenuClick = e => {
     console.log("Menu item clicked:", e.key);
 
     setDropdownOpen(false);
@@ -158,12 +155,12 @@ const Manage_Services = () => {
                 menu={{
                   items,
 
-                  onClick: handleMenuClick,
+                  onClick: handleMenuClick
                 }}
                 placement="bottomRight"
                 trigger={["click"]}
                 open={dropdownOpen}
-                onOpenChange={(open) => setDropdownOpen(open)}
+                onOpenChange={open => setDropdownOpen(open)}
               >
                 <div className="cursor-pointer hover:bg-gray-100 p-2 rounded-full transition-colors">
                   <MoreIcon className="w-5 h-5 text-gray-600" />

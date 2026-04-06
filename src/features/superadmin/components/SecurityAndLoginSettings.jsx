@@ -7,12 +7,12 @@ const SecurityAndLoginSettings = () => {
       items: [
         { label: "New Partner Requests", type: "switch" },
         { label: "High priority Complaints", type: "switch" },
-        { label: "Payment Failures", type: "switch" },
-      ],
-    },
+        { label: "Payment Failures", type: "switch" }
+      ]
+    }
   ];
 
-  const renderItem = (item) => {
+  const renderItem = item => {
     const isDeactivateAccount = item.label.toLowerCase().includes("deactivate");
 
     return (
@@ -46,7 +46,7 @@ const SecurityAndLoginSettings = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-[35%]">
-      {settingsSections.map((section) => (
+      {settingsSections.map(section => (
         <div key={section.title} className="flex flex-col gap-2">
           <h1 className="text-xs text-muted-foreground font-medium">
             {section.title}

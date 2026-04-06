@@ -3,34 +3,33 @@ import Segment from "../../../shared/components/common/Segment";
 const PersonalInfo = lazy(() => import("../components/PersonalInfo"));
 const Overview = lazy(() => import("../components/Overview"));
 const SecurityAndLoginSettings = lazy(
-  () => import("../components/SecurityAndLoginSettings"),
+  () => import("../components/SecurityAndLoginSettings")
 );
 const Notifications = lazy(() => import("../components/Notifications"));
 
 const Proflie = () => {
   const [activeComponent, setActiveComponent] = useState(1);
-
   const tabs = [
     {
       id: 1,
       label: "Overview",
-      component: <Overview />,
+      component: <Overview />
     },
     {
       id: 2,
       label: "Personal Info",
-      component: <PersonalInfo />,
+      component: <PersonalInfo />
     },
     {
       id: 3,
       label: "Security and login settings",
-      component: <SecurityAndLoginSettings />,
+      component: <SecurityAndLoginSettings />
     },
     {
       id: 4,
       label: "Notifications",
-      component: <Notifications />,
-    },
+      component: <Notifications />
+    }
   ];
 
   return (

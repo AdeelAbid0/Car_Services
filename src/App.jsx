@@ -18,7 +18,7 @@ const App = () => {
           token: {
             colorPrimary: "#9A85FF",
             borderRadius: 6,
-            fontFamily: "DM Sans, sans-serif",
+            fontFamily: "DM Sans, sans-serif"
           },
           components: {
             Input: {
@@ -35,13 +35,13 @@ const App = () => {
               colorErrorBorder: "#EF4444  ",
               colorErrorText: "#EF4444  ",
               errorActiveShadow: "0px 0px 0px 4px #EF444422",
-              errorHoverShadow: "0px 0px 0px 4px black",
+              errorHoverShadow: "0px 0px 0px 4px black"
             },
             DatePicker: {
               controlHeight: 44,
               controlHeightSM: 32,
               borderRadiusLG: 12,
-              borderRadiusSM: 8,
+              borderRadiusSM: 8
             },
             Button: {
               controlHeight: 44,
@@ -64,7 +64,7 @@ const App = () => {
               colorLinkHover: "#8E81F5aa",
               colorLinkActive: "#9A85FF",
               colorBgContainerDisabled: "#D7D7D7",
-              colorTextDisabled: "#9A85FF",
+              colorTextDisabled: "#9A85FF"
             },
             Select: {
               paddingBlock: 5,
@@ -79,7 +79,7 @@ const App = () => {
               colorTextPlaceholder: "#878787",
               multipleItemHeight: 32,
               multipleItemBg: "#F3F1FD",
-              multipleItemBorderColor: "#F3F1FD",
+              multipleItemBorderColor: "#F3F1FD"
             },
 
             Table: {
@@ -90,9 +90,9 @@ const App = () => {
               colorBgContainer: "#FAFAFA",
               rowHoverBg: "#F3F3F3",
               colorText: "#262626",
-              fontSize: 14,
-            },
-          },
+              fontSize: 14
+            }
+          }
         }}
       >
         <Suspense fallback={<LoadingFallback />}>

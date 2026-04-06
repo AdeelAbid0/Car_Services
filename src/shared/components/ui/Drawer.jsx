@@ -15,7 +15,7 @@ const CommonDrawer = ({
   footerButtonPrimaryClick,
   footerButtonSecondaryClick,
   rootClassName,
-  showHeader = true,
+  showHeader = true
 }) => {
   return (
     <Drawer

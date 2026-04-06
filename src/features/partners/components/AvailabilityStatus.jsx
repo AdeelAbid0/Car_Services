@@ -4,7 +4,7 @@ import { useState } from "react";
 const AvailabilityStatus = ({ onChange }) => {
   const [selectedStatus, setSelectedStatus] = useState("available");
 
-  const handleStatusChange = (status) => {
+  const handleStatusChange = status => {
     setSelectedStatus(status);
     console.log("Selected status:", status);
 

@@ -6,19 +6,17 @@ import { AUTH_ROUTES } from "../../router/routes";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
-  const { user, token } = useSelector((state) => state.auth);
+  const { user, token } = useSelector(state => state.auth);
   console.log({ user });
   console.log({ token });
-
   const [isAuthRoute, setIsAuthRoute] = useState(false);
   const location = useLocation();
   const auth_routes = AUTH_ROUTES;
-
   const Routes = useRoutes(appRoutes);
 
   useEffect(() => {
     const isCurrentPathAuthRoute = auth_routes?.some(
-      (route) => route.path === location.pathname,
+      route => route.path === location.pathname
     );
     setIsAuthRoute(isCurrentPathAuthRoute);
   }, [location, auth_routes]);

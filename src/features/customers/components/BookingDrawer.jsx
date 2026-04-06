@@ -9,7 +9,7 @@ export const BookingDrawer = ({ showBookingDrawer, setShowBookingDrawer }) => {
   const BOOKING_DRAWER_WIDTH = {
     2: "75%",
     3: "45%",
-    4: "45%",
+    4: "45%"
   };
 
   const Drawer_Width = BOOKING_DRAWER_WIDTH[currentStep];
@@ -17,7 +17,7 @@ export const BookingDrawer = ({ showBookingDrawer, setShowBookingDrawer }) => {
 
   const handleClick = () => {
     if (currentStep < TOTAL_STEPS) {
-      setCurrentStep((prev) => prev + 1);
+      setCurrentStep(prev => prev + 1);
     }
   };
 

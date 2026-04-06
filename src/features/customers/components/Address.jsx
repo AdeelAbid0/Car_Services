@@ -11,8 +11,8 @@ const Address = () => {
       image: "/Images/hero-image.png",
       address: "House 25, Street 10, Sector G-11, Islamabad",
       phone: "+92 3XX XXX XXXX",
-      Tag: "Home",
-    },
+      Tag: "Home"
+    }
   ];
   const items = [
     {
@@ -22,7 +22,7 @@ const Address = () => {
           <p className="text-[13px]! text-foreground! font-normal">Edit</p>
           <Edit className="text-foreground/70" />
         </div>
-      ),
+      )
     },
     {
       key: "2",
@@ -31,12 +31,12 @@ const Address = () => {
           <p className="text-[13px]! text-foreground! font-normal">Delete</p>
           <Delete />
         </div>
-      ),
-    },
+      )
+    }
   ];
   return (
     <div className="flex flex-col gap-2 max-w-[50%]">
-      {addressData?.map((address) => (
+      {addressData?.map(address => (
         <div
           key={address?.id}
           className="bg-muted-background hover:bg-white p-6 rounded-2xl flex justify-between"

@@ -5,9 +5,9 @@ const hardcodedUser = {
   id: 1,
   name: "Adeel Abid",
   email: "adeel@example.com",
-  // role: "customer",
+  role: "customer"
   // role: "partner",
-  role: "superadmin",
+  // role: "superadmin",
 };
 
 const hardcodedToken = "test-token-123456";
@@ -37,7 +37,7 @@ const initialState = {
       return hardcodedToken;
     }
     return tokenData;
-  })(),
+  })()
 };
 
 const authSlice = createSlice({
@@ -53,12 +53,12 @@ const authSlice = createSlice({
       localStorage.setItem("token", action.payload.token);
     },
 
-    logout: (state) => {
+    logout: state => {
       state.user = null;
       state.token = null;
       localStorage.clear();
-    },
-  },
+    }
+  }
 });
 
 export const { setCredentials, logout } = authSlice.actions;

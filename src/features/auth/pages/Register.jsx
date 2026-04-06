@@ -17,9 +17,9 @@ const Register = () => {
   const formik = useFormik({
     initialValues: RegisterUserInitialValues,
     validationSchema: RegisterValidationSchema,
-    onSubmit: (values) => {
+    onSubmit: values => {
       console.log("Form submitted:", values);
-    },
+    }
   });
   const handleRegister = () => {
     formik.handleSubmit();
@@ -86,7 +86,7 @@ const Register = () => {
           <Checkbox
             name="terms"
             checked={formik.values.terms}
-            onChange={(e) => {
+            onChange={e => {
               formik.setFieldValue("terms", e.target.checked);
             }}
             className="text-foreground font-medium"

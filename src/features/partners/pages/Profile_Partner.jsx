@@ -6,10 +6,10 @@ const BusinessInfo = lazy(() => import("../components/BusinessInfo"));
 const Services = lazy(() => import("../components/Services"));
 const Gallery = lazy(() => import("../components/Gallery"));
 const AvailabilityStatus = lazy(
-  () => import("../components/AvailabilityStatus"),
+  () => import("../components/AvailabilityStatus")
 );
 const AccountsAndSettings = lazy(
-  () => import("../components/AccountsAndSettings"),
+  () => import("../components/AccountsAndSettings")
 );
 
 const Profile_Partner = () => {
@@ -19,33 +19,33 @@ const Profile_Partner = () => {
     {
       id: 1,
       label: "Personal Info",
-      component: <PersonalInfo />,
+      component: <PersonalInfo />
     },
     {
       id: 2,
       label: "Business Info",
-      component: <BusinessInfo />,
+      component: <BusinessInfo />
     },
     {
       id: 3,
       label: "Services",
-      component: <Services />,
+      component: <Services />
     },
     {
       id: 4,
       label: "Gallery",
-      component: <Gallery />,
+      component: <Gallery />
     },
     {
       id: 5,
       label: "Availability Status",
-      component: <AvailabilityStatus />,
+      component: <AvailabilityStatus />
     },
     {
       id: 6,
       label: "Accounts and Settings",
-      component: <AccountsAndSettings />,
-    },
+      component: <AccountsAndSettings />
+    }
   ];
 
   return (

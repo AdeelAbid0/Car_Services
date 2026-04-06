@@ -9,8 +9,8 @@ const Settings = () => {
         { label: "Enable Notifications", type: "switch" },
         { label: "Payment and invoice alerts", type: "switch" },
         { label: "Review reminders", type: "switch" },
-        { label: "Promotions and offers", type: "switch" },
-      ],
+        { label: "Promotions and offers", type: "switch" }
+      ]
     },
     {
       title: "About",
@@ -18,8 +18,8 @@ const Settings = () => {
         { label: "Terms and Conditions" },
         { label: "Privacy Policy" },
         { label: "Company Info" },
-        { label: "Refund Policy" },
-      ],
+        { label: "Refund Policy" }
+      ]
     },
     {
       title: "Help and Support",
@@ -27,12 +27,12 @@ const Settings = () => {
         { label: "Help Center" },
         { label: "Report an Issue" },
         { label: "Contact Support" },
-        { label: "Refund Policy" },
-      ],
-    },
+        { label: "Refund Policy" }
+      ]
+    }
   ];
 
-  const renderItem = (item) => (
+  const renderItem = item => (
     <div
       key={item.label}
       className="flex items-center justify-between w-full px-4 h-10 bg-muted-background rounded-lg cursor-pointer hover:bg-white"
@@ -48,7 +48,7 @@ const Settings = () => {
 
   return (
     <div className="flex flex-col gap-8 max-w-[35%]">
-      {settingsSections.map((section) => (
+      {settingsSections.map(section => (
         <div key={section.title} className="flex flex-col gap-2">
           <h1 className="text-xs text-muted-foreground font-medium">
             {section.title}

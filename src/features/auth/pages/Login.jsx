@@ -18,9 +18,9 @@ const Login = () => {
   const formik = useFormik({
     initialValues: LoginInitialValues,
     validationSchema: LoginValidationSchema,
-    onSubmit: (values) => {
+    onSubmit: values => {
       console.log({ values });
-    },
+    }
   });
 
   const handleLogin = () => {

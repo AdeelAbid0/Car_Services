@@ -20,8 +20,8 @@ const MyCars = () => {
       variant: "Sedan",
       regCity: "Islamabad",
       licensePlate: "2022",
-      fuelType: "Petrol",
-    },
+      fuelType: "Petrol"
+    }
   ];
   const items = [
     {
@@ -31,7 +31,7 @@ const MyCars = () => {
           <p className="text-[13px]! text-foreground! font-normal">Edit</p>
           <Edit className="text-foreground/70" />
         </div>
-      ),
+      )
     },
     {
       key: "2",
@@ -40,15 +40,15 @@ const MyCars = () => {
           <p className="text-[13px]! text-foreground! font-normal">Delete</p>
           <Delete />
         </div>
-      ),
-    },
+      )
+    }
   ];
   const handleUpload = () => {
     console.log("handle upload");
   };
   return (
     <div className="flex flex-col gap-2 max-w-[50%]">
-      {carsData?.map((car) => (
+      {carsData?.map(car => (
         <div
           key={car?.id}
           className="bg-muted-background hover:bg-white p-6 rounded-2xl flex justify-between"

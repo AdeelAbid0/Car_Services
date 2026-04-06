@@ -19,15 +19,15 @@ const My_Wallet = () => {
         name: "QuickLube",
         date: "20 Apr 2022, 06:55 PM",
         amount: "PKR 4,500",
-        icon: <CardImage className="w-full h-full object-cover rounded-xl" />,
+        icon: <CardImage className="w-full h-full object-cover rounded-xl" />
       },
       {
         id: 2,
         name: "AutoCare Workshop",
         date: "15 Apr 2022, 02:30 PM",
         amount: "PKR 2,800",
-        icon: <CardImage className="w-full h-full object-cover rounded-xl" />,
-      },
+        icon: <CardImage className="w-full h-full object-cover rounded-xl" />
+      }
     ],
     regular: [
       {
@@ -35,9 +35,9 @@ const My_Wallet = () => {
         name: "QuickLube",
         date: "20 Apr 2022, 06:55 PM",
         amount: "PKR 4,500",
-        icon: <CardImage className="w-full h-full object-cover rounded-xl" />,
-      },
-    ],
+        icon: <CardImage className="w-full h-full object-cover rounded-xl" />
+      }
+    ]
   };
 
   const currentData = paymentsData[activeTab] || [];
@@ -156,8 +156,8 @@ const My_Wallet = () => {
                   </h3>
                   <div className="flex flex-col gap-2">
                     {currentData
-                      .filter((item) => item.date.includes("Apr 2022"))
-                      .map((item) => (
+                      .filter(item => item.date.includes("Apr 2022"))
+                      .map(item => (
                         <div
                           key={item.id}
                           className="flex w-full p-3 bg-muted-background hover:bg-muted-background/70 cursor-pointer transition-colors rounded-xl"

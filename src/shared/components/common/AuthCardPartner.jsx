@@ -9,7 +9,7 @@ const AuthCardPartner = ({
   totalSteps,
   onNext,
   onBack,
-  loading,
+  loading
 }) => {
   const renderStepIndicators = () => {
     const steps = [];
@@ -20,7 +20,7 @@ const AuthCardPartner = ({
           className={`w-6 h-1.5 rounded-full ${
             i <= currentStep ? "bg-primary" : "bg-background"
           }`}
-        ></span>,
+        ></span>
       );
     }
     return steps;

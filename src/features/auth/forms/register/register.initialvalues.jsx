@@ -3,5 +3,5 @@ export const RegisterUserInitialValues = {
   email: "",
   password: "",
   confirmPassword: "",
-  terms: false,
+  terms: false
 };

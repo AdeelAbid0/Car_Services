@@ -17,83 +17,53 @@ import Datepicker from "../../../shared/components/ui/Datepicker";
 
 const Dashboard = () => {
   const [showDetailDrawer, setShowDetailDrawer] = useState(false);
-
   const [rejectDrawer, setRejectDrawer] = useState(false);
-
   const [selectedBusiness, setSelectedBusiness] = useState(null);
-
   const [showFilterDrawer, setShowFilterDrawer] = useState(false);
-
   const [selectedFilter, setSelectedFilter] = useState(3);
-
   const data = [
     {
       key: "1",
-
       name: "Mike",
-
       age: 32,
-
-      address: "10 Downing Street",
-    },
+      address: "10 Downing Street"
+    }
   ];
-
   const columns = [
     {
       title: "Business name",
-
       dataIndex: "name",
-
-      key: "name",
+      key: "name"
     },
-
     {
       title: "Owner",
-
       dataIndex: "age",
-
-      key: "age",
+      key: "age"
     },
-
     {
       title: "Service category",
-
       dataIndex: "address",
-
-      key: "address",
+      key: "address"
     },
-
     {
       title: "Submitted on",
-
       dataIndex: "address",
-
-      key: "address",
+      key: "address"
     },
-
     {
       title: "Location",
-
       dataIndex: "address",
-
-      key: "address",
+      key: "address"
     },
-
     {
       title: "Status",
-
       dataIndex: "address",
-
-      key: "address",
+      key: "address"
     },
-
     {
       title: "Details",
-
       align: "center",
-
       key: "details",
-
       render: (_, record) => (
         <div className="flex items-center justify-center w-full">
           <DetailIcon
@@ -104,13 +74,12 @@ const Dashboard = () => {
             }}
           />
         </div>
-      ),
-    },
+      )
+    }
   ];
 
   const handleDateChange = (date, dateString) => {
     console.log({ date });
-
     console.log({ dateString });
   };
 
@@ -128,7 +97,7 @@ const Dashboard = () => {
               type={"primary"}
               prefixIcon={<FilterIcon />}
               onClick={() => {
-                setShowFilterDrawer((prev) => !prev);
+                setShowFilterDrawer(prev => !prev);
               }}
               className={
                 "bg-muted-background! text-foreground! font-medium! border! border-border! rounded-lg! h-9!"
@@ -152,7 +121,7 @@ const Dashboard = () => {
                       <Radio
                         value={1}
                         checked={selectedFilter === 1}
-                        onChange={(e) => {
+                        onChange={e => {
                           setSelectedFilter(e.target.value);
                         }}
                       />
@@ -166,7 +135,7 @@ const Dashboard = () => {
                       <Radio
                         value={2}
                         checked={selectedFilter === 2}
-                        onChange={(e) => {
+                        onChange={e => {
                           setSelectedFilter(e.target.value);
                         }}
                       />
@@ -180,7 +149,7 @@ const Dashboard = () => {
                       <Radio
                         value={3}
                         checked={selectedFilter === 3}
-                        onChange={(e) => {
+                        onChange={e => {
                           setSelectedFilter(e.target.value);
                         }}
                       />

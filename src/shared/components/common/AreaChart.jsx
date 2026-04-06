@@ -6,23 +6,23 @@ const AreaChart = ({ color }) => {
     series: [
       {
         name: "",
-        data: [10, 15, 12, 15],
-      },
+        data: [10, 15, 12, 15]
+      }
     ],
     options: {
       chart: {
         type: "area",
         toolbar: {
-          show: false,
+          show: false
         },
         zoom: {
-          enabled: false,
-        },
+          enabled: false
+        }
       },
       stroke: {
         curve: "smooth",
         width: 3,
-        colors: [color], // STROKE (LINE) SETTINGS
+        colors: [color] // STROKE (LINE) SETTINGS
       },
 
       fill: {
@@ -32,23 +32,23 @@ const AreaChart = ({ color }) => {
           shadeIntensity: 1,
           opacityFrom: 0.5,
           opacityTo: 0.5,
-          stops: [100, 100, 100],
+          stops: [100, 100, 100]
         },
-        colors: [color], // shadow
+        colors: [color] // shadow
       },
 
       xaxis: {
         labels: { show: false },
         axisBorder: { show: false },
-        axisTicks: { show: false },
+        axisTicks: { show: false }
       },
       yaxis: { labels: { show: false } },
       grid: { show: false },
       tooltip: { enabled: false },
       legend: { show: false },
       dataLabels: { enabled: false },
-      markers: { size: 0 },
-    },
+      markers: { size: 0 }
+    }
   });
 
   return (

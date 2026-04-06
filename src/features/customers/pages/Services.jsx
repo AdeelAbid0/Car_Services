@@ -36,8 +36,8 @@ const Services = () => {
         { id: 19, name: "Tire Rotation", icon: <DummyIcon /> },
         { id: 20, name: "Tire Rotation", icon: <DummyIcon /> },
         { id: 21, name: "Tire Rotation", icon: <DummyIcon /> },
-        { id: 22, name: "Tire Rotation", icon: <DummyIcon /> },
-      ],
+        { id: 22, name: "Tire Rotation", icon: <DummyIcon /> }
+      ]
     },
     {
       id: 2,
@@ -45,8 +45,8 @@ const Services = () => {
       subServices: [
         { id: 1, name: "Tire Rotation", icon: <DummyIcon /> },
         { id: 2, name: "Tire Rotation", icon: <DummyIcon /> },
-        { id: 3, name: "Tire Rotation", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "Tire Rotation", icon: <DummyIcon /> }
+      ]
     },
     {
       id: 3,
@@ -54,8 +54,8 @@ const Services = () => {
       subServices: [
         { id: 1, name: "Brake Service", icon: <DummyIcon /> },
         { id: 2, name: "Brake Service", icon: <DummyIcon /> },
-        { id: 3, name: "Brake Service", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "Brake Service", icon: <DummyIcon /> }
+      ]
     },
     {
       id: 4,
@@ -63,8 +63,8 @@ const Services = () => {
       subServices: [
         { id: 1, name: "Engine Diagnostics", icon: <DummyIcon /> },
         { id: 2, name: "Engine Diagnostics", icon: <DummyIcon /> },
-        { id: 3, name: "Engine Diagnostics", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "Engine Diagnostics", icon: <DummyIcon /> }
+      ]
     },
     {
       id: 5,
@@ -72,8 +72,8 @@ const Services = () => {
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
-        { id: 3, name: "AC Service", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "AC Service", icon: <DummyIcon /> }
+      ]
     },
     {
       id: 6,
@@ -81,8 +81,8 @@ const Services = () => {
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
-        { id: 3, name: "AC Service", icon: <DummyIcon /> },
-      ],
+        { id: 3, name: "AC Service", icon: <DummyIcon /> }
+      ]
     },
     {
       id: 7,
@@ -90,15 +90,15 @@ const Services = () => {
       subServices: [
         { id: 1, name: "AC Service", icon: <DummyIcon /> },
         { id: 2, name: "AC Service", icon: <DummyIcon /> },
-        { id: 3, name: "AC Service", icon: <DummyIcon /> },
-      ],
-    },
+        { id: 3, name: "AC Service", icon: <DummyIcon /> }
+      ]
+    }
   ];
 
   const ServicesGrid = ({ services }) => {
     return (
       <div className="flex w-full flex-wrap gap-6">
-        {services.map((service) => (
+        {services.map(service => (
           <div
             key={service.id}
             className={`flex flex-col gap-2 justify-center items-center rounded-xl w-38  h-30 cursor-pointer bg-muted-background hover:bg-white ${
@@ -121,10 +121,10 @@ const Services = () => {
     );
   };
 
-  const tabs = carServices.map((category) => ({
+  const tabs = carServices.map(category => ({
     id: category.id,
     label: category.name,
-    component: <ServicesGrid services={category.subServices} />,
+    component: <ServicesGrid services={category.subServices} />
   }));
 
   return (

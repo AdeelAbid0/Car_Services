@@ -14,7 +14,7 @@ import CardImage from "../../../assets/Images/cards.svg?react";
 
 const Payout = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const handleMenuClick = (e) => {
+  const handleMenuClick = e => {
     console.log("Menu item clicked:", e.key);
     setDropdownOpen(false);
     if (e.key === "2") {
@@ -31,7 +31,7 @@ const Payout = () => {
             Set for withdrawl
           </p>
         </div>
-      ),
+      )
     },
     {
       key: "2",
@@ -40,7 +40,7 @@ const Payout = () => {
           <EditIcon />
           <p className="text-xs font-normal! text-foreground">Edit</p>
         </div>
-      ),
+      )
     },
     {
       key: "3",
@@ -49,8 +49,8 @@ const Payout = () => {
           <DeleteIcon />
           <p className="text-xs font-normal! text-foreground">Delete</p>
         </div>
-      ),
-    },
+      )
+    }
   ];
   return (
     <div className="flex w-full gap-20">
@@ -80,12 +80,12 @@ const Payout = () => {
               <Dropdown
                 menu={{
                   items,
-                  onClick: handleMenuClick,
+                  onClick: handleMenuClick
                 }}
                 placement="bottomRight"
                 trigger={["click"]}
                 open={dropdownOpen}
-                onOpenChange={(open) => setDropdownOpen(open)}
+                onOpenChange={open => setDropdownOpen(open)}
               >
                 <MenuIcon />
               </Dropdown>

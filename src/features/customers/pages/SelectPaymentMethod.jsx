@@ -13,11 +13,11 @@ const SelectPaymentMethod = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [currentStep, setCurrentStep] = useState(1);
 
-  const handleRadioChange = (method) => {
+  const handleRadioChange = method => {
     setSelectedMethod(method);
   };
 
-  const handleBreadcrumbClick = (stepId) => {
+  const handleBreadcrumbClick = stepId => {
     if (stepId < currentStep) {
       setCurrentStep(stepId);
     }

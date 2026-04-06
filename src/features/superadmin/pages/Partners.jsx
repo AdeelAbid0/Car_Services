@@ -11,25 +11,18 @@ const AddedByAdmin = lazy(() => import("../components/AddedByAdmin"));
 const AddedByPartners = lazy(() => import("../components/AddedByPartners"));
 const Partners = () => {
   const [activeTab, setActiveTab] = useState(1);
-
   const [addPartnerDrawer, setAddPartnerDrawer] = useState(false);
-
   const [viewPartnerDetail, setViewPartnerDetail] = useState(false);
-
   const [rejectDrawer, setRejectDrawer] = useState(false);
-
   const tabs = [
     {
       id: 1,
-
-      label: "Added by Partners",
+      label: "Added by Partners"
     },
-
     {
       id: 2,
-
-      label: "Added by Admin",
-    },
+      label: "Added by Admin"
+    }
   ];
 
   return (

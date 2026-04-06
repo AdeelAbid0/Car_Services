@@ -9,42 +9,42 @@ const RejectReasonDrawer = ({ setRejectDrawer }) => {
       id: 1,
       title: "Incomplete function",
       description:
-        "Required details or fields are missing or not properly filled.",
+        "Required details or fields are missing or not properly filled."
     },
     {
       id: 2,
       title: "Invalid or Unclear Documents",
       description:
-        "Uploaded documents are unclear, expired, or do not match the provided details.",
+        "Uploaded documents are unclear, expired, or do not match the provided details."
     },
     {
       id: 3,
       title: "Business Verification Failed",
       description:
-        "We were unable to verify the business registration or workshop details.",
+        "We were unable to verify the business registration or workshop details."
     },
     {
       id: 4,
       title: "Service Quality Concerns",
       description:
-        "The listed services or experience do not meet platform quality standards.",
+        "The listed services or experience do not meet platform quality standards."
     },
     {
       id: 5,
       title: "Session Expired",
-      description: "Your session has timed out. Please log in again.",
+      description: "Your session has timed out. Please log in again."
     },
     {
       id: 6,
       title: "Service Area Not Supported",
       description:
-        "Service pricing is too high or does not match market expectations.",
+        "Service pricing is too high or does not match market expectations."
     },
     {
       id: 7,
       title: "Pricing Misaligned with Standards",
-      description: "Your changes have been saved successfully.",
-    },
+      description: "Your changes have been saved successfully."
+    }
   ];
   console.log(selectedReasons);
   return (
@@ -68,17 +68,17 @@ const RejectReasonDrawer = ({ setRejectDrawer }) => {
             </div>
 
             <div className="flex flex-col gap-2 px-5 mb-4">
-              {reasons?.map((r) => {
+              {reasons?.map(r => {
                 return (
                   <div className="flex justify-start items-start p-3 gap-3 bg-muted-background rounded-lg">
                     <Checkbox
                       id={r.id}
-                      onChange={(e) => {
+                      onChange={e => {
                         if (e.target.checked) {
                           setSelectedReasons([...selectedReasons, r.id]);
                         } else {
                           setSelectedReasons(
-                            selectedReasons.filter((id) => id !== r.id),
+                            selectedReasons.filter(id => id !== r.id)
                           );
                         }
                       }}
