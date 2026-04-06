@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../../../components/ui/Button";
 import { ROUTES } from "../../../constants/routes";
+import Button from "../../../shared/components/ui/Button";
 
 const FinalScreen = () => {
   const navigate = useNavigate();
