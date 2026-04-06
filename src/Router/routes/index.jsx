@@ -1,10 +1,7 @@
 // exporting all routes from same file
 
 export { AUTH_ROUTES } from "./auth.routes";
-export { LANDINGPAGE_ROUTES } from "./landingpage.routes";
-export { PROFILE_ROUTES } from "./profile.routes";
-export { BOOKING_ROUTES } from "./booking.routes";
-export { PAYMENT_ROUTES } from "./payment.routes";
+export { CUSTOMER_ROUTES } from "./customer.routes";
 export { PARTNER_ROUTES } from "./partner.routes";
 export { SUPERADMIN_ROUTES } from "./superadmin.routes";
-export { UNAUTHORIZED_ROUTES } from "./unauthorize.route";
+export { PUBLIC_ROUTES } from "./public.routes";

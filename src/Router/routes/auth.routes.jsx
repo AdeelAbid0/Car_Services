@@ -5,7 +5,7 @@ import PublicRoutes from "../PublicRoutes";
 const Login = lazy(() => import("../../features/auth/pages/Login"));
 const Register = lazy(() => import("../../features/auth/pages/Register"));
 const RegisterPartner = lazy(
-  () => import("../../features/auth/pages/RegisterPartner"),
+  () => import("../../features/auth/pages/RegisterPartner")
 );
 const VerifyOTP = lazy(() => import("../../features/auth/pages/VerifyOTP"));
 const Join = lazy(() => import("../../features/auth/pages/Join"));
@@ -16,7 +16,7 @@ export const AUTH_ROUTES = [
       <PublicRoutes>
         <Login />
       </PublicRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.REGISTER_USER,
@@ -24,7 +24,7 @@ export const AUTH_ROUTES = [
       <PublicRoutes>
         <Register />
       </PublicRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.PARTNER_REGISTER,
@@ -32,7 +32,7 @@ export const AUTH_ROUTES = [
       <PublicRoutes>
         <RegisterPartner />
       </PublicRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.VERIFY_OTP,
@@ -40,7 +40,7 @@ export const AUTH_ROUTES = [
       <PublicRoutes>
         <VerifyOTP />
       </PublicRoutes>
-    ),
+    )
   },
   {
     path: ROUTES.JOIN,
@@ -48,6 +48,6 @@ export const AUTH_ROUTES = [
       <PublicRoutes>
         <Join />
       </PublicRoutes>
-    ),
-  },
+    )
+  }
 ];
