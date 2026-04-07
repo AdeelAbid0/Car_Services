@@ -59,18 +59,18 @@ const Header = ({ user, token }) => {
 
   return (
     <header
-      className={`flex w-full mx-auto justify-between h-16 md:h-21.75 transition-colors duration-300 px-4 sm:px-10 md:px-19 pt-3 sm:pt-4 md:pt-6 pb-3 sm:pb-4 md:pb-6 ${
+      className={`flex w-full mx-auto justify-between items-center h-16 md:h-21.75 transition-colors duration-300 px-4 sm:px-10 md:px-19 pt-3 sm:pt-4 md:pt-6 pb-3 sm:pb-4 md:pb-6 ${
         location.pathname === ROUTES.HOME
           ? "bg-transparent"
           : "bg-white shadow-[0px_0.5px_15px_0px_#0000012]"
       }`}
     >
       <NavLink to={ROUTES.HOME} className="cursor-pointer flex items-center">
-        <div className="w-8 h-8 sm:w-auto sm:h-auto">
+        <div className="w-6 h-5 xs:w-7 xs:h-6 sm:w-auto sm:h-auto">
           {location.pathname === ROUTES.HOME ? (
-            <LogoIconDark />
+            <LogoIconDark className="w-22 h-7 sm:w-full sm:h-full" />
           ) : (
-            <LogoIconLight />
+            <LogoIconLight className="w-22 h-7 sm:w-full sm:h-full" />
           )}
         </div>
       </NavLink>
@@ -152,7 +152,7 @@ const Header = ({ user, token }) => {
             />
           </>
         ) : (
-          <div className="relative" ref={dropdownRef}>
+          <div className="relative " ref={dropdownRef}>
             <button
               onClick={() => setShowDropdown(!showDropdown)}
               className={`flex items-center gap-2 px-3 py-2 rounded-md transition-colors cursor-pointer ${
@@ -161,7 +161,7 @@ const Header = ({ user, token }) => {
                   : "text-foreground"
               }`}
             >
-              <div className="w-11 h-11 rounded-full bg-gray-300 flex items-center justify-center"></div>
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-gray-300 flex items-center justify-center"></div>
               <div
                 className={`${
                   location.pathname === ROUTES.HOME

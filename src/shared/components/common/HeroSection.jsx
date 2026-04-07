@@ -138,8 +138,8 @@ const HeroSection = () => {
             ></div>
           ))}
         </div>
-        <div className="hidden md:block absolute z-10 bottom-9 right-4 lg:right-15">
-          <HeroSendIcon className="w-auto h-auto" />
+        <div className="block absolute z-10 mb-3 bottom-15 sm:bottom-9 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-4 lg:right-15">
+          <HeroSendIcon className="w-20 h-20 xs:w-auto xs:h-auto" />
         </div>
         <div className="hidden md:block absolute z-10 bottom-22 left-4 lg:left-15 w-[35%] lg:w-[24%]">
           <div className="flex gap-3 items-start">
@@ -157,7 +157,7 @@ const HeroSection = () => {
         <div className="relative w-full h-auto px-3 sm:px-8 md:px-12 lg:px-18 py-3 sm:py-6 z-10">
           <div className="relative z-10">
             <div className="flex w-full justify-center text-center">
-              <h1 className="font-anton max-w-full sm:max-w-fit md:max-w-217.5 text-white text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[70px]! 2xl:text-[100px]! font-normal text-center leading-[120%] uppercase">
+              <h1 className="font-anton max-w-full sm:max-w-fit md:max-w-217.5 text-white text-3xl xs:text-4xl md:text-5xl lg:text-[70px]! 2xl:text-[100px]! font-normal text-center leading-[120%] uppercase">
                 All <span className="text-primary">your car services</span>
                 <br />
                 in one place
@@ -165,10 +165,10 @@ const HeroSection = () => {
             </div>
 
             {/* Text below heading - Mobile only */}
-            <div className="flex md:hidden w-full justify-center text-center pt-3 sm:pt-4 mb-8">
-              <div className="flex flex-col gap-2 sm:gap-3 items-center max-w-xs sm:max-w-sm">
-                <span className="shrink-0  w-full border-[1px] border-primary mt-1"></span>
-                <p className="text-xs sm:text-sm font-medium text-white leading-4 sm:leading-5">
+            <div className="flex md:hidden max-w-[250px] mx-auto justify-center text-center pt-2 sm:pt-4 mb-8 mt-[14px]">
+              <div className="flex flex-col gap-1 sm:gap-2 items-center w-full">
+                <span className="shrink-0  w-full border-[1px] border-primary"></span>
+                <p className="text-[12px] sm:text-sm font-medium text-white leading-4.5">
                   Book trusted car services, compare prices, and manage
                   everything online.
                 </p>
@@ -176,8 +176,14 @@ const HeroSection = () => {
             </div>
 
             <div className="flex w-full justify-center px-2 sm:px-4 md:px-0">
+              <div className="flex justify-center gap-3 items-center md:hidden bg-white rounded-full w-[75%] p-3 mb-6 outline outline-2 outline-primary outline-offset-1">
+                <SearchIcon className="w-4 h-4 text-foreground" />
+                <p className="text-[13px] text-foreground leading-[20px]">
+                  Start your search
+                </p>
+              </div>
               <div
-                className="flex w-full sm:w-[90%] md:w-[75%] lg:w-[53%] flex-col items-center mt-2 sm:mt-4 md:mt-6 lg:mt-4 2xl:mt-10 md:mb-0 relative z-20 gap-0 max-w-full md:max-w-156"
+                className="hidden md:flex w-full sm:w-[90%] md:w-[75%] lg:w-[53%] flex-col items-center mt-2 sm:mt-4 md:mt-6 lg:mt-4 2xl:mt-10 md:mb-0 relative z-20 gap-0 max-w-full md:max-w-156"
                 onMouseLeave={() => {
                   setActiveTab(null);
                 }}
@@ -239,11 +245,6 @@ const HeroSection = () => {
                       <CustomCalendar />
                     </div>
                   )}
-                </div>
-
-                {/* Send Icon below search - Mobile only */}
-                <div className="flex md:hidden w-full z-10 bottom-9 justify-center items-center pt-6 pb-2">
-                  <HeroSendIcon className="w-19 h-19 sm:w-auto sm:h-auto" />
                 </div>
               </div>
             </div>
