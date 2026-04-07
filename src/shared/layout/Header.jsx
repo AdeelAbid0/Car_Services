@@ -59,21 +59,25 @@ const Header = ({ user, token }) => {
 
   return (
     <header
-      className={`flex w-full mx-auto justify-between h-21.75 transition-colors duration-300 px-19 pt-6 pb-6 ${
+      className={`flex w-full mx-auto justify-between h-16 md:h-21.75 transition-colors duration-300 px-4 sm:px-10 md:px-19 pt-3 sm:pt-4 md:pt-6 pb-3 sm:pb-4 md:pb-6 ${
         location.pathname === ROUTES.HOME
           ? "bg-transparent"
           : "bg-white shadow-[0px_0.5px_15px_0px_#0000012]"
       }`}
     >
-      <NavLink to={ROUTES.HOME} className="cursor-pointer">
-        {location.pathname === ROUTES.HOME ? (
-          <LogoIconDark />
-        ) : (
-          <LogoIconLight />
-        )}
+      <NavLink to={ROUTES.HOME} className="cursor-pointer flex items-center">
+        <div className="w-8 h-8 sm:w-auto sm:h-auto">
+          {location.pathname === ROUTES.HOME ? (
+            <LogoIconDark />
+          ) : (
+            <LogoIconLight />
+          )}
+        </div>
       </NavLink>
 
-      <div className={`flex font-medium text-[16px] items-center pt-2`}>
+      <div
+        className={`hidden md:flex font-medium text-[16px] items-center pt-2`}
+      >
         <ul className="flex items-center gap-11">
           {navItems.map(item => (
             <li key={item.id}>
@@ -113,7 +117,7 @@ const Header = ({ user, token }) => {
         </ul>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 sm:gap-4">
         {!isAuthenticated ? (
           <>
             <Button
@@ -122,7 +126,7 @@ const Header = ({ user, token }) => {
               onClick={() => {
                 navigate(ROUTES.LOGIN);
               }}
-              className={`${
+              className={`hidden sm:block text-xs sm:text-sm ${
                 !location.pathname === ROUTES.HOME
                   ? "bg-background! hover:bg-[#E5E0FF]! text-primary!"
                   : "bg-foreground! hover:bg-[#303030]! text-white! border! border-border!"
@@ -140,7 +144,7 @@ const Header = ({ user, token }) => {
                 // navigate(ROUTES.PARTNER_REGISTER);
                 navigate(ROUTES.JOIN);
               }}
-              className={`${
+              className={`text-xs sm:text-sm ${
                 location.pathname === ROUTES.HOME
                   ? "bg-background! hover:bg-[#E5E0FF]! text-primary!"
                   : "bg-foreground! hover:bg-[#303030]! text-white! "

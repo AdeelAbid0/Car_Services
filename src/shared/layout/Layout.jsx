@@ -1,6 +1,7 @@
 import { useLocation, useRoutes } from "react-router-dom";
 import { appRoutes } from "../../router";
 import Header from "./Header";
+import BottomNavigation from "../components/common/BottomNavigation";
 import { useEffect, useState } from "react";
 import { AUTH_ROUTES } from "../../router/routes";
 import { useSelector } from "react-redux";
@@ -30,10 +31,12 @@ const Layout = () => {
       )}
 
       <div
-        className={`h-[calc(100vh-87px)]  ${isAuthRoute ? "mt-0" : "mt-21.75 overflow-y-auto"}`}
+        className={`h-[calc(100vh-87px)] md:h-[calc(100vh-87px)] ${isAuthRoute ? "mt-0" : "mt-16 md:mt-21.75 mb-20 md:mb-0 overflow-y-auto"}`}
       >
         {Routes}
       </div>
+
+      {!isAuthRoute && <BottomNavigation />}
     </div>
   );
 };
