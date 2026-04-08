@@ -6,13 +6,14 @@ import RouteIcon from "../../../assets/svg/route.svg?react";
 import InputText from "../ui/InputText";
 import CustomCalendar from "./Calendar";
 import { Button } from "antd";
+import SearchDrawer from "./searchDrawer";
 export const Services = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 items-center bg-white rounded-2xl w-full p-3 sm:p-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 md:gap-3 items-center md:bg-white rounded-2xl w-full p-3 sm:p-5">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
         return (
-          <div className="flex flex-col items-center gap-2">
-            <div className="flex justify-center items-center min-w-21 min-h-21 rounded-xl bg-background border border-[#D8D4FF]">
+          <div className="flex w-full md:flex-col md:bg-transparent bg-primary-hover items-center gap-2 md:border-none border border-primary rounded-xl md:rounded-none p-2 md:p-0 cursor-pointer">
+            <div className="flex justify-center items-center w-6 h-6 md:min-w-21 md:min-h-21 rounded-xl md:bg-background md:border border-[#D8D4FF]">
               <LocationIcon />
             </div>
             <h1 className="text-muted-foreground text-xs font-normal">
@@ -26,19 +27,21 @@ export const Services = () => {
 };
 export const Locations = () => {
   return (
-    <div className="flex flex-wrap gap-3 items-center bg-white rounded-2xl w-full p-5">
+    <div className="flex flex-wrap gap-3 items-center md:bg-white rounded-2xl w-full p-5">
       <div className="flex flex-col w-full justify-center items-center gap-2">
-        <InputText
-          placeholder={"Search place"}
-          className={"max-w-75 rounded-full!"}
-        />
+        <div className="hidden md:block w-full">
+          <InputText
+            placeholder={"Search place"}
+            className={" max-w-75 rounded-full!"}
+          />
+        </div>
         <div className="flex w-full flex-col gap-4">
           <div className="flex flex-col sm:flex-row w-full gap-3 sm:gap-0 sm:justify-between">
-            <div className="flex items-center gap-2 sm:gap-5 w-full sm:w-[49%] bg-background p-1 rounded-2xl">
-              <div className="flex justify-center items-center w-14 h-14 rounded-md bg-white">
+            <div className="flex items-center gap-2 sm:gap-5 w-full sm:w-[49%] bg-white md:bg-background p-1 rounded-2xl">
+              <div className="flex justify-center items-center w-10 h-10 md:w-14 md:h-14 rounded-md md:bg-white bg-primary-hover">
                 <LocationIcon />
               </div>
-              <div className="flex flex-col gap-2 w-[49%] bg-background">
+              <div className="flex flex-col md:gap-2 gap-1 w-[49%] bg-white md:bg-background">
                 <h1 className="text-foreground text-[13px] font-medium">
                   Nearby
                 </h1>
@@ -47,11 +50,11 @@ export const Locations = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-2 sm:gap-5 w-full sm:w-[49%] bg-background p-1 rounded-2xl">
-              <div className="flex justify-center items-center w-14 h-14 rounded-md bg-white">
+            <div className="flex items-center gap-2 sm:gap-5 w-full sm:w-[49%] bg-white md:bg-background p-1 rounded-2xl">
+              <div className="flex justify-center items-center w-10 h-10 md:w-14 md:h-14 rounded-md md:bg-white bg-primary-hover">
                 <RouteIcon />
               </div>
-              <div className="flex flex-col gap-2 flex-1 bg-background">
+              <div className="flex flex-col md:gap-2 flex-1 bg-white md:bg-background">
                 <h1 className="text-foreground text-[13px] font-medium">
                   Google Maps
                 </h1>
@@ -83,9 +86,11 @@ export const Locations = () => {
     </div>
   );
 };
+
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [heroHeight, setHeroHeight] = useState("100vh");
+  const [showSearchDrawer, setShowSearchDrawer] = useState(false);
   const heroRef = useRef(null);
 
   const searchInputs = [
@@ -176,7 +181,10 @@ const HeroSection = () => {
             </div>
 
             <div className="flex w-full justify-center px-2 sm:px-4 md:px-0">
-              <div className="flex justify-center gap-3 items-center md:hidden bg-white rounded-full w-[75%] p-3 mb-6 outline outline-2 outline-primary outline-offset-1">
+              <div
+                className="flex justify-center gap-3 items-center md:hidden bg-white rounded-full w-[75%] p-3 mb-6 outline outline-2 outline-primary outline-offset-1"
+                onClick={() => setShowSearchDrawer(true)}
+              >
                 <SearchIcon className="w-4 h-4 text-foreground" />
                 <p className="text-[13px] text-foreground leading-[20px]">
                   Start your search
@@ -250,6 +258,12 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex w-full relative">
+        <SearchDrawer
+          showSearchDrawer={showSearchDrawer}
+          setShowSearchDrawer={setShowSearchDrawer}
+        />
       </div>
     </div>
   );
