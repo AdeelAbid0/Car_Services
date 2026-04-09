@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
-const CustomCalendar = () => {
+const CustomCalendar = ({ onSelectDate }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState("5:00 PM");

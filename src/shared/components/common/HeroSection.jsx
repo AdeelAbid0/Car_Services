@@ -7,12 +7,15 @@ import InputText from "../ui/InputText";
 import CustomCalendar from "./Calendar";
 import { Button } from "antd";
 import SearchDrawer from "./searchDrawer";
-export const Services = () => {
+export const Services = ({ onSelectService }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 md:gap-3 items-center md:bg-white rounded-2xl w-full p-3 sm:p-5">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
         return (
-          <div className="flex w-full md:flex-col md:bg-transparent bg-primary-hover items-center gap-2 md:border-none border border-primary rounded-xl md:rounded-none p-2 md:p-0 cursor-pointer">
+          <div
+            className="flex w-full md:flex-col md:bg-transparent bg-primary-hover items-center gap-2 md:border-none border border-primary rounded-xl md:rounded-none p-2 md:p-0 cursor-pointer"
+            onClick={() => onSelectService("Oil Change")}
+          >
             <div className="flex justify-center items-center w-6 h-6 md:min-w-21 md:min-h-21 rounded-xl md:bg-background md:border border-[#D8D4FF]">
               <LocationIcon />
             </div>
@@ -25,7 +28,7 @@ export const Services = () => {
     </div>
   );
 };
-export const Locations = () => {
+export const Locations = ({ onSelectLocation }) => {
   return (
     <div className="flex flex-wrap gap-3 items-center md:bg-white rounded-2xl w-full p-5">
       <div className="flex flex-col w-full justify-center items-center gap-2">
@@ -70,7 +73,10 @@ export const Locations = () => {
             </label>
             {[1, 2, 3].map(item => {
               return (
-                <div className="flex flex-col gap-1  mt-2.5">
+                <div
+                  className="flex flex-col gap-1  mt-2.5 cursor-pointer"
+                  onClick={() => onSelectLocation("F-8 Markaz, Islamabad")}
+                >
                   <h1 className="text-[13px] font-normal text-foreground">
                     F-8 Markaz, Islamabad
                   </h1>

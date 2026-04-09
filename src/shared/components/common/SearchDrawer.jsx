@@ -38,16 +38,21 @@ const SearchDrawer = ({ showSearchDrawer, setShowSearchDrawer }) => {
 
   const handleServiceSelect = serviceName => {
     setSelections({ ...selections, what: serviceName });
-    setActiveTab(null);
+    setActiveTab(2);
   };
 
   const handleLocationSelect = locationName => {
     setSelections({ ...selections, where: locationName });
-    setActiveTab(null);
+    setActiveTab(3);
   };
 
   const handleDateSelect = date => {
     setSelections({ ...selections, when: date });
+    setActiveTab(null);
+  };
+
+  const handleClearAll = () => {
+    setSelections({ ...selections, what: "", where: "", when: "" });
     setActiveTab(null);
   };
 
@@ -60,6 +65,7 @@ const SearchDrawer = ({ showSearchDrawer, setShowSearchDrawer }) => {
         width={"100%"}
         footerButtonPrimaryLabel={"Search"}
         footerButtonSecondaryLabel={"Clear All"}
+        footerButtonSecondaryClick={handleClearAll}
       >
         <div className="flex flex-col w-full gap-3">
           {searchInputs.map(input => (
