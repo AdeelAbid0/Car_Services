@@ -9,7 +9,7 @@ import { Button } from "antd";
 import CommonDrawer from "../ui/Drawer";
 export const Services = ({ onSelectService }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 md:gap-3 items-center md:bg-white rounded-2xl w-full p-3 sm:p-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 md:gap-3 items-center md:bg-white rounded-2xl w-full md:p-3 sm:p-5">
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
         return (
           <div
@@ -30,7 +30,7 @@ export const Services = ({ onSelectService }) => {
 };
 export const Locations = ({ onSelectLocation }) => {
   return (
-    <div className="flex flex-wrap gap-3 items-center md:bg-white rounded-2xl w-full p-5">
+    <div className="flex flex-wrap gap-3 items-center md:bg-white rounded-2xl w-full md:p-5">
       <div className="flex flex-col w-full justify-center items-center gap-2">
         <div className="hidden md:block w-full">
           <InputText
@@ -39,7 +39,7 @@ export const Locations = ({ onSelectLocation }) => {
           />
         </div>
         <div className="flex w-full flex-col gap-4">
-          <div className="flex flex-col sm:flex-row w-full gap-3 sm:gap-0 sm:justify-between">
+          <div className="flex flex-col sm:flex-row w-full gap-1 md:gap-3 sm:gap-0 sm:justify-between">
             <div className="flex items-center gap-2 sm:gap-5 w-full sm:w-[49%] bg-white md:bg-background p-1 rounded-2xl">
               <div className="flex justify-center items-center w-10 h-10 md:w-14 md:h-14 rounded-md md:bg-white bg-primary-hover">
                 <LocationIcon />
@@ -155,6 +155,7 @@ export const SearchDrawer = ({
         footerButtonPrimaryLabel={"Search"}
         footerButtonSecondaryLabel={"Clear All"}
         footerButtonSecondaryClick={handleClearAll}
+        footerButtonSecondaryType={"default"}
       >
         <div className="flex flex-col w-full gap-3">
           {searchInputs.map(input => (
@@ -162,27 +163,31 @@ export const SearchDrawer = ({
               {/* Tab Header */}
               <div
                 onClick={() => handleTabClick(input.id)}
-                className="flex gap-2 py-2.5 px-5 rounded-full bg-white border border-black w-full cursor-pointer hover:bg-gray-50 transition-colors"
+                className="flex items-center gap-2 py-2.5 px-5 rounded-full bg-white border border-black w-full h-[48px] cursor-pointer hover:bg-gray-50 transition-colors"
               >
                 <span className="text-xs text-muted-foreground">
                   {input.label}
                 </span>
                 |
-                <span className="text-xs text-foreground font-medium">
+                <span
+                  className={`text-xs text-foreground font-medium ${selections[input.key] ? "text-primary" : "text-foreground"}`}
+                >
                   {selections[input.key] || input.placeholder}
                 </span>
               </div>
 
               {/* Tab Content */}
               {activeTab === input.id && (
-                <div className="mt-3 mb-3 w-full">
+                <div className="mt-3 w-full">
                   {input.id === 1 && (
                     <Services onSelectService={handleServiceSelect} />
                   )}
                   {input.id === 2 && (
                     <Locations onSelectLocation={handleLocationSelect} />
                   )}
-                  {input.id === 3 && <CustomCalendar />}
+                  {input.id === 3 && (
+                    <CustomCalendar onSelectDate={handleDateSelect} />
+                  )}
                 </div>
               )}
             </div>
