@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
-const CustomCalendar = () => {
+const CustomCalendar = ({ onSelectDate }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState("5:00 PM");
@@ -147,7 +147,7 @@ const CustomCalendar = () => {
   return (
     <div className="flex items-center bg-white rounded-2xl w-full">
       <div className="bg-white rounded-2xl p-4 w-full">
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row gap-6">
           {/* Calendar Section - Smaller */}
           <div className="flex-1 min-w-69">
             <div className="flex items-center justify-between mb-3">
@@ -242,7 +242,7 @@ const CustomCalendar = () => {
           <div className="w-px bg-gray-200"></div>
 
           {/* Time Selection - Larger */}
-          <div className="flex-1 max-w-50">
+          <div className="flex-1 md:max-w-50 w-full">
             <div className="mb-4">
               <div className="text-base font-semibold text-gray-700 mb-1">
                 {dayNames[selectedDate.getDay()]}, {selectedDate.getDate()}{" "}
@@ -251,7 +251,7 @@ const CustomCalendar = () => {
               <div className="text-xs text-gray-500">Select a time slot</div>
             </div>
             {/* Time slots with scroll */}
-            <div className="flex flex-col gap-2 max-h-70 overflow-y-auto pr-1">
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-2 max-h-70 overflow-y-auto pr-1">
               {times.map(time => (
                 <button
                   key={time}
