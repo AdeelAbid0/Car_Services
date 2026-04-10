@@ -6,7 +6,7 @@ import RouteIcon from "../../../assets/svg/route.svg?react";
 import InputText from "../ui/InputText";
 import CustomCalendar from "./Calendar";
 import { Button } from "antd";
-import SearchDrawer from "./searchDrawer";
+import CommonDrawer from "../ui/Drawer";
 export const Services = ({ onSelectService }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-1 md:gap-3 items-center md:bg-white rounded-2xl w-full p-3 sm:p-5">
@@ -92,28 +92,135 @@ export const Locations = ({ onSelectLocation }) => {
     </div>
   );
 };
+export const SearchDrawer = ({
+  showSearchDrawer,
+  setShowSearchDrawer,
+  selections,
+  setSelections
+}) => {
+  const [activeTab, setActiveTab] = useState(null);
 
+  const searchInputs = [
+    {
+      id: 1,
+      label: "What",
+      placeholder: "Search your service",
+      key: "what"
+    },
+    {
+      id: 2,
+      label: "Where",
+      placeholder: "Choose location",
+      key: "where"
+    },
+    {
+      id: 3,
+      label: "When",
+      placeholder: "Select date",
+      key: "when"
+    }
+  ];
+
+  const handleTabClick = id => {
+    setActiveTab(activeTab === id ? null : id);
+  };
+
+  const handleServiceSelect = serviceName => {
+    setSelections({ ...selections, what: serviceName });
+    setActiveTab(2);
+  };
+
+  const handleLocationSelect = locationName => {
+    setSelections({ ...selections, where: locationName });
+    setActiveTab(3);
+  };
+
+  const handleDateSelect = date => {
+    setSelections({ ...selections, when: date });
+    setActiveTab(null);
+  };
+
+  const handleClearAll = () => {
+    setSelections({ ...selections, what: "", where: "", when: "" });
+    setActiveTab(null);
+  };
+
+  return (
+    <>
+      <CommonDrawer
+        open={showSearchDrawer}
+        title={"Search"}
+        onClose={() => setShowSearchDrawer(false)}
+        width={"100%"}
+        footerButtonPrimaryLabel={"Search"}
+        footerButtonSecondaryLabel={"Clear All"}
+        footerButtonSecondaryClick={handleClearAll}
+      >
+        <div className="flex flex-col w-full gap-3">
+          {searchInputs.map(input => (
+            <div key={input.id} className="w-full">
+              {/* Tab Header */}
+              <div
+                onClick={() => handleTabClick(input.id)}
+                className="flex gap-2 py-2.5 px-5 rounded-full bg-white border border-black w-full cursor-pointer hover:bg-gray-50 transition-colors"
+              >
+                <span className="text-xs text-muted-foreground">
+                  {input.label}
+                </span>
+                |
+                <span className="text-xs text-foreground font-medium">
+                  {selections[input.key] || input.placeholder}
+                </span>
+              </div>
+
+              {/* Tab Content */}
+              {activeTab === input.id && (
+                <div className="mt-3 mb-3 w-full">
+                  {input.id === 1 && (
+                    <Services onSelectService={handleServiceSelect} />
+                  )}
+                  {input.id === 2 && (
+                    <Locations onSelectLocation={handleLocationSelect} />
+                  )}
+                  {input.id === 3 && <CustomCalendar />}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </CommonDrawer>
+    </>
+  );
+};
 const HeroSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [heroHeight, setHeroHeight] = useState("100vh");
   const [showSearchDrawer, setShowSearchDrawer] = useState(false);
+  const [selections, setSelections] = useState({
+    what: "",
+    where: "",
+    when: ""
+  });
   const heroRef = useRef(null);
 
   const searchInputs = [
     {
       id: 1,
       label: "What",
-      placeholder: "Search your service"
+      placeholder: "Search your service",
+      key: "what"
     },
     {
       id: 2,
       label: "Where",
-      placeholder: "Choose location"
+      placeholder: "Choose location",
+      key: "where"
     },
     {
       id: 3,
       label: "When",
-      placeholder: "Select date"
+      placeholder: "Select date",
+      key: "when"
     }
   ];
 
@@ -176,9 +283,9 @@ const HeroSection = () => {
             </div>
 
             {/* Text below heading - Mobile only */}
-            <div className="flex md:hidden max-w-[250px] mx-auto justify-center text-center pt-2 sm:pt-4 mb-8 mt-[14px]">
+            <div className="flex md:hidden max-w-62.5 mx-auto justify-center text-center pt-2 sm:pt-4 mb-8 mt-3.5">
               <div className="flex flex-col gap-1 sm:gap-2 items-center w-full">
-                <span className="shrink-0  w-full border-[1px] border-primary"></span>
+                <span className="shrink-0  w-full border border-primary"></span>
                 <p className="text-[12px] sm:text-sm font-medium text-white leading-4.5">
                   Book trusted car services, compare prices, and manage
                   everything online.
@@ -188,11 +295,11 @@ const HeroSection = () => {
 
             <div className="flex w-full justify-center px-2 sm:px-4 md:px-0">
               <div
-                className="flex justify-center gap-3 items-center md:hidden bg-white rounded-full w-[75%] p-3 mb-6 outline outline-2 outline-primary outline-offset-1"
+                className="flex justify-center gap-3 items-center md:hidden bg-white rounded-full w-[75%] p-3 mb-6 outline-2 outline-primary outline-offset-1"
                 onClick={() => setShowSearchDrawer(true)}
               >
                 <SearchIcon className="w-4 h-4 text-foreground" />
-                <p className="text-[13px] text-foreground leading-[20px]">
+                <p className="text-[13px] text-foreground leading-5">
                   Start your search
                 </p>
               </div>
@@ -226,7 +333,7 @@ const HeroSection = () => {
                               : "text-foreground"
                           }`}
                         >
-                          {input.placeholder}
+                          {selections[input.key] || input.placeholder}
                         </p>
                       </div>
                       {index < searchInputs.length && (
@@ -246,12 +353,20 @@ const HeroSection = () => {
                 <div className="relative w-full">
                   {activeTab === 1 && (
                     <div className="absolute top-1 left-0 right-0 z-40">
-                      <Services />
+                      <Services
+                        onSelectService={serviceName =>
+                          setSelections({ ...selections, what: serviceName })
+                        }
+                      />
                     </div>
                   )}
                   {activeTab === 2 && (
                     <div className="absolute top-1 left-0 right-0 z-40">
-                      <Locations />
+                      <Locations
+                        onSelectLocation={locationName =>
+                          setSelections({ ...selections, where: locationName })
+                        }
+                      />
                     </div>
                   )}
                   {activeTab === 3 && (
@@ -269,6 +384,8 @@ const HeroSection = () => {
         <SearchDrawer
           showSearchDrawer={showSearchDrawer}
           setShowSearchDrawer={setShowSearchDrawer}
+          selections={selections}
+          setSelections={setSelections}
         />
       </div>
     </div>
