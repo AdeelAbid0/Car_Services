@@ -1,15 +1,13 @@
 import { useLocation, useRoutes } from "react-router-dom";
-import { appRoutes } from "../../router";
 import Header from "./Header";
 import BottomNavigation from "../components/common/BottomNavigation";
 import { useEffect, useState } from "react";
+import { appRoutes } from "../../router";
 import { AUTH_ROUTES } from "../../router/routes";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
   const { user, token } = useSelector(state => state.auth);
-  console.log({ user });
-  console.log({ token });
   const [isAuthRoute, setIsAuthRoute] = useState(false);
   const location = useLocation();
   const auth_routes = AUTH_ROUTES;
