@@ -2,7 +2,7 @@ import { useLocation, useRoutes } from "react-router-dom";
 import Header from "./Header";
 import BottomNavigation from "../components/common/BottomNavigation";
 import { useEffect, useState } from "react";
-import { appRoutes } from "../../router";
+import { appRoutes } from "../../router/index";
 import { AUTH_ROUTES } from "../../router/routes";
 import { useSelector } from "react-redux";
 
