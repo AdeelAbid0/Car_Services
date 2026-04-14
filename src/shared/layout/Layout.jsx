@@ -29,7 +29,7 @@ const Layout = () => {
       )}
 
       <div
-        className={`h-[calc(100vh-87px)] md:h-[calc(100vh-87px)] ${isAuthRoute ? "mt-0" : "mt-16 md:mt-21.75 mb-20 md:mb-0 overflow-y-auto"}`}
+        className={`h-[calc(100vh-120px)] md:h-[calc(100vh-87px)] ${isAuthRoute ? "mt-0" : "mt-16 md:mt-21.75 mb-20 md:mb-0 overflow-y-auto"}`}
       >
         {Routes}
       </div>
