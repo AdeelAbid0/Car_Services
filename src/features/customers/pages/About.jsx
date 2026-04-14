@@ -1,12 +1,12 @@
 const About = () => {
   return (
     <div className="flex w-full max-w-[90%] mx-auto justify-center items-center">
-      <div className="grid w-full max-w-7xl grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8 items-start py-4 px-4 lg:px-8">
-        <div className="flex flex-col gap-2 md:gap-3 relative z-10">
-          <h1 className="text-2xl! font-bold! text-foreground leading-11">
+      <div className="grid w-full max-w-7xl grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8 items-start py-4 px-0 md:px-4 lg:px-8">
+        <div className="flex flex-col gap-4 md:gap-3 relative z-10">
+          <h1 className="text-2xl! font-bold! text-foreground leading-[100%] md:leading-11">
             About us
           </h1>
-          <p className="md:text-[16px] text-[13px] w-full max-w-xl font-normal text-muted-foreground leading-6">
+          <p className="md:text-[16px] text-[13px] w-full max-w-xl font-normal text-muted-foreground leading-4 md:leading-6">
             We’re building a simple and reliable way to manage all your car
             services in one place. <br />
             From routine maintenance to emergency assistance, our platform
