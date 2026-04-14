@@ -4,5 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss(), svgr()]
+  plugins: [react(), tailwindcss(), svgr()],
+  resolve: {
+    alias: {
+      "@": "/src",
+      "@/router": "/src/router",
+      "@/router/routes": "/src/router/routes"
+    }
+  }
 });
