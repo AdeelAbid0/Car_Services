@@ -7,7 +7,7 @@ import EyeIcon from "../../../assets/svg/eye-icon.svg?react";
 import AuthCard from "../../../shared/components/common/AuthCard";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../shared/components/ui/Button";
-import { ROUTES } from "../../../constants/routes";
+import { ROUTES } from "../../../constants/routes-alpha";
 import { useFormik } from "formik";
 import { LoginInitialValues } from "../forms/login/login.initialvalues";
 import { LoginValidationSchema } from "../forms/login/login.validationschema";
