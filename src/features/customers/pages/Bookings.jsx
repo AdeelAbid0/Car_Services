@@ -3,7 +3,7 @@ import EmptyView from "../../../shared/components/common/EmptyView";
 import BookingEmptyIcon from "../../../assets/Images/booking-empty.svg?react";
 import ArrowRightIcon from "../../../assets/svg/arrow-right.svg?react";
 import BookingCard from "../../../shared/components/common/BookingCard";
-import { ROUTES } from "../../../constants/routes";
+import { ROUTES } from "../../../constants/routes-alpha";
 import { useNavigate } from "react-router-dom";
 
 const Bookings = () => {

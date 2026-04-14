@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import LogoIconDark from "../../assets/svg/logo-dark.svg?react";
 import LogoIconLight from "../../assets/svg/logo-light.svg?react";
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../constants/routes-alpha";
 import User from "../../assets/svg/profile.svg?react";
 import ChevronDown from "../../assets/svg/chevron-down.svg?react";
 import Info from "../../assets/svg/info.svg?react";

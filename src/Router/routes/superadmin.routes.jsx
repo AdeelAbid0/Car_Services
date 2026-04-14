@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { ROUTES } from "../../constants/routes";
+import { ROUTES } from "../../constants/routes-alpha";
 import PrivateRoutes from "../PrivateRoutes";
 import { ROLES } from "../../constants/roles";
 const Dashboard = lazy(

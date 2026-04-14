@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { ROUTES } from "../../../constants/routes";
+import { ROUTES } from "../../../constants/routes-alpha";
 import UserIcon from "../../../assets/svg/home-icon.svg?react";
 import ServiceIcon from "../../../assets/svg/services-icon.svg?react";
 import PartnerIcon from "../../../assets/svg/partners-icon.svg?react";
