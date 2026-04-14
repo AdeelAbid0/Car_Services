@@ -56,13 +56,13 @@ const CommonDrawer = ({
         </div>
 
         {/* Footer - Fixed Bottom */}
-        <div className="shrink-0 border-t border-border py-3 px-8 flex gap-3 justify-end bg-background">
+        <div className="shrink-0 border-t border-border py-3 px-8 flex gap-3 justify-center md:justify-end bg-background">
           {footerButtonSecondaryLabel && (
             <Button
               variant={"outlined"}
               type={footerButtonSecondaryType}
               label={footerButtonSecondaryLabel}
-              className={"h-8!"}
+              className={"w-full md:w-auto h-8!"}
               onClick={footerButtonSecondaryClick}
             />
           )}
@@ -70,7 +70,7 @@ const CommonDrawer = ({
             <Button
               type={"primary"}
               label={footerButtonPrimaryLabel}
-              className={"h-8!"}
+              className={"w-full md:w-auto h-8!"}
               onClick={footerButtonPrimaryClick}
             />
           )}

@@ -52,7 +52,9 @@ const BottomNavigation = () => {
                   />
                   <span
                     className={`text-[12px] font-medium transition-colors ${
-                      isActive ? "text-primary" : "text-muted-foreground"
+                      isActive
+                        ? "text-primary stroke-2"
+                        : "text-muted-foreground"
                     }`}
                   >
                     {item.label}

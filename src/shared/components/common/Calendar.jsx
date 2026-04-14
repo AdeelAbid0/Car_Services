@@ -98,6 +98,7 @@ const CustomCalendar = ({ onSelectDate }) => {
   const handleDateClick = dateObj => {
     setSelectedDate(dateObj.date);
     console.log("Selected Date:", dateObj.date.toDateString());
+    onSelectDate(dateObj.date.toDateString());
   };
 
   const handleTimeClick = time => {
