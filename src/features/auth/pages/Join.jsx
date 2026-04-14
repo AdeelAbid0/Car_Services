@@ -3,7 +3,7 @@ import CarLogo from "../../../assets/svg/car.svg?react";
 import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
 import Logo from "../../../assets/svg/logo-dark.svg?react";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../../constants/routes-alpha";
+import { ROUTES } from "../../../constants/routes";
 import Button from "../../../shared/components/ui/Button";
 import { useState } from "react";
 

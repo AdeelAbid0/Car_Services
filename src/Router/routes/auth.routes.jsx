@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { ROUTES } from "../../constants/routes-alpha";
+import { ROUTES } from "../../constants/routes";
 import PublicRoutes from "../PublicRoutes";
 // Lazy load components
 const Login = lazy(() => import("../../features/auth/pages/Login"));

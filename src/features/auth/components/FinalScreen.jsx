@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../../constants/routes-alpha";
+import { ROUTES } from "../../../constants/routes";
 import Button from "../../../shared/components/ui/Button";
 
 const FinalScreen = () => {
