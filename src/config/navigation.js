@@ -1,4 +1,4 @@
-import { ROUTES } from "../constants/routes-alpha";
+import { ROUTES } from "../constants/routes";
 
 // Base navigation items that don't depend on authentication
 const baseNavItems = {

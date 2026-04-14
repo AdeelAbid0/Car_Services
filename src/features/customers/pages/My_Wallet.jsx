@@ -4,7 +4,7 @@ import SearchIcon from "../../../assets/svg/search-normal.svg?react";
 import PlusIcon from "../../../assets/svg/add.svg?react";
 import CardImage from "../../../assets/Images/cards.svg?react";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../../constants/routes-alpha";
+import { ROUTES } from "../../../constants/routes";
 import InputText from "../../../shared/components/ui/InputText";
 import Button from "../../../shared/components/ui/Button";
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { ROUTES } from "../../../constants/routes-alpha";
+import { ROUTES } from "../../../constants/routes";
 import PartnerCard from "../common/PartnerCard";
 import CustomCalendar from "./Calendar";
 import Button from "../ui/Button";
