@@ -2,9 +2,9 @@ import { useLocation, useRoutes } from "react-router-dom";
 import Header from "./Header";
 import BottomNavigation from "../components/common/BottomNavigation";
 import { useEffect, useState } from "react";
-import { appRoutes } from "../../router";
-import { AUTH_ROUTES } from "../../router/routes";
+import { appRoutes } from "../../router/index.jsx";
 import { useSelector } from "react-redux";
+import { AUTH_ROUTES } from "../../router/routes/index.jsx";
 
 const Layout = () => {
   const { user, token } = useSelector(state => state.auth);

@@ -3,7 +3,7 @@ import { ROUTES } from "../../../constants/routes";
 import UserIcon from "../../../assets/svg/home-icon.svg?react";
 import ServiceIcon from "../../../assets/svg/services-icon.svg?react";
 import PartnerIcon from "../../../assets/svg/partners-icon.svg?react";
-import ProfileIcon from "../../../assets/svg/profile-icon.svg?react";
+import ProfileIcon from "../../../assets/svg/profile-circle.svg?react";
 
 const BottomNavigation = () => {
   const location = useLocation();
@@ -34,7 +34,7 @@ const BottomNavigation = () => {
 
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border z-50">
-      <div className="flex justify-around items-center h-[56px]">
+      <div className="flex justify-around items-center h-14">
         {navItems.map(item => {
           const IconComponent = item.icon;
           return (
@@ -47,7 +47,9 @@ const BottomNavigation = () => {
                 <>
                   <IconComponent
                     className={`w-6 h-6 transition-colors ${
-                      isActive ? "text-primary" : "text-muted-foreground"
+                      isActive
+                        ? "fill-primary! text-primary! "
+                        : "text-muted-foreground fill-transparent!"
                     }`}
                   />
                   <span
