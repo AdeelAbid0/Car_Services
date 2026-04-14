@@ -4,7 +4,7 @@ import {
   PARTNER_ROUTES,
   PUBLIC_ROUTES,
   SUPERADMIN_ROUTES
-} from "./routes/index.js";
+} from "./routes/index.jsx";
 
 export const appRoutes = [
   ...AUTH_ROUTES,
