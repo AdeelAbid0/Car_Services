@@ -97,11 +97,11 @@ const Services = () => {
 
   const ServicesGrid = ({ services }) => {
     return (
-      <div className="flex w-full flex-wrap gap-6">
+      <div className="flex w-full flex-wrap gap-[9px] md:gap-6">
         {services.map(service => (
           <div
             key={service.id}
-            className={`flex flex-col gap-2 justify-center items-center rounded-xl w-38  h-30 cursor-pointer bg-muted-background hover:bg-white ${
+            className={`flex md:flex-col gap-3 md:gap-2 justify-center items-center rounded-xl w-41 md:w-38 h-15 md:h-30 cursor-pointer bg-muted-background hover:bg-white ${
               selectedService === service?.id
                 ? "bg-white border border-primary"
                 : ""
@@ -111,8 +111,10 @@ const Services = () => {
               setShowBookingModal(true);
             }}
           >
-            {service.icon}
-            <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-4">
+            <div className="flex items-center justify-center w-7 h-7 md:w-auto md:h-auto">
+              {service.icon}
+            </div>
+            <p className="cursor-pointer text-muted-foreground text-sm font-medium leading-6 md:leading-4">
               {service.name}
             </p>
           </div>
@@ -130,17 +132,19 @@ const Services = () => {
   return (
     <>
       <div className="flex w-full justify-center h-full overflow-auto">
-        <div className="flex w-[72%] flex-col gap-6 h-full py-11">
-          <div className="flex flex-col gap-1">
-            <h1 className="text-foreground text-2xl! font-bold!">Services</h1>
-            <p className="text-muted-foreground text-[16px] font-normal">
+        <div className="flex w-[90%] md:w-[72%] flex-col gap-4 md:gap-6 h-full py-4 md:py-11">
+          <div className="flex flex-col gap-0.5 md:gap-1">
+            <h1 className="text-foreground text-xl md:text-2xl! font-bold!">
+              Services
+            </h1>
+            <p className="text-muted-foreground text-[12px] md:text-[16px] font-normal">
               Top car services chosen by customers near you.
             </p>
           </div>
           <div className="flex w-full">
             <InputText placeholder={"Search"} prefixIcon={<SearchIcon />} />
           </div>
-          <div className="w-full">
+          <div className="w-full overflow-x-auto">
             <Segment
               tabs={tabs}
               defaultActiveTab={serviceCategory}

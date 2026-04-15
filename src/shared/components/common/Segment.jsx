@@ -14,7 +14,7 @@ const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
   const TabComponent = activeTabData?.component;
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className="flex w-fit shrink-0 gap-6 border-b border-border min-h-7 h-auto mb-4">
         {tabs.map(tab => (
           <div
@@ -23,9 +23,9 @@ const Segment = ({ tabs, defaultActiveTab, onTabChange }) => {
             className="cursor-pointer"
           >
             <p
-              className={`w-full ${
+              className={`w-full text-[13px] md:text-sm leading-[100%] ${
                 activeTab === tab.id
-                  ? "text-primary font-medium border-b-2 border-primary pb-2"
+                  ? "text-primary md:font-medium border-b-2 border-primary pb-2"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
