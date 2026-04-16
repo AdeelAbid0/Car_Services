@@ -1,4 +1,10 @@
 import { ROUTES } from "../constants/routes";
+import UserIcon from "../assets/svg/home-icon.svg?react";
+import ServiceIcon from "../assets/svg/services-icon.svg?react";
+import PartnerIcon from "../assets/svg/partners-icon.svg?react";
+import ProfileIcon from "../assets/svg/profile-circle.svg?react";
+import BookingIcon from "../assets/svg/booking-icon.svg?react";
+
 
 // Base navigation items that don't depend on authentication
 const baseNavItems = {
@@ -7,24 +13,28 @@ const baseNavItems = {
       id: 1,
       label: "Home",
       path: ROUTES.HOME,
+      icon: UserIcon,
       auth: false
     },
     {
       id: 2,
       label: "Services",
       path: ROUTES.SERVICES,
+      icon: ServiceIcon,
       auth: false
     },
     {
       id: 3,
       label: "Partners",
       path: ROUTES.PARTNERS,
+      icon: PartnerIcon,
       auth: false
     },
     {
       id: 4,
       label: "My Bookings",
       path: ROUTES.BOOKINGS,
+      icon: BookingIcon,
       auth: true
     }
   ],
@@ -39,6 +49,7 @@ const baseNavItems = {
       id: 2,
       label: "Dashboard",
       path: ROUTES.PARTNER_DASHBOARD,
+      
       auth: true
     },
     {
