@@ -144,7 +144,7 @@ const Services = () => {
           <div className="flex w-full">
             <InputText placeholder={"Search"} prefixIcon={<SearchIcon />} />
           </div>
-          <div className="w-full overflow-x-auto">
+          <div className="w-full">
             <Segment
               tabs={tabs}
               defaultActiveTab={serviceCategory}

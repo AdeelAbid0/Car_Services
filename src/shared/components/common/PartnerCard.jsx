@@ -41,7 +41,7 @@ const PartnerCard = ({
                 {location}
               </p>
             </div>
-            <div className="flex items-center gap-1 h-5">
+            <div className="flex items-center gap-1 h-5 pr-2.5">
               <span className="w-2 h-2 bg-success rounded-full"></span>
               <p className="text-success text-xs md:text-sm font-normal leading-5">
                 {status}
