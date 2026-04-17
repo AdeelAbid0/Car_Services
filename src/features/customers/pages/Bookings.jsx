@@ -37,13 +37,28 @@ const Bookings = () => {
   return (
     <div className="flex w-full justify-center items-start">
       {!bookingData.length > 0 ? (
-        <div className="mt-11 w-full max-w-[72%]">
-          <div className="flex w-full justify-between items-center">
+        <div className=" mt-2 md:mt-11 px-5 md:px-0 w-full  md:max-w-[72%]">
+          <div className="flex flex-col md:flex-row w-full justify-between md:items-center">
+            {/* button for Small screen */}
+            <div
+              className="flex md:hidden mb-4 w-full items-center"
+              onClick={() => {
+                navigate(ROUTES.MY_WALLET);
+              }}
+            >
+              <div className="flex w-full justify-center items-center px-4 py-1.75 gap-3 md:gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors">
+                <p className="text-white font-normal text-sm">PKR 0</p>
+                <span className="h-3 border border-foreground/80 "></span>
+                <p className="text-white font-normal text-sm">My wallet</p>
+                <ArrowRightIcon className="text-white" />
+              </div>
+            </div>
+
             <div className="flex flex-col gap-1 justify-center">
-              <h1 className="text-2xl font-bold! text-foreground">
+              <h1 className="text-xl md:text-2xl font-bold! text-foreground">
                 My Bookings
               </h1>
-              <p className="text-[16px] text-muted-foreground font-normal">
+              <p className="text-[13px] md:text-[16px] text-muted-foreground font-normal">
                 Track your upcoming, ongoing, and completed services.
               </p>
             </div>
@@ -53,7 +68,7 @@ const Bookings = () => {
                 navigate(ROUTES.MY_WALLET);
               }}
             >
-              <div className="flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors">
+              <div className="hidden md:flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors">
                 <p className="text-white font-normal text-sm">PKR 0</p>
                 <span className="h-3 border border-foreground/80 "></span>
                 <p className="text-white font-normal text-sm">My wallet</p>
@@ -63,7 +78,7 @@ const Bookings = () => {
           </div>
 
           {/* Tabs */}
-          <div className="flex w-full flex-wrap gap-6 mt-11 border-b border-border">
+          <div className="flex w-full flex-wrap gap-6 mt-4 md:mt-11 border-b border-border">
             {tabs.map(item => (
               <div
                 key={item.id}

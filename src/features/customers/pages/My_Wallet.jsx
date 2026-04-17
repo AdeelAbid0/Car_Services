@@ -43,17 +43,30 @@ const My_Wallet = () => {
   const currentData = paymentsData[activeTab] || [];
 
   return (
-    <div className="flex w-full justify-center">
-      <div className="mt-11 w-full max-w-[72%]">
-        <div className="flex w-full justify-between items-center">
-          <div className="flex flex-col gap-1 justify-center">
-            <h1 className="text-2xl font-bold! text-foreground">My Wallet</h1>
-            <p className="text-[16px] text-muted-foreground font-normal">
+    <div className="flex flex-col md:flex-row w-full justify-center">
+      <div className="mt-3 md:mt-11 w-full px-5 md:max-w-[72%]">
+        <div className="flex flex-col md:flex-row w-full justify-between items-center">
+          {/* Smaller Screen button */}
+          <div
+            className="flex md:hidden w-full items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors"
+            onClick={() => {
+              navigate(ROUTES.BOOKINGS);
+            }}
+          >
+            <p className="flex gap-2 w-full justify-center items-center text-white font-normal text-sm">
+              My Bookings <ArrowRightIcon className="text-white" />
+            </p>
+          </div>
+          <div className="flex flex-col gap-1 mt-4 justify-center">
+            <h1 className="text-xl md:text-2xl font-bold! text-foreground">
+              My Wallet
+            </h1>
+            <p className="text-[13px] md:text-[16px] text-muted-foreground font-normal">
               Verified workshops and providers ready to care for your car.{" "}
             </p>
           </div>
           <div
-            className="flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors"
+            className="hidden md:flex items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors"
             onClick={() => {
               navigate(ROUTES.BOOKINGS);
             }}
@@ -63,9 +76,9 @@ const My_Wallet = () => {
             </p>
           </div>
         </div>
-        <div className="flex w-full justify-between mt-8">
-          <div className="flex flex-col gap-4 w-[30%]">
-            <CardImage />
+        <div className="flex flex-col md:flex-row gap-7 md:gap-0 w-full justify-between mt-4 md:mt-8">
+          <div className="flex flex-col gap-4 w-full  md:w-[30%]">
+            <CardImage className="w-[336px] md:w-full" />
             <div className="flex flex-col gap-2 w-full">
               <div className="flex flex-col gap-2 items-center w-full bg-white rounded-[10px] py-6">
                 <div className="flex flex-col gap-1">
@@ -102,16 +115,16 @@ const My_Wallet = () => {
               />
             </div>
           </div>
-          <div className="w-[60%]">
-            <h1 className="text-2xl font-bold! text-foreground">
+          <div className="w-full md:w-[60%]">
+            <h1 className="text-xl md:text-2xl font-bold! text-foreground">
               Payment History
             </h1>
 
-            <div className="w-full mt-6">
-              <div className="flex w-full justify-between">
+            <div className="w-full mt-4">
+              <div className="flex flex-col md:flex-row gap-4 md:gap-0 w-full justify-between">
                 <div className="flex gap-8">
                   <button
-                    className={`relative pb-4 cursor-pointer text-[16px] font-medium transition-colors ${
+                    className={`relative pb-4 cursor-pointer text-sm! md:text-[16px] font-medium transition-colors ${
                       activeTab === "all"
                         ? "text-primary!"
                         : "text-muted-foreground! hover:text-foreground!"
@@ -124,7 +137,7 @@ const My_Wallet = () => {
                     )}
                   </button>
                   <button
-                    className={`relative pb-4 cursor-pointer text-[16px] font-medium transition-colors ${
+                    className={`relative pb-4 cursor-pointer text-sm! md:text-[16px] font-medium transition-colors ${
                       activeTab === "regular"
                         ? "text-primary!"
                         : "text-muted-foreground! hover:text-foreground!"
@@ -141,7 +154,9 @@ const My_Wallet = () => {
                   <InputText
                     prefixIcon={<SearchIcon className="w-4! h-4!" />}
                     placeholder="Search"
-                    className={"h-8! rounded-lg! placeholder:text-[8px]!"}
+                    className={
+                      "h-11 md:h-8! rounded-lg! placeholder:text-[8px]!"
+                    }
                   />
                 </div>
               </div>
@@ -154,29 +169,29 @@ const My_Wallet = () => {
                   <h3 className="text-[14px] font-medium text-muted-foreground pb-3">
                     Today
                   </h3>
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-1 md:gap-2">
                     {currentData
                       .filter(item => item.date.includes("Apr 2022"))
                       .map(item => (
                         <div
                           key={item.id}
-                          className="flex w-full p-3 bg-muted-background hover:bg-muted-background/70 cursor-pointer transition-colors rounded-xl"
+                          className="flex justify-between w-full p-3 bg-white md:bg-muted-background hover:bg-muted-background/70 cursor-pointer transition-colors rounded-xl"
                         >
                           <div className="flex items-center w-full gap-4">
-                            <div className="flex shrink-0 w-12 h-12 rounded-xl bg-gray-100">
+                            <div className="flex shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-xl bg-gray-100">
                               {item.icon}
                             </div>
-                            <div className="flex flex-col gap-1">
-                              <h1 className="text-[18px] font-semibold text-foreground">
+                            <div className="flex flex-col w-max gap-1">
+                              <h1 className=" text-[14px] md:text-[18px] font-semibold text-foreground">
                                 {item.name}
                               </h1>
-                              <p className="font-medium text-sm text-muted-foreground">
+                              <p className="font-medium text-xs md:text-sm text-muted-foreground">
                                 {item.date}
                               </p>
                             </div>
                           </div>
                           <div className="flex w-full justify-end items-center">
-                            <h1 className="text-[16px] font-medium text-foreground">
+                            <h1 className="text-[14px] md:text-[16px] font-medium text-foreground">
                               {item.amount}
                             </h1>
                           </div>
