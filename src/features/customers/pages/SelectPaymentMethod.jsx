@@ -4,14 +4,18 @@ import VisaLogo from "../../../assets/svg/visa-logo.svg?react";
 import EasypaisaLogo from "../../../assets/svg/easypaisa-logo.svg?react";
 import JazzcashLogo from "../../../assets/svg/jazzcash-logo.svg?react";
 import ArrowRight from "../../../assets/svg/arrow-right.svg?react";
+import ArrowLeft from "../../../assets/svg/arrow-left.svg?react";
 import CardDetails from "../components/CardDetails";
 import LoadingPayment from "../components/LoadingPayment";
 import PaymentSuccess from "../components/PaymentSuccess";
 import Button from "../../../shared/components/ui/Button";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../constants/routes";
 
 const SelectPaymentMethod = () => {
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [currentStep, setCurrentStep] = useState(1);
+  const navigate = useNavigate();
 
   const handleRadioChange = method => {
     setSelectedMethod(method);
@@ -44,18 +48,30 @@ const SelectPaymentMethod = () => {
 
   return (
     <div className="flex w-full justify-center h-full overflow-auto">
-      <div className="flex w-[72%] flex-col gap-6 h-full py-11">
+      <div className="flex w-full md:w-[72%] flex-col gap-4 md:gap-6 h-full px-5 md:px-0 py-2 md:py-11">
+        {/* Smaller Screen button */}
+        <div
+          className="flex md:hidden w-full items-center px-4 py-1.75 gap-2 bg-foreground rounded-lg cursor-pointer hover:bg-foreground/80 transition-colors"
+          onClick={() => {
+            navigate(ROUTES.BOOKINGS);
+          }}
+        >
+          <p className="flex gap-2 w-full justify-center items-center text-white font-normal text-sm">
+            <ArrowLeft className="text-white" /> My Bookings
+          </p>
+        </div>
+
         {/* Static Heading - Same for all components */}
         <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold! text-foreground leading-11">
+          <h1 className="text-xl md:text-2xl font-bold! text-foreground leading-[129%] md:leading-11">
             Payment Method
           </h1>
-          <p className="text-[16px] font-normal text-muted-foreground leading-6">
+          <p className="hidden md:flex text-[14px] md:text-[16px] font-normal text-muted-foreground leading-[100%] md:leading-6">
             Add or manage your payment options for quick and secure checkout.
           </p>
         </div>
 
-        <div className="mt-4 flex w-full justify-center">
+        <div className="md:mt-4 flex w-full justify-center">
           <div className="flex max-w-87 items-center gap-1 text-sm text-muted-foreground">
             {getFullBreadcrumb()
               .split(" › ")
@@ -93,9 +109,9 @@ const SelectPaymentMethod = () => {
           </div>
         </div>
 
-        <div className="mt-2">
+        <div className="md:mt-2">
           {currentStep === 1 ? (
-            <div className="flex flex-col gap-4 w-full items-center">
+            <div className="flex flex-col gap-2 md:gap-4 w-full items-center">
               <div
                 className="flex w-full max-w-85 items-center justify-between px-3 bg-white h-12 rounded-xl border border-border cursor-pointer hover:border-primary transition-colors"
                 onClick={() => handleRadioChange("paypal")}
