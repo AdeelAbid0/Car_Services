@@ -28,7 +28,7 @@ const CommonDrawer = ({
       <div className="flex flex-col h-full">
         {/* Header - Fixed Top */}
         {showHeader && (
-          <div className="shrink-0 border-b border-border p-8 pb-3 bg-background">
+          <div className="shrink-0 border-b border-border p-5 md:p-8 pb-3 bg-background">
             <div className="flex justify-between items-start">
               <div className="flex flex-col gap-1 flex-1">
                 <h1 className="text-2xl! font-bold! text-foreground">
@@ -50,7 +50,7 @@ const CommonDrawer = ({
 
         {/* Content Area - Scrollable */}
         <div
-          className={`flex-1 overflow-y-auto bg-background ${childrenPadding == null ? "p-8" : "p-0"}`}
+          className={`flex-1 overflow-y-auto bg-background ${childrenPadding == null ? "p-5 md:p-8" : "p-0"}`}
         >
           {children}
         </div>
