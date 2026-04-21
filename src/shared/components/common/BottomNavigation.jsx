@@ -1,36 +1,35 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
-import UserIcon from "../../../assets/svg/home-icon.svg?react";
-import ServiceIcon from "../../../assets/svg/services-icon.svg?react";
-import PartnerIcon from "../../../assets/svg/partners-icon.svg?react";
-import ProfileIcon from "../../../assets/svg/profile-circle.svg?react";
+import { getNavItems } from "../../../config/navigation";
 
-const BottomNavigation = () => {
+const BottomNavigation = ({ user }) => {
   const location = useLocation();
   const isAuthenticated = !!localStorage.getItem("token");
 
-  const navItems = [
-    {
-      label: "Home",
-      path: ROUTES.HOME,
-      icon: UserIcon
-    },
-    {
-      label: "Services",
-      path: ROUTES.SERVICES,
-      icon: ServiceIcon
-    },
-    {
-      label: "Partners",
-      path: ROUTES.PARTNERS,
-      icon: PartnerIcon
-    },
-    {
-      label: isAuthenticated ? "Profile" : "Login",
-      path: isAuthenticated ? ROUTES.PROFILE : ROUTES.LOGIN,
-      icon: ProfileIcon
-    }
-  ];
+  const navItems = getNavItems(user);
+
+  // const navItems = [
+  //   {
+  //     label: "Home",
+  //     path: ROUTES.HOME,
+  //     icon: UserIcon
+  //   },
+  //   {
+  //     label: "Services",
+  //     path: ROUTES.SERVICES,
+  //     icon: ServiceIcon
+  //   },
+  //   {
+  //     label: "Partners",
+  //     path: ROUTES.PARTNERS,
+  //     icon: PartnerIcon
+  //   },
+  //   {
+  //     label: isAuthenticated ? "Profile" : "Login",
+  //     path: isAuthenticated ? ROUTES.PROFILE : ROUTES.LOGIN,
+  //     icon: ProfileIcon
+  //   }
+  // ];
 
   return (
     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border z-50">
