@@ -78,7 +78,7 @@ const My_Wallet = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-7 md:gap-0 w-full justify-between mt-4 md:mt-8">
           <div className="flex flex-col gap-4 w-full  md:w-[30%]">
-            <CardImage className="w-[336px] md:w-full" />
+            <CardImage className="w-84 md:w-full" />
             <div className="flex flex-col gap-2 w-full">
               <div className="flex flex-col gap-2 items-center w-full bg-white rounded-[10px] py-6">
                 <div className="flex flex-col gap-1">
